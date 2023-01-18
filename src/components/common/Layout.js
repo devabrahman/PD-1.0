@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BellAlertIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import TopOptions from 'components/SVGIcons/TopOptions';
+import AuthRight from 'components/authentication/AuthRight';
 
 const Layout = ({ title, children }) => {
   return (
     <section className="grid grid-cols-12 h-screen overflow-hidden">
       <section className="col-start-1 col-end-3">
-        <div className="bg-blue-50 w-full h-full block"></div>
+        <div className="bg-blue-50 w-full h-full block">
+          <AuthRight />
+        </div>
       </section>
       <section className="col-start-3 col-end-13">
         <div className="flex justify-between items-center px-14 mt-8">
@@ -26,6 +29,11 @@ const Layout = ({ title, children }) => {
           </div>
         </div>
         {children}
+      </section>
+      <section>
+        <div>
+          <p>Hello</p>
+        </div>
       </section>
     </section>
   );
