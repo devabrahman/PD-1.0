@@ -2,6 +2,7 @@ import React from 'react';
 import { IoIosArrowUp } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io';
 import { BsQuestionLg } from 'react-icons/bs';
+import CategoryIcon from 'components/SVGIcons/CategoryIcon';
 
 const AuthRight = () => {
   return (
@@ -32,7 +33,10 @@ const AuthRight = () => {
             <div className="text-base text-[#302323] m-5 mr-0">
               <ul>
                 <li className="py-2 flex flex-row justify-between items-center">
-                  Categories
+                  <div className="flex">
+                    <CategoryIcon className="h-6 w-14" />
+                    <p className="px-2">Categories</p>
+                  </div>
                   <IoIosArrowDown className="text-[#99C3FF]" />
                 </li>
                 <li className="py-2 flex flex-row justify-between items-center">

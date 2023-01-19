@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { BellAlertIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import TopOptions from 'components/SVGIcons/TopOptions';
 import AuthRight from 'components/authentication/AuthRight';
+import { HiChevronRight } from 'react-icons/hi';
+import ProductDirectoryIcon from 'components/SVGIcons/ProductDirectoryIcon';
+import Macbook from 'public/assets/Macbook.png';
 
 const Layout = ({ title, children }) => {
   return (
@@ -29,11 +32,15 @@ const Layout = ({ title, children }) => {
           </div>
         </div>
         {children}
-      </section>
-      <section>
-        <div>
-          <p>Hello</p>
+        <div className="flex flex-row px-14">
+          <ProductDirectoryIcon className="text-[#4F4F4F] border-red-200" />
+          <HiChevronRight className="h-7 w-10 text-[#D9D9D9]" />
+          <p>Producst</p>
+          <HiChevronRight className="h-7 w-10 text-[#D9D9D9]" />
+          <p>Product Details</p>
         </div>
+        <h1 className="px-14 py-6 text-2xl">Product Details </h1>
+        <Macbook />
       </section>
     </section>
   );
