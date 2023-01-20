@@ -17,7 +17,7 @@ const Navigation = () => {
             </button>
           </div>
           <div className="">
-            <p className="text-base ml-5 m-5">Dashboard</p>
+            <p className="text-base mx-12">Dashboard</p>
 
             <div className="text-base text-[#878787]  m-5 mr-0">
               <Disclosure>
