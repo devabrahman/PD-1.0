@@ -5,6 +5,7 @@ import TopOptions from 'components/SVGIcons/TopOptions';
 import Navigation from 'components/authentication/Navigation';
 import { HiChevronRight } from 'react-icons/hi';
 import ProductDirectoryIcon from 'components/SVGIcons/ProductDirectoryIcon';
+import OtherProducts from './OtherProducts';
 // import Macbook from 'public/assets/Macbook.png';
 
 const Layout = ({ title, children }) => {
@@ -40,6 +41,7 @@ const Layout = ({ title, children }) => {
           <p className="text-[#1C92FF]">Product Details</p>
         </div>
         <h1 className="px-14 py-6 text-2xl">Product Details </h1>
+        <OtherProducts />
       </section>
     </section>
   );
