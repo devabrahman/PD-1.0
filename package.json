@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.2.3",
     "eslint-config-standard-react": "^13.0.0",
     "eslint-plugin-react": "^7.28.0",
     "install": "^0.13.0",

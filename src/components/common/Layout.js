@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BellAlertIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import TopOptions from 'components/SVGIcons/TopOptions';
-import Navigation from 'components/authentication/Navigation';
+import Navigation from 'components/common/Navigation';
 import { HiChevronRight } from 'react-icons/hi';
 import ProductDirectoryIcon from 'components/SVGIcons/ProductDirectoryIcon';
 import OtherProducts from './OtherProducts';
