@@ -59,7 +59,13 @@ const Navigation = () => {
                         className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-[#99C3FF]`}
                       />
                     </Disclosure.Button>
-                    <Disclosure.Panel className="mx-7 text-[#878787]">No panel</Disclosure.Panel>
+                    <Disclosure.Panel className="mx-7 text-[#878787]">
+                      <ul>
+                        <li>Categories</li>
+                        <li>New</li>
+                        <li>Edit</li>
+                      </ul>
+                    </Disclosure.Panel>
                   </>
                 )}
               </Disclosure>
