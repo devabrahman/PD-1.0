@@ -29,13 +29,15 @@ const OtherProducts = () => {
           <td className="px-12">
             <StarIcon />
           </td>
-          <td className="px-12">
-            <hr className="w-28 h-0.5 my-1 bg-[#13FF65] border-0 rounded md:my-10" />
+          <td className="px-8">
+            <div className="w-full bg-[#c6ecfb] rounded-full h-0.5 dark:bg-[#c6ecfb]">
+              <hr className="w-11/12 h-0.5  bg-[#13FF65] border-0 rounded " />
+            </div>
           </td>
           <td className="px-12">624548</td>
         </tr>
         <tr className="rounded-xl shadow-lg shadow-[#87CEEB]/25">
-          <td className="pr-64 py-4">
+          <td className="pr-60 py-4">
             <div className="flex">
               <RectangleIcon className="" />
               <span>Mackbook Pro</span>
@@ -46,8 +48,10 @@ const OtherProducts = () => {
           <td className="px-12">
             <StarIcon />
           </td>
-          <td className="px-12">
-            <hr className="w-20 h-0.5 my-1 bg-[#FE516D] border-0 rounded md:my-10" />
+          <td className="px-8">
+            <div className="w-full bg-[#c6ecfb] rounded-full h-0.5 dark:bg-[#c6ecfb]">
+              <hr className="w-8/12 h-0.5  bg-[#FE516D] border-0 rounded " />
+            </div>
           </td>
           <td className="px-12">189676</td>
         </tr>
@@ -63,8 +67,10 @@ const OtherProducts = () => {
           <td className="px-12">
             <StarIcon />
           </td>
-          <td className="px-12">
-            <hr className="w-16 h-0.5 my-1 bg-[#FE516D] border-0 rounded md:my-10" />
+          <td className="px-8">
+            <div className="w-full bg-[#c6ecfb] rounded-full h-0.5 dark:bg-[#c6ecfb]">
+              <hr className="w-6/12 h-0.5  bg-[#FE516D] border-0 rounded " />
+            </div>
           </td>
           <td className="px-12">194556</td>
         </tr>

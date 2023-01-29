@@ -40,7 +40,6 @@ const Layout = ({ title, children }) => {
           <HiChevronRight className="h-7 w-10 text-[#D9D9D9]" />
           <p className="text-[#1C92FF]">Product Details</p>
         </div>
-        <h1 className="px-14 py-6 text-2xl">Product Details </h1>
         <NewCategory />
       </section>
     </section>
