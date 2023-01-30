@@ -1,12 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { BellAlertIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import TopOptions from 'components/SVGIcons/TopOptions';
 import Navigation from 'components/common/Navigation';
-import { HiChevronRight } from 'react-icons/hi';
-import ProductDirectoryIcon from 'components/SVGIcons/ProductDirectoryIcon';
-import NewCategory from 'components/categories/NewCategory';
-// import Macbook from 'public/assets/Macbook.png';
+import TopOptions from 'components/SVGIcons/TopOptions';
+import PropTypes from 'prop-types';
 
 const Layout = ({ title, children }) => {
   return (
@@ -16,7 +11,7 @@ const Layout = ({ title, children }) => {
           <Navigation />
         </div>
       </section>
-      <section className="col-start-3 col-end-13">
+      <section className="col-start-3 col-end-13 ml-8 mr-16">
         <div className="flex justify-between items-center px-14 mt-8">
           <h2 className="text-[27px] font-medium">{title}</h2>
 
@@ -33,14 +28,6 @@ const Layout = ({ title, children }) => {
           </div>
         </div>
         {children}
-        <div className="flex flex-row px-14">
-          <ProductDirectoryIcon className="text-[#4F4F4F] border-red-200" />
-          <HiChevronRight className="h-7 w-10 text-[#D9D9D9]" />
-          <p>Producst</p>
-          <HiChevronRight className="h-7 w-10 text-[#D9D9D9]" />
-          <p className="text-[#1C92FF]">Product Details</p>
-        </div>
-        <NewCategory />
       </section>
     </section>
   );

@@ -1,6 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
+import { useState } from 'react';
 import { BsXLg } from 'react-icons/bs';
 import DeletePopupIcon from '../../Images/DeletePopupIcon.png';
 

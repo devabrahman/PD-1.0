@@ -1,11 +1,10 @@
 import RectangleIcon from 'components/SVGIcons/RectangleIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import StarIcon from 'components/SVGIcons/StarIcon';
-import React from 'react';
 
 const OtherProducts = () => {
   return (
-    <table className="my-auto mx-auto">
+    <table className="w-full">
       <caption className="text-left text-xl my-2 py-5">Other Products</caption>
       <thead>
         <tr className="uppercase text-[#5798F6] text-sm">

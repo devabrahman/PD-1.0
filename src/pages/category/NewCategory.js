@@ -1,13 +1,15 @@
+import Breadcrumbs from 'components/common/Breadcrumbs';
 import ImageDropDown from 'components/common/ImageDropDown';
-import React from 'react';
-import CategoryPic from '../../Images/CategoryPic.png';
+import Layout from 'components/common/Layout';
+import categoryPic from '../../assets/Images/CategoryPic.png';
 
 const NewCategory = () => {
   return (
-    <>
+    <Layout title="Category">
+      <Breadcrumbs rootTitle="Category" subTitle="New" />
       <div className="flex">
         <div className="grid justify-items-center basis-3/5 w-full ml-5 mr-0">
-          <img src={CategoryPic} alt="Category Icon" className="w-9/12" />
+          <img src={categoryPic} alt="Category Icon" className="w-9/12" />
         </div>
         <form className="w-full h-auto mx-5">
           <div className="mb-4 mx-0">
@@ -52,7 +54,7 @@ const NewCategory = () => {
           </div>
         </form>
       </div>
-    </>
+    </Layout>
   );
 };
 
