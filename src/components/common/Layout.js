@@ -2,12 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BellAlertIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import TopOptions from 'components/SVGIcons/TopOptions';
+import Navigation from 'components/common/Navigation';
+import { HiChevronRight } from 'react-icons/hi';
+import ProductDirectoryIcon from 'components/SVGIcons/ProductDirectoryIcon';
+import NewCategory from 'components/categories/NewCategory';
+// import Macbook from 'public/assets/Macbook.png';
 
 const Layout = ({ title, children }) => {
   return (
     <section className="grid grid-cols-12 h-screen overflow-hidden">
       <section className="col-start-1 col-end-3">
-        <div className="bg-blue-50 w-full h-full block"></div>
+        <div className="bg-blue-50 w-full h-full block">
+          <Navigation />
+        </div>
       </section>
       <section className="col-start-3 col-end-13">
         <div className="flex justify-between items-center px-14 mt-8">
@@ -26,6 +33,14 @@ const Layout = ({ title, children }) => {
           </div>
         </div>
         {children}
+        <div className="flex flex-row px-14">
+          <ProductDirectoryIcon className="text-[#4F4F4F] border-red-200" />
+          <HiChevronRight className="h-7 w-10 text-[#D9D9D9]" />
+          <p>Producst</p>
+          <HiChevronRight className="h-7 w-10 text-[#D9D9D9]" />
+          <p className="text-[#1C92FF]">Product Details</p>
+        </div>
+        <NewCategory />
       </section>
     </section>
   );
