@@ -87,6 +87,13 @@ const SingleProduct = () => {
               <li>30W USB-C Power Adapter</li>
             </ul>
           </div>
+
+          <button
+            type="button"
+            className="text-primary font-medium text-base mx-[18px] p-2 block border-2 border-primary rounded-[10px] mt-6">
+            {' '}
+            Add to Cart
+          </button>
         </div>
       </section>
 
