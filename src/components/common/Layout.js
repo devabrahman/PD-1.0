@@ -2,7 +2,6 @@ import { BellAlertIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import Navigation from 'components/common/Navigation';
 import TopOptions from 'components/SVGIcons/TopOptions';
 import PropTypes from 'prop-types';
-// import Macbook from 'public/assets/Macbook.png';
 
 const Layout = ({ title, children }) => {
   return (
