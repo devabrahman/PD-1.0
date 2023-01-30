@@ -1,5 +1,4 @@
 import ImageDropDown from 'components/common/ImageDropDown';
-import React from 'react';
 import CategoryPic from '../../Images/CategoryPic.png';
 
 const NewCategory = () => {

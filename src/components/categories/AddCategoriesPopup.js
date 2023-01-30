@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
+import { useState } from 'react';
 import { BsXLg } from 'react-icons/bs';
 import CategoryPic from '../../Images/CategoryPic.png';
 
