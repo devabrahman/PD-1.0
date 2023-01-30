@@ -1,10 +1,13 @@
-import React from 'react';
 // import { IoIosArrowUp } from 'react-icons/io';
-import { IoIosArrowDown } from 'react-icons/io';
-import { BsQuestionLg } from 'react-icons/bs';
-import CategoryIcon from 'components/SVGIcons/CategoryIcon';
-// import OrderIcon from 'components/SVGIcons/OrderIcon';
 import { Disclosure } from '@headlessui/react';
+import CategoryIcon from 'components/SVGIcons/CategoryIcon';
+import { BsQuestionLg } from 'react-icons/bs';
+import { IoIosArrowDown } from 'react-icons/io';
+import { Link } from 'react-router-dom';
+
+import orderIcon from '../../assets/Images/icons/order-nav-icon.png';
+import productIcon from '../../assets/Images/icons/product-nav-icon.png';
+import tagIcon from '../../assets/Images/icons/tag-nav-icon.png';
 
 const Navigation = () => {
   return (
@@ -25,7 +28,7 @@ const Navigation = () => {
                   <>
                     <Disclosure.Button className="text-[#302323] w-full justify-between flex">
                       <div className="flex">
-                        <CategoryIcon className="h-6 w-14" />
+                        <img src={productIcon} alt="order icon" />
                         <p className="px-2">Products</p>
                       </div>
                       <IoIosArrowDown
@@ -35,10 +38,18 @@ const Navigation = () => {
 
                     <Disclosure.Panel className="mx-7">
                       <ul>
-                        <li>Products</li>
-                        <li>New</li>
-                        <li>Edit</li>
-                        <li>Single Product</li>
+                        <li>
+                          <Link to="/products">Products</Link>
+                        </li>
+                        <li>
+                          <Link to="/new-product">New</Link>
+                        </li>
+                        <li>
+                          <Link to="/edit-product">Edit</Link>
+                        </li>
+                        <li>
+                          <Link to="/single-product">Single Product</Link>
+                        </li>
                       </ul>
                     </Disclosure.Panel>
                   </>
@@ -62,7 +73,9 @@ const Navigation = () => {
                     <Disclosure.Panel className="mx-7 text-[#878787]">
                       <ul>
                         <li>Categories</li>
-                        <li>New</li>
+                        <li>
+                          <Link to="/new-category">New</Link>
+                        </li>
                         <li>Edit</li>
                       </ul>
                     </Disclosure.Panel>
@@ -77,7 +90,7 @@ const Navigation = () => {
                   <>
                     <Disclosure.Button className="text-[#302323] w-full justify-between flex">
                       <div className="flex">
-                        <CategoryIcon className="h-6 w-14" />
+                        <img src={tagIcon} alt="order icon" />
                         <p className="px-2">Tags</p>
                       </div>
                       <IoIosArrowDown
@@ -96,14 +109,17 @@ const Navigation = () => {
                   <>
                     <Disclosure.Button className="text-[#302323] w-full justify-between flex">
                       <div className="flex">
-                        <CategoryIcon className="h-6 w-14" />
+                        <img src={orderIcon} alt="order icon" />
                         <p className="px-2">Orders</p>
                       </div>
                       <IoIosArrowDown
                         className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-[#99C3FF]`}
                       />
                     </Disclosure.Button>
-                    <Disclosure.Panel className="mx-7 text-[#878787]">No panel</Disclosure.Panel>
+                    <Disclosure.Panel className="mx-7 text-[#878787]">Orders</Disclosure.Panel>
+                    <Disclosure.Panel className="mx-7 text-[#878787]">
+                      Orders Details
+                    </Disclosure.Panel>
                   </>
                 )}
               </Disclosure>
