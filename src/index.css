@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom font for body */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer utilities {
+  .input-back-box-shadow {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  }
+  .input-accent-box-shadow {
+    box-shadow: 0px 4px 10px 0px rgba(135, 206, 235, 0.24);
+  }
+}
