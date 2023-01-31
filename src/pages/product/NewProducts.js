@@ -1,6 +1,7 @@
 import { Tab } from '@headlessui/react';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import Layout from 'components/common/Layout';
+import CalenderIcon from 'components/SVGIcons/CalenderIcon';
 
 const NewProducts = () => {
   return (
@@ -68,25 +69,33 @@ const NewProducts = () => {
           </div>
 
           {/* Regular Price */}
-          <div className="rounded-xl input-accent-box-shadow w-full flex  gap-7 px-2.5 py-3">
+          <div className="rounded-xl mt-5 input-accent-box-shadow w-full flex  gap-7 px-[15px] pt-3 pb-[18px]">
             <div className="w-full ">
-              <h5>Regular Price</h5>
+              <h5 className="font-medium ">Regular Price</h5>
               <input
                 type="number"
                 name=""
                 id=""
-                className="border border-accent/30 h-9 mt-3 rounded-xl w-full"
+                placeholder="$ 00.0"
+                className="border pl-3 border-accent/30 h-9 mt-3 rounded-[7px] w-full pr-1.5"
               />
             </div>
 
-            <div className="w-full ">
-              <h5>Regular Price</h5>
+            <div className="w-full relative">
+              <h5 className="font-medium ">Special Price</h5>
               <input
                 type="number"
                 name=""
                 id=""
-                className="border border-accent/30 h-9 mt-3 rounded-xl w-full"
+                placeholder="$ 00.0"
+                className="border pl-3 border-accent/30 h-9 mt-3 rounded-[7px] w-full pr-1.5"
               />
+              <div className="flex items-center gap-2 absolute bottom-[14%] right-[15%] z-10">
+                <span className="h-4 rounded-sm w-0.5 bg-pdGrey block"></span>
+                <div className="cursor-pointer ">
+                  <CalenderIcon />
+                </div>
+              </div>
             </div>
           </div>
 
