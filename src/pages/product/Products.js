@@ -1,8 +1,11 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import Layout from 'components/common/Layout';
 import AstroIcon from 'components/SVGIcons/AstroIcon';
+import DeleteIcon from 'components/SVGIcons/DeleteIcon';
+import EditIcon from 'components/SVGIcons/Editicon';
+import RectangleIcon from 'components/SVGIcons/RectangleIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
-import StarIcon from 'components/SVGIcons/StarIcon';
+import { BiChevronUp, BiChevronDown } from 'react-icons/bi';
 
 const Products = () => {
   return (
@@ -10,46 +13,112 @@ const Products = () => {
       <Breadcrumbs rootTitle="Products" subTitle="Products" />
       <table className="w-full table-auto">
         <caption className="text-left text-xl my-2 py-5">Other Products</caption>
-        <thead>
-          <tr className="uppercase text-[#5798F6] text-sm">
-            <th className=""></th>
-            <th className="">THUMBNAIL</th>
+        <thead className="uppercase text-[#5798F6] text-sm">
+          <tr>
+            <th className="w-5"></th>
+            <th>THUMBNAIL</th>
             <th>PRODUCT</th>
-            <th>PRICE</th>
-            <th>SKU</th>
-            <th>QUANTITY</th>
-            <th>STATUS</th>
-            <th>STATUS </th>
+            <th>
+              <div className="flex">
+                {' '}
+                PRICE{' '}
+                <div className="bg-[#87CEEB]/10 mx-5">
+                  <BiChevronUp />
+                  <BiChevronDown />
+                </div>
+              </div>
+            </th>
+            <th>
+              <div className="flex">
+                {' '}
+                SKU
+                <div className="bg-[#87CEEB]/10 mx-5">
+                  <BiChevronUp />
+                  <BiChevronDown />
+                </div>
+              </div>
+            </th>
+            <th>
+              <div className="flex">
+                QUANTITY
+                <div className="bg-[#87CEEB]/10 mx-5">
+                  <BiChevronUp />
+                  <BiChevronDown />
+                </div>
+              </div>
+            </th>
+            <th>
+              <div className="flex">
+                STATUS
+                <div className="bg-[#87CEEB]/10 mx-5">
+                  <BiChevronUp />
+                  <BiChevronDown />
+                </div>
+              </div>
+            </th>
             <th className=""></th>
             <th className=""></th>
+            <th></th>
           </tr>
         </thead>
         <tbody className="">
           <tr className="rounded-xl shadow-lg shadow-[#87CEEB]/25">
-            <td className=" py-2">
-              <div className="flex">
+            <td></td>
+            <td className="py-3">
+              <div className="flex gap-2">
                 <RightMarkIcon />
-                <span>
-                  <AstroIcon />
-                </span>
+                <AstroIcon />
               </div>
             </td>
+            <td className="flex items-center flex-col">
+              <div className="py-4">
+                <p>Mackbook Pro</p>
+                <p className="text-xs text-[rgb(185,185,185)]">Laptop</p>
+              </div>
+            </td>
+            <td className="">$149</td>
+            <td className="">113213</td>
+            <td className="">0</td>
             <td className="">
-              <div className="">
-                <span>Mackbook Pro</span>
-                <p className="ml-11 -mt-5 text-xs text-[rgb(185,185,185)]">Laptop</p>
+              <span className="text-green bg-green/20 rounded-md text-sm py-1.5 px-3 font-medium">
+                In Stock
+              </span>
+            </td>
+            <td>
+              <EditIcon />
+            </td>
+            <td>
+              <DeleteIcon />
+            </td>
+          </tr>
+          <tr className="rounded-xl shadow-lg shadow-[#87CEEB]/25">
+            <td></td>
+            <td className="py-3">
+              <div className="flex gap-2">
+                <RectangleIcon />
+                <AstroIcon />
               </div>
             </td>
-            <td className="px-16">$259</td>
-            <td className="px-12">
-              <StarIcon />
-            </td>
-            <td className="px-8">
-              <div className="w-full bg-[#c6ecfb] rounded-full h-0.5 dark:bg-[#c6ecfb]">
-                <hr className="w-11/12 h-0.5  bg-[#13FF65] border-0 rounded " />
+            <td className="flex items-center flex-col">
+              <div className="py-4">
+                <p>Mackbook Pro</p>
+                <p className="text-xs text-[rgb(185,185,185)]">Laptop</p>
               </div>
             </td>
-            <td className="px-12">624548</td>
+            <td className="">$149</td>
+            <td className="">113213</td>
+            <td className="">0</td>
+            <td className="">
+              <span className="text-[#F4316B] bg-[#FF3300]/10 rounded-md text-sm py-1.5 px-3 font-medium h-min">
+                Out of Stock
+              </span>
+            </td>
+            <td>
+              <EditIcon />
+            </td>
+            <td>
+              <DeleteIcon />
+            </td>
           </tr>
         </tbody>
       </table>
