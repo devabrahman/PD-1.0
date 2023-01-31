@@ -5,6 +5,7 @@
 /* Custom font for body */
 body {
   font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 @layer utilities {

@@ -16,17 +16,15 @@ const Products = () => {
     <>
       <Layout title="Category">
         <Breadcrumbs rootTitle="Products" subTitle="Products" />
-        <table className="w-full table-auto">
-          <caption className="text-left text-xl my-2 py-5">Other Products</caption>
-          <thead className="uppercase text-[#5798F6] text-sm">
-            <tr>
+        <table className="w-full table-auto mt-14">
+          <thead className="uppercase font-medium text-[#5798F6] text-sm">
+            <tr className=" font-medium">
               <th className="w-5"></th>
-              <th>THUMBNAIL</th>
-              <th>PRODUCT</th>
+              <th className=" font-medium">THUMBNAIL</th>
+              <th className=" font-medium">PRODUCT</th>
               <th>
-                <div className="flex">
-                  {' '}
-                  PRICE{' '}
+                <div className="flex items-center">
+                  <span className=" font-medium"> PRICE</span>
                   <div className="bg-[#87CEEB]/10 mx-5">
                     <BiChevronUp />
                     <BiChevronDown />
@@ -34,9 +32,8 @@ const Products = () => {
                 </div>
               </th>
               <th>
-                <div className="flex">
-                  {' '}
-                  SKU
+                <div className="flex items-center">
+                  <span className=" font-medium">SKU</span>
                   <div className="bg-[#87CEEB]/10 mx-5">
                     <BiChevronUp />
                     <BiChevronDown />
@@ -44,8 +41,8 @@ const Products = () => {
                 </div>
               </th>
               <th>
-                <div className="flex">
-                  QUANTITY
+                <div className="flex items-center">
+                  <span className=" font-medium">QUANTITY</span>
                   <div className="bg-[#87CEEB]/10 mx-5">
                     <BiChevronUp />
                     <BiChevronDown />
@@ -53,8 +50,8 @@ const Products = () => {
                 </div>
               </th>
               <th>
-                <div className="flex">
-                  STATUS
+                <div className="flex items-center">
+                  <span className=" font-medium"> STATUS</span>
                   <div className="bg-[#87CEEB]/10 mx-5">
                     <BiChevronUp />
                     <BiChevronDown />
@@ -70,7 +67,7 @@ const Products = () => {
             <tr className="rounded-xl shadow-lg shadow-[#87CEEB]/25">
               <td></td>
               <td className="py-3">
-                <div className="flex gap-2">
+                <div className="flex gap-2 items-center">
                   <RightMarkIcon />
                   <AstroIcon />
                 </div>
