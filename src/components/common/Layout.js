@@ -2,6 +2,7 @@ import { BellAlertIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import Navigation from 'components/common/Navigation';
 import TopOptions from 'components/SVGIcons/TopOptions';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Layout = ({ title, children }) => {
   return (
@@ -24,7 +25,10 @@ const Layout = ({ title, children }) => {
             <div className="relative bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer ml-6 h-10 w-12 px-2">
               <TopOptions />
             </div>
-            <img src="assets/images/avatar.png" className="h-16 w-16 rounded-full ml-2" />
+            <Link to="/vendor-profile">
+              Tags
+              <img src="assets/images/avatar.png" className="h-16 w-16 rounded-full ml-2" />
+            </Link>
           </div>
         </div>
         {children}
