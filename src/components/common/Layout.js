@@ -12,7 +12,7 @@ const Layout = ({ title, children }) => {
         </div>
       </section>
       <section className="col-start-3 col-end-13 ml-8 mr-16">
-        <div className="flex justify-between items-center px-14 mt-8">
+        <div className="flex justify-between items-center pr-14 mt-8">
           <h2 className="text-[27px] font-medium">{title}</h2>
 
           <div className="flex items-center">
