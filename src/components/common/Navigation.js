@@ -72,7 +72,9 @@ const Navigation = () => {
                     </Disclosure.Button>
                     <Disclosure.Panel className="mx-7 text-[#878787]">
                       <ul>
-                        <li>Categories</li>
+                        <li>
+                          <Link to="/categories"> Categories</Link>
+                        </li>
                         <li>
                           <Link to="/new-category">New</Link>
                         </li>
@@ -84,23 +86,14 @@ const Navigation = () => {
               </Disclosure>
             </div>
 
-            <div className="text-base text-[#302323] m-5 mr-0">
-              <Disclosure>
-                {({ open }) => (
-                  <>
-                    <Disclosure.Button className="text-[#302323] w-full justify-between flex">
-                      <div className="flex">
-                        <img src={tagIcon} alt="order icon" />
-                        <p className="px-2">Tags</p>
-                      </div>
-                      <IoIosArrowDown
-                        className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-[#99C3FF]`}
-                      />
-                    </Disclosure.Button>
-                    <Disclosure.Panel className="mx-7 text-[#878787]">No panel</Disclosure.Panel>
-                  </>
-                )}
-              </Disclosure>
+            <div className="text-base text-[#302323] m-5 mr-0text-[#302323] w-full justify-between flex">
+              <div className="flex">
+                <img src={tagIcon} alt="order icon" />
+                <p className="px-2">
+                  {' '}
+                  <Link to="/tags">Tags</Link>
+                </p>
+              </div>
             </div>
 
             <div className="text-base text-[#302323] m-5 mr-0">
@@ -116,9 +109,11 @@ const Navigation = () => {
                         className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-[#99C3FF]`}
                       />
                     </Disclosure.Button>
-                    <Disclosure.Panel className="mx-7 text-[#878787]">Orders</Disclosure.Panel>
                     <Disclosure.Panel className="mx-7 text-[#878787]">
-                      Orders Details
+                      <Link to="/orders">Orders</Link>
+                    </Disclosure.Panel>
+                    <Disclosure.Panel className="mx-7 text-[#878787]">
+                      <Link to="/order-details">Orders Details</Link>
                     </Disclosure.Panel>
                   </>
                 )}

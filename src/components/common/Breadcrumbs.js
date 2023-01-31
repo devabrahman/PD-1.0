@@ -4,7 +4,7 @@ import { HiChevronRight } from 'react-icons/hi';
 
 const Breadcrumbs = ({ rootTitle, subTitle }) => {
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row items-center">
       <ProductDirectoryIcon className="text-[#4F4F4F] border-red-200" />
       <HiChevronRight className="h-7 w-10 text-[#D9D9D9]" />
       <p>{rootTitle}</p>
