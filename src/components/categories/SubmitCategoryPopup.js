@@ -1,7 +1,8 @@
 import { Dialog } from '@headlessui/react';
 import { useState } from 'react';
 import { BsXLg } from 'react-icons/bs';
-import DeletePopupIcon from '../../Images/DeletePopupIcon.png';
+// import DeletePopupIcon from '../../Images/DeletePopupIcon.png';
+import DeletePopupIcon from '../../assets/Images/DeletePopupIcon.png';
 
 const SubmitCategoryPopup = () => {
   let [isOpen, setIsOpen] = useState(true);
@@ -15,7 +16,7 @@ const SubmitCategoryPopup = () => {
         {/* Full-screen container to center the panel */}
         <div className="fixed inset-0 flex items-center justify-center p-4">
           {/* The actual dialog panel  */}
-          <Dialog.Panel className="inline-block w-full min-w-[900px] max-w-lg overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-md">
+          <Dialog.Panel className="inline-block w-full min-w-[900px] max-w-lg overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-lg">
             <div className="mx-9 my-5">
               <section className="flex justify-end">
                 <button>
