@@ -78,7 +78,9 @@ const Navigation = () => {
                         <li>
                           <Link to="/new-category">New</Link>
                         </li>
-                        <li>Edit</li>
+                        <li>
+                          <Link to="/edit-category">Edit</Link>
+                        </li>
                       </ul>
                     </Disclosure.Panel>
                   </>
