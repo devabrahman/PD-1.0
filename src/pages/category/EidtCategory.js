@@ -3,7 +3,7 @@ import ImageDropDown from 'components/common/ImageDropDown';
 import Layout from 'components/common/Layout';
 import categoryPic from '../../assets/Images/CategoryPic.png';
 
-const NewCategory = () => {
+const EidtCategory = () => {
   return (
     <Layout title="Category">
       <Breadcrumbs rootTitle="Category" subTitle="New" />
@@ -57,5 +57,4 @@ const NewCategory = () => {
     </Layout>
   );
 };
-
-export default NewCategory;
+export default EidtCategory;
