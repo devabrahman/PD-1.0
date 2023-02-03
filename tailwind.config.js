@@ -8,7 +8,7 @@ module.exports = {
         gold: '#FFCF0D',
         primary: '#5798F6',
         pdGrey: '#D6D6D6',
-        accent: ' #1C92FF'
+        accent: ' #1C92FF' 
       },
       fontFamily: {
         primary: ['Poppins', 'sans-serif']
