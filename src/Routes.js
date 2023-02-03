@@ -6,7 +6,7 @@ import EditProducts from 'pages/product/EditProducts';
 import NewProducts from 'pages/product/NewProducts';
 import Products from 'pages/product/Products';
 import SingleProduct from 'pages/product/SingleProduct';
-import VariableProduct from 'pages/product/VariableProduct';
+// import SingleProductsNew from 'pages/product/VariableProduct';
 import Profile from 'pages/Profile';
 import Tags from 'pages/Tags';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -24,7 +24,7 @@ const AppRoutes = () => {
         <Route path="/single-product" element={<SingleProduct />} />
         <Route path="/new-product" element={<NewProducts />} />
         <Route path="/edit-product" element={<EditProducts />} />
-        <Route path="/variable-product" element={<VariableProduct />} />
+        {/* <Route path="/variable-product" element={<SingleProductsNew />} /> */}
 
         {/* Category */}
         <Route path="/categories" element={<Category />} />

@@ -50,9 +50,6 @@ const Navigation = () => {
                         <li>
                           <Link to="/single-product">Single Product</Link>
                         </li>
-                        <li>
-                          <Link to="/variable-product">Variable Product</Link>
-                        </li>
                       </ul>
                     </Disclosure.Panel>
                   </>
