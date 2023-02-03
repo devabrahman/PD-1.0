@@ -402,7 +402,6 @@ const NewProducts = () => {
           </div>
 
           <div className="py-5">
-            <BiX />
             <h5 htmlFor="" className="text-[#424141] font-medium text-base mb-1.5 block">
               Product Picture
             </h5>
