@@ -190,7 +190,7 @@ const DesktopTen = () => {
             <div className="p-6">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex">
-                  <SettingIcon className="w-5 h-6 mr-7 opacity-25" />
+                  <SettingIcon className="w-5 h-6 mr-7" />
                   <p className="text-xl font-medium">Color</p>
                 </div>
                 <EditIcon />
@@ -210,7 +210,7 @@ const DesktopTen = () => {
             <div className="p-6">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex">
-                  <SettingIcon className="w-5 h-6 mr-7 opacity-25" />
+                  <SettingIcon className="w-5 h-6 mr-7" />
                   <p className="text-xl font-medium">Color</p>
                 </div>
                 <EditIcon />
@@ -230,7 +230,7 @@ const DesktopTen = () => {
             <div className="p-6">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex">
-                  <SettingIcon className="w-5 h-6 mr-7 opacity-25" />
+                  <SettingIcon className="w-5 h-6 mr-7" />
                   <p className="text-xl font-medium">Color</p>
                 </div>
                 <EditIcon />
@@ -270,21 +270,6 @@ const DesktopTen = () => {
               </p>
             </div>
             <hr className="w-full" />
-            {/* <table className="w-full table-auto">
-              <thead className="uppercase font-medium text-[#5798F6] text-sm">
-                <tr className="font-medium py-2 3/4">
-                  <th className="py-4 px-6">
-                    <RectangleIcon />
-                  </th>
-                  <th className="w-2"></th>
-                  <th className="w-5">Variant</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>SKU</th>
-                  <th></th>
-                </tr>
-              </thead>
-            </table> */}
 
             <div className="relative overflow-x-auto">
               <table className="w-full text-sm text-left">
