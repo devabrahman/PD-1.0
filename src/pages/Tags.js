@@ -26,7 +26,7 @@ const Tags = () => {
             </tr>
           </thead>
           <tbody>
-            <tr className="rounded-xl shadow-lg shadow-[#87CEEB]/25">
+            <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow">
               <td className="my-2">
                 <RectangleIcon />
               </td>
@@ -43,7 +43,7 @@ const Tags = () => {
                 <DeleteIcon />
               </td>
             </tr>
-            <tr className="rounded-xl shadow-lg shadow-[#87CEEB]/25 mt-5">
+            <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow mt-5">
               <td>
                 <RightMarkIcon />
               </td>

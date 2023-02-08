@@ -64,7 +64,7 @@ const Products = () => {
             </tr>
           </thead>
           <tbody className="">
-            <tr className="rounded-xl shadow-lg shadow-[#87CEEB]/25">
+            <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow">
               <td></td>
               <td className="py-3">
                 <div className="flex gap-2 items-center">
@@ -93,7 +93,7 @@ const Products = () => {
                 <DeleteIcon />
               </td>
             </tr>
-            <tr className="rounded-xl shadow-lg shadow-[#87CEEB]/25">
+            <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow">
               <td></td>
               <td className="py-3">
                 <div className="flex gap-2">
