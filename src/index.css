@@ -16,3 +16,10 @@ body {
     box-shadow: 0px 4px 10px 0px rgba(135, 206, 235, 0.24);
   }
 }
+
+input:checked + div {
+  @apply border-[#99C3FF];
+}
+input:checked + div svg {
+  @apply block;
+}
