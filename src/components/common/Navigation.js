@@ -50,6 +50,9 @@ const Navigation = () => {
                         <li>
                           <Link to="/single-product">Single Product</Link>
                         </li>
+                        <li>
+                          <Link to="/desktop-ten">Desktop 10</Link>
+                        </li>
                       </ul>
                     </Disclosure.Panel>
                   </>
