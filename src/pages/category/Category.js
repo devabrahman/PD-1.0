@@ -17,7 +17,7 @@ const Category = () => {
         <Breadcrumbs rootTitle="Category" subTitle="Category" />
         <table className="w-full table-auto mt-14">
           <thead className="uppercase font-medium text-[#5798F6] text-sm">
-            <tr className=" font-medium">
+            <tr className="font-medium">
               <th className="w-5"></th>
               <th className="font-medium">THUMBNAIL</th>
               <th className="font-medium">ID</th>
@@ -51,9 +51,9 @@ const Category = () => {
             </tr>
           </thead>
           <tbody className="">
-            <tr className="rounded-xl shadow-xl shadow-[#87CEEB]/40">
+            <tr className="rounded-xl shadow-md shadow-[#87CEEB] input-back-box-shadow">
               <td></td>
-              <td className="py-3">
+              <td className="py-2">
                 <div className="flex gap-2 items-center">
                   <RightMarkIcon />
                   <AstroIcon />
@@ -73,9 +73,9 @@ const Category = () => {
                 <DeleteIcon />
               </td>
             </tr>
-            <tr className="rounded-xl shadow-xl shadow-[#87CEEB]/25">
+            <tr className="rounded-xl shadow-md shadow-[#87CEEB] input-back-box-shadow">
               <td></td>
-              <td className="py-3">
+              <td className="py-2">
                 <div className="flex gap-2">
                   <RectangleIcon />
                   <AstroIcon />
