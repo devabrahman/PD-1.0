@@ -3,6 +3,7 @@ import NewCategory from 'pages/category/NewCategory';
 import EditCategory from 'pages/category/EditCategory';
 import OrderDetails from 'pages/orders/OrderDetails';
 import Orders from 'pages/orders/Orders';
+import DesktopTen from 'pages/product/DesktopTen';
 import EditProducts from 'pages/product/EditProducts';
 import NewProducts from 'pages/product/NewProducts';
 import Products from 'pages/product/Products';
@@ -26,6 +27,7 @@ const AppRoutes = () => {
         <Route path="/new-product" element={<NewProducts />} />
         <Route path="/edit-product" element={<EditProducts />} />
         {/* <Route path="/variable-product" element={<SingleProductsNew />} /> */}
+        <Route path="/desktop-ten" element={<DesktopTen />} />
 
         {/* Category */}
         <Route path="/categories" element={<Category />} />

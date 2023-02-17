@@ -18,7 +18,7 @@ const Products = () => {
         <Breadcrumbs rootTitle="Products" subTitle="Products" />
         <table className="w-full table-auto mt-14">
           <thead className="uppercase font-medium text-[#5798F6] text-sm">
-            <tr className=" font-medium">
+            <tr className="font-medium">
               <th className="w-5"></th>
               <th className=" font-medium">THUMBNAIL</th>
               <th className=" font-medium">PRODUCT</th>

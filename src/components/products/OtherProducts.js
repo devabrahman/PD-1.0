@@ -1,6 +1,7 @@
 import RectangleIcon from 'components/SVGIcons/RectangleIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import StarIcon from 'components/SVGIcons/StarIcon';
+import { AiFillStar } from 'react-icons/ai';
 
 const OtherProducts = () => {
   return (
@@ -65,6 +66,7 @@ const OtherProducts = () => {
           <td className="px-16">$369</td>
           <td className="px-12">
             <StarIcon />
+            <AiFillStar className="text-gold w-[21px] h-[21px]" />
           </td>
           <td className="px-8">
             <div className="w-full bg-[#c6ecfb] rounded-full h-0.5 dark:bg-[#c6ecfb]">
