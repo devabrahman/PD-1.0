@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Layout = ({ title, children }) => {
   return (
-    <section className="grid grid-cols-12 h-screen overflow-hidden">
+    <section className="grid grid-cols-12 h-screen overflow-hidden overflow-y-scroll">
       <section className="col-start-1 col-end-3">
         <div className="bg-blue-50 w-full h-full block">
           <Navigation />
