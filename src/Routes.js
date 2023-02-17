@@ -1,5 +1,6 @@
 import Category from 'pages/category/Category';
 import NewCategory from 'pages/category/NewCategory';
+import EditCategory from 'pages/category/EditCategory';
 import OrderDetails from 'pages/orders/OrderDetails';
 import Orders from 'pages/orders/Orders';
 import EditProducts from 'pages/product/EditProducts';
@@ -29,6 +30,7 @@ const AppRoutes = () => {
         {/* Category */}
         <Route path="/categories" element={<Category />} />
         <Route path="/new-category" element={<NewCategory />} />
+        <Route path="/edit-category" element={<EditCategory />} />
 
         {/* Tags */}
         <Route path="/tags" element={<Tags />} />
