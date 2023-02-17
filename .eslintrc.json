@@ -12,9 +12,10 @@
   },
   "plugins": ["react"],
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off"
   }
 }
 
-// TODO: @sumon and @me need to check is eslint configuration 
+// TODO: @sumon and @me need to check is eslint configuration
 // is standard for themeforest or not BEFORE pushing to themeforest

@@ -12,7 +12,7 @@ const Tags = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <Layout title="Category">
+      <Layout title="Tags">
         <Breadcrumbs rootTitle="Tags" subTitle="Tags" />
 
         <table className="w-full table-auto mt-14">
