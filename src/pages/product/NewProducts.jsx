@@ -29,7 +29,7 @@ const NewProducts = () => {
 
             <h3 className="font-medium text-lg mb-2 mt-6">Product description</h3>
             <textarea
-              className="w-full rounded-xl border border-pdGrey/70 h-48 input-back-box-shadow"
+              className="w-full rounded-xl border border-pdGrey/70 h-72 input-back-box-shadow"
               type="text"
               name="productTitle"
               id=""
@@ -37,7 +37,7 @@ const NewProducts = () => {
 
             <h3 className="font-medium text-lg mb-2 mt-6">Product long description</h3>
             <textarea
-              className="w-full rounded-xl border border-pdGrey/70 h-48 input-back-box-shadow"
+              className="w-full rounded-xl border border-pdGrey/70 h-72 input-back-box-shadow"
               type="text"
               name="productTitle"
               id=""
