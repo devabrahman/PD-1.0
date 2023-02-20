@@ -1,11 +1,11 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
+import DeletePopup from 'components/common/DeletePopup';
 import Layout from 'components/common/Layout';
-import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
+import Pagination from 'components/common/Pagination';
 import RectangleIcon from 'components/SVGIcons/RectangleIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
-import DeletePopup from 'components/common/DeletePopup';
-import Pagination from 'components/common/Pagination';
 import { useState } from 'react';
+import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 
 const OrderDetails = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ const OrderDetails = () => {
     <>
       <Layout title="Orders">
         <Breadcrumbs rootTitle="Orders" subTitle="Orders Details " />
-        <table className="w-full table-auto mt-14">
+        <table className="w-full  table-auto mt-14 border-spacing-y-5 border-separate">
           <thead className="uppercase font-medium text-[#5798F6] text-sm">
             <tr className="font-medium">
               <th className="w-5"></th>
@@ -73,7 +73,8 @@ const OrderDetails = () => {
               </th>
             </tr>
           </thead>
-          <tbody className="">
+
+          <tbody>
             <tr className="rounded-xl shadow-md shadow-[#87CEEB] input-back-box-shadow">
               <td className="py-2">
                 <div className="flex gap-2 items-center">

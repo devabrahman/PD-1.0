@@ -1,7 +1,7 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
 // import ImageDropDown from 'components/common/ImageDropDown';
 import Layout from 'components/common/Layout';
-import ProductPic from '../../assets/Images/categories/ProductImage.png';
+import productPic from '../../assets/Images/categories/ProductImage.png';
 
 const EidtCategory = () => {
   return (
@@ -9,8 +9,8 @@ const EidtCategory = () => {
       <Breadcrumbs rootTitle="Category" subTitle="Edit" />
       <div className="flex mt-5">
         <div className="grid justify-items-center  bg-white w-8/12 ml-5 mr-0">
-          <div className="bg-white shadow-xl h-1/2 w-9/12 flex justify-center">
-            <img src={ProductPic} alt="Category Icon" className=" w-8/12 h-3/5 mt-20" />
+          <div className="bg-white rounded-lg shadow-xl h-1/2 w-9/12 flex justify-center">
+            <img src={productPic} alt="Category Icon" className="w-8/12 h-3/5 mt-20" />
           </div>
         </div>
         <form className="w-full h-auto mx-5">
@@ -48,7 +48,7 @@ const EidtCategory = () => {
               <label className="flex justify-center w-full h-44 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-3xl appearance-none cursor-pointer hover:border-gray-400 focus:outline-none items-center">
                 <div className="">
                   <div className="flex justify-center py-3">
-                    <img src={ProductPic} alt="Category Icon" className="w-20 h-20" />
+                    <img src={productPic} alt="Category Icon" className="w-20 h-20" />
                   </div>
                 </div>
                 <input type="file" name="file_upload" className="hidden" />

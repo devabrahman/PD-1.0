@@ -1,13 +1,13 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
+import DeletePopup from 'components/common/DeletePopup';
 import Layout from 'components/common/Layout';
-import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import AstroIcon from 'components/SVGIcons/AstroIcon';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import EditIcon from 'components/SVGIcons/Editicon';
 import RectangleIcon from 'components/SVGIcons/RectangleIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
-import DeletePopup from 'components/common/DeletePopup';
 import { useState } from 'react';
+import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 
 const Category = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,7 @@ const Category = () => {
     <>
       <Layout title="Category">
         <Breadcrumbs rootTitle="Category" subTitle="Category" />
-        <table className="w-full table-auto mt-14">
+        <table className="w-full table-auto mt-14 border-spacing-y-5 border-separate">
           <thead className="uppercase font-medium text-[#5798F6] text-sm">
             <tr className="font-medium">
               <th className="w-5"></th>
