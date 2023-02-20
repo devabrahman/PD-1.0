@@ -26,7 +26,6 @@ const Layout = ({ title, children }) => {
               <TopOptions />
             </div>
             <Link to="/vendor-profile">
-              Tags
               <img src="assets/images/avatar.png" className="h-16 w-16 rounded-full ml-2" />
             </Link>
           </div>
