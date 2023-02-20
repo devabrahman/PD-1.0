@@ -1,7 +1,7 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
 // import ImageDropDown from 'components/common/ImageDropDown';
 import Layout from 'components/common/Layout';
-import ProductPic from '../../assets/Images/Categories/ProductImage.png';
+import ProductPic from '../../assets/Images/categories/ProductImage.png';
 
 const EidtCategory = () => {
   return (
