@@ -6,7 +6,8 @@ const Bell = ({ className }) => {
       viewBox="0 0 26 26"
       fill="none"
       className={className}
-      xmlns="http://www.w3.org/2000/svg">
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink">
       <rect width="26" height="26" fill="url(#pattern0)" />
       <defs>
         <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
