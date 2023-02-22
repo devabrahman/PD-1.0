@@ -1,14 +1,13 @@
-import Navigation from 'components/common/Navigation';
-import OptionIcon from '../../assets/Images/products/OptionIcon.png';
-import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
-import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import { PlusIcon } from '@heroicons/react/24/outline';
-import SettingIcon from 'components/SVGIcons/SettingIcon';
+import Navigation from 'components/common/Navigation';
+import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import EditIcon from 'components/SVGIcons/Editicon';
-import { BiX, BiChevronDown } from 'react-icons/bi';
-import RectangleIcon from 'components/SVGIcons/RectangleIcon';
-import ShippingIcon from '../../assets/Images/products/ShippingIcon.png';
+import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
+import SettingIcon from 'components/SVGIcons/SettingIcon';
+import { BiX } from 'react-icons/bi';
+import OptionIcon from '../../assets/Images/products/OptionIcon.png';
 import SearchEngineIcon from '../../assets/Images/products/SearchEngineIcon.png';
+import ShippingIcon from '../../assets/Images/products/ShippingIcon.png';
 
 const DesktopTen = () => {
   return (
@@ -245,168 +244,6 @@ const DesktopTen = () => {
                   <BiX />
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="my-10 w-4/6">
-          <div className="flex justify-between">
-            <h5 className="font-medium text-xl ml-2">Variations</h5>
-            <p className="text-accent/80">+ Add another option</p>
-          </div>
-          <div className="border w-full border-[#D6D6D6]/70 rounded-xl my-2">
-            <div className="ml-4 flex items-center py-2">
-              <p className="px-5">Select</p>
-              <p className="text-accent">All</p>
-              <p className="text-accent px-3">None</p>
-              <p className="text-accent flex items-center px-3">
-                <span>Color</span> <BiChevronDown className="w-5 h-5" />
-              </p>
-              <p className="text-accent flex items-center px-3">
-                <span>Storage</span> <BiChevronDown className="w-5 h-5" />
-              </p>
-              <p className="text-accent flex items-center px-3">
-                <span>Ram</span> <BiChevronDown className="w-5 h-5" />
-              </p>
-            </div>
-            <hr className="w-full" />
-
-            <div className="relative overflow-x-auto">
-              <table className="w-full text-sm text-left">
-                <thead className="text-xs">
-                  <tr className="border-b text-[#848484] dark:border-[#E6E6E6]">
-                    <th scope="col" className="pl-3 py-3">
-                      <RectangleIcon />
-                    </th>
-                    <th scope="col" className="py-3">
-                      Variant
-                    </th>
-                    <th scope="col" className="px-4 py-3">
-                      Price
-                    </th>
-                    <th scope="col" className="px-4 py-3">
-                      Quantity
-                    </th>
-                    <th scope="col" className="px-4 py-3">
-                      SKU
-                    </th>
-                    <th scope="col" className="px-6 py-3"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b dark:border-[#E6E6E6]">
-                    <th scope="row" className="pl-3 py-3 font-medium whitespace-nowrap flex">
-                      <RightMarkIcon />
-                      <RightMarkIcon />
-                    </th>
-                    <td className="py-3">Black/256GB/8GB</td>
-                    <td className="py-3">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        className="border border-[#B9B9B9] h-9 rounded-xl pr-1.5 mr-6 w-24"
-                        placeholder=""
-                      />
-                    </td>
-                    <td className="py-3">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        className="border border-[#B9B9B9] h-9 rounded-xl pr-1.5 mr-6 w-24"
-                        placeholder=""
-                      />
-                    </td>
-                    <td className="py-3">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        className="border border-[#B9B9B9] h-9 rounded-xl pr-1.5 mr-6 w-24"
-                        placeholder=""
-                      />
-                    </td>
-                    <td className="py-3">
-                      <EditIcon />
-                    </td>
-                  </tr>
-                  <tr className="border-b dark:border-[#E6E6E6]">
-                    <th scope="row" className="pl-3 py-3 font-medium whitespace-nowrap flex">
-                      <RightMarkIcon />
-                      <RightMarkIcon />
-                    </th>
-                    <td className="py-3">Black/256GB/8GB</td>
-                    <td className="py-3">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        className="border border-[#B9B9B9] h-9 rounded-xl pr-1.5 mr-6 w-24"
-                        placeholder=""
-                      />
-                    </td>
-                    <td className="py-3">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        className="border border-[#B9B9B9] h-9 rounded-xl pr-1.5 mr-6 w-24"
-                        placeholder=""
-                      />
-                    </td>
-                    <td className="py-3">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        className="border border-[#B9B9B9] h-9 rounded-xl pr-1.5 mr-6 w-24"
-                        placeholder=""
-                      />
-                    </td>
-                    <td className="py-3">
-                      <EditIcon />
-                    </td>
-                  </tr>
-                  <tr className="border-b dark:border-[#E6E6E6]">
-                    <th scope="row" className="pl-3 py-3 font-medium whitespace-nowrap flex">
-                      <RightMarkIcon />
-                      <RightMarkIcon />
-                    </th>
-                    <td className="py-3">Black/256GB/8GB</td>
-                    <td className="py-3">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        className="border border-[#B9B9B9] h-9 rounded-xl pr-1.5 mr-6 w-24"
-                        placeholder=""
-                      />
-                    </td>
-                    <td className="py-3">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        className="border border-[#B9B9B9] h-9 rounded-xl pr-1.5 mr-6 w-24"
-                        placeholder=""
-                      />
-                    </td>
-                    <td className="py-3">
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        className="border border-[#B9B9B9] h-9 rounded-xl pr-1.5 mr-6 w-24"
-                        placeholder=""
-                      />
-                    </td>
-                    <td className="py-3">
-                      <EditIcon />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
             </div>
           </div>
         </div>

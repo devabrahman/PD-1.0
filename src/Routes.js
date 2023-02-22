@@ -1,6 +1,6 @@
 import Category from 'pages/category/Category';
-import NewCategory from 'pages/category/NewCategory';
 import EditCategory from 'pages/category/EditCategory';
+import NewCategory from 'pages/category/NewCategory';
 import OrderDetails from 'pages/orders/OrderDetails';
 import Orders from 'pages/orders/Orders';
 import DesktopTen from 'pages/product/DesktopTen';
@@ -9,8 +9,9 @@ import NewProducts from 'pages/product/NewProducts';
 import Products from 'pages/product/Products';
 import SingleProduct from 'pages/product/SingleProduct';
 // import SingleProductsNew from 'pages/product/VariableProduct';
-import Profile from 'pages/Profile';
 import Tags from 'pages/Tags';
+import ProfileEdit from 'pages/userProfile/ProfileEdit';
+import VendorProfile from 'pages/userProfile/VendorProfile';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 // importing pages
@@ -42,7 +43,8 @@ const AppRoutes = () => {
         <Route path="/order-details" element={<OrderDetails />} />
 
         {/* Profile */}
-        <Route path="/vendor-profile" element={<Profile />} />
+        <Route path="/vendor-profile" element={<VendorProfile />} />
+        <Route path="/vendor-profile-edit" element={<ProfileEdit />} />
       </Routes>
     </BrowserRouter>
   );

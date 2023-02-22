@@ -9,22 +9,21 @@ import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import { useState } from 'react';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 
-const Products = () => {
+const Category = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <Layout title="Category">
-        <Breadcrumbs rootTitle="Products" subTitle="Products" />
-        <table className="w-full table-auto mt-14">
+        <Breadcrumbs rootTitle="Category" subTitle="Category" />
+        <table className="w-full table-auto mt-14 border-spacing-y-5 border-separate">
           <thead className="uppercase font-medium text-[#5798F6] text-sm">
             <tr className="font-medium">
               <th className="w-5"></th>
-              <th className=" font-medium">THUMBNAIL</th>
-              <th className=" font-medium">PRODUCT</th>
+              <th className="font-medium">THUMBNAIL</th>
+              <th className="font-medium">ID</th>
               <th>
                 <div className="flex items-center">
-                  <span className=" font-medium"> PRICE</span>
+                  <span className=" font-medium"> TITLE</span>
                   <div className="bg-[#87CEEB]/10 mx-5">
                     <BiChevronUp />
                     <BiChevronDown />
@@ -33,7 +32,7 @@ const Products = () => {
               </th>
               <th>
                 <div className="flex items-center">
-                  <span className=" font-medium">SKU</span>
+                  <span className=" font-medium">SLUG</span>
                   <div className="bg-[#87CEEB]/10 mx-5">
                     <BiChevronUp />
                     <BiChevronDown />
@@ -42,50 +41,31 @@ const Products = () => {
               </th>
               <th>
                 <div className="flex items-center">
-                  <span className=" font-medium">QUANTITY</span>
+                  <span className=" font-medium">Count</span>
                   <div className="bg-[#87CEEB]/10 mx-5">
                     <BiChevronUp />
                     <BiChevronDown />
                   </div>
                 </div>
               </th>
-              <th>
-                <div className="flex items-center">
-                  <span className=" font-medium"> STATUS</span>
-                  <div className="bg-[#87CEEB]/10 mx-5">
-                    <BiChevronUp />
-                    <BiChevronDown />
-                  </div>
-                </div>
-              </th>
-              <th className=""></th>
-              <th className=""></th>
-              <th></th>
             </tr>
           </thead>
           <tbody className="">
-            <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow">
+            <tr className="rounded-xl shadow-md shadow-[#87CEEB] input-back-box-shadow">
               <td></td>
-              <td className="py-3">
+              <td className="py-2">
                 <div className="flex gap-2 items-center">
                   <RightMarkIcon />
                   <AstroIcon />
                 </div>
               </td>
-              <td className="flex items-center flex-col">
-                <div className="py-4">
-                  <p>Mackbook Pro</p>
-                  <p className="text-xs text-[rgb(185,185,185)]">Laptop</p>
-                </div>
-              </td>
-              <td className="">$149</td>
-              <td className="">113213</td>
-              <td className="">0</td>
               <td className="">
-                <span className="text-green bg-green/20 rounded-md text-sm py-1.5 px-3 font-medium">
-                  In Stock
-                </span>
+                <p>#194556</p>
               </td>
+              <td className="">Angular</td>
+              <td className="">/angular</td>
+              <td className="">1</td>
+              <td></td>
               <td className="cursor-pointer">
                 <EditIcon />
               </td>
@@ -93,28 +73,21 @@ const Products = () => {
                 <DeleteIcon />
               </td>
             </tr>
-            <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow">
+            <tr className="rounded-xl shadow-md shadow-[#87CEEB] input-back-box-shadow">
               <td></td>
-              <td className="py-3">
+              <td className="py-2">
                 <div className="flex gap-2">
                   <RectangleIcon />
                   <AstroIcon />
                 </div>
               </td>
-              <td className="flex items-center flex-col">
-                <div className="py-4">
-                  <p>Mackbook Pro</p>
-                  <p className="text-xs text-[rgb(185,185,185)]">Laptop</p>
-                </div>
+              <td>
+                <p>#194556</p>
               </td>
-              <td className="">$149</td>
-              <td className="">113213</td>
-              <td className="">0</td>
-              <td className="">
-                <span className="text-[#F4316B] bg-[#FF3300]/10 rounded-md text-sm py-1.5 px-3 font-medium h-min">
-                  Out of Stock
-                </span>
-              </td>
+              <td className="">FlowbiteJS</td>
+              <td className="">/angular</td>
+              <td className="">2</td>
+              <td></td>
               <td className="cursor-pointer">
                 <EditIcon />
               </td>
@@ -130,4 +103,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Category;

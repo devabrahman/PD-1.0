@@ -1,7 +1,7 @@
 import { Dialog } from '@headlessui/react';
 import PropTypes from 'prop-types';
 import { BsXLg } from 'react-icons/bs';
-import DeletePopupIcon from '../../assets/Images/DeletePopupIcon.png';
+import DeletePopupIcon from '../../assets/Images/common/DeletePopupIcon.png';
 
 const DeletePopup = ({ isOpen, setIsOpen }) => {
   return (
