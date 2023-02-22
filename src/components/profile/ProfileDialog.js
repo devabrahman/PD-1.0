@@ -22,16 +22,13 @@ const ProfileDialog = () => {
             <h2 className="text-[#302323] font-medium">Profile</h2>
             <div className="p-2">
               <div className="flex items-center gap-2 mb-5">
-                <Link to="/vendor-profile">
-                  <div className="w-9 h-9 rounded-full">
-                    <img className="w-full" src={profile} alt="Profile" />
-                  </div>
-                  <div>
-                    <h2 className="text-[#302323] font-medium">Amantony Rojario</h2>
-                    <p className="text-xs text-[#9F9FA2] font-medium">aman564@gmail.com</p>
-                  </div>
-                </Link>
-                ;
+                <div className="w-9 h-9 rounded-full">
+                  <img className="w-full" src={profile} alt="Profile" />
+                </div>
+                <div>
+                  <h2 className="text-[#302323] font-medium">Amantony Rojario</h2>
+                  <p className="text-xs text-[#9F9FA2] font-medium">aman564@gmail.com</p>
+                </div>
               </div>
               <a href="" className="flex items-center gap-4 mb-5">
                 <div className="w-6">
@@ -83,9 +80,9 @@ const ProfileDialog = () => {
           </div>
           <hr />
           <div className="py-5 px-7">
-            <a className="text-[#5798F7] font-medium" href="#">
+            <Link to="/vendor-profile" className="text-[#5798F7] font-medium">
               View full profile
-            </a>
+            </Link>
           </div>
         </div>
       </Popover.Panel>
