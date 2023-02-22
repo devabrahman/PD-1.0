@@ -7,7 +7,7 @@ const ProfileEdit = () => {
   return (
     <Layout title="">
       <section>
-        <div className="w-[492px] mx-auto py-5">
+        <div className="w-[492px] mx-auto mb-20">
           <h3 className="text-xl font-medium text-[#302323]">Edit profile</h3>
           <div className="w-[130px] h-[130px] mx-auto rounded-full shadow-lg shadow-[#87ceeb40] p-1 relative mb-10">
             <img className="w-full" src={profile} alt="Profile" />
