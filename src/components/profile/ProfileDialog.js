@@ -88,7 +88,6 @@ const ProfileDialog = () => {
             </a>
           </div>
         </div>
-        ;
       </Popover.Panel>
     </Popover>
   );
