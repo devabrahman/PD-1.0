@@ -1,4 +1,5 @@
 import Layout from 'components/common/Layout';
+import ProfileDialog from 'components/profile/ProfileDialog';
 import profile from '../../assets/Images/common/profile.png';
 import bg from '../../assets/Images/common/vendor-profile-bg.png';
 import check from '../../assets/Images/icons/check.png';
@@ -112,6 +113,7 @@ const VendorProfile = () => {
           </div>
         </div>
       </section>
+      <ProfileDialog />
     </Layout>
   );
 };
