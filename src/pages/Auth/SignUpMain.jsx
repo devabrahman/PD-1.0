@@ -1,4 +1,5 @@
 import BgShadow from 'components/SVGIcons/BgShadow';
+import { Link } from 'react-router-dom';
 import eye from '../../assets/Images/auth/eye.png';
 import facebook from '../../assets/Images/auth/facebook.png';
 import google from '../../assets/Images/auth/google.png';
@@ -91,7 +92,9 @@ const SignUp = () => {
                   <div className="flex justify-center">
                     <p className="flex gap-3 items-center font-medium text-sm">
                       <span className="text-[#535353]">Already have an account?</span>
-                      <span className="text-[#F4316B]">Sign in</span>
+                      <Link to="/signin">
+                        <span className="text-[#F4316B]">Sign In</span>
+                      </Link>
                     </p>
                   </div>
                 </div>
