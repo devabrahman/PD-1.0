@@ -1,9 +1,6 @@
-import React from 'react';
 
 const TagIcon = () => {
-  return (
-    
-  );
+  return <div className=""></div>;
 };
 
 export default TagIcon;
