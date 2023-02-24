@@ -14,13 +14,7 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off"
-  },
-  "prettier/prettier": [
-    "error",
-    {
-      "endOfLine": "auto"
-    }
-  ]
+  }
 }
 
 // TODO: @sumon and @me need to check is eslint configuration
