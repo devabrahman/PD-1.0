@@ -1,3 +1,4 @@
+import SignUp from 'pages/auth/SignUpMain';
 import Category from 'pages/category/Category';
 import EditCategory from 'pages/category/EditCategory';
 import NewCategory from 'pages/category/NewCategory';
@@ -22,6 +23,9 @@ const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* Auth */}
+        <Route path="sign-up" element={<SignUp />} />
+
         {/* Products */}
         <Route path="/products" element={<Products />} />
         <Route path="/single-product" element={<SingleProduct />} />
