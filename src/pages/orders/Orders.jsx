@@ -39,7 +39,7 @@ const Orders = () => {
               <p className="text-xl text-[#302323]">
                 Order no. <span className="font-medium">#241342</span>{' '}
                 <em className="text-[#3023234d]">
-                  on <time>23.02.2021</time>{' '}
+                  on <time>23.02.2021</time>
                 </em>
               </p>
             </div>
@@ -56,7 +56,7 @@ const Orders = () => {
               <div className="grid">
                 <div className="flex items-center gap-3">
                   <div className="w-[26px] h-[26px]">
-                    <img className="w-full" src={Bell} alt="Bell icon" />
+                    <Bell className="w-full" />
                   </div>
                   <div>
                     <h4 className="text-[#536571] text-sm font-medium">Order received</h4>
@@ -66,7 +66,7 @@ const Orders = () => {
                 <span className="w-[1.5px] h-7 rounded-xl bg-[#89abdc54] ml-3"></span>
                 <div className="flex items-center gap-3">
                   <div className="w-[26px] h-[26px]">
-                    <img className="w-full" src={HtmlIcon} alt="Html icon" />
+                    <HtmlIcon className="w-full" />
                   </div>
                   <div>
                     <h4 className="text-[#536571] text-sm font-medium">Generate order id</h4>
@@ -77,7 +77,7 @@ const Orders = () => {
                 <span className="w-[1.5px] h-7 rounded-xl bg-[#89abdc54] ml-3"></span>
                 <div className="flex items-center gap-3">
                   <div className="w-[26px] h-[26px]">
-                    <img className="w-full" src={Cart} alt="Cart icon" />
+                    <Cart className="w-full" />
                   </div>
                   <div>
                     <h4 className="text-[#536571] text-sm font-medium">
@@ -89,7 +89,7 @@ const Orders = () => {
                 <span className="w-[1.5px] h-7 rounded-xl bg-[#89abdc54] ml-3"></span>
                 <div className="flex items-center gap-3">
                   <div className="w-[26px] h-[26px]">
-                    <img className="w-full" src={Check} alt="Check icon" />
+                    <Check className="w-full" />
                   </div>
                   <div>
                     <h4 className="text-[#536571] text-sm font-medium">Order delivered</h4>
