@@ -7,7 +7,7 @@ import image1 from '../../assets/Images/auth/image1.png';
 import image2 from '../../assets/Images/auth/image2.png';
 import twitter from '../../assets/Images/auth/twitter.png';
 
-const SignUp = () => {
+const SignUpMain = () => {
   return (
     <section className="relative bg-[#F3F5F9] min-h-screen py-10">
       <div className="flex items-center gap-28 max-w-[1400px] mx-auto">
@@ -115,4 +115,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUpMain;
