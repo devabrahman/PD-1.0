@@ -1,8 +1,12 @@
-import React from 'react';
-
-const RightMarkIcon = () => {
+const RightMarkIcon = ({ className }) => {
   return (
-    <svg width="42" height="41" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="42"
+      height="41"
+      viewBox="0 0 42 41"
+      fill="none"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d_208_524)">
         <rect x="9" y="7" width="20" height="20" rx="7" fill="url(#paint0_radial_208_524)" />
       </g>
