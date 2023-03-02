@@ -5,9 +5,9 @@ import { BsQuestionLg } from 'react-icons/bs';
 import { IoIosArrowDown } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
-import orderIcon from '../../assets/Images/icons/order-nav-icon.png';
-import productIcon from '../../assets/Images/icons/product-nav-icon.png';
-import tagIcon from '../../assets/Images/icons/tag-nav-icon.png';
+import orderIcon from '../../../assets/Images/icons/order-nav-icon.png';
+import productIcon from '../../../assets/Images/icons/product-nav-icon.png';
+import tagIcon from '../../../assets/Images/icons/tag-nav-icon.png';
 
 const Navigation = () => {
   return (

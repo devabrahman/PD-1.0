@@ -1,5 +1,5 @@
 import { PlusIcon } from '@heroicons/react/24/outline';
-import Navigation from 'components/common/Navigation';
+import Navigation from 'components/common/navigations/Navigation';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import EditIcon from 'components/SVGIcons/Editicon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';

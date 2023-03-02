@@ -1,7 +1,7 @@
 import { Popover, Transition } from '@headlessui/react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
-const TopOptions = () => {
+const TopOptions = ({ navigationPosition, setNavigationPosition }) => {
   return (
     <Popover className="relative">
       {() => (
@@ -60,16 +60,43 @@ const TopOptions = () => {
               <>
                 <div className="w-[320px] pt-[30px] pb-12 mt-4 px-6  mx-auto rounded-3xl drop-shadow-2xl bg-white  border-transparent border">
                   <ul className=" flex gap-[14px] justify-start ">
-                    <li className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
-                      <span className="w-[25px] h-1 rounded-md bg-gray-300 text-center absolute top-2 left-1"></span>
+                    <li
+                      onClick={() => {
+                        setNavigationPosition('top');
+                      }}
+                      className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
+                      <span
+                        className={`w-[25px] h-1 rounded-md ${
+                          navigationPosition === 'top' ? 'bg-primary' : 'bg-gray-300'
+                        }  text-center absolute top-2 left-1`}></span>
                     </li>
-                    <li className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
-                      <span className="w-[25px] h-1 rounded-md bg-gray-300 text-center absolute top-2 left-1"></span>
-                      <span className="h-[20px] w-1 rounded-md bg-gray-300 text-center absolute top-2 left-[18px]"></span>
+                    <li
+                      onClick={() => {
+                        setNavigationPosition('top-right');
+                      }}
+                      className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
+                      <span
+                        className={`w-[25px] h-1 rounded-md ${
+                          navigationPosition === 'top-right' ? 'bg-primary' : 'bg-gray-300'
+                        } text-center absolute top-2 left-1`}></span>
+                      <span
+                        className={`h-[20px] w-1 rounded-md ${
+                          navigationPosition === 'top-right' ? 'bg-primary' : 'bg-gray-300'
+                        } text-center absolute top-2 left-[18px]`}></span>
                     </li>
-                    <li className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
-                      <span className="w-[25px] h-1 rounded-md bg-gray-300 text-center absolute top-2 left-1"></span>
-                      <span className="h-[20px] w-1 rounded-md bg-gray-300 text-center absolute top-2 left-[10px]"></span>
+                    <li
+                      onClick={() => {
+                        setNavigationPosition('top-left');
+                      }}
+                      className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
+                      <span
+                        className={`w-[25px] h-1 rounded-md ${
+                          navigationPosition === 'top-left' ? 'bg-primary' : 'bg-gray-300'
+                        } text-center absolute top-2 left-1`}></span>
+                      <span
+                        className={`h-[20px] w-1 rounded-md  ${
+                          navigationPosition === 'top-left' ? 'bg-primary' : 'bg-gray-300'
+                        } text-center absolute top-2 left-[10px]`}></span>
                     </li>
 
                     <li className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
