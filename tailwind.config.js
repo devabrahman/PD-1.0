@@ -12,7 +12,8 @@ module.exports = {
       },
       fontFamily: {
         primary: ['Poppins', 'sans-serif'],
-        secondary: ['Montserrat', 'sans-serif']
+        secondary: ['Montserrat', 'sans-serif'],
+        DMSons: ['DM Sans', 'sans-serif']
       }
     }
   },
