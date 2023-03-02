@@ -1,10 +1,10 @@
-import Navigation from 'components/common/Navigation';
-import OptionIcon from '../../assets/Images/products/OptionIcon.png';
-import ShippingIcon from '../../assets/Images/products/ShippingIcon.png';
-import SearchEngineIcon from '../../assets/Images/products/SearchEngineIcon.png';
-import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
-import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import { PlusIcon } from '@heroicons/react/24/outline';
+import Navigation from 'components/common/navigations/Navigation';
+import DeleteIcon from 'components/SVGIcons/DeleteIcon';
+import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
+import OptionIcon from '../../assets/Images/products/OptionIcon.png';
+import SearchEngineIcon from '../../assets/Images/products/SearchEngineIcon.png';
+import ShippingIcon from '../../assets/Images/products/ShippingIcon.png';
 
 const VariableProduct = () => {
   return (

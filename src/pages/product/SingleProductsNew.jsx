@@ -1,7 +1,7 @@
-import Navigation from 'components/common/Navigation';
+import Navigation from 'components/common/navigations/Navigation';
 import OptionIcon from '../../assets/Images/products/OptionIcon.png';
-import ShippingIcon from '../../assets/Images/products/ShippingIcon.png';
 import SearchEngineIcon from '../../assets/Images/products/SearchEngineIcon.png';
+import ShippingIcon from '../../assets/Images/products/ShippingIcon.png';
 
 const SingleProductsNew = () => {
   return (
