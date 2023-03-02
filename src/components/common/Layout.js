@@ -6,15 +6,26 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 const Layout = ({ title, children }) => {
-  const [navigationPosition, setNavigationPosition] = useState('left');
+  const [navigationPosition, setNavigationPosition] = useState('top-left');
+
   return (
     <section className="grid grid-cols-12 h-screen overflow-hidden overflow-y-scroll">
-      <section className="col-start-1 col-end-3">
+      <section
+        className={
+          navigationPosition === 'top-left'
+            ? 'col-start-1 col-end-3'
+            : navigationPosition === 'top-right' && 'col-start-10 col-end-13 order-2'
+        }>
         <div className="bg-blue-50 w-full h-full block">
           <Navigation />
         </div>
       </section>
-      <section className="col-start-3 col-end-13 ml-8 mr-16">
+      <section
+        className={
+          navigationPosition === 'top-left'
+            ? 'col-start-3 col-end-13 ml-8 mr-16'
+            : navigationPosition === 'top-right' && 'col-start-1 col-end-10 order-1 ml-[70px] mr-9'
+        }>
         <div className="flex justify-between items-center pr-14 mt-8">
           <h2 className="text-[27px] font-medium">{title}</h2>
 
