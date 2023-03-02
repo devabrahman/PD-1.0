@@ -3,8 +3,10 @@ import Navigation from 'components/common/Navigation';
 import ProfileDialog from 'components/profile/ProfileDialog';
 import TopOptions from 'components/SVGIcons/TopOptions';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 const Layout = ({ title, children }) => {
+  const [navigationPosition, setNavigationPosition] = useState('left');
   return (
     <section className="grid grid-cols-12 h-screen overflow-hidden overflow-y-scroll">
       <section className="col-start-1 col-end-3">
@@ -22,7 +24,10 @@ const Layout = ({ title, children }) => {
               <BellAlertIcon className="h-10 w-12 text-blue-400 px-2.5" />
               <span className="h-2 w-2 rounded-full bg-red-400 absolute right-1 top-1"></span>
             </div>
-            <TopOptions />
+            <TopOptions
+              navigationPosition={navigationPosition}
+              setNavigationPosition={(value) => setNavigationPosition(value)}
+            />
             <ProfileDialog />
           </div>
         </div>
