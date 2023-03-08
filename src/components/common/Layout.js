@@ -7,27 +7,27 @@ import Navigation from './navigations/Navigation';
 import TopNavigation from './navigations/TopNavigation';
 
 const Layout = ({ title, children }) => {
-  const [navigationPosition, setNavigationPosition] = useState('top-left');
+  const [navigationPosition, setNavigationPosition] = useState('left');
 
   return (
     <section className="grid grid-cols-12 h-screen overflow-hidden overflow-y-scroll">
       {navigationPosition !== 'top' && (
         <section
           className={
-            navigationPosition === 'top-left'
+            navigationPosition === 'left'
               ? 'col-start-1 col-end-3'
-              : navigationPosition === 'top-right' && 'col-start-11 col-end-13 order-2'
+              : navigationPosition === 'right' && 'col-start-11 col-end-13 order-2'
           }>
-          <div className="bg-blue-50 w-full h-full block">
+          <div className="bg-[#FBFDFF] w-full h-full block">
             <Navigation />
           </div>
         </section>
       )}
       <section
         className={
-          navigationPosition === 'top-left'
+          navigationPosition === 'left'
             ? 'col-start-3 col-end-13 ml-8 mr-16'
-            : navigationPosition === 'top-right'
+            : navigationPosition === 'right'
             ? 'col-start-1 col-end-11 order-1 ml-[70px] mr-9'
             : navigationPosition === 'top' && 'col-start-1 col-end-13'
         }>

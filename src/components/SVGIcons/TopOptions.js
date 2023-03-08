@@ -72,36 +72,31 @@ const TopOptions = ({ navigationPosition, setNavigationPosition }) => {
                     </li>
                     <li
                       onClick={() => {
-                        setNavigationPosition('top-right');
+                        setNavigationPosition('right');
                       }}
                       className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
                       <span
                         className={`w-[25px] h-1 rounded-md ${
-                          navigationPosition === 'top-right' ? 'bg-primary' : 'bg-gray-300'
+                          navigationPosition === 'right' ? 'bg-primary' : 'bg-gray-300'
                         } text-center absolute top-2 left-1`}></span>
                       <span
                         className={`h-[20px] w-1 rounded-md ${
-                          navigationPosition === 'top-right' ? 'bg-primary' : 'bg-gray-300'
+                          navigationPosition === 'right' ? 'bg-primary' : 'bg-gray-300'
                         } text-center absolute top-2 left-[18px]`}></span>
                     </li>
                     <li
                       onClick={() => {
-                        setNavigationPosition('top-left');
+                        setNavigationPosition('left');
                       }}
                       className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
                       <span
                         className={`w-[25px] h-1 rounded-md ${
-                          navigationPosition === 'top-left' ? 'bg-primary' : 'bg-gray-300'
+                          navigationPosition === 'left' ? 'bg-primary' : 'bg-gray-300'
                         } text-center absolute top-2 left-1`}></span>
                       <span
                         className={`h-[20px] w-1 rounded-md  ${
-                          navigationPosition === 'top-left' ? 'bg-primary' : 'bg-gray-300'
+                          navigationPosition === 'left' ? 'bg-primary' : 'bg-gray-300'
                         } text-center absolute top-2 left-[10px]`}></span>
-                    </li>
-
-                    <li className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
-                      <span className="w-[25px] h-1 rounded-md bg-gray-300 text-center absolute top-2 left-1"></span>
-                      <span className="h-[20px] w-1 rounded-md bg-gray-300 text-center absolute top-2 left-[10px]"></span>
                     </li>
                   </ul>
 

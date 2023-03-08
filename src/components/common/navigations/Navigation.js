@@ -19,7 +19,7 @@ const Navigation = () => {
               logo
             </button>
           </div>
-          <div className="">
+          <div className="space-y-8">
             <p className="text-base mx-12">
               <Link to="/">Dashboard</Link>
             </p>
