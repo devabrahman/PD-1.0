@@ -11,6 +11,7 @@ const Layout = ({ title, children }) => {
 
   return (
     <section className="grid grid-cols-12 h-screen overflow-hidden overflow-y-scroll">
+      {/*common navigation for left and right */}
       {navigationPosition !== 'top' && (
         <section
           className={
@@ -23,8 +24,11 @@ const Layout = ({ title, children }) => {
           </div>
         </section>
       )}
+
       <section
         className={
+          //* all navigation position style */
+
           navigationPosition === 'top-left'
             ? 'col-start-3 col-end-13 ml-8 mr-16'
             : navigationPosition === 'top-right'
@@ -33,16 +37,24 @@ const Layout = ({ title, children }) => {
         }>
         <div
           className={`${
+            //common navigation class
             navigationPosition !== 'top' ? 'bg-transparent' : 'bg-[#FBFDFF] mb-[44px]'
           } flex justify-between items-center pr-14 pt-8`}>
+          {/* set navigation position and title*/}
           {navigationPosition !== 'top' && <h2 className="text-[27px] font-medium">{title}</h2>}
+
+          {/* set top navigation base on states */}
           {navigationPosition === 'top' && <TopNavigation className={''} />}
+
+          {/* import top icons */}
           <div className="flex items-center gap-6 ">
             <MagnifyingGlassIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
+
             <div className="relative bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer">
               <BellAlertIcon className="h-10 w-12 text-blue-400 px-2.5" />
               <span className="h-2 w-2 rounded-full bg-red-400 absolute right-1 top-1"></span>
             </div>
+
             <TopOptions
               navigationPosition={navigationPosition}
               setNavigationPosition={(value) => setNavigationPosition(value)}
@@ -50,6 +62,8 @@ const Layout = ({ title, children }) => {
             <ProfileDialog />
           </div>
         </div>
+
+        {/* Top navigation and title */}
         <div className={navigationPosition === 'top' && 'ml-[75px] mr-[96px]'}>
           {navigationPosition === 'top' && <h2 className="text-[27px] font-medium">{title}</h2>}
           {children}
