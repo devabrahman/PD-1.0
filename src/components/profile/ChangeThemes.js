@@ -40,9 +40,7 @@ function ChangeThemes({ className }) {
           }  rounded-lg py-1.5 px-2.5`}
           onClick={() => applyTheme('dark')}>
           <MoonIcon
-            className={`w-[20px] ${
-              selectedIndex === 1 && 'text-white dark:bg-[#474950] fill-white'
-            }`}
+            className={`w-[20px] ${selectedIndex === 1 && 'text-[#87D3EB] fill-[#87D3EB]'}`}
           />{' '}
           Dark
         </Tab>
