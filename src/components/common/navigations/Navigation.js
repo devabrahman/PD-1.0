@@ -8,17 +8,18 @@ import { Link } from 'react-router-dom';
 import orderIcon from '../../../assets/Images/icons/order-nav-icon.png';
 import productIcon from '../../../assets/Images/icons/product-nav-icon.png';
 import tagIcon from '../../../assets/Images/icons/tag-nav-icon.png';
+import logo from '../../../assets/Images/common/logo.png'; //src\assets\Images\common\logo.png
 
 const Navigation = () => {
   return (
     <>
       <div className="px-3 py-6 flex flex-col relative">
         <div className="">
-          <div className="mb-10 ml-14">
-            <button className="bg-[#99C3FF] py-1.5 px-8 rounded-2xl text-xs font-bold ">
-              logo
+          <Link to="/" className="block mb-10 ml-14">
+            <button className="bg-[#99C3FF]/40 input-accent-box-shadow py-1.5 px-8 rounded-2xl text-xs font-bold ">
+              <img src={logo} alt="Logo" className="w-10" />
             </button>
-          </div>
+          </Link>
           <div className="">
             <p className="text-base mx-12">
               <Link to="/">Dashboard</Link>
