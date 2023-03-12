@@ -1,6 +1,6 @@
 import React from 'react';
 
-const messageIcon = ({ className }) => {
+const MessageIcon = ({ className }) => {
   return (
     <svg
       width="28"
@@ -20,4 +20,4 @@ const messageIcon = ({ className }) => {
   );
 };
 
-export default messageIcon;
+export default MessageIcon;

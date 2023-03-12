@@ -1,6 +1,6 @@
 import React from 'react';
 
-const arrowDownIcon = ({ className }) => {
+const ArrowDownIcon = ({ className }) => {
   return (
     <svg
       width="28"
@@ -17,4 +17,4 @@ const arrowDownIcon = ({ className }) => {
   );
 };
 
-export default arrowDownIcon;
+export default ArrowDownIcon;

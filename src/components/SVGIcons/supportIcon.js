@@ -1,6 +1,6 @@
 import React from 'react';
 
-const supportIcon = ({ className }) => {
+const SupportIcon = ({ className }) => {
   return (
     <svg
       width="28"
@@ -18,4 +18,4 @@ const supportIcon = ({ className }) => {
   );
 };
 
-export default supportIcon;
+export default SupportIcon;

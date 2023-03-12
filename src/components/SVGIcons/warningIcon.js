@@ -1,6 +1,6 @@
 import React from 'react';
 
-const warningIcon = ({ className }) => {
+const WarningIcon = ({ className }) => {
   return (
     <svg
       width="28"
@@ -25,4 +25,4 @@ const warningIcon = ({ className }) => {
   );
 };
 
-export default warningIcon;
+export default WarningIcon;
