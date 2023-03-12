@@ -30,7 +30,7 @@ const Layout = ({ title, children }) => {
         className={
           //* all navigation position style */
 
-          navigationPosition === 'top-left'
+          navigationPosition === 'left'
             ? 'col-start-3 col-end-13 ml-8 mr-16'
             : navigationPosition === 'right'
             ? 'col-start-1 col-end-11 order-1 ml-[70px] mr-9'
