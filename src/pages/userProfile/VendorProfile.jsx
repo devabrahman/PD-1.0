@@ -1,9 +1,9 @@
 import Layout from 'components/common/Layout';
+import ProfileSetting from 'components/profile/ProfileSetting';
 import profile from '../../assets/Images/common/profile.png';
 import bg from '../../assets/Images/common/vendor-profile-bg.png';
 import check from '../../assets/Images/icons/check.png';
 import edit from '../../assets/Images/icons/edit.png';
-import gear from '../../assets/Images/icons/gear.png';
 import notification from '../../assets/Images/icons/notification.png';
 import search from '../../assets/Images/icons/search.png';
 import user from '../../assets/Images/icons/user.png';
@@ -18,7 +18,7 @@ const VendorProfile = () => {
       <section className="pb-10">
         <div className="">
           <div
-            className="h-[270px] p-8 rounded-xl overflow-hidden shadow-lg shadow-[#87ceeb40]"
+            className="h-[270px] p-8 rounded-xl  shadow-lg shadow-[#87ceeb40]"
             style={{
               background: `url(${bg})`,
               backgroundRepeat: 'no-repeat',
@@ -34,14 +34,14 @@ const VendorProfile = () => {
                   id="search"
                 />
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 ">
                 <div className="w-10 h-10 rounded-xl shadow-md shadow-[#87ceeb40] bg-[#ffffff33] flex items-center justify-center">
                   <img className="w-[18px]" src={user} alt="" />
                 </div>
                 <span className="text-xl text-[#5798F7] font-medium">Log out</span>
               </div>
-              <div className="w-6">
-                <img className="w-full" src={gear} alt="setting" />
+              <div className="w-6 relative">
+                <ProfileSetting />
               </div>
               <div className="w-10 h-10 rounded-xl shadow-md shadow-[#87ceeb40] bg-[#ffffff33] flex items-center justify-center">
                 <img className="w-[18px]" src={notification} alt="" />
