@@ -1,5 +1,6 @@
-import { Popover, Transition } from '@headlessui/react';
+import { Popover } from '@headlessui/react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import TransitionComponent from 'components/common/Transition';
 
 const TopOptions = ({ navigationPosition, setNavigationPosition }) => {
   return (
@@ -49,13 +50,7 @@ const TopOptions = ({ navigationPosition, setNavigationPosition }) => {
               </svg>
             </div>
           </Popover.Button>
-          <Transition
-            enter="transition duration-200 ease-out"
-            enterFrom="transform scale-95 opacity-0"
-            enterTo="transform scale-100 opacity-100"
-            leave="transition duration-175 ease-out"
-            leaveFrom="transform scale-100 opacity-100"
-            leaveTo="transform scale-95 opacity-0">
+          <TransitionComponent>
             <Popover.Panel className="absolute z-10 right-0.5">
               <>
                 <div className="w-[320px] pt-[30px] pb-12 mt-4 px-6  mx-auto rounded-3xl drop-shadow-2xl bg-white  border-transparent border">
@@ -137,7 +132,7 @@ const TopOptions = ({ navigationPosition, setNavigationPosition }) => {
                 </div>
               </>
             </Popover.Panel>
-          </Transition>
+          </TransitionComponent>
         </>
       )}
     </Popover>
