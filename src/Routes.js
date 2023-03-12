@@ -15,11 +15,13 @@ import Tags from 'pages/Tags';
 import ProfileEdit from 'pages/userProfile/ProfileEdit';
 import VendorProfile from 'pages/userProfile/VendorProfile';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { themeCheck } from 'utils/darkmode';
 
 // importing pages
 import Home from './pages/Home';
 
 const AppRoutes = () => {
+  themeCheck();
   return (
     <BrowserRouter>
       <Routes>
