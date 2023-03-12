@@ -1,5 +1,5 @@
-import SignIn from 'pages/auth/SignInMain';
-import SignUp from 'pages/auth/SignUpMain';
+// import SignIn from 'pages/auth/SignInMain';
+// import SignUp from 'pages/auth/SignUpMain';
 import Category from 'pages/category/Category';
 import EditCategory from 'pages/category/EditCategory';
 import NewCategory from 'pages/category/NewCategory';
@@ -27,8 +27,8 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         {/* Auth */}
-        <Route path="signup" element={<SignUp />} />
-        <Route path="signin" element={<SignIn />} />
+        {/* <Route path="signup" element={<SignUp />} />
+        <Route path="signin" element={<SignIn />} /> */}
 
         {/* Products */}
         <Route path="/products" element={<Products />} />

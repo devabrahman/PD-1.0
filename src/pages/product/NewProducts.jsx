@@ -11,6 +11,7 @@ import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import { BiX } from 'react-icons/bi';
 import SearchEngineIcon from '../../assets/Images/products/SearchEngineIcon.png';
 import ShippingIcon from '../../assets/Images/products/ShippingIcon.png';
+import TextEditor from 'components/common/TextEditor';
 
 const NewProducts = () => {
   return (
@@ -28,20 +29,10 @@ const NewProducts = () => {
             />
 
             <h3 className="font-medium text-lg mb-2 mt-6">Product description</h3>
-            <textarea
-              className="w-full rounded-xl border border-pdGrey/70 h-72 input-back-box-shadow"
-              type="text"
-              name="productTitle"
-              id=""
-            />
+            <TextEditor />
 
             <h3 className="font-medium text-lg mb-2 mt-6">Product long description</h3>
-            <textarea
-              className="w-full rounded-xl border border-pdGrey/70 h-72 input-back-box-shadow"
-              type="text"
-              name="productTitle"
-              id=""
-            />
+            <TextEditor />
           </section>
           <section className="w-1/3">
             <CategoryList />
