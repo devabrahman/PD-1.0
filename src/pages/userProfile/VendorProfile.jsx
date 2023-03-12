@@ -40,7 +40,7 @@ const VendorProfile = () => {
                 </div>
                 <span className="text-xl text-[#5798F7] font-medium">Log out</span>
               </div>
-              <div className="w-6 relative">
+              <div className="relative block mt-2.5">
                 <ProfileSetting />
               </div>
               <div className="w-10 h-10 rounded-xl shadow-md shadow-[#87ceeb40] bg-[#ffffff33] flex items-center justify-center">
