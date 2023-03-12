@@ -1,5 +1,7 @@
-import { Popover, Transition } from '@headlessui/react';
+import { Popover } from '@headlessui/react';
 import { Link } from 'react-router-dom';
+import TransitionComponent from 'components/common/Transition';
+
 import avatarIcon from '../../assets/Images/common/avatar.png';
 import profile from '../../assets/Images/common/profile.png';
 import atTheRate from '../../assets/Images/icons/atTheRate.png';
@@ -21,13 +23,7 @@ const ProfileDialog = () => {
               <img src={avatarIcon} className={`rounded-full w-full h-full`} />
             </div>
           </Popover.Button>
-          <Transition
-            enter="transition duration-200 ease-out"
-            enterFrom="transform scale-95 opacity-0"
-            enterTo="transform scale-100 opacity-100"
-            leave="transition duration-175 ease-out"
-            leaveFrom="transform scale-100 opacity-100"
-            leaveTo="transform scale-95 opacity-0">
+          <TransitionComponent>
             <Popover.Panel className="absolute z-10 right-0">
               <div className="w-[320px] mx-auto rounded-3xl shadow-md shadow-[#87ceeb33] bg-white">
                 <div className="p-6">
@@ -98,7 +94,7 @@ const ProfileDialog = () => {
                 </div>
               </div>
             </Popover.Panel>
-          </Transition>
+          </TransitionComponent>
         </>
       )}
     </Popover>
