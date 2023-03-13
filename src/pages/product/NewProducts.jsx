@@ -13,7 +13,21 @@ import SearchEngineIcon from '../../assets/Images/products/SearchEngineIcon.png'
 import ShippingIcon from '../../assets/Images/products/ShippingIcon.png';
 import TextEditor from 'components/common/TextEditor';
 
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import { DateRangePicker } from 'react-date-range';
+import { useState } from 'react';
+import { addDays } from 'date-fns';
+
 const NewProducts = () => {
+  const [state, setState] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: 'selection'
+    }
+  ]);
+
   return (
     <Layout title="Products">
       <Breadcrumbs rootTitle={{ title: 'Products', url: '/products' }} subTitle="New" />
@@ -22,7 +36,7 @@ const NewProducts = () => {
           <section className="w-3/4">
             <h3 className="font-medium text-lg mb-2">Post Title</h3>
             <input
-              className="w-full rounded-xl border border-pdGrey/70 h-12 input-back-box-shadow"
+              className="w-full rounded-xl px-4 border border-pdGrey/70 h-12 input-back-box-shadow focus:outline-none focus:focused-input"
               type="text"
               name="productTitle"
               id=""
@@ -36,6 +50,7 @@ const NewProducts = () => {
           </section>
           <section className="w-1/3">
             <CategoryList />
+
             {/* Regular Price */}
             <div className="rounded-xl mt-5 input-accent-box-shadow w-full flex  gap-7 px-[15px] pt-3 pb-[18px]">
               <div className="w-full ">
@@ -58,10 +73,20 @@ const NewProducts = () => {
                   placeholder="$ 00.0"
                   className="border pl-3 border-accent/30 h-9 mt-3 rounded-[7px] w-full pr-1.5"
                 />
-                <div className="flex items-center gap-2 absolute bottom-[14%] right-[15%] z-10">
+                <div className="flex items-center justify-between gap-2 absolute bottom-[14%] right-[15px] z-10">
                   <span className="h-4 rounded-sm w-0.5 bg-pdGrey block"></span>
                   <div className="cursor-pointer">
                     <CalenderIcon className="mr-3" />
+                    <DateRangePicker
+                      onChange={(item) => setState([item.selection])}
+                      showSelectionPreview={true}
+                      moveRangeOnFirstSelection={false}
+                      months={2}
+                      ranges={state}
+                      direction="horizontal"
+                      preventSnapRefocus={true}
+                      calendarFocus="backwards"
+                    />
                   </div>
                 </div>
               </div>
