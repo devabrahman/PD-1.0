@@ -18,10 +18,23 @@ body {
 }
 @layer components {
   .focused-input {
-    border: 2px solid rgba(143, 206, 231, 0.24);
-    -webkit-box-shadow: 0px 0px 34px -16px rgba(0, 27, 148, 0.16);
-    -moz-box-shadow: 0px 0px 34px -16px rgba(0, 27, 148, 0.16);
-    box-shadow: 0px 0px 34px -16px rgba(0, 27, 148, 0.16);
+    @apply border-blue-300 outline-none;
+
+    -webkit-box-shadow: 0px 0px 34px -5px rgba(0, 27, 148, 0.12);
+    -moz-box-shadow: 0px 0px 34px -5px rgba(0, 27, 148, 0.12);
+    box-shadow: 0px 0px 34px -5px rgba(0, 27, 148, 0.12);
+  }
+  .focused-input-dark {
+    @apply border-blue-300 outline-none;
+
+    -webkit-box-shadow: 0px 0px 34px -5px rgba(114, 118, 136, 0.12);
+    -moz-box-shadow: 0px 0px 34px -5px rgba(114, 118, 136, 0.12);
+    box-shadow: 0px 0px 34px -5px rgba(114, 118, 136, 0.12);
+  }
+}
+@layer base {
+  input:focus {
+    @apply focused-input dark:focused-input-dark;
   }
 }
 
