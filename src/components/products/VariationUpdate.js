@@ -5,7 +5,7 @@ import { BiChevronDown } from 'react-icons/bi';
 
 const VariationUpdate = () => {
   return (
-    <div className="my-10 w-4/6">
+    <div className="my-10">
       <div className="flex justify-between">
         <h5 className="font-medium text-xl ml-2">Variations</h5>
         <p className="text-accent/80">+ Add another option</p>

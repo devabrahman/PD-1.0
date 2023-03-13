@@ -12,7 +12,7 @@ const NewVariation = () => {
         <img src={OptionIcon} alt="Option icon" className="h-6 w-5" />
         <h5 className="font-medium text-xl ml-2">Variations</h5>
       </div>
-      <div className="border w-4/6 border-[#D6D6D6]/60 rounded-xl my-2">
+      <div className="border w-full border-[#D6D6D6]/60 rounded-xl my-2">
         <div className="ml-4 flex items-center">
           <RightMarkIcon className="h-2 w-2" />
           <p className="">Add variation like Color, Size, etc</p>
