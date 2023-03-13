@@ -1,10 +1,11 @@
+/* eslint-disable react/no-unknown-property */
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import DeletePopup from 'components/common/DeletePopup';
 import Layout from 'components/common/Layout';
 import AstroIcon from 'components/SVGIcons/AstroIcon';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import EditIcon from 'components/SVGIcons/Editicon';
-import RectangleIcon from 'components/SVGIcons/RectangleIcon';
+// import RectangleIcon from 'components/SVGIcons/RectangleIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import { useState } from 'react';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
@@ -67,8 +68,26 @@ const Products = () => {
             <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow">
               <td></td>
               <td className="py-3">
-                <div className="flex gap-2 items-center">
-                  <RightMarkIcon />
+                <div className="flex gap-2 items-center custom-checkbox">
+                  <input type="checkbox" id="input-2" class="check-input" />
+                  <label for="input-2" class="checkbox">
+                    <svg
+                      width="11"
+                      height="8"
+                      viewBox="0 0 11 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 3.86957L4.08571 7L10 1"
+                        stroke="white"
+                        stroke-opacity="0.75"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </label>
+
                   <AstroIcon />
                 </div>
               </td>
@@ -97,7 +116,8 @@ const Products = () => {
               <td></td>
               <td className="py-3">
                 <div className="flex gap-2">
-                  <RectangleIcon />
+                  <RightMarkIcon />
+
                   <AstroIcon />
                 </div>
               </td>

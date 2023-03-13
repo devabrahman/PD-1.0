@@ -44,3 +44,64 @@ input:checked + div {
 input:checked + div svg {
   @apply block;
 }
+
+.check-input {
+  display: none;
+}
+.checkbox {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #635e5e;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 3px;
+  transition: 0.3s all;
+}
+.checkbox svg {
+  width: 20px;
+  height: 20px;
+}
+.check-input:checked + .checkbox {
+  box-shadow: 2px 4px 8px rgba(137, 176, 198, 0.1);
+  border-radius: 8px;
+  position: relative;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  padding: 3px;
+  background: #48f685;
+}
+
+.check-input:checked + .checkbox svg path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke: #fff;
+  stroke-width: 1.8;
+  animation: check 4s forwards;
+}
+.checkbox::before {
+  content: '';
+  background: #53fc9f33;
+  background-blend-mode: color;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  display: block;
+  width: 60px;
+  height: 60px;
+  z-index: -1;
+}
+.check-input:checked + .checkbox::before {
+  animation: ripple 0.3s;
+}
+@keyframes check {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ripple {
+  to {
+    transform: scale(1);
+  }
+}
