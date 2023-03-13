@@ -10,10 +10,18 @@ body {
 
 @layer utilities {
   .input-back-box-shadow {
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.05));
   }
   .input-accent-box-shadow {
     box-shadow: 0px 4px 10px 0px rgba(135, 206, 235, 0.24);
+  }
+}
+@layer components {
+  .focused-input {
+    border: 2px solid rgba(143, 206, 231, 0.24);
+    -webkit-box-shadow: 0px 0px 34px -16px rgba(0, 27, 148, 0.16);
+    -moz-box-shadow: 0px 0px 34px -16px rgba(0, 27, 148, 0.16);
+    box-shadow: 0px 0px 34px -16px rgba(0, 27, 148, 0.16);
   }
 }
 
