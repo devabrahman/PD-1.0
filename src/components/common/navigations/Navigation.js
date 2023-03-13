@@ -13,7 +13,7 @@ import logo from '../../../assets/Images/common/logo.png'; //src\assets\Images\c
 const Navigation = () => {
   return (
     <>
-      <div className="px-3 py-6 flex flex-col relative">
+      <div className="px-3 py-6 flex flex-col relative justify-between min-h-screen">
         <div className="">
           <Link to="/" className="block mb-10 ml-14">
             <button className="bg-[#99C3FF]/40 input-accent-box-shadow py-1.5 px-8 rounded-2xl text-xs font-bold ">
@@ -127,7 +127,7 @@ const Navigation = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-b from-[#FBF0DE] to-[#E3E2F6] mx-4 rounded-[10px] h-56 w-52 w- flex flex-col fixed bottom-12 justify-end">
+        <div className="bg-gradient-to-b from-[#FBF0DE] to-[#E3E2F6] mx-4 rounded-[10px] h-56 w-11/12  flex flex-col bottom-12 justify-end">
           <div className="flex justify-center">
             <div className="bg-white w-16 relative -top-6 h-16 rounded-full shadow-[0px_33px_24px_rgba(0,0,0,0.16)]">
               <div className="bg-[#FF886A] w-10 h-10 rounded-full m-3 items-center flex">
