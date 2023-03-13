@@ -15,12 +15,12 @@ import TextEditor from 'components/common/TextEditor';
 
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import { DateRangePicker } from 'react-date-range';
 import { useState } from 'react';
 import { addDays } from 'date-fns';
+import Calendar from 'components/products/Calendar';
 
 const NewProducts = () => {
-  const [state, setState] = useState([
+  const [date, setDate] = useState([
     {
       startDate: new Date(),
       endDate: addDays(new Date(), 7),
@@ -71,21 +71,15 @@ const NewProducts = () => {
                   name=""
                   id=""
                   placeholder="$ 00.0"
-                  className="border pl-3 border-accent/30 h-9 mt-3 rounded-[7px] w-full pr-1.5"
+                  className="border pl-3 border-accent/30 h-9 mt-3 rounded-[7px] w-full pr-1.5 focus:focused-input"
                 />
-                <div className="flex items-center justify-between gap-2 absolute bottom-[14%] right-[15px] z-10">
+                <div className="flex items-center justify-between gap-2 absolute bottom-[11%] right-[15px] z-10">
                   <span className="h-4 rounded-sm w-0.5 bg-pdGrey block"></span>
                   <div className="cursor-pointer">
-                    <CalenderIcon className="mr-3" />
-                    <DateRangePicker
-                      onChange={(item) => setState([item.selection])}
-                      showSelectionPreview={true}
-                      moveRangeOnFirstSelection={false}
-                      months={2}
-                      ranges={state}
-                      direction="horizontal"
-                      preventSnapRefocus={true}
-                      calendarFocus="backwards"
+                    <Calendar
+                      date={date}
+                      setDate={(value) => setDate(value)}
+                      icon={<CalenderIcon className="mr-3" />}
                     />
                   </div>
                 </div>
