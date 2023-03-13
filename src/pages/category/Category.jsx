@@ -14,7 +14,7 @@ const Category = () => {
   return (
     <>
       <Layout title="Category">
-        <Breadcrumbs rootTitle="Category" subTitle="Category" />
+        <Breadcrumbs rootTitle={{ title: 'Category', url: '/categories' }} />
         <table className="w-full table-auto mt-14 border-spacing-y-5 border-separate">
           <thead className="uppercase font-medium text-[#5798F6] text-sm">
             <tr className="font-medium">

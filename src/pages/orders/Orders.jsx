@@ -13,7 +13,7 @@ import warning from '../../assets/Images/orders/warning.png';
 const Orders = () => {
   return (
     <Layout title="Orders">
-      <Breadcrumbs rootTitle="Orders" subTitle="Orders " />
+      <Breadcrumbs rootTitle={{ title: 'Orders', url: '' }} />
       <section className="py-10">
         <div className="shadow-md shadow-[#87ceeb40] rounded-xl px-6 py-7 w-full mx-auto">
           <div className="flex justify-between">

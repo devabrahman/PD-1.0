@@ -6,7 +6,7 @@ import categoryPic from '../../assets/Images/common/CategoryPic.png';
 const NewCategory = () => {
   return (
     <Layout title="Category">
-      <Breadcrumbs rootTitle="Category" subTitle="New" />
+      <Breadcrumbs rootTitle={{ title: 'Category', url: '/categories' }} subTitle="New" />
       <div className="flex">
         <div className="grid justify-items-center basis-3/5 w-full ml-5 mr-0">
           <img src={categoryPic} alt="Category Icon" className="w-9/12" />

@@ -16,7 +16,7 @@ import TextEditor from 'components/common/TextEditor';
 const NewProducts = () => {
   return (
     <Layout title="Products">
-      <Breadcrumbs rootTitle="Product" subTitle="New" />
+      <Breadcrumbs rootTitle={{ title: 'Products', url: '/products' }} subTitle="New" />
       <main>
         <div className="w-full flex gap-16 pt-14">
           <section className="w-3/4">
