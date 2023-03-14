@@ -1,6 +1,6 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import ImageDropDown from 'components/common/ImageDropDown';
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LayoutBackup';
 import CategoryList from './CategoryList';
 // Icons
 import NewVariation from 'components/products/NewVariation';
