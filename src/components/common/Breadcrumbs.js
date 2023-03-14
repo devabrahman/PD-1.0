@@ -8,7 +8,7 @@ const Breadcrumbs = ({ rootTitle, subTitle }) => {
 
   return (
     <div className="flex flex-row items-center">
-      <ProductDirectoryIcon className="text-[#4F4F4F] w-6 border-red-200" />
+      <ProductDirectoryIcon className="text-[#4F4F4F] stroke-2 border-red-200" />
       <HiChevronRight className="h-7 w-10 text-[#D9D9D9]" />
       <Link to={url || ''}>
         <p>{title || rootTitle}</p>
