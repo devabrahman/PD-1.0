@@ -1,145 +1,134 @@
+/* eslint-disable no-unused-vars */
 import { PlusIcon } from '@heroicons/react/24/outline';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import SettingIcon from 'components/SVGIcons/SettingIcon';
+import { useCallback, useState } from 'react';
 
 import OptionIcon from '../../assets/Images/products/OptionIcon.png'; //../../assets/Images/products/OptionIcon.png
 
 const NewVariation = () => {
+  const allProDucts = [
+    { name: 'color', value: ['black', 'White'] },
+    { name: 'Storage', value: ['256GB', '512GB', '1TB'] },
+    { name: 'Ram', value: ['2GB', '6GB', '8GB', '10GB'] }
+  ];
+
+  const [variationList, setVariationList] = useState(allProDucts);
+
+  const addVariation = () => {
+    const list = [...variationList];
+    list[list.length] = { name: '', value: [''] };
+    setVariationList(list);
+  };
+  const addVariationValue = (itemIndex, valueIndex, value) => {
+    const list = [...variationList];
+    list[itemIndex].value[valueIndex + 1] = '';
+    setVariationList(list);
+  };
+
+  const removeVariation = (itemIndex) => {
+    const list = [...variationList];
+    list.splice(itemIndex, 1);
+    setVariationList(list);
+  };
+  const removeValue = useCallback((itemIndex, valueIndex) => {
+    const list = [...variationList];
+    list[itemIndex].value.splice(valueIndex, 1);
+    setVariationList(list);
+  }, []);
+
+  const updateVariationName = (itemIndex, value) => {
+    const list = [...variationList];
+    list[itemIndex].name = value;
+    setVariationList(list);
+  };
+  const updateVariationValue = (itemIndex, valueIndex, value) => {
+    const list = [...variationList];
+    list[itemIndex].value[valueIndex] = value;
+    setVariationList(list);
+  };
+
   return (
     <div className="my-5">
       <div className="flex">
         <img src={OptionIcon} alt="Option icon" className="h-6 w-5" />
         <h5 className="font-medium text-xl ml-2">Variations</h5>
       </div>
-      <div className="border w-4/6 border-[#D6D6D6]/60 rounded-xl my-2">
+      <div className="border w-full border-[#D6D6D6]/60 rounded-xl my-2">
         <div className="ml-4 flex items-center">
           <RightMarkIcon className="h-2 w-2" />
           <p className="">Add variation like Color, Size, etc</p>
         </div>
         <hr className="h-0.5 w-full bg-[#CDCDCD]/20" />
-        <div className="w-3/5 mx-10 my-3">
-          <p className="">Variation name</p>
-          <div className="flex items-center">
-            <SettingIcon className="w-5 h-6 -ml-6 mr-6" />
-            <input
-              type="number"
-              name=""
-              id=""
-              className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-full pr-1.5 mr-6"
-              placeholder="Color"
-            />
-            <DeleteIcon className="w-7 h-10" />
-          </div>
-        </div>
-        <div className="w-3/5 mx-14 my-3 mb-16">
-          <p className="ml-4">Variation values</p>
-          <div className="flex items-center">
-            <SettingIcon className="w-5 h-6 -ml-4 mr-6 opacity-25" />
-            <input
-              type="number"
-              name=""
-              id=""
-              className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-4/5 pr-1.5 mr-6"
-              placeholder="Black"
-            />
-            <DeleteIcon className="w-8 h-10" />
-          </div>
-          <div className="flex items-center">
-            <SettingIcon className="w-5 h-6 -ml-4 mr-7 opacity-25" />
-            <input
-              type="number"
-              name=""
-              id=""
-              className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-full pr-1.5 mr-6"
-              placeholder="White"
-            />
-            <div className="flex space-x-2 mt-2 -ml-3">
-              <DeleteIcon className="w-7 h-10" />
-              <PlusIcon className="w-7 h-7 bg-[#1C92FF] text-white p-1 rounded-xl" />
+        {variationList.map((item, itemIndex) => (
+          <>
+            <div className="w-3/5 mx-10 my-3">
+              <p className="">Variation name</p>
+              <div className="flex items-center">
+                <SettingIcon className="w-5 h-6 -ml-6 mr-6" />
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-full pr-1.5 mr-6"
+                  value={item?.name}
+                  onChange={(event) => updateVariationName(itemIndex, event.target.value)}
+                />
+                <span onClick={() => removeVariation(itemIndex)} className="cursor-pointer">
+                  <DeleteIcon className="w-7 h-10" />
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center ml-8">
-            <input
-              type="number"
-              name=""
-              id=""
-              className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-5/6 pr-1.5 mr-6"
-              placeholder="Add another value"
-            />
-            <DeleteIcon className="w-7 h-10" />
-          </div>
-        </div>
 
-        <div className="w-3/5 mx-10 my-3">
-          <p className="">Variation name</p>
-          <div className="flex items-center">
-            <SettingIcon className="w-5 h-6 -ml-6 mr-6" />
-            <input
-              type="number"
-              name=""
-              id=""
-              className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-full pr-1.5 mr-6"
-              placeholder="Storage"
-            />
-            <DeleteIcon className="w-7 h-10" />
-          </div>
-        </div>
+            <div className="w-3/5 mx-14 my-3 mb-16">
+              <p className="ml-4">Variation values</p>
 
-        <div className="w-3/5 mx-14 my-3 mb-16">
-          <p className="ml-6">Variation values</p>
-          <div className="flex items-center">
-            <SettingIcon className="w-5 h-6 -ml-4 mr-7 opacity-25" />
-            <input
-              type="number"
-              name=""
-              id=""
-              className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-3/4 pr-1.5 mr-6"
-              placeholder="256GB"
-            />
-            <div className="flex gap-3 mt-2 ml-4">
-              <DeleteIcon className="w-7 h-10" />
-              <PlusIcon className="w-7 h-7 bg-[#1C92FF] text-white p-1 rounded-xl" />
+              {item?.value?.map((value, valueIndex) => (
+                <div key={valueIndex} className="flex items-center">
+                  <SettingIcon className="w-5 h-6 -ml-4 mr-6 opacity-25" />
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-4/5 pr-1.5 mr-6"
+                    placeholder="Add another value"
+                    value={value}
+                    onChange={(event) =>
+                      updateVariationValue(itemIndex, valueIndex, event.target.value)
+                    }
+                  />
+                  <span
+                    onClick={() => removeValue(itemIndex, valueIndex)}
+                    className="cursor-pointer mr-2">
+                    <DeleteIcon className="w-8 h-10 " />
+                  </span>
+                  {item?.value?.length - 1 == valueIndex && (
+                    <span onClick={() => addVariationValue(itemIndex, valueIndex)}>
+                      <PlusIcon className="w-7 h-7 bg-[#1C92FF] text-white p-1 rounded-xl" />
+                    </span>
+                  )}
+                </div>
+              ))}
             </div>
-          </div>
-        </div>
+          </>
+        ))}
 
-        <div className="w-3/5 mx-10 my-3">
-          <p className="">Variation name</p>
-          <div className="flex items-center">
-            <SettingIcon className="w-5 h-6 -ml-6 mr-6" />
-            <input
-              type="number"
-              name=""
-              id=""
-              className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-full pr-1.5 mr-6"
-              placeholder="RAM"
-            />
-            <DeleteIcon className="w-7 h-10" />
-          </div>
-        </div>
-
-        <div className="w-3/5 mx-14 my-3 mb-16">
-          <p className="ml-6">Variation values</p>
-          <div className="flex items-center">
-            <SettingIcon className="w-5 h-6 -ml-4 mr-7 opacity-25" />
-            <input
-              type="number"
-              name=""
-              id=""
-              className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-3/4 pr-1.5 mr-6"
-              placeholder="8GB"
-            />
-            <div className="flex gap-3 mt-2">
-              <DeleteIcon className="w-7 h-10" />
-              <PlusIcon className="w-7 h-7 bg-[#1C92FF] text-white p-1 rounded-xl" />
-            </div>
-          </div>
-        </div>
         <hr className="h-0.5 w-11/12 bg-[#CDCDCD]/20 ml-6" />
         <div className="flex justify-between items-center ml-5">
-          <p className="text-accent/80">+ Add another option</p>
-          <div className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">Done</div>
+          <p onClick={addVariation} className="text-accent/80 cursor-pointer">
+            + Add another option
+          </p>
+          <div
+            onClick={() => {
+              console.log(
+                '🔐 -> file: NewVariation.js:123 -> NewVariation -> onClick:',
+                variationList
+              );
+            }}
+            className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">
+            Done
+          </div>
         </div>
       </div>
     </div>

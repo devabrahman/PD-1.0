@@ -5,12 +5,10 @@ import EditCategory from 'pages/category/EditCategory';
 import NewCategory from 'pages/category/NewCategory';
 import OrderDetails from 'pages/orders/OrderDetails';
 import Orders from 'pages/orders/Orders';
-import DesktopTen from 'pages/product/DesktopTen';
 import EditProducts from 'pages/product/EditProducts';
 import NewProducts from 'pages/product/NewProducts';
 import Products from 'pages/product/Products';
 import SingleProduct from 'pages/product/SingleProduct';
-// import SingleProductsNew from 'pages/product/VariableProduct';
 import Tags from 'pages/Tags';
 import ProfileEdit from 'pages/userProfile/ProfileEdit';
 import VendorProfile from 'pages/userProfile/VendorProfile';
@@ -35,8 +33,6 @@ const AppRoutes = () => {
         <Route path="/single-product" element={<SingleProduct />} />
         <Route path="/new-product" element={<NewProducts />} />
         <Route path="/edit-product" element={<EditProducts />} />
-        {/* <Route path="/variable-product" element={<SingleProductsNew />} /> */}
-        <Route path="/desktop-ten" element={<DesktopTen />} />
 
         {/* Category */}
         <Route path="/categories" element={<Category />} />

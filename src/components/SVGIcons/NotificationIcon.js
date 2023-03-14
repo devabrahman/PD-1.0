@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Notification = ({ className }) => {
+const NotificationIcon = ({ className }) => {
   return (
     <svg
       width="18"
@@ -17,4 +17,4 @@ const Notification = ({ className }) => {
   );
 };
 
-export default Notification;
+export default NotificationIcon;
