@@ -166,7 +166,7 @@ const Products = () => {
     <>
       <Layout title="Category">
         <Breadcrumbs rootTitle={{ title: 'Products' }} subTitle="" />
-        <table className="w-full table-auto mt-14 border-spacing-y-6 border-separate">
+        <table className="w-full table-auto mt-14 border-spacing-y-6 border-separate pb-36">
           <thead className="uppercase font-medium text-[#5798F6] text-sm">
             <tr className="font-medium">
               <th className="w-5">
