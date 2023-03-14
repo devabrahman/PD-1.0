@@ -70,6 +70,7 @@ const Products = () => {
                     checked={allChecked === 'all'}
                     id="input-2"
                     className="check-input"
+                    onChange={() => {}}
                   />
                   <label
                     onClick={() => allProductChecked('all')}
@@ -134,7 +135,7 @@ const Products = () => {
                     id="input-2"
                     checked={product?.isChecked || false}
                     className="check-input cursor-pointer"
-                    onClick={handelChange}
+                    onChange={() => {}}
                   />
                   <label
                     onClick={() => handelChange(product?.id)}
@@ -178,7 +179,9 @@ const Products = () => {
                   )}
                 </td>
                 <td className="cursor-pointer">
-                  <EditIcon />
+                  <Link to="/edit-product">
+                    <EditIcon />
+                  </Link>
                 </td>
                 <td
                   className="cursor-pointer"
