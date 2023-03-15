@@ -21,6 +21,7 @@ const NewVariation = () => {
     list[list.length] = { name: '', value: [''] };
     setVariationList(list);
   };
+
   const addVariationValue = (itemIndex, valueIndex, value) => {
     const list = [...variationList];
     list[itemIndex].value[valueIndex + 1] = '';
@@ -32,17 +33,19 @@ const NewVariation = () => {
     list.splice(itemIndex, 1);
     setVariationList(list);
   };
-  const removeValue = useCallback((itemIndex, valueIndex) => {
+
+  const removeVariationValue = (itemIndex, valueIndex) => {
     const list = [...variationList];
     list[itemIndex].value.splice(valueIndex, 1);
     setVariationList(list);
-  }, []);
+  };
 
   const updateVariationName = (itemIndex, value) => {
     const list = [...variationList];
     list[itemIndex].name = value;
     setVariationList(list);
   };
+
   const updateVariationValue = (itemIndex, valueIndex, value) => {
     const list = [...variationList];
     list[itemIndex].value[valueIndex] = value;
@@ -99,7 +102,7 @@ const NewVariation = () => {
                     }
                   />
                   <span
-                    onClick={() => removeValue(itemIndex, valueIndex)}
+                    onClick={() => removeVariationValue(itemIndex, valueIndex)}
                     className="cursor-pointer mr-2">
                     <DeleteIcon className="w-8 h-10 " />
                   </span>
