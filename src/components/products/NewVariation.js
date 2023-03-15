@@ -39,6 +39,7 @@ const NewVariation = ({ variation, setVariation }) => {
     list[itemIndex].value[valueIndex] = value;
     setVariationList(list);
   };
+
   const addVariation = () => {
     const list = [...variationList];
     list[list.length] = { name: '', value: [''] };
