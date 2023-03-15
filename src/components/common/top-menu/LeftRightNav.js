@@ -86,12 +86,22 @@ function LeftRightNav() {
               onClick={() => toggleItem(index)}>
               <div className="flex">
                 {navItem?.icon !== '' ? (
-                  <img src={navItem?.icon} alt="nav icon" className="max-w-5" />
+                  <img src={navItem?.icon} alt="nav icon" className="w-6" />
                 ) : (
-                  <span className="block w-6"></span>
+                  <span className="inline-block w-6"></span>
                 )}
                 <h5 className="px-2 text-[#302323] font-medium text-[19px]">
-                  {navItem?.menu?.title}
+                  {navItem.menu.url !== '' ? (
+                    <NavLink
+                      className={({ isActive, isPending }) =>
+                        isPending ? '' : isActive ? setActiveNav(index) : ''
+                      }
+                      to={navItem.menu.url}>
+                      {navItem.menu.title}
+                    </NavLink>
+                  ) : (
+                    navItem?.menu?.title
+                  )}
                 </h5>
               </div>
 
