@@ -101,10 +101,7 @@ const ImageDropDown = () => {
             </span>
           </div>
         </div>
-        <aside style={thumbsContainer}>
-          {thumbs}
-          sdfsd
-        </aside>
+        <aside style={thumbsContainer}>{thumbs}</aside>
       </div>
     </>
   );
