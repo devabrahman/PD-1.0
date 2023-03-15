@@ -19,7 +19,14 @@ import { addDays } from 'date-fns';
 import Calendar from 'components/products/Calendar';
 import ProductTag from 'components/products/ProductTag';
 
+const variationList = [
+  { name: 'color', value: ['black', 'White'] },
+  { name: 'Storage', value: ['256GB', '512GB', '1TB'] },
+  { name: 'Ram', value: ['2GB', '6GB', '8GB', '10GB'] }
+];
+
 const NewProducts = () => {
+  const [variation, setVariation] = useState(variationList);
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -75,9 +82,13 @@ const NewProducts = () => {
                   placeholder="100"
                 />
               </div>
-              <NewVariation />
-              <VariationList />
-              <VariationUpdate />
+
+              <NewVariation variation={variation} setVariation={(value) => setVariation(value)} />
+              <VariationList variation={variation} setVariation={(value) => setVariation(value)} />
+              <VariationUpdate
+                variation={variation}
+                setVariation={(value) => setVariation(value)}
+              />
 
               <div className="my-5">
                 <div className="flex">
