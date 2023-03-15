@@ -3,8 +3,9 @@ import ProfileDialog from 'components/profile/ProfileDialog';
 import TopOptions from 'components/SVGIcons/TopOptions';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import Navigation from './navigations/Navigation';
+// import Navigation from './navigations/Navigation';
 import TopNavigation from './navigations/TopNavigation';
+import LeftRightNav from './top-menu/LeftRightNav';
 import Notification from './top-menu/Notification';
 
 const Layout = ({ title, children }) => {
@@ -21,7 +22,7 @@ const Layout = ({ title, children }) => {
               : navigationPosition === 'right' && 'col-start-11 col-end-13 order-2'
           }>
           <div className="bg-[#FBFDFF] w-full h-full block">
-            <Navigation />
+            <LeftRightNav />
           </div>
         </section>
       )}

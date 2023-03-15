@@ -1,27 +1,16 @@
-/* eslint-disable no-unused-vars */
 import { PlusIcon } from '@heroicons/react/24/outline';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import SettingIcon from 'components/SVGIcons/SettingIcon';
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 
 import OptionIcon from '../../assets/Images/products/OptionIcon.png'; //../../assets/Images/products/OptionIcon.png
 
-const NewVariation = () => {
-  const allProDucts = [
-    { name: 'color', value: ['black', 'White'] },
-    { name: 'Storage', value: ['256GB', '512GB', '1TB'] },
-    { name: 'Ram', value: ['2GB', '6GB', '8GB', '10GB'] }
-  ];
+const NewVariation = ({ variation, setVariation }) => {
+  const [variationList, setVariationList] = useState(variation);
+  const [done, setDone] = useState(false);
 
-  const [variationList, setVariationList] = useState(allProDucts);
-
-  const addVariation = () => {
-    const list = [...variationList];
-    list[list.length] = { name: '', value: [''] };
-    setVariationList(list);
-  };
-  const addVariationValue = (itemIndex, valueIndex, value) => {
+  const addVariationValue = (itemIndex, valueIndex) => {
     const list = [...variationList];
     list[itemIndex].value[valueIndex + 1] = '';
     setVariationList(list);
@@ -32,23 +21,36 @@ const NewVariation = () => {
     list.splice(itemIndex, 1);
     setVariationList(list);
   };
-  const removeValue = useCallback((itemIndex, valueIndex) => {
+
+  const removeVariationValue = (itemIndex, valueIndex) => {
     const list = [...variationList];
     list[itemIndex].value.splice(valueIndex, 1);
     setVariationList(list);
-  }, []);
+  };
 
   const updateVariationName = (itemIndex, value) => {
     const list = [...variationList];
     list[itemIndex].name = value;
     setVariationList(list);
   };
+
   const updateVariationValue = (itemIndex, valueIndex, value) => {
     const list = [...variationList];
     list[itemIndex].value[valueIndex] = value;
     setVariationList(list);
   };
 
+  const addVariation = () => {
+    const list = [...variationList];
+    list[list.length] = { name: '', value: [''] };
+    setVariationList(list);
+    setDone(false);
+  };
+
+  const handelDone = () => {
+    setDone(true);
+    setVariation(variationList);
+  };
   return (
     <div className="my-5">
       <div className="flex">
@@ -75,9 +77,11 @@ const NewVariation = () => {
                   value={item?.name}
                   onChange={(event) => updateVariationName(itemIndex, event.target.value)}
                 />
-                <span onClick={() => removeVariation(itemIndex)} className="cursor-pointer">
-                  <DeleteIcon className="w-7 h-10" />
-                </span>
+                {!done && (
+                  <span onClick={() => removeVariation(itemIndex)} className="cursor-pointer">
+                    <DeleteIcon className="w-7 h-10" />
+                  </span>
+                )}
               </div>
             </div>
 
@@ -98,12 +102,14 @@ const NewVariation = () => {
                       updateVariationValue(itemIndex, valueIndex, event.target.value)
                     }
                   />
-                  <span
-                    onClick={() => removeValue(itemIndex, valueIndex)}
-                    className="cursor-pointer mr-2">
-                    <DeleteIcon className="w-8 h-10 " />
-                  </span>
-                  {item?.value?.length - 1 == valueIndex && (
+                  {!done && (
+                    <span
+                      onClick={() => removeVariationValue(itemIndex, valueIndex)}
+                      className="cursor-pointer mr-2">
+                      <DeleteIcon className="w-8 h-10 " />
+                    </span>
+                  )}
+                  {!done && item?.value?.length - 1 == valueIndex && (
                     <span onClick={() => addVariationValue(itemIndex, valueIndex)}>
                       <PlusIcon className="w-7 h-7 bg-[#1C92FF] text-white p-1 rounded-xl" />
                     </span>
@@ -119,16 +125,19 @@ const NewVariation = () => {
           <p onClick={addVariation} className="text-accent/80 cursor-pointer">
             + Add another option
           </p>
-          <div
-            onClick={() => {
-              console.log(
-                '🔐 -> file: NewVariation.js:123 -> NewVariation -> onClick:',
-                variationList
-              );
-            }}
-            className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">
-            Done
-          </div>
+          {!done ? (
+            <button
+              onClick={handelDone}
+              className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">
+              Done
+            </button>
+          ) : (
+            <button
+              onClick={() => setDone(false)}
+              className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">
+              Edit
+            </button>
+          )}
         </div>
       </div>
     </div>
