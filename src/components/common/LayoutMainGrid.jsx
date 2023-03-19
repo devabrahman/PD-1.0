@@ -11,7 +11,7 @@ const LayoutMainGrid = ({ children, position = 'app-grid' }) => {
           : position === 'top'
           ? 'app-grid-top'
           : 'app-grid-left'
-      } app-grid h-screen overflow-hidden overflow-y-scroll`}>
+      } h-screen overflow-hidden overflow-y-scroll`}>
       {children}
     </section>
   );
@@ -19,7 +19,6 @@ const LayoutMainGrid = ({ children, position = 'app-grid' }) => {
 
 // props validation
 LayoutMainGrid.propTypes = {
-  title: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired
 };
 

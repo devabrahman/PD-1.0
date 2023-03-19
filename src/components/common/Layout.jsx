@@ -111,7 +111,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
   if (sidebarPosition === 'top') {
     return (
       <LayoutMainGrid position="top">
-        <section className={`flex justify-between ${padding} h-20`}>
+        <section className={`flex justify-between ${padding}`}>
           <TopNavigation />
 
           <div className="flex items-center gap-6">

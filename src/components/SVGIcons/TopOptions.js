@@ -122,8 +122,6 @@ const TopOptions = ({ sidebarPosition, setSidebarPosition }) => {
                         <input
                           className="input-accent-box-shadow placeholder:font-[#B9B9B9] placeholder:text-sm py-1.5 px-1 rounded-md pl-7 w-full outline-none"
                           type="text"
-                          name=""
-                          id=""
                           placeholder="Type your favorite fonts"
                         />
                       </div>
