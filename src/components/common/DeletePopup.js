@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { BsXLg } from 'react-icons/bs';
 import DeletePopupIcon from '../../assets/Images/common/DeletePopupIcon.png';
 
-const DeletePopup = ({ isOpen, setIsOpen }) => {
+const DeletePopup = ({ isOpen, setIsOpen, setConfirmDelete }) => {
   return (
     <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
       {/* The backdrop, rendered as a fixed sibling to the panel container */}
@@ -45,7 +45,10 @@ const DeletePopup = ({ isOpen, setIsOpen }) => {
                 Cancel
               </button>
               <button
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setConfirmDelete(true);
+                  setIsOpen(false);
+                }}
                 className="px-6 py-1 mr-5 bg-[#DB2955] text-white rounded-3xl cursor-pointer">
                 Submit
               </button>

@@ -11,7 +11,10 @@ import macbook5 from '../../assets/Images/products/macbook5.jpg';
 const SingleProduct = () => {
   return (
     <Layout title="Products">
-      <Breadcrumbs rootTitle="Products" subTitle=" Product Details" />
+      <Breadcrumbs
+        rootTitle={{ title: 'Products', url: '/products' }}
+        subTitle=" Product Details"
+      />
       <section className="flex gap-16">
         <div className="w-full">
           <div className="justify-center">

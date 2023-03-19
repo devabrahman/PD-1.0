@@ -1,11 +1,12 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import ProfileDialog from 'components/profile/ProfileDialog';
-import Notification from 'components/SVGIcons/Notification';
 import TopOptions from 'components/SVGIcons/TopOptions';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import Navigation from './navigations/Navigation';
+// import Navigation from './navigations/Navigation';
 import TopNavigation from './navigations/TopNavigation';
+import LeftRightNav from './top-menu/LeftRightNav';
+import Notification from './top-menu/Notification';
 
 const Layout = ({ title, children }) => {
   const [navigationPosition, setNavigationPosition] = useState('top');
@@ -23,8 +24,7 @@ const Layout = ({ title, children }) => {
           }>
           {/* TODO: why you have used --block-- class here */}
           <div className="bg-[#FBFDFF] w-full h-full block">
-            {/* TODO: why the name isn't LeftNavigation doesn't it make more sense */}
-            <Navigation />
+            <LeftRightNav />
           </div>
         </section>
       )}
@@ -55,12 +55,7 @@ const Layout = ({ title, children }) => {
           <div className="flex items-center gap-6 ">
             <MagnifyingGlassIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
 
-            <div className="relative h-10 w-12 bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer">
-              {/* TODO: why this icon name is not NotificationIcon */}
-              {/* TODO: why empty class is there */}
-              <Notification className="" />
-              <span className="h-2 w-2 rounded-full bg-red-500 absolute right-3 top-2"></span>
-            </div>
+            <Notification />
 
             {/* TODO: I TOLD YOU TO the name is CUSTOMIZATION MENU. so could you name the component same? */}
             <TopOptions

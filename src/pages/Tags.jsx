@@ -13,7 +13,7 @@ const Tags = () => {
   return (
     <>
       <Layout title="Tags">
-        <Breadcrumbs rootTitle="Tags" subTitle="Tags" />
+        <Breadcrumbs rootTitle={{ title: 'Tags', url: '/tags' }} />
 
         <table className="w-full table-auto mt-14 border-spacing-y-5 border-separate">
           <thead className="uppercase font-medium text-[#5798F6] text-sm">

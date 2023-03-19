@@ -6,7 +6,7 @@ import productPic from '../../assets/Images/categories/ProductImage.png';
 const EidtCategory = () => {
   return (
     <Layout title="Category">
-      <Breadcrumbs rootTitle="Category" subTitle="Edit" />
+      <Breadcrumbs rootTitle={{ title: 'Category', url: '/categories' }} subTitle="Edit" />
       <div className="flex mt-5">
         <div className="grid justify-items-center  bg-white w-8/12 ml-5 mr-0">
           <div className="bg-white rounded-lg shadow-xl h-1/2 w-9/12 flex justify-center">
