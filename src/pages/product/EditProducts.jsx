@@ -1,5 +1,5 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LayoutBackup';
 
 const EditProducts = () => {
   return (

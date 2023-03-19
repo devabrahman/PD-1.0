@@ -4,6 +4,7 @@ import CategoryIcon from 'components/SVGIcons/CategoryIcon';
 import { IoIosArrowDown } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
+// TODO: absolute path is enabled abut yet relative path, why?
 import orderIcon from '../../../assets/Images/icons/order-nav-icon.png';
 import productIcon from '../../../assets/Images/icons/product-nav-icon.png';
 import tagIcon from '../../../assets/Images/icons/tag-nav-icon.png';
@@ -11,9 +12,10 @@ import tagIcon from '../../../assets/Images/icons/tag-nav-icon.png';
 const TopNavigation = ({ className }) => {
   return (
     <div className={className}>
+      {/* TODO: BLANK SPACE why? */}
       <div className=" flex gap-14 items-center">
-        <div className=" ml-14">
-          <button className="bg-[#99C3FF] py-1.5 px-8 rounded-2xl text-xs font-bold ">logo</button>
+        <div className="">
+          <button className="bg-blue-100 py-2 px-8 rounded-full text-lg ">Logo</button>
         </div>
         <div className="flex gap-6 items-center">
           <p className="text-base mx-12">

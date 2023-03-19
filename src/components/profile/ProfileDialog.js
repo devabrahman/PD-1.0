@@ -2,7 +2,6 @@ import { Popover } from '@headlessui/react';
 import { Link } from 'react-router-dom';
 import TransitionComponent from 'components/common/Transition';
 
-import avatarIcon from '../../assets/Images/common/avatar.png';
 import profile from '../../assets/Images/common/profile.png';
 import atTheRate from '../../assets/Images/icons/atTheRate.png';
 import coloredit from '../../assets/Images/icons/color-edit.png';
@@ -13,14 +12,15 @@ import twitter from '../../assets/Images/social/twitter.png';
 
 const ProfileDialog = () => {
   return (
-    <Popover className="relative">
+    // TODO: could you add grid and place-content-center
+    <Popover className="relative grid place-content-center">
       {({ open }) => (
         <>
           <Popover.Button className="outline-none">
             <div
-              className={`h-14 w-14 border-4 rounded-full                       
+              className={`h-12 w-12 border-4 rounded-full                       
                 ${open ? 'border-blue-700' : 'border-transparent'}`}>
-              <img src={avatarIcon} className={`rounded-full w-full h-full`} />
+              <img src={profile} className={`rounded-full w-full h-full`} />
             </div>
           </Popover.Button>
           <TransitionComponent>

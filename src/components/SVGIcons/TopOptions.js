@@ -2,7 +2,7 @@ import { Popover } from '@headlessui/react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import TransitionComponent from 'components/common/Transition';
 
-const TopOptions = ({ navigationPosition, setNavigationPosition }) => {
+const TopOptions = ({ sidebarPosition, setSidebarPosition }) => {
   return (
     <Popover className="relative">
       {() => (
@@ -57,41 +57,41 @@ const TopOptions = ({ navigationPosition, setNavigationPosition }) => {
                   <ul className=" flex gap-[14px] justify-start ">
                     <li
                       onClick={() => {
-                        setNavigationPosition('top');
+                        setSidebarPosition('left');
                       }}
                       className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
                       <span
                         className={`w-[25px] h-1 rounded-md ${
-                          navigationPosition === 'top' ? 'bg-primary' : 'bg-gray-300'
+                          sidebarPosition === 'left' ? 'bg-primary' : 'bg-gray-300'
+                        } text-center absolute top-2 left-1`}></span>
+                      <span
+                        className={`h-[20px] w-1 rounded-md  ${
+                          sidebarPosition === 'left' ? 'bg-primary' : 'bg-gray-300'
+                        } text-center absolute top-2 left-[10px]`}></span>
+                    </li>
+                    <li
+                      onClick={() => {
+                        setSidebarPosition('top');
+                      }}
+                      className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
+                      <span
+                        className={`w-[25px] h-1 rounded-md ${
+                          sidebarPosition === 'top' ? 'bg-primary' : 'bg-gray-300'
                         }  text-center absolute top-2 left-1`}></span>
                     </li>
                     <li
                       onClick={() => {
-                        setNavigationPosition('right');
+                        setSidebarPosition('right');
                       }}
                       className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
                       <span
                         className={`w-[25px] h-1 rounded-md ${
-                          navigationPosition === 'right' ? 'bg-primary' : 'bg-gray-300'
+                          sidebarPosition === 'right' ? 'bg-primary' : 'bg-gray-300'
                         } text-center absolute top-2 left-1`}></span>
                       <span
                         className={`h-[20px] w-1 rounded-md ${
-                          navigationPosition === 'right' ? 'bg-primary' : 'bg-gray-300'
+                          sidebarPosition === 'right' ? 'bg-primary' : 'bg-gray-300'
                         } text-center absolute top-2 left-[18px]`}></span>
-                    </li>
-                    <li
-                      onClick={() => {
-                        setNavigationPosition('left');
-                      }}
-                      className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(36,53,80,0.10)] ">
-                      <span
-                        className={`w-[25px] h-1 rounded-md ${
-                          navigationPosition === 'left' ? 'bg-primary' : 'bg-gray-300'
-                        } text-center absolute top-2 left-1`}></span>
-                      <span
-                        className={`h-[20px] w-1 rounded-md  ${
-                          navigationPosition === 'left' ? 'bg-primary' : 'bg-gray-300'
-                        } text-center absolute top-2 left-[10px]`}></span>
                     </li>
                   </ul>
 
@@ -122,8 +122,6 @@ const TopOptions = ({ navigationPosition, setNavigationPosition }) => {
                         <input
                           className="input-accent-box-shadow placeholder:font-[#B9B9B9] placeholder:text-sm py-1.5 px-1 rounded-md pl-7 w-full outline-none"
                           type="text"
-                          name=""
-                          id=""
                           placeholder="Type your favorite fonts"
                         />
                       </div>

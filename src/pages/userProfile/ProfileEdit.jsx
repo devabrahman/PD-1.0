@@ -1,4 +1,4 @@
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LayoutBackup';
 import check from '../../assets/Images/common/check.png';
 import eye from '../../assets/Images/common/eye.png';
 import profile from '../../assets/Images/common/profile.png';

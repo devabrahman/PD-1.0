@@ -8,8 +8,9 @@ import WalletIcon from 'components/SVGIcons/WalletIcon';
 
 const Home = () => {
   return (
-    <Layout title="Products">
-      <main className="py-5 px-6">
+    // TODO
+    <Layout title="Products" padding="px-8 py-8">
+      <main className="py-5">
         <section className="">
           <div className="flex gap-[18px]  ">
             <Overview icon={<ReportIcon />} title={'Earnings'} amount={350.4} />
