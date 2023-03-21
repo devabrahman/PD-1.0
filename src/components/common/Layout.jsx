@@ -8,7 +8,7 @@ import { MagnifyingGlassIcon as SearchIcon } from '@heroicons/react/24/outline';
 // TODO: please change next three component name once you see the code
 // TODO: a comment for @AJMIN to check later
 import ProfileDropdownMenu from 'components/profile/ProfileDialog';
-import NotificationIcon from 'components/SVGIcons/Notification';
+import NotificationIcon from 'components/SVGIcons/NotificationIcon';
 import CustomizationMenu from 'components/SVGIcons/TopOptions';
 import TopNavigation from './navigations/TopNavigation';
 
