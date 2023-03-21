@@ -1,12 +1,22 @@
+import { ChevronUpIcon } from '@heroicons/react/24/outline';
+import { spent } from 'api/spent';
 import Layout from 'components/common/Layout';
+import Activity from 'components/dashboard/Activity';
 import { Overview } from 'components/dashboard/Overview';
-import CalenderIcon from 'components/SVGIcons/CalenderIcon';
+import Payment from 'components/dashboard/Payment';
+import TotalProduct from 'components/dashboard/TotalProduct';
+import TotalSales from 'components/dashboard/TotalSales';
 import ChartIcon from 'components/SVGIcons/ChartIcon';
 import DollarIcon from 'components/SVGIcons/DollarIcon';
 import ReportIcon from 'components/SVGIcons/ReportIcon';
 import WalletIcon from 'components/SVGIcons/WalletIcon';
+import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
+import map from 'assets/Images/common/Map.png';
 
 const Home = () => {
+  // Get Data from demo api
+  const data = spent;
+
   return (
     // TODO
     <Layout title="Products" padding="px-8 py-8">
@@ -32,16 +42,61 @@ const Home = () => {
         <section className="grid grid-cols-12 gap-6 mt-11">
           <div className="col-span-9 mx-7 my-6">
             <div className="flex justify-between">
-              <div className="flex gap-1.5 cursor-pointer bg-[#F4F7FE] py-2.5 px-[11px] rounded-md">
-                <CalenderIcon />
-                <p className="text-sm font-medium font-DMSons">This month</p>
-              </div>
               <div className="p-1.5 rounded-[10px] bg-[#F4F7FE]">
                 <ChartIcon />
               </div>
             </div>
+            <div className="flex justify-between">
+              <div className="w-36 h-72">
+                <p className="font-DMSons font-bold text-2xl mt-5 text-[#2B3674]">$37.5K</p>
+                <p className="text-[#A3AED0] font-DMSons flex  text-[14px]">
+                  Total Spent
+                  <span className="text-[#05CD99]">
+                    <ChevronUpIcon className="w-2.5 ml-1.5 mt-0.5 fill-[#05CD99]" />{' '}
+                  </span>
+                  <span className="text-[#05CD99] font-DMSons text-[11px]">+2.45%</span>
+                </p>
+              </div>
+              <div width="650" height="730" className="h-[250px] w-[700px] ">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart width={500} height={300} data={data}>
+                    <CartesianGrid strokeDasharray="6 6" vertical={false} />
+                    <XAxis dataKey="time" />
+                    <Tooltip />
+                    <Line
+                      yAxisId="left"
+                      type="monotone"
+                      dataKey="price"
+                      stroke="#5798F6"
+                      activeDot={{ r: 8, strokeWidth: 1 }}
+                      strokeWidth={3}
+                    />
+                    <Line
+                      yAxisId="right"
+                      type="monotone"
+                      dataKey="price2"
+                      strokeWidth={3}
+                      stroke="#FF6734"
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
           </div>
-          <div className="col-span-3"></div>
+          <div className="col-span-3 space-y-5">
+            <TotalProduct />
+            <TotalSales />
+          </div>
+          {/* <div className="flex justify-between w-full"></div> */}
+          <div className="col-span-4 bg-white input-accent-box-shadow px-5 py-[30px] rounded-x">
+            <p className="font-medium text-lg">Map</p>
+
+            <div className="min-w-[331px]">
+              <img className="w-full" src={map} alt="map images" />
+            </div>
+          </div>
+          <Payment className="col-span-5" />
+          <Activity className="col-span-3" />
         </section>
       </main>
     </Layout>
