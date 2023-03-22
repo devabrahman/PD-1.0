@@ -1,5 +1,5 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
-import Layout from 'components/common/LayoutBackup';
+import Layout from 'components/common/Layout';
 import OtherProducts from 'components/products/OtherProducts';
 import { AiFillStar } from 'react-icons/ai';
 import macbook1 from '../../assets/Images/products/macbook1.jpg';

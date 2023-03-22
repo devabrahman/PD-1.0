@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import DeletePopup from 'components/common/DeletePopup';
 import Layout from 'components/common/Layout';
-import Pagination from 'components/common/Pagination';
 import Bell from 'components/SVGIcons/Bell';
 import Cart from 'components/SVGIcons/Cart';
 import Check from 'components/SVGIcons/Check';
@@ -167,7 +166,6 @@ const OrderDetails = () => {
         </section>
       </Layout>
       <DeletePopup isOpen={isOpen} setIsOpen={(event) => setIsOpen(event)} />
-      <Pagination />
     </>
   );
 };

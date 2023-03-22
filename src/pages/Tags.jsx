@@ -1,5 +1,5 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
-import Layout from 'components/common/LayoutBackup';
+import Layout from 'components/common/Layout';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import EditIcon from 'components/SVGIcons/Editicon';
 import RectangleIcon from 'components/SVGIcons/RectangleIcon';

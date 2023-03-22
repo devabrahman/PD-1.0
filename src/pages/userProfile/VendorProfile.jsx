@@ -1,4 +1,4 @@
-import Layout from 'components/common/LayoutBackup';
+import Layout from 'components/common/Layout';
 import ProfileSetting from 'components/profile/ProfileSetting';
 import profile from '../../assets/Images/common/profile.png';
 import bg from '../../assets/Images/common/vendor-profile-bg.png';

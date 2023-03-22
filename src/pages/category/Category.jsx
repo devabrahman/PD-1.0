@@ -1,6 +1,6 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import DeletePopup from 'components/common/DeletePopup';
-import Layout from 'components/common/LayoutBackup';
+import Layout from 'components/common/Layout';
 import AstroIcon from 'components/SVGIcons/AstroIcon';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import EditIcon from 'components/SVGIcons/Editicon';

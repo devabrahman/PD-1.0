@@ -13,7 +13,7 @@ const Orders = () => {
   return (
     <Layout title="Orders">
       <Breadcrumbs rootTitle={{ title: 'Orders', url: '' }} />
-      <table className="w-full  table-auto mt-10 border-spacing-y-7 border-separate">
+      <table className="w-full  table-auto pt-10 border-spacing-y-7 border-separate dark:bg-dark dark:text-white">
         <thead className="uppercase font-medium text-[#5798F6] text-sm">
           <tr className="font-medium">
             <th className="h-fulinline-flex items-center">
