@@ -11,10 +11,10 @@ const Activity = ({ className }) => {
   };
 
   const data = [
-    { name: 'Active', value: 2400 },
-    { name: 'Inactive', value: 2567 },
-    { name: 'Group', value: 1398 },
-    { name: 'Reject', value: 1800 }
+    { name: '$2400', value: 2400 },
+    { name: '$2567', value: 2567 },
+    { name: '$1398', value: 1398 },
+    { name: '$1800', value: 1800 }
   ];
 
   const RADIAN = Math.PI / 180;
