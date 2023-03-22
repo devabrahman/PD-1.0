@@ -1,151 +1,143 @@
-// import { IoIosArrowUp } from 'react-icons/io';
-import { Disclosure } from '@headlessui/react';
-import CategoryIcon from 'components/SVGIcons/CategoryIcon';
-import { BsQuestionLg } from 'react-icons/bs';
+import React, { useLayoutEffect, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
-import { Link } from 'react-router-dom';
-
-import orderIcon from '../../../assets/Images/icons/order-nav-icon.png';
-import productIcon from '../../../assets/Images/icons/product-nav-icon.png';
-import tagIcon from '../../../assets/Images/icons/tag-nav-icon.png';
-import logo from '../../../assets/Images/common/logo.png'; //src\assets\Images\common\logo.png
+import logo from 'assets/Images/common/logo.png';
+import productIcon from 'assets/Images/icons/product-nav-icon.png';
+import categoryIcon from 'assets/Images/icons/categoryIcon.png';
+import tagIcon from 'assets/Images/icons/tag-nav-icon.png';
+import orderIcon from 'assets/Images/icons/order-nav-icon.png';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navigation = () => {
+  const [openItem, setOpenItem] = useState(null);
+  const [activeNave, setActiveNave] = useState(null);
+
+  const toggleItem = (index) => {
+    if (openItem === index) {
+      setOpenItem(null);
+    } else {
+      setOpenItem(index);
+    }
+  };
+
+  const navList = [
+    {
+      icon: '',
+      menu: { title: 'Dashboard', url: '/' },
+      submenu: []
+    },
+    {
+      icon: productIcon,
+      menu: { title: 'Products', url: '' },
+      submenu: [
+        { title: 'Products', url: '/products' },
+        { title: 'New', url: '/new-product' },
+        { title: 'Edit', url: '/edit-product' },
+        { title: 'Single Product', url: '/single-product' }
+      ]
+    },
+    {
+      icon: categoryIcon,
+      menu: { title: 'Categories', url: '' },
+      submenu: [
+        { title: 'Categories', url: '/categories' },
+        { title: 'New', url: '/new-category' },
+        { title: 'Edit', url: '/edit-category' }
+      ]
+    },
+    {
+      icon: tagIcon,
+      menu: { title: 'Tags', url: '/tags' },
+      submenu: []
+    },
+    {
+      icon: orderIcon,
+      menu: { title: 'Orders', url: '' },
+      submenu: [
+        { title: 'Orders', url: '/orders' },
+        { title: 'Orders Details', url: '/order-details' }
+      ]
+    }
+  ];
+
+  useLayoutEffect(() => {
+    if (activeNave) {
+      setOpenItem(activeNave);
+    }
+  }, [activeNave]);
+
+  const setActiveNav = (index) => {
+    setActiveNave(index);
+    return 'text-black';
+  };
   return (
     <>
-      <div className="px-3 py-6 w-full flex flex-col relative justify-between">
-        <div className="">
-          <Link to="/" className="block mb-10 ml-14">
-            <button className="bg-[#99C3FF]/40 input-accent-box-shadow py-1.5 px-8 rounded-2xl text-xs font-bold ">
-              <img src={logo} alt="Logo" className="w-10" />
-            </button>
-          </Link>
-          <div className="">
-            <p className="text-base mx-12">
-              <Link to="/">Dashboard</Link>
-            </p>
+      <div className="w-full max-w-md mx-auto mt-10">
+        <Link to="/" className="block mb-10 ml-14">
+          <button className="bg-[#b7d9d6]/40 input-accent-box-shadow py-1.5 px-8 rounded-2xl text-xs font-bold ">
+            <img src={logo} alt="Logo" className="w-10" />
+          </button>
+        </Link>
 
-            <div className="text-base text-[#878787]  m-5 mr-0">
-              <Disclosure>
-                {({ open }) => (
-                  <>
-                    <Disclosure.Button className="text-[#302323] w-full justify-between flex">
-                      <div className="flex">
-                        <img src={productIcon} alt="order icon" />
-                        <p className="px-2">Products</p>
-                      </div>
-                      <IoIosArrowDown
-                        className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-[#5798F7]`}
-                      />
-                    </Disclosure.Button>
+        <div className="px-3 py-6 w-full flex flex-col relative justify-between">
+          {navList.map((navItem, index) => (
+            <div key={index}>
+              <div
+                className="flex items-center justify-between px-4 py-3 cursor-pointer"
+                onClick={() => toggleItem(index)}>
+                <div className="flex">
+                  {navItem?.icon !== '' ? (
+                    <img src={navItem?.icon} alt="nav icon" className="w-6" />
+                  ) : (
+                    <span className="inline-block w-6"></span>
+                  )}
+                  <h5 className="px-2 text-[#302323] font-medium text-[19px]">
+                    {navItem.menu.url !== '' ? (
+                      <NavLink
+                        className={({ isActive, isPending }) =>
+                          isPending ? '' : isActive ? setActiveNav(index) : ''
+                        }
+                        to={navItem.menu.url}>
+                        {navItem.menu.title}
+                      </NavLink>
+                    ) : (
+                      navItem?.menu?.title
+                    )}
+                  </h5>
+                </div>
 
-                    <Disclosure.Panel className="mx-7">
-                      <ul>
-                        <li>
-                          <Link to="/products">Products</Link>
-                        </li>
-                        <li>
-                          <Link to="/new-product">New</Link>
-                        </li>
-                        <li>
-                          <Link to="/edit-product">Edit</Link>
-                        </li>
-                        <li>
-                          <Link to="/single-product">Single Product</Link>
-                        </li>
-                      </ul>
-                    </Disclosure.Panel>
-                  </>
+                {navItem?.submenu?.length > 0 && (
+                  <IoIosArrowDown
+                    className={`${
+                      openItem === index ? 'rotate-180 text-[#5798F7]' : ''
+                    } transition-transform duration-300`}>
+                    &#10148;
+                  </IoIosArrowDown>
                 )}
-              </Disclosure>
-            </div>
+              </div>
 
-            <div className="text-base text-[#302323] m-5 mr-0">
-              <Disclosure>
-                {({ open }) => (
-                  <>
-                    <Disclosure.Button className="text-[#302323] w-full justify-between flex">
-                      <div className="flex">
-                        <CategoryIcon className="h-6 w-14" />
-                        <p className="px-2">Categories</p>
-                      </div>
-                      <IoIosArrowDown
-                        className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-[#99C3FF]`}
-                      />
-                    </Disclosure.Button>
-                    <Disclosure.Panel className="mx-7 text-[#878787]">
-                      <ul>
-                        <li>
-                          <Link to="/categories"> Categories</Link>
-                        </li>
-                        <li>
-                          <Link to="/new-category">New</Link>
-                        </li>
-                        <li>
-                          <Link to="/edit-category">Edit</Link>
-                        </li>
-                      </ul>
-                    </Disclosure.Panel>
-                  </>
-                )}
-              </Disclosure>
-            </div>
-
-            <div className="text-base text-[#302323] m-5 mr-0text-[#302323] w-full justify-between flex">
-              <div className="flex">
-                <img src={tagIcon} alt="order icon" />
-                <p className="px-2">
-                  {' '}
-                  <Link to="/tags">Tags</Link>
-                </p>
+              <div
+                className={`transition-all duration-300 ${
+                  openItem === index ? 'h-auto' : 'h-0'
+                } overflow-hidden ml-12 `}>
+                <ul className="text-base text-[#878787] space-y-1.5">
+                  {navItem?.submenu?.length > 0 &&
+                    navItem?.submenu?.map((submenu, i) => (
+                      <li
+                        key={i}
+                        className={`text-[19px] ${navItem?.submenu?.length - 1 === i && 'pb-6'}`}>
+                        <NavLink
+                          className={({ isActive, isPending }) =>
+                            isPending ? '' : isActive ? setActiveNav(index) : ''
+                          }
+                          to={submenu?.url}>
+                          {submenu?.title}
+                        </NavLink>
+                      </li>
+                    ))}
+                </ul>
               </div>
             </div>
-
-            <div className="text-base text-[#302323] m-5 mr-0">
-              <Disclosure>
-                {({ open }) => (
-                  <>
-                    <Disclosure.Button className="text-[#302323] w-full justify-between flex">
-                      <div className="flex">
-                        <img src={orderIcon} alt="order icon" />
-                        <p className="px-2">Orders</p>
-                      </div>
-                      <IoIosArrowDown
-                        className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-[#99C3FF]`}
-                      />
-                    </Disclosure.Button>
-                    <Disclosure.Panel className="mx-7 text-[#878787]">
-                      <Link to="/orders">Orders</Link>
-                    </Disclosure.Panel>
-                    <Disclosure.Panel className="mx-7 text-[#878787]">
-                      <Link to="/order-details">Orders Details</Link>
-                    </Disclosure.Panel>
-                  </>
-                )}
-              </Disclosure>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-b from-[#FBF0DE] to-[#E3E2F6] mx-[0.9%] rounded-[10px] h-56 w-[13.4%] fixed flex flex-col bottom-12 justify-end">
-          <div className="flex justify-center">
-            <div className="bg-white w-16 relative -top-6 h-16 rounded-full shadow-[0px_33px_24px_rgba(0,0,0,0.16)]">
-              <div className="bg-[#FF886A] w-10 h-10 rounded-full m-3 items-center flex">
-                <BsQuestionLg className="text-white m-2" size="32" />
-              </div>
-            </div>
-          </div>
-          <div className="px-6">
-            <p className="text-center text-base font-semibold">Help Center</p>
-            <p className="text-center text-[#757575] text-xs mt-1">
-              Having trouble in Planti. Please contact us for more questions.
-            </p>
-          </div>
-          <div className="m-5 ">
-            <button className="bg-[#FF8465] py-1.5 w-11/12 h-10 px-2 text-white rounded-2xl text-xs font-bold ">
-              Go To Help Center
-            </button>
-          </div>
+          ))}
         </div>
       </div>
     </>
