@@ -39,7 +39,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
   if (sidebarPosition === 'left') {
     return (
       <LayoutMainGrid position="left">
-        <section className="bg-[#FBFDFF] w-full h-full block">
+        <section className="bg-[#FBFDFF] dark:bg-[#0E1C2F] dark:text-white w-full h-full block">
           <LeftNavigation />
         </section>
         <section className={padding}>
@@ -75,7 +75,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
   if (sidebarPosition === 'right') {
     return (
       <LayoutMainGrid position="right">
-        <section className={padding}>
+        <section className={`dark:bg-dark dark:text-white ${padding}`}>
           <div className="flex justify-between items-center">
             <h2 className="text-2xl font-medium">{title}</h2>
 

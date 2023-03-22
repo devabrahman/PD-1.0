@@ -1,6 +1,6 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import ImageDropDown from 'components/common/ImageDropDown';
-import Layout from 'components/common/LayoutBackup';
+import Layout from 'components/common/Layout';
 import categoryPic from '../../assets/Images/common/CategoryPic.png';
 
 const NewCategory = () => {

@@ -9,10 +9,11 @@ module.exports = {
         gold: '#FFCF0D',
         primary: '#5798F6',
         pdGrey: '#D6D6D6',
-        accent: ' #1C92FF'
+        accent: ' #1C92FF',
+        dark: '#061325'
       },
       fontFamily: {
-        primary: ['Poppins', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
         secondary: ['Montserrat', 'sans-serif'],
         DMSons: ['DM Sans', 'sans-serif']
       }
