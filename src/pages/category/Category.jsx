@@ -8,13 +8,30 @@ import RectangleIcon from 'components/SVGIcons/RectangleIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import { useState } from 'react';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
+import { MagnifyingGlassIcon as SearchIcon, PlusIcon } from '@heroicons/react/24/outline';
 
 const Category = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <Layout title="Category">
-        <Breadcrumbs rootTitle={{ title: 'Category', url: '/categories' }} />
+        <div className="flex justify-between items-baseline">
+          <Breadcrumbs rootTitle={{ title: 'Category', url: '/categories' }} />
+          <div className="flex gap-2.5 items-center">
+            <form action="">
+              <div className="border border-[#B9B9B9]/30 rounded-lg flex pl-1.5 ">
+                <SearchIcon className="w-6 stroke-2 stroke-primary " />
+                <input type="search" name="search" className="h-full ml-2 py-2" />
+              </div>
+            </form>
+            <div className="w-12 h-[43px] bg-primary rounded-lg inline-flex justify-center items-center cursor-pointer">
+              <Link to="/new-category">
+                <PlusIcon className="text-white w-8 " />
+              </Link>
+            </div>
+          </div>
+        </div>
         <table className="w-full table-auto mt-14 border-spacing-y-5 border-separate">
           <thead className="uppercase font-medium text-[#5798F6] text-sm">
             <tr className="font-medium">
@@ -51,7 +68,7 @@ const Category = () => {
             </tr>
           </thead>
           <tbody className="">
-            <tr className="rounded-xl shadow-md shadow-[#87CEEB] input-back-box-shadow">
+            <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
               <td></td>
               <td className="py-2">
                 <div className="flex gap-2 items-center">
@@ -66,14 +83,16 @@ const Category = () => {
               <td className="">/angular</td>
               <td className="">1</td>
               <td></td>
-              <td className="cursor-pointer">
-                <EditIcon />
+              <td>
+                <Link to="/edit-category" className="cursor-pointer">
+                  <EditIcon />
+                </Link>
               </td>
               <td className="cursor-pointer" onClick={() => setIsOpen(true)}>
                 <DeleteIcon />
               </td>
             </tr>
-            <tr className="rounded-xl shadow-md shadow-[#87CEEB] input-back-box-shadow">
+            <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
               <td></td>
               <td className="py-2">
                 <div className="flex gap-2">
@@ -88,8 +107,10 @@ const Category = () => {
               <td className="">/angular</td>
               <td className="">2</td>
               <td></td>
-              <td className="cursor-pointer">
-                <EditIcon />
+              <td>
+                <Link to="/edit-category" className="cursor-pointer">
+                  <EditIcon />
+                </Link>
               </td>
               <td className="cursor-pointer" onClick={() => setIsOpen(true)}>
                 <DeleteIcon />
