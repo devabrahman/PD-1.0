@@ -12,7 +12,7 @@ module.exports = {
         accent: ' #1C92FF'
       },
       fontFamily: {
-        primary: ['Poppins', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
         secondary: ['Montserrat', 'sans-serif'],
         DMSons: ['DM Sans', 'sans-serif']
       }
