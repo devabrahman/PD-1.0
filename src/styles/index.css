@@ -30,7 +30,8 @@
   }
 }
 @layer base {
-  input:focus {
+  input:focus,
+  textarea:focus {
     @apply focused-input dark:focused-input-dark;
   }
 }
