@@ -42,11 +42,6 @@ const Products = () => {
   };
 
   useEffect(() => {
-    console.log(
-      '🔐 -> file: Products.jsx:46 -> useEffect -> confirmDelete && deleteIndex:',
-      confirmDelete,
-      deleteIndex
-    );
     if (confirmDelete && deleteIndex !== '') {
       const newProductList = allProducts;
       newProductList.splice(deleteIndex, 1);
@@ -63,7 +58,7 @@ const Products = () => {
         <table className="w-full table-auto mt-14 border-spacing-y-6 border-separate pb-36">
           <thead className="uppercase font-medium text-[#5798F6] text-sm">
             <tr className="font-medium">
-              <th className="w-5">
+              <th className="w-5 pl-2">
                 <div className="items-start custom-checkbox">
                   <input
                     type="checkbox"
@@ -125,11 +120,8 @@ const Products = () => {
           </thead>
           <tbody className="">
             {allProducts.map((product, index) => (
-              <tr
-                key={product?.id}
-                className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow">
-                <td className="w-5">
-                  {' '}
+              <tr key={product?.id} className="rounded-xl border-pdGrey/70 h-12 table-shadow">
+                <td className="w-5 pl-2">
                   <input
                     type="checkbox"
                     id="input-2"
@@ -140,8 +132,8 @@ const Products = () => {
                   <label
                     onClick={() => handelChange(product?.id)}
                     htmlFor="input-2"
-                    className="checkbox cursor-pointer">
-                    <CheckMarkIcon />
+                    className="checkbox dark:fill-dark cursor-pointer">
+                    <CheckMarkIcon className="dark:stroke-dark stroke-white" />
                   </label>
                 </td>
                 <td className="pl-5 py-3">

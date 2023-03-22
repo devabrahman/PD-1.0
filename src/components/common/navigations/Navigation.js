@@ -67,7 +67,7 @@ const Navigation = () => {
 
   const setActiveNav = (index) => {
     setActiveNave(index);
-    return 'text-black';
+    return 'text-black dark:text-gray-300';
   };
   return (
     <>
@@ -90,7 +90,7 @@ const Navigation = () => {
                   ) : (
                     <span className="inline-block w-6"></span>
                   )}
-                  <h5 className="px-2 text-[#302323] font-medium text-[19px]">
+                  <p className="px-2 text-[#302323] dark:text-white font-medium text-[19px]">
                     {navItem.menu.url !== '' ? (
                       <NavLink
                         className={({ isActive, isPending }) =>
@@ -102,7 +102,7 @@ const Navigation = () => {
                     ) : (
                       navItem?.menu?.title
                     )}
-                  </h5>
+                  </p>
                 </div>
 
                 {navItem?.submenu?.length > 0 && (
@@ -124,7 +124,9 @@ const Navigation = () => {
                     navItem?.submenu?.map((submenu, i) => (
                       <li
                         key={i}
-                        className={`text-[19px] ${navItem?.submenu?.length - 1 === i && 'pb-6'}`}>
+                        className={`text-[19px] dark:text-white ${
+                          navItem?.submenu?.length - 1 === i && 'pb-6'
+                        }`}>
                         <NavLink
                           className={({ isActive, isPending }) =>
                             isPending ? '' : isActive ? setActiveNav(index) : ''
