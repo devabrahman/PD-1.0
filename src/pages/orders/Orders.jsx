@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import Breadcrumbs from 'components/common/Breadcrumbs';
+import { useState } from 'react';
+import DeletePopup from 'components/common/DeletePopup';
 import Layout from 'components/common/Layout';
 import Pagination from 'components/common/Pagination';
 import RectangleIcon from 'components/SVGIcons/RectangleIcon';
@@ -9,6 +11,7 @@ import { Link } from 'react-router-dom';
 
 const Orders = () => {
   const demoArray = Array(6).fill(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Layout title="Orders">
@@ -247,6 +250,7 @@ const Orders = () => {
               </div>
             </td>
           </tr>
+
           <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
             <td className="py-2">
               <div className="">
@@ -278,6 +282,8 @@ const Orders = () => {
       <div className="w-full">
         <Pagination />
       </div>
+
+      <DeletePopup isOpen={isOpen} setIsOpen={(event) => setIsOpen(event)} />
     </Layout>
   );
 };
