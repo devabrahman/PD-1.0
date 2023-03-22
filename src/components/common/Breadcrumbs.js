@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { HiChevronRight } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 
-const Breadcrumbs = ({ rootTitle, subTitle }) => {
+const Breadcrumbs = ({ rootTitle, subTitle, top = 'mt-[75px]' }) => {
   const { title, url } = rootTitle;
 
   return (
-    <div className="flex flex-row items-center">
+    <div className={`flex flex-row items-center ${top}`}>
       <ProductDirectoryIcon className="text-[#4F4F4F] stroke-2 border-red-200" />
       <HiChevronRight className="h-7 w-10 text-[#D9D9D9]" />
       <Link to={url || ''}>
