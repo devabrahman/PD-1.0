@@ -4,7 +4,7 @@ export const Overview = ({ icon, title, amount }) => {
       <div className="w-14 h-14 bg-[#F4F7FE] rounded-full flex justify-center items-center">
         {icon}
       </div>
-      <div className="">
+      <div>
         <p className="font-medium text-[#97A6D5] text-sm">{title}</p>
         <p className="font-DMSons font-bold text-lg text-[#2B3674]">${amount}</p>
       </div>

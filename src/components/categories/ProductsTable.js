@@ -13,7 +13,7 @@ const ProductsTable = () => {
             <th>Count</th>
           </tr>
         </thead>
-        <tbody className="">
+        <tbody>
           <tr className="rounded-xl shadow-lg shadow-[#87CEEB]/25">
             <td className="pr-64 py-2">
               <div className="flex">

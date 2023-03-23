@@ -50,7 +50,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
               <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
 
               <div className="relative h-10 w-12 bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer">
-                <NotificationIcon className="" />
+                <NotificationIcon />
                 <span className="h-2 w-2 rounded-full bg-red-500 absolute right-3 top-2"></span>
               </div>
 
@@ -83,7 +83,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
               <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
 
               <div className="relative h-10 w-12 bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer">
-                <NotificationIcon className="" />
+                <NotificationIcon />
                 <span className="h-2 w-2 rounded-full bg-red-500 absolute right-3 top-2"></span>
               </div>
 
@@ -118,7 +118,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
             <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
 
             <div className="relative h-10 w-12 bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer">
-              <NotificationIcon className="" />
+              <NotificationIcon />
               <span className="h-2 w-2 rounded-full bg-red-500 absolute right-3 top-2"></span>
             </div>
 

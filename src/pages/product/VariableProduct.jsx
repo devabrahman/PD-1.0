@@ -46,11 +46,11 @@ const VariableProduct = () => {
           <div className="border w-4/6 border-[#D6D6D6]/60 rounded-xl my-2">
             <div className="ml-4 flex items-center">
               <RightMarkIcon className="h-2 w-2" />
-              <p className="">Add variation like Color, Size, etc</p>
+              <p>Add variation like Color, Size, etc</p>
             </div>
             <hr className="h-0.5 w-full bg-[#CDCDCD]/20" />
             <div className="w-3/5 mx-10 my-3">
-              <p className="">Variation name</p>
+              <p>Variation name</p>
               <div className="flex items-center">
                 <input
                   type="number"
@@ -63,7 +63,7 @@ const VariableProduct = () => {
               </div>
             </div>
             <div className="w-3/5 mx-14 my-3 mb-16">
-              <p className="">Variation values</p>
+              <p>Variation values</p>
               <div className="flex items-center">
                 <input
                   type="number"

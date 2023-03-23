@@ -18,9 +18,9 @@ const SingleProduct = () => {
       <section className="flex gap-16">
         <div className="w-full">
           <div className="justify-center">
-            <span className=""></span>
+            <span></span>
             <img src={macbook1} alt="macBook" />
-            <span className=""></span>
+            <span></span>
           </div>
           <div className="flex gap-3 justify-center mt-14">
             <img className="object-cover h-14" src={macbook1} alt="macBook" />

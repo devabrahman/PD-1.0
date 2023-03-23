@@ -74,26 +74,16 @@ const ImageDropDown = () => {
   console.log('🔐 -> file: ImageDropDown.js:73 -> useEffect -> files:', files);
 
   return (
-    /*
-    <section className="container">
-    <div {...getRootProps({ className: 'dropzone' })}>
-        <input {...getInputProps()} />
-        <p>Drag drop some files here, or click to select files</p>
-        </div>
-        <aside style={thumbsContainer}>{thumbs}</aside>
-        </section>
-        */
-
     <>
       <div className="max-w-sm">
-        <div className="flex justify-center w-full h-44 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-3xl appearance-none cursor-pointer hover:border-gray-400 focus:outline-none items-center">
+        <div className="flex justify-center w-full h-44 px-4 transition bg-white dark:bg-dark border-2 border-gray-300 dark:border-darkBorder border-dashed rounded-3xl appearance-none cursor-pointer hover:border-gray-400 focus:outline-none items-center">
           <div {...getRootProps({ className: 'dropzone' })}>
             <input {...getInputProps()} />
             <div className="flex justify-center py-3">
-              <ImageIcon className="" />
+              <ImageIcon />
             </div>
             <span className="flex items-center space-x-2">
-              <span className="font-medium text-gray-600">
+              <span className="font-medium text-gray-600 dark:text-[#CDCDCD]">
                 Drop your image here, or
                 <span className="text-blue-600"> browse</span>
                 <p className="text-center text-[#CDCDCD]">JPG, PNG,JPEG </p>

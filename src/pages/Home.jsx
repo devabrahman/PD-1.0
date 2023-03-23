@@ -21,14 +21,14 @@ const Home = () => {
     // TODO
     <Layout title="Products" padding="px-8 py-8">
       <main className="py-5">
-        <section className="">
+        <section>
           <div className="flex gap-[18px]  ">
             <Overview icon={<ReportIcon />} title={'Earnings'} amount={350.4} />
             <Overview icon={<DollarIcon />} title={'Spend this month'} amount={642.39} />
             <Overview icon={<WalletIcon />} title={'Earnings'} amount={350.4} />
             <div className="flex w-full gap-[18px] py-5 px-6 rounded-2xl bg-white input-accent-box-shadow">
               <div className="w-6 h-14  rounded-full flex justify-center items-center"></div>
-              <div className="">
+              <div>
                 <p className="font-medium text-[#97A6D5] text-sm">Sales</p>
                 <p className="font-DMSons font-bold text-lg text-[#2B3674]">$574.34</p>
                 <p className="text-[#A3AED0] text-[12px] font-bold font-DMSons">

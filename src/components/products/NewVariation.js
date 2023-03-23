@@ -60,13 +60,13 @@ const NewVariation = ({ variation, setVariation }) => {
       <div className="border w-full border-[#D6D6D6]/60 rounded-xl my-2">
         <div className="ml-4 flex items-center">
           <RightMarkIcon className="h-2 w-2" />
-          <p className="">Add variation like Color, Size, etc</p>
+          <p>Add variation like Color, Size, etc</p>
         </div>
         <hr className="h-0.5 w-full bg-[#CDCDCD]/20" />
         {variationList.map((item, itemIndex) => (
           <>
             <div className="w-3/5 mx-10 my-3">
-              <p className="">Variation name</p>
+              <p>Variation name</p>
               <div className="flex items-center">
                 <SettingIcon className="w-5 h-6 -ml-6 mr-6" />
                 <input
