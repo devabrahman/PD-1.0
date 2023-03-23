@@ -17,26 +17,24 @@ const EidtCategory = () => {
         </div>
         <form className="w-full h-auto mx-5">
           <div className="mb-4 mx-0">
-            <label htmlFor="" className="text-left font-montserrat text-base mb-1.5 block pb-4">
+            <label htmlFor="" className="text-left text-base mb-1.5 block pb-4">
               Title
             </label>
             <input
               type="text"
-              className="rounded-2xl flex justify-center dark:bg-dark dark:text-white items-center border border-primary dark:border-darkBorder px bg-opacity-10 p-3 font-montserrat text-sm w-10/12"
+              className="rounded-2xl px-6 dark:bg-dark dark:text-white items-center border border-[#B9B9B9]/50 dark:border-darkBorder px bg-opacity-10 p-3 text-sm w-10/12"
               required
               defaultValue="Apple"
             />
             <input
               type="text"
-              className="rounded-3xl flex justify-center dark:bg-dark items-center border border-primary dark:border-darkBorder my-5 bg-opacity-10 p-3 font-montserrat text-sm w-5/12"
+              className="rounded-3xl px-6 dark:bg-dark items-center border border-[#B9B9B9]/50 dark:border-darkBorder my-5 bg-opacity-10 p-3 text-sm w-5/12"
               required
               defaultValue="/angular"
             />
           </div>
           <div className="mx-0">
-            <p
-              htmlFor=""
-              className="text-[#302323] dark:text-[#E6E6E6]  font-montserrat text-xl mb-1.5 block">
+            <p htmlFor="" className="text-[#302323] dark:text-[#E6E6E6]  text-xl mb-1.5 block">
               Description
             </p>
             <p className="w-9/12 text-base text-[#161616]/70 dark:text-[#CDCDCD]/90 py-2">
@@ -45,9 +43,7 @@ const EidtCategory = () => {
             </p>
           </div>
           <div className="py-5">
-            <label
-              htmlFor=""
-              className="text-[#302323] dark:text-[#E6E6E6] font-montserrat text-xl mb-1.5 block">
+            <label htmlFor="" className="text-[#302323] dark:text-[#E6E6E6] text-xl mb-1.5 block">
               Categories Picture
             </label>
             <div className="p-2 max-w-sm">
