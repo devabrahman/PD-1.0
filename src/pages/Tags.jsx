@@ -22,8 +22,12 @@ const Tags = () => {
           <div className="flex gap-2.5 items-center">
             <form action="">
               <div className="border border-[#B9B9B9]/30 rounded-lg flex pl-1.5 ">
-                <SearchIcon className="w-6 stroke-2 stroke-primary " />
-                <input type="search" name="search" className="h-full ml-2 py-2" />
+                <SearchIcon className="w-6 stroke-2 stroke-primary cursor-pointer" />
+                <input
+                  type="search"
+                  name="search"
+                  className="h-full ml-2 py-2 rounded-lg px-1.5 dark:bg-lightDark"
+                />
               </div>
             </form>
             <div
