@@ -22,13 +22,13 @@ const NewCategory = () => {
             </label>
             <input
               type="text"
-              className="rounded-2xl flex justify-center dark:bg-dark dark:text-white items-center border border-primary dark:border-darkBorder px bg-opacity-10 p-3 font-montserrat text-sm w-10/12"
+              className="rounded-2xl flex justify-center dark:bg-dark dark:text-white items-center border border-[#B9B9B9]/50 dark:border-darkBorder px-6 bg-opacity-10 p-3 font-montserrat text-sm w-10/12"
               required
               placeholder="Category Name"
             />
             <input
               type="text"
-              className="rounded-3xl flex justify-center dark:bg-dark items-center border border-primary dark:border-darkBorder my-5 bg-opacity-10 p-3 font-montserrat text-sm w-5/12"
+              className="rounded-3xl px-6 flex justify-center dark:bg-dark items-center border border-[#B9B9B9]/50 dark:border-darkBorder my-5 bg-opacity-10 p-3 font-montserrat text-sm w-5/12"
               required
               placeholder="/angular"
             />
