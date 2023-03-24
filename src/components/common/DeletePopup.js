@@ -41,7 +41,7 @@ const DeletePopup = ({ isOpen, setIsOpen, setConfirmDelete }) => {
             <div className="flex justify-end gap-5 items-center mt-5 mb-2 text-lg ">
               <button
                 onClick={() => setIsOpen(false)}
-                className="px-6 py-1 border-[#E6E6E6] rounded-3xl cursor-pointer border-2">
+                className="px-7 py-2.5 border-[#E6E6E6] rounded-3xl cursor-pointer border">
                 Cancel
               </button>
               <button
@@ -49,7 +49,7 @@ const DeletePopup = ({ isOpen, setIsOpen, setConfirmDelete }) => {
                   setConfirmDelete(true);
                   setIsOpen(false);
                 }}
-                className="px-6 py-1 mr-5 bg-[#DB2955] text-white rounded-3xl cursor-pointer">
+                className="px-7 py-2.5 mr-5 bg-[#DB2955] text-white rounded-3xl cursor-pointer">
                 Submit
               </button>
             </div>

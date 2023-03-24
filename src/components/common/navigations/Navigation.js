@@ -67,7 +67,7 @@ const Navigation = () => {
 
   const setActiveNav = (index) => {
     setActiveNave(index);
-    return 'text-black dark:text-gray-300';
+    return 'text-black dark:text-primary';
   };
   return (
     <>

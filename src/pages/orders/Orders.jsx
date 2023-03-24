@@ -87,7 +87,7 @@ const Orders = () => {
                 <RightMarkIcon />
               </div>
             </td>
-            <td className="">
+            <td>
               <p>#194551</p>
             </td>
             <td className="flex flex-col">
@@ -116,7 +116,7 @@ const Orders = () => {
                 <RightMarkIcon />
               </div>
             </td>
-            <td className="">
+            <td>
               <p>#334578</p>
             </td>
             <td className="flex flex-col">
@@ -141,11 +141,11 @@ const Orders = () => {
 
           <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
             <td className="py-2">
-              <div className="">
+              <div>
                 <RightMarkIcon />
               </div>
             </td>
-            <td className="">
+            <td>
               <p>#194551</p>
             </td>
             <td className="flex flex-col">
@@ -172,7 +172,7 @@ const Orders = () => {
                 <RightMarkIcon />
               </div>
             </td>
-            <td className="">
+            <td>
               <p>#194551</p>
             </td>
             <td className="flex flex-col">
@@ -197,11 +197,11 @@ const Orders = () => {
 
           <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
             <td className="py-2">
-              <div className="">
+              <div>
                 <RightMarkIcon />
               </div>
             </td>
-            <td className="">
+            <td>
               <p>#194551</p>
             </td>
             <td className="flex flex-col">
@@ -228,7 +228,7 @@ const Orders = () => {
                 <RightMarkIcon />
               </div>
             </td>
-            <td className="">
+            <td>
               <p>#194551</p>
             </td>
             <td className="flex flex-col">
@@ -253,11 +253,11 @@ const Orders = () => {
 
           <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
             <td className="py-2">
-              <div className="">
+              <div>
                 <RightMarkIcon />
               </div>
             </td>
-            <td className="">
+            <td>
               <p>#194551</p>
             </td>
             <td className="flex flex-col">

@@ -1,14 +1,15 @@
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from 'react';
 import { PlusIcon } from '@heroicons/react/24/outline';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import SettingIcon from 'components/SVGIcons/SettingIcon';
-import { useState } from 'react';
 
-import OptionIcon from '../../assets/Images/products/OptionIcon.png'; //../../assets/Images/products/OptionIcon.png
+import OptionIcon from 'assets/Images/products/OptionIcon.png';
 
-const NewVariation = ({ variation, setVariation }) => {
+const NewVariation = ({ variation, setVariation, isVariable, setIsVariable }) => {
   const [variationList, setVariationList] = useState(variation);
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState(true);
 
   const addVariationValue = (itemIndex, valueIndex) => {
     const list = [...variationList];
@@ -57,88 +58,99 @@ const NewVariation = ({ variation, setVariation }) => {
         <img src={OptionIcon} alt="Option icon" className="h-6 w-5" />
         <h5 className="font-medium text-xl ml-2">Variations</h5>
       </div>
-      <div className="border w-full border-[#D6D6D6]/60 rounded-xl my-2">
-        <div className="ml-4 flex items-center">
-          <RightMarkIcon className="h-2 w-2" />
-          <p className="">Add variation like Color, Size, etc</p>
+      <div className="border w-full border-[#D6D6D6]/60 py-2.5 rounded-xl my-2">
+        <div className="ml-4 flex items-center gap-3">
+          {/* <RightMarkIcon className="h-2 w-2" /> */}
+          <input
+            type="checkbox"
+            checked={isVariable}
+            onChange={(e) => setIsVariable(e.target.checked)}
+            name="variable"
+            id="variable"
+          />
+          <p>Add variation like Color, Size, etc</p>
         </div>
-        <hr className="h-0.5 w-full bg-[#CDCDCD]/20" />
-        {variationList.map((item, itemIndex) => (
+        {isVariable && (
           <>
-            <div className="w-3/5 mx-10 my-3">
-              <p className="">Variation name</p>
-              <div className="flex items-center">
-                <SettingIcon className="w-5 h-6 -ml-6 mr-6" />
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-full pr-1.5 mr-6"
-                  value={item?.name}
-                  onChange={(event) => updateVariationName(itemIndex, event.target.value)}
-                />
-                {!done && (
-                  <span onClick={() => removeVariation(itemIndex)} className="cursor-pointer">
-                    <DeleteIcon className="w-7 h-10" />
-                  </span>
-                )}
-              </div>
-            </div>
-
-            <div className="w-3/5 mx-14 my-3 mb-16">
-              <p className="ml-4">Variation values</p>
-
-              {item?.value?.map((value, valueIndex) => (
-                <div key={valueIndex} className="flex items-center">
-                  <SettingIcon className="w-5 h-6 -ml-4 mr-6 opacity-25" />
-                  <input
-                    type="text"
-                    name=""
-                    id=""
-                    className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-4/5 pr-1.5 mr-6"
-                    placeholder="Add another value"
-                    value={value}
-                    onChange={(event) =>
-                      updateVariationValue(itemIndex, valueIndex, event.target.value)
-                    }
-                  />
-                  {!done && (
-                    <span
-                      onClick={() => removeVariationValue(itemIndex, valueIndex)}
-                      className="cursor-pointer mr-2">
-                      <DeleteIcon className="w-8 h-10 " />
-                    </span>
-                  )}
-                  {!done && item?.value?.length - 1 == valueIndex && (
-                    <span onClick={() => addVariationValue(itemIndex, valueIndex)}>
-                      <PlusIcon className="w-7 h-7 bg-[#1C92FF] text-white p-1 rounded-xl" />
-                    </span>
-                  )}
+            <hr className="h-0.5 my-2.5 w-full bg-[#CDCDCD]/20" />
+            {variationList.map((item, itemIndex) => (
+              <>
+                <div className="w-3/5 mx-10 my-3">
+                  <p>Variation name</p>
+                  <div className="flex items-center">
+                    <SettingIcon className="w-5 h-6 -ml-6 mr-6" />
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-full pr-1.5 mr-6"
+                      value={item?.name}
+                      onChange={(event) => updateVariationName(itemIndex, event.target.value)}
+                    />
+                    {!done && (
+                      <span onClick={() => removeVariation(itemIndex)} className="cursor-pointer">
+                        <DeleteIcon className="w-7 h-10" />
+                      </span>
+                    )}
+                  </div>
                 </div>
-              ))}
+
+                <div className="w-3/5 mx-14 my-3 mb-16">
+                  <p className="ml-4">Variation values</p>
+
+                  {item?.value?.map((value, valueIndex) => (
+                    <div key={valueIndex} className="flex items-center">
+                      <SettingIcon className="w-5 h-6 -ml-4 mr-6 opacity-25" />
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-4/5 pr-1.5 mr-6"
+                        placeholder="Add another value"
+                        value={value}
+                        onChange={(event) =>
+                          updateVariationValue(itemIndex, valueIndex, event.target.value)
+                        }
+                      />
+                      {!done && (
+                        <span
+                          onClick={() => removeVariationValue(itemIndex, valueIndex)}
+                          className="cursor-pointer mr-2">
+                          <DeleteIcon className="w-8 h-10 " />
+                        </span>
+                      )}
+                      {!done && item?.value?.length - 1 == valueIndex && (
+                        <span onClick={() => addVariationValue(itemIndex, valueIndex)}>
+                          <PlusIcon className="w-7 h-7 bg-[#1C92FF] text-white p-1 rounded-xl" />
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </>
+            ))}
+
+            {variationList?.length !== 0 && <hr className="h-0.5 w-11/12 bg-[#CDCDCD]/20 ml-6" />}
+            <div className="flex justify-between items-center ml-5">
+              <p onClick={addVariation} className="text-accent/80 cursor-pointer">
+                + Add another option
+              </p>
+              {!done ? (
+                <button
+                  onClick={handelDone}
+                  className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">
+                  Done
+                </button>
+              ) : (
+                <button
+                  onClick={() => setDone(false)}
+                  className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">
+                  Edit
+                </button>
+              )}
             </div>
           </>
-        ))}
-
-        <hr className="h-0.5 w-11/12 bg-[#CDCDCD]/20 ml-6" />
-        <div className="flex justify-between items-center ml-5">
-          <p onClick={addVariation} className="text-accent/80 cursor-pointer">
-            + Add another option
-          </p>
-          {!done ? (
-            <button
-              onClick={handelDone}
-              className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">
-              Done
-            </button>
-          ) : (
-            <button
-              onClick={() => setDone(false)}
-              className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">
-              Edit
-            </button>
-          )}
-        </div>
+        )}
       </div>
     </div>
   );

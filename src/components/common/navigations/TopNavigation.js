@@ -14,7 +14,7 @@ const TopNavigation = ({ className }) => {
     <div className={className}>
       {/* TODO: BLANK SPACE why? */}
       <div className=" flex gap-14 items-center">
-        <div className="">
+        <div>
           <button className="bg-blue-100 py-2 px-8 rounded-full text-lg ">Logo</button>
         </div>
         <div className="flex gap-6 items-center">

@@ -89,7 +89,7 @@ const Activity = ({ className }) => {
   return (
     <div className={className}>
       <div className="bg-white input-accent-box-shadow px-5 py-[30px] rounded-xl">
-        <div className="">
+        <div>
           <div className="flex justify-between mb-5">
             <p className="font-bold text-2xl text-[#6B7A99]">Activity</p>
             <form action="">

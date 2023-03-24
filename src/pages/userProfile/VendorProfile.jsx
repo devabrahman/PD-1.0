@@ -16,7 +16,7 @@ const VendorProfile = () => {
   return (
     <Layout title="">
       <section className="pb-10">
-        <div className="">
+        <div>
           <div
             className="h-[270px] p-8 rounded-xl  shadow-lg shadow-[#87ceeb40]"
             style={{
@@ -56,7 +56,7 @@ const VendorProfile = () => {
               </div>
             </div>
             <div className="flex items-center justify-between flex-grow">
-              <div className="">
+              <div>
                 <h2 className="text-xl font-medium text-[#302323]">Amantony Rojario</h2>
                 <p className="text-sm text-[#848484] font-medium">CEO / Co-Founder</p>
               </div>

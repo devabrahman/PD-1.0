@@ -5,7 +5,7 @@ const CategoryList = () => {
     <div className="rounded-xl input-accent-box-shadow w-full">
       <Tab.Group>
         <Tab.List className="flex justify-around input-accent-box-shadow rounded-xl px-2.5 py-3">
-          <Tab className="">
+          <Tab>
             <span className="font-medium text-base mr-4"> Categories</span>
           </Tab>
           <div className="w-0.5 h-8 bg-[#DDEFFF]" />
@@ -14,11 +14,11 @@ const CategoryList = () => {
           </Tab>
         </Tab.List>
         <Tab.Panels className="py-5">
-          <Tab.Panel className="">
-            <section className="">
+          <Tab.Panel>
+            <section>
               {/* 1st checkbox */}
               <div className="ml-3">
-                <div className="">
+                <div>
                   <div className="flex items-center mr-4">
                     <input
                       type="checkbox"
@@ -163,10 +163,10 @@ const CategoryList = () => {
             </section>
           </Tab.Panel>
           <Tab.Panel className="flex justify-end mr-8">
-            <section className="">
+            <section>
               {/* 1st checkbox */}
               <div className="ml-3">
-                <div className="">
+                <div>
                   <div className="flex items-center mr-4">
                     <input
                       type="checkbox"

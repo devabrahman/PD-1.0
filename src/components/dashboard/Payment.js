@@ -9,7 +9,7 @@ const Payment = ({ className }) => {
     <div className={className}>
       <div className="bg-white input-accent-box-shadow px-5 py-[15px] rounded-xl col-span-1 min-w-[344px]">
         <p className="font-medium text-lg">payment</p>
-        <section className="">
+        <section>
           <div className="flex gap-4 items-center mt-6">
             <div className="bg-slate-100 rounded-lg p-1">
               <TagIcon className="inline-block" />

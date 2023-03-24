@@ -113,12 +113,12 @@ const Products = () => {
                   </div>
                 </div>
               </th>
-              <th className=""></th>
-              <th className=""></th>
+              <th></th>
+              <th></th>
               <th></th>
             </tr>
           </thead>
-          <tbody className="">
+          <tbody>
             {allProducts.map((product, index) => (
               <tr key={product?.id} className="rounded-xl border-pdGrey/70 h-12 table-shadow">
                 <td className="w-5 pl-2">
@@ -153,13 +153,13 @@ const Products = () => {
                     <p className="text-xs text-[rgb(185,185,185)]">Laptop</p>
                   </div>
                 </td>
-                <td className="">
+                <td>
                   {product?.currency}
                   {product?.price}
                 </td>
-                <td className="">{product?.sku}</td>
-                <td className="">{product?.quantity}</td>
-                <td className="">
+                <td>{product?.sku}</td>
+                <td>{product?.quantity}</td>
+                <td>
                   {product?.status ? (
                     <span className="text-green bg-green/20 rounded-md text-sm py-1.5 px-3 font-medium">
                       In Stock

@@ -16,7 +16,7 @@ const OtherProducts = () => {
           <th>Id</th>
         </tr>
       </thead>
-      <tbody className="">
+      <tbody>
         <tr className="rounded-xl shadow-lg shadow-[#87CEEB]/25">
           <td className="pr-64 py-2">
             <div className="flex">
@@ -39,7 +39,7 @@ const OtherProducts = () => {
         <tr className="rounded-xl shadow-lg shadow-[#87CEEB]/25">
           <td className="pr-60 py-4">
             <div className="flex">
-              <RectangleIcon className="" />
+              <RectangleIcon />
               <span>Mackbook Pro</span>
             </div>
             <p className="ml-11 -mt-5 text-xs text-[#B9B9B9]">Laptop</p>

@@ -64,7 +64,7 @@ const SignUp = () => {
                 </div>
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex gap-3">
-                    <input className="" type="checkbox" name="check" id="check" />
+                    <input type="checkbox" name="check" id="check" />
                     <label htmlFor="check">Keep me logged in</label>
                   </div>
                   <a className="text-[#4318FF] text-sm font-medium" href="http://">
@@ -98,7 +98,7 @@ const SignUp = () => {
             &copy; 2022 Horizon UI. All Rights Reserved. Made with love by Simple!
           </p>
         </div>
-        <div className="">
+        <div>
           <ul className="flex items-center justify-center gap-10">
             <li>
               <a className="text-white text-sm font-medium" href="https://">

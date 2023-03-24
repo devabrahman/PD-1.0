@@ -7,7 +7,7 @@ import NewVariation from 'components/products/NewVariation';
 import VariationList from 'components/products/VariationList';
 import VariationUpdate from 'components/products/VariationUpdate';
 import CalenderIcon from 'components/SVGIcons/CalenderIcon';
-import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
+// import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import SearchEngineIcon from '../../assets/Images/products/SearchEngineIcon.png';
 import ShippingIcon from '../../assets/Images/products/ShippingIcon.png';
 import TextEditor from 'components/common/TextEditor';
@@ -19,14 +19,12 @@ import { addDays } from 'date-fns';
 import Calendar from 'components/products/Calendar';
 import ProductTag from 'components/products/ProductTag';
 
-const variationList = [
-  { name: 'color', value: ['black', 'White'] },
-  { name: 'Storage', value: ['256GB', '512GB', '1TB'] },
-  { name: 'Ram', value: ['2GB', '6GB', '8GB', '10GB'] }
-];
-
 const NewProducts = () => {
+  const variationList = [];
   const [variation, setVariation] = useState(variationList);
+  const [isVariable, setIsVariable] = useState(false);
+  const [physicalProduct, setPhysicalProduct] = useState(false);
+  const [quantity, setQuantity] = useState(true);
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -67,8 +65,14 @@ const NewProducts = () => {
                 />
               </div>
               <div className="my-5 w-1/3">
-                <div className="flex items-center">
-                  <RightMarkIcon className="h-3 w-3" />
+                <div className="flex gap-3 items-center">
+                  {/* <RightMarkIcon className="w-3" /> */}
+                  <input
+                    onChange={(e) => setQuantity(e.target.checked)}
+                    type="checkbox"
+                    className="w-4 h-4"
+                    checked={quantity}
+                  />
                   <h5 className="font-medium text-xl">Quantity</h5>
                 </div>
                 <p className="text-[10px] text-[#302323] flex justify-end m-0 -mb-2 p-0">
@@ -78,47 +82,143 @@ const NewProducts = () => {
                   type="number"
                   name=""
                   id=""
+                  disabled={!quantity}
                   className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-full pr-1.5"
                   placeholder="100"
                 />
               </div>
 
-              <NewVariation variation={variation} setVariation={(value) => setVariation(value)} />
-              <VariationList variation={variation} setVariation={(value) => setVariation(value)} />
-              <VariationUpdate
+              <NewVariation
+                isVariable={isVariable}
+                setIsVariable={setIsVariable}
                 variation={variation}
                 setVariation={(value) => setVariation(value)}
               />
+              {isVariable && variation.length !== 0 && (
+                <>
+                  <VariationList
+                    variation={variation}
+                    setVariation={(value) => setVariation(value)}
+                  />
+                  <VariationUpdate
+                    variation={variation}
+                    setVariation={(value) => setVariation(value)}
+                  />
+                </>
+              )}
 
-              <div className="my-5">
+              <div className="my-12 mt-9">
                 <div className="flex">
                   <img src={ShippingIcon} alt="Option icon" className="h-6 w-5" />
                   <h5 className="font-medium text-xl ml-2">Shipping</h5>
                 </div>
                 <div className="border w-full border-[#D6D6D6]/60 rounded-xl my-2">
-                  <div className="flex my-2 mx-3">
-                    <input type="checkbox" className="w-4 h-4" />
+                  <div className="flex items-center my-2 mx-3">
+                    <input
+                      onChange={(e) => setPhysicalProduct(e.target.checked)}
+                      type="checkbox"
+                      className="w-4 h-4"
+                    />
                     <p className="ml-3">This is a physical product</p>
                   </div>
-                  <hr className="h-0.5 w-full bg-[#CDCDCD]/20" />
-                  <p className="px-2 py-3">
-                    Customers won’t enter their shipping address or choose a shipping method when
-                    buying this product.
-                  </p>
+                  {physicalProduct && (
+                    <>
+                      <hr className="h-0.5 w-full bg-[#CDCDCD]/20" />
+                      <div className="px-3">
+                        <h5 className="text-[#302323] text-xl py-4">Customs information</h5>
+                        <form action="">
+                          <div>
+                            <label htmlFor="" className="text-[15px] pb-3 block">
+                              Country/Region of origin
+                            </label>
+                            <select
+                              name=""
+                              id=""
+                              placeholder="Select country or region"
+                              className="border border-[#B9B9B9] rounded-xl block w-5/12 outline-none py-2.5 px-4 text-[15px]">
+                              <option disabled value="" className="text-[#848484] text-[15px]">
+                                Select country or region
+                              </option>
+                              <option value="">Bangladesh</option>
+                              <option value="">India</option>
+                              <option value="">USA</option>
+                              <option value="">UEA</option>
+                            </select>
+                          </div>
+
+                          <div className="my-7">
+                            <label htmlFor="" className="text-[15px] pb-3 block">
+                              Country/Region of origin
+                            </label>
+                            <select
+                              name=""
+                              id=""
+                              placeholder="Select country or region"
+                              className="border border-[#B9B9B9] rounded-xl block w-5/12 outline-none py-2.5 px-4 text-[15px]">
+                              <option disabled value="" className="text-[#848484] text-[15px]">
+                                Select country or region
+                              </option>
+                              <option value="">Bangladesh</option>
+                              <option value="">India</option>
+                              <option value="">USA</option>
+                              <option value="">UEA</option>
+                            </select>
+                          </div>
+                        </form>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
               <div className="my-5">
-                <div className="flex">
+                <div className="flex gap-2">
                   <img src={SearchEngineIcon} alt="Option icon" className="h-6 w-5" />
-                  <h5 className="font-medium text-xl ml-2">Search engine listing</h5>
+                  <h5 className="font-medium text-xl">Search engine listing</h5>
                 </div>
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  className="border pl-3 border-[#B9B9B9] h-9 mt-3 rounded-[8px] w-full pr-1.5"
-                  placeholder="Add a title and description to see how this product might appear in a search engine listing"
-                />
+                <p className="text-xs pt-4 text-[#302323]">
+                  Add a title and description to see how this product might appear in a search
+                  engine listing
+                </p>
+                <form action="">
+                  <div className="mt-5">
+                    <label htmlFor="title" className="text-[19px] font-medium text-[#302323]">
+                      Page Title
+                    </label>
+                    <input
+                      type="text"
+                      name="Title"
+                      id="title"
+                      className="border border-[#D6D6D6]/70 mt-3 rounded-xl w-full py-2.5 pl-3 pr-1.5"
+                      placeholder="Add a title "
+                    />
+                  </div>
+
+                  <div className="mt-6">
+                    <label htmlFor="title" className="text-[19px] font-medium text-[#302323]">
+                      Meta description
+                    </label>
+                    <textarea
+                      type="text"
+                      name="Title"
+                      id="title"
+                      rows={8}
+                      className="shadow[0px_4px_10px rgba(0, 0, 0, 0.15)] border border-[#D6D6D6]/70 mt-3 rounded-xl w-full py-2.5 pl-3 pr-1.5"
+                      placeholder="Add a description to see how this product might appear in a search engine listing "
+                    />
+                  </div>
+
+                  <div className="mt-3">
+                    <label htmlFor="title" className="text-[19px] font-medium text-[#302323]">
+                      URL
+                    </label>
+                    <input
+                      type="text"
+                      name="Title"
+                      id="title"
+                      className="border border-[#D6D6D6]/70 mt-3 rounded-xl w-full py-1.5 pl-3 pr-1.5"
+                    />
+                  </div>
+                </form>
               </div>
             </section>
           </section>
