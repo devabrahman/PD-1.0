@@ -1,13 +1,14 @@
 /* eslint-disable no-unused-vars */
-import Breadcrumbs from 'components/common/Breadcrumbs';
 import { useState } from 'react';
+import Breadcrumbs from 'components/common/Breadcrumbs';
 import DeletePopup from 'components/common/DeletePopup';
 import Layout from 'components/common/Layout';
+import { Link } from 'react-router-dom';
 import Pagination from 'components/common/Pagination';
+// icon
 import RectangleIcon from 'components/SVGIcons/RectangleIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
-import { Link } from 'react-router-dom';
 
 const Orders = () => {
   const demoArray = Array(6).fill(0);
