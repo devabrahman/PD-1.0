@@ -1,3 +1,4 @@
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import ImageIcon from 'components/SVGIcons/ImageIcon';
 import React, { useEffect, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
@@ -24,8 +25,8 @@ const thumb = {
 
 const thumbInner = {
   display: 'flex',
-  minWidth: 0,
-  overflow: 'hidden'
+  minWidth: 0
+  // overflow: 'hidden'
 };
 
 const img = {
@@ -54,15 +55,19 @@ const ImageDropDown = () => {
 
   const thumbs = files.map((file) => (
     <div style={thumb} key={file.name}>
-      <div style={thumbInner}>
+      <div className="relative group" style={thumbInner}>
         <img
           src={file.preview}
           style={img}
           // Revoke data uri after image is loaded
+          className="object-contain"
           onLoad={() => {
             URL.revokeObjectURL(file.preview);
           }}
         />
+        <span className="hidden absolute right-0 w-4 h-4 bg-red-600 rounded-full group-hover:inline-flex items-center justify-center cursor-pointer">
+          <XMarkIcon className="w-4 text-white" />
+        </span>
       </div>
     </div>
   ));
@@ -71,7 +76,6 @@ const ImageDropDown = () => {
     // Make sure to revoke the data uris to avoid memory leaks, will run on unmount
     return () => files.forEach((file) => URL.revokeObjectURL(file.preview));
   }, []);
-  console.log('🔐 -> file: ImageDropDown.js:73 -> useEffect -> files:', files);
 
   return (
     <>
