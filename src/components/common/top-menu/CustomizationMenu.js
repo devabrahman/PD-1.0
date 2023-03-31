@@ -2,7 +2,7 @@ import { Popover } from '@headlessui/react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import TransitionComponent from 'components/common/Transition';
 
-const TopOptions = ({ sidebarPosition, setSidebarPosition }) => {
+const CustomizationMenu = ({ sidebarPosition, setSidebarPosition }) => {
   return (
     <Popover className="relative">
       {() => (
@@ -137,4 +137,4 @@ const TopOptions = ({ sidebarPosition, setSidebarPosition }) => {
   );
 };
 
-export default TopOptions;
+export default CustomizationMenu;
