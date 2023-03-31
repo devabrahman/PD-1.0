@@ -1,30 +1,30 @@
+import { useState } from 'react';
+import { addDays } from 'date-fns';
+import Layout from 'components/common/Layout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import ImageDropDown from 'components/common/ImageDropDown';
-import Layout from 'components/common/Layout';
-import CategoryList from '../../components/products/CategoryList';
-// Icons
+import CategoryList from 'components/products/CategoryList';
+import Calendar from 'components/products/Calendar';
+import ProductTag from 'components/products/ProductTag';
 import NewVariation from 'components/products/NewVariation';
 import VariationList from 'components/products/VariationList';
 import VariationUpdate from 'components/products/VariationUpdate';
-import CalenderIcon from 'components/SVGIcons/CalenderIcon';
-// import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
-import SearchEngineIcon from '../../assets/Images/products/SearchEngineIcon.png';
-import ShippingIcon from '../../assets/Images/products/ShippingIcon.png';
 import TextEditor from 'components/common/TextEditor';
-
+// Icons
+import CalenderIcon from 'components/SVGIcons/CalenderIcon';
+import SearchEngineIcon from 'assets/Images/products/SearchEngineIcon.png';
+import ShippingIcon from 'assets/Images/products/ShippingIcon.png';
+// Css
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import { useState } from 'react';
-import { addDays } from 'date-fns';
-import Calendar from 'components/products/Calendar';
-import ProductTag from 'components/products/ProductTag';
+import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
 
 const NewProducts = () => {
   const variationList = [];
   const [variation, setVariation] = useState(variationList);
   const [isVariable, setIsVariable] = useState(false);
   const [physicalProduct, setPhysicalProduct] = useState(false);
-  const [quantity, setQuantity] = useState(true);
+  const [checkQuantity, setCheckQuantity] = useState(true);
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -53,7 +53,6 @@ const NewProducts = () => {
             <h3 className="font-medium text-lg mb-2 mt-6">Product long description</h3>
             <TextEditor />
 
-            {/* Sku Section */}
             <section className="mt-16 w-full">
               <div>
                 <h5 className="font-medium text-xl">SKU (Stock Keeping Unit)</h5>
@@ -65,24 +64,37 @@ const NewProducts = () => {
                 />
               </div>
               <div className="my-5 w-1/3">
-                <div className="flex gap-3 items-center">
-                  {/* <RightMarkIcon className="w-3" /> */}
-                  <input
-                    onChange={(e) => setQuantity(e.target.checked)}
-                    type="checkbox"
-                    className="w-4 h-4"
-                    checked={quantity}
-                  />
+                <div className="flex gap-2.5 items-center">
+                  <div className="w-7 flex justify-center items-center">
+                    <input
+                      type="checkbox"
+                      checked={checkQuantity || false}
+                      className="check-input cursor-pointer"
+                      onChange={() => {}}
+                    />
+                    <label
+                      onClick={() => setCheckQuantity(checkQuantity ? false : true)}
+                      htmlFor="input-2"
+                      className={`checkbox dark:fill-dark cursor-pointer ${
+                        checkQuantity
+                          ? 'rounded-[9px] bg-[#48f685] w-7 h-7'
+                          : 'w-5 h-5 rounded-[4px]'
+                      }`}>
+                      <CheckMarkIcon className="dark:stroke-dark stroke-white" />
+                    </label>
+                  </div>
+
                   <h5 className="font-medium text-xl">Quantity</h5>
                 </div>
                 <p className="text-[10px] text-[#302323] flex justify-end m-0 -mb-2 p-0">
                   Available
                 </p>
+
                 <input
                   type="number"
                   name=""
                   id=""
-                  disabled={!quantity}
+                  disabled={!checkQuantity}
                   className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-full pr-1.5"
                   placeholder="100"
                 />
@@ -113,13 +125,27 @@ const NewProducts = () => {
                   <h5 className="font-medium text-xl ml-2">Shipping</h5>
                 </div>
                 <div className="border w-full border-[#D6D6D6]/60 rounded-xl my-2">
-                  <div className="flex items-center my-2 mx-3">
-                    <input
-                      onChange={(e) => setPhysicalProduct(e.target.checked)}
-                      type="checkbox"
-                      className="w-4 h-4"
-                    />
-                    <p className="ml-3">This is a physical product</p>
+                  <div className="flex items-center gap-1.5 my-2 mx-3">
+                    <div className="w-8 flex justify-center items-center">
+                      <input
+                        type="checkbox"
+                        id="input-2"
+                        checked={physicalProduct || false}
+                        className="check-input cursor-pointer"
+                        onChange={() => {}}
+                      />
+                      <label
+                        onClick={() => setPhysicalProduct(physicalProduct ? false : true)}
+                        htmlFor="input-2"
+                        className={`checkbox dark:fill-dark cursor-pointer ${
+                          physicalProduct
+                            ? 'rounded-[9px] bg-[#48f685] w-6 h-6'
+                            : 'w-4 h-4 rounded-[4px]'
+                        }`}>
+                        <CheckMarkIcon className="dark:stroke-dark stroke-white" />
+                      </label>
+                    </div>
+                    <p>This is a physical product</p>
                   </div>
                   {physicalProduct && (
                     <>
