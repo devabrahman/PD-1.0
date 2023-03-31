@@ -8,9 +8,9 @@ import { MagnifyingGlassIcon as SearchIcon } from '@heroicons/react/24/outline';
 // TODO: please change next three component name once you see the code
 // TODO: a comment for @AJMIN to check later
 import ProfileDropdownMenu from 'components/profile/ProfileDialog';
-import NotificationIcon from 'components/SVGIcons/NotificationIcon';
 import CustomizationMenu from 'components/SVGIcons/TopOptions';
 import TopNavigation from './navigations/TopNavigation';
+import Notification from './top-menu/Notification';
 
 const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
   // state for sidebar position
@@ -47,12 +47,9 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
             <h2 className="text-2xl font-medium">{title}</h2>
 
             <div className="flex items-center gap-6 ">
-              <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
+              <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400  h-10 w-12 rounded-xl px-2.5 cursor-pointer border2  table-shadow solid #5798F6" />
 
-              <div className="relative h-10 w-12 bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer">
-                <NotificationIcon />
-                <span className="h-2 w-2 rounded-full bg-red-500 absolute right-3 top-2"></span>
-              </div>
+              <Notification />
 
               <CustomizationMenu
                 sidebarPosition={sidebarPosition}
@@ -82,10 +79,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
             <div className="flex items-center gap-6 ">
               <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
 
-              <div className="relative h-10 w-12 bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer">
-                <NotificationIcon />
-                <span className="h-2 w-2 rounded-full bg-red-500 absolute right-3 top-2"></span>
-              </div>
+              <Notification />
 
               <CustomizationMenu
                 sidebarPosition={sidebarPosition}
@@ -117,10 +111,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
           <div className="flex items-center gap-6">
             <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
 
-            <div className="relative h-10 w-12 bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer">
-              <NotificationIcon />
-              <span className="h-2 w-2 rounded-full bg-red-500 absolute right-3 top-2"></span>
-            </div>
+            <Notification />
 
             <CustomizationMenu
               sidebarPosition={sidebarPosition}

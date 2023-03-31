@@ -8,7 +8,7 @@ const TopOptions = ({ sidebarPosition, setSidebarPosition }) => {
       {() => (
         <>
           <Popover.Button className="outline-none">
-            <div className="relative bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer h-10 w-12 px-2">
+            <div className="relative bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 table-shadow rounded-xl grid place-content-center cursor-pointer h-10 w-12 px-2">
               <svg
                 width="19"
                 height="19"
