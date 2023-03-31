@@ -37,9 +37,9 @@ const NewProducts = () => {
     <Layout title="Products">
       <Breadcrumbs rootTitle={{ title: 'Products', url: '/products' }} subTitle="New" />
       <main>
-        <div className="w-full flex gap-16 pt-14">
+        <form className="w-full flex gap-16 pt-14">
           <section className="w-3/4">
-            <h3 className="font-medium text-lg mb-2">Post Title</h3>
+            <label className="block font-medium text-lg mb-2">Post Title</label>
             <input
               className="w-full rounded-xl px-4 border border-pdGrey/70 h-12 input-back-box-shadow focus:outline-none focus:focused-input"
               type="text"
@@ -47,15 +47,15 @@ const NewProducts = () => {
               id=""
             />
 
-            <h3 className="font-medium text-lg mb-2 mt-6">Product description</h3>
+            <label className="block font-medium text-lg mb-2 mt-6">Product description</label>
             <TextEditor />
 
-            <h3 className="font-medium text-lg mb-2 mt-6">Product long description</h3>
+            <label className="block font-medium text-lg mb-2 mt-6">Product long description</label>
             <TextEditor />
 
             <section className="mt-16 w-full">
               <div>
-                <h5 className="font-medium text-xl">SKU (Stock Keeping Unit)</h5>
+                <label className="block font-medium text-xl">SKU (Stock Keeping Unit)</label>
                 <input
                   type="text"
                   name=""
@@ -122,7 +122,7 @@ const NewProducts = () => {
               <div className="my-12 mt-9">
                 <div className="flex">
                   <img src={ShippingIcon} alt="Option icon" className="h-6 w-5" />
-                  <h5 className="font-medium text-xl ml-2">Shipping</h5>
+                  <label className="block font-medium text-xl ml-2">Shipping</label>
                 </div>
                 <div className="border w-full border-[#D6D6D6]/60 rounded-xl my-2">
                   <div className="flex items-center gap-1.5 my-2 mx-3">
@@ -150,7 +150,9 @@ const NewProducts = () => {
                     <>
                       <hr className="h-0.5 w-full bg-[#CDCDCD]/20" />
                       <div className="px-3">
-                        <h5 className="text-[#302323] text-xl py-4">Customs information</h5>
+                        <label className="block text-[#302323] text-xl py-4">
+                          Customs information
+                        </label>
                         <form action="">
                           <div>
                             <label htmlFor="" className="text-[15px] pb-3 block">
@@ -205,7 +207,7 @@ const NewProducts = () => {
 
             <div className="rounded-xl mt-5 input-accent-box-shadow w-full flex  gap-7 px-[15px] pt-3 pb-[18px]">
               <div className="w-full ">
-                <h5 className="font-medium ">Regular Price</h5>
+                <label className="block font-medium ">Regular Price</label>
                 <input
                   type="number"
                   name=""
@@ -216,7 +218,7 @@ const NewProducts = () => {
               </div>
 
               <div className="w-full relative">
-                <h5 className="font-medium ">Special Price</h5>
+                <label className="block font-medium ">Special Price</label>
                 <input
                   type="text"
                   name=""
@@ -238,15 +240,15 @@ const NewProducts = () => {
             </div>
             <ProductTag />
             <div className="py-5">
-              <h5 htmlFor="" className="text-[#424141] font-medium text-base mb-1.5 block">
+              <label className="block text-[#424141] font-medium text-base mb-1.5">
                 Product Picture
-              </h5>
+              </label>
               <div className="p-2">
                 <ImageDropDown />
               </div>
             </div>
           </section>
-        </div>
+        </form>
       </main>
     </Layout>
   );
