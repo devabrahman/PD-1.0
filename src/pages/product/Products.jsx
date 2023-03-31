@@ -8,6 +8,8 @@ import EditIcon from 'components/SVGIcons/Editicon';
 import { useEffect, useState } from 'react';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import { MagnifyingGlassIcon as SearchIcon, PlusIcon } from '@heroicons/react/24/outline';
+import Pagination from 'components/common/Pagination';
 
 const Products = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,8 +56,27 @@ const Products = () => {
   return (
     <>
       <Layout title="Category">
-        <Breadcrumbs rootTitle={{ title: 'Products' }} subTitle="" />
-        <table className="w-full table-auto mt-14 border-spacing-y-6 border-separate pb-36">
+        <div className="flex justify-between items-baseline">
+          <Breadcrumbs rootTitle={{ title: 'Products' }} subTitle="" />
+          <div className="flex gap-2.5 items-center">
+            <form action="">
+              <div className="border border-[#B9B9B9]/30 rounded-lg flex pl-1.5 ">
+                <SearchIcon className="w-6 stroke-2 stroke-primary cursor-pointer" />
+                <input
+                  type="search"
+                  name="search"
+                  className="h-full w-48 ml-2 py-2 rounded-lg px-1.5 dark:bg-lightDark"
+                />
+              </div>
+            </form>
+            <Link to="/new-product">
+              <div className="w-[43px] h-[43px] bg-primary rounded-lg inline-flex justify-center items-center cursor-pointer">
+                <PlusIcon className="text-white w-8 " />
+              </div>
+            </Link>
+          </div>
+        </div>
+        <table className="w-full table-auto mt-14 border-spacing-y-6 border-separate">
           <thead className="uppercase font-medium text-[#5798F6] text-sm">
             <tr className="font-medium">
               <th className="w-5 pl-2">
@@ -70,8 +91,10 @@ const Products = () => {
                   <label
                     onClick={() => allProductChecked('all')}
                     htmlFor="input-2"
-                    className="checkbox">
-                    <CheckMarkIcon />
+                    className={`checkbox dark:fill-dark cursor-pointer w-6 h-6 rounded-[7px] ${
+                      allChecked == 'all' && 'rounded-[9px] bg-[#48f685]'
+                    }`}>
+                    <CheckMarkIcon className="dark:stroke-dark stroke-white" />
                   </label>
                 </div>
               </th>
@@ -113,8 +136,8 @@ const Products = () => {
                   </div>
                 </div>
               </th>
-              <th></th>
-              <th></th>
+              <th className="inline-block mr-[14px]"></th>
+              <th className="inline-block mr-[14px]"></th>
               <th></th>
             </tr>
           </thead>
@@ -132,17 +155,15 @@ const Products = () => {
                   <label
                     onClick={() => handelChange(product?.id)}
                     htmlFor="input-2"
-                    className="checkbox dark:fill-dark cursor-pointer">
+                    className={`checkbox dark:fill-dark cursor-pointer w-6 h-6 rounded-[7px] ${
+                      product?.isChecked && 'rounded-[9px] bg-[#48f685]'
+                    }`}>
                     <CheckMarkIcon className="dark:stroke-dark stroke-white" />
                   </label>
                 </td>
                 <td className="pl-5 py-3">
                   <div className="flex gap-6 w-11 items-center custom-checkbox">
-                    <img
-                      src={product.thumbnail}
-                      className="w-full rounded-md"
-                      alt={product?.productName}
-                    />
+                    <img src={product.thumbnail} className="w-full rounded-md" alt={product?.id} />
                   </div>
                 </td>
                 <td className="flex items-start flex-col">
@@ -187,6 +208,7 @@ const Products = () => {
             ))}
           </tbody>
         </table>
+        <Pagination />
       </Layout>
       <DeletePopup
         setIsOpen={(event) => setIsOpen(event)}
