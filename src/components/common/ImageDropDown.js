@@ -53,7 +53,13 @@ const ImageDropDown = () => {
     }
   });
 
-  const thumbs = files.map((file) => (
+  const removeThumbnail = (file, index) => {
+    const newArr = [...files];
+    newArr.splice(index, 1);
+    setFiles(newArr);
+  };
+
+  const thumbs = files.map((file, index) => (
     <div style={thumb} key={file.name}>
       <div className="relative group" style={thumbInner}>
         <img
@@ -65,7 +71,9 @@ const ImageDropDown = () => {
             URL.revokeObjectURL(file.preview);
           }}
         />
-        <span className="hidden absolute right-0 w-4 h-4 bg-red-600 rounded-full group-hover:inline-flex items-center justify-center cursor-pointer">
+        <span
+          onClick={() => removeThumbnail(file, index)}
+          className="hidden absolute right-0 w-4 h-4 bg-red-600 rounded-full group-hover:inline-flex items-center justify-center cursor-pointer">
           <XMarkIcon className="w-4 text-white" />
         </span>
       </div>
