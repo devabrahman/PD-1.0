@@ -1,35 +1,41 @@
+import { useEffect, useState } from 'react';
 import { productList } from 'api/products';
+import { Link } from 'react-router-dom';
+import Layout from 'components/common/Layout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import DeletePopup from 'components/common/DeletePopup';
-import Layout from 'components/common/Layout';
+import Pagination from 'components/common/Pagination';
+// icons
 import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import EditIcon from 'components/SVGIcons/Editicon';
-import { useEffect, useState } from 'react';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
-import { Link } from 'react-router-dom';
 import { MagnifyingGlassIcon as SearchIcon, PlusIcon } from '@heroicons/react/24/outline';
-import Pagination from 'components/common/Pagination';
 
 const Products = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isDeleteOpen, setIsDeleteOpen] = useState(false);
   const [allChecked, setAllChecked] = useState('');
   const [allProducts, setAllProducts] = useState(productList);
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [deleteIndex, setDeleteIndex] = useState('');
+
+  // check all product is checked
   useEffect(() => {
     const tempAll = allProducts.find((product) => !product?.isChecked);
     !tempAll && setAllChecked('all');
   }, [allProducts]);
 
-  const handelChange = (id) => {
+  // handel select a product
+  const handelSingleCheckMark = (id) => {
     const tempAll = allProducts.map((product) =>
       product.id == id ? { ...product, isChecked: product?.isChecked ? false : true } : product
     );
     setAllProducts(tempAll);
     setAllChecked('');
   };
-  const allProductChecked = () => {
+
+  // handel select all products
+  const checkedAllProducts = () => {
     const checkAll = allProducts.find((product) => !product?.isChecked);
     if (allChecked === 'all' && !checkAll) {
       const tempAll = allProducts.map((product) => ({ ...product, isChecked: false }));
@@ -43,6 +49,7 @@ const Products = () => {
     setAllProducts(tempAll);
   };
 
+  // handel delete products
   useEffect(() => {
     if (confirmDelete && deleteIndex !== '') {
       const newProductList = allProducts;
@@ -89,7 +96,7 @@ const Products = () => {
                     onChange={() => {}}
                   />
                   <label
-                    onClick={() => allProductChecked('all')}
+                    onClick={() => checkedAllProducts('all')}
                     htmlFor="input-2"
                     className={`checkbox dark:fill-dark cursor-pointer w-6 h-6 rounded-[7px] ${
                       allChecked == 'all' && 'rounded-[9px] bg-[#48f685]'
@@ -153,7 +160,7 @@ const Products = () => {
                     onChange={() => {}}
                   />
                   <label
-                    onClick={() => handelChange(product?.id)}
+                    onClick={() => handelSingleCheckMark(product?.id)}
                     htmlFor="input-2"
                     className={`checkbox dark:fill-dark cursor-pointer w-6 h-6 rounded-[7px] ${
                       product?.isChecked && 'rounded-[9px] bg-[#48f685]'
@@ -199,7 +206,7 @@ const Products = () => {
                 <td
                   className="cursor-pointer"
                   onClick={() => {
-                    setIsOpen(true);
+                    setIsDeleteOpen(true);
                     setDeleteIndex(index);
                   }}>
                   <DeleteIcon />
@@ -210,9 +217,10 @@ const Products = () => {
         </table>
         <Pagination />
       </Layout>
+
       <DeletePopup
-        setIsOpen={(event) => setIsOpen(event)}
-        isOpen={isOpen}
+        setIsOpen={(event) => setIsDeleteOpen(event)}
+        isOpen={isDeleteOpen}
         setConfirmDelete={(value) => setConfirmDelete(value)}
       />
     </>
