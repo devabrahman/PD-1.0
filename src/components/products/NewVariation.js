@@ -64,7 +64,6 @@ const NewVariation = ({ variation, setVariation, isVariable, setIsVariable }) =>
           <div className="w-8 flex justify-center items-center">
             <input
               type="checkbox"
-              id="input-2"
               checked={isVariable || false}
               className="check-input cursor-pointer"
               onChange={() => {}}

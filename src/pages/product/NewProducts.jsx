@@ -129,7 +129,6 @@ const NewProducts = () => {
                     <div className="w-8 flex justify-center items-center">
                       <input
                         type="checkbox"
-                        id="input-2"
                         checked={physicalProduct || false}
                         className="check-input cursor-pointer"
                         onChange={() => {}}

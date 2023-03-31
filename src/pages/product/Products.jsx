@@ -91,7 +91,6 @@ const Products = () => {
                   <input
                     type="checkbox"
                     checked={allChecked === 'all'}
-                    id="input-2"
                     className="check-input"
                     onChange={() => {}}
                   />
@@ -154,7 +153,6 @@ const Products = () => {
                 <td className="w-5 pl-2">
                   <input
                     type="checkbox"
-                    id="input-2"
                     checked={product?.isChecked || false}
                     className="check-input cursor-pointer"
                     onChange={() => {}}
