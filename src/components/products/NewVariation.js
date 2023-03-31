@@ -79,6 +79,7 @@ const NewVariation = ({ variation, setVariation, isVariable, setIsVariable }) =>
           </div>
           <p>Add variation like Color, Size, etc</p>
         </div>
+
         {isVariable && (
           <>
             <hr className="h-0.5 my-2.5 w-full bg-[#CDCDCD]/20" />

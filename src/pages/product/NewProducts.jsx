@@ -10,14 +10,14 @@ import NewVariation from 'components/products/NewVariation';
 import VariationList from 'components/products/VariationList';
 import VariationUpdate from 'components/products/VariationUpdate';
 import TextEditor from 'components/common/TextEditor';
+import MetaSection from 'components/products/MetaSection';
 // Icons
 import CalenderIcon from 'components/SVGIcons/CalenderIcon';
-import SearchEngineIcon from 'assets/Images/products/SearchEngineIcon.png';
 import ShippingIcon from 'assets/Images/products/ShippingIcon.png';
+import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
 // Css
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
 
 const NewProducts = () => {
   const variationList = [];
@@ -195,56 +195,7 @@ const NewProducts = () => {
                   )}
                 </div>
               </div>
-              <div className="my-5">
-                <div className="flex gap-2">
-                  <img src={SearchEngineIcon} alt="Option icon" className="h-6 w-5" />
-                  <h5 className="font-medium text-xl">Search engine listing</h5>
-                </div>
-                <p className="text-xs pt-4 text-[#302323]">
-                  Add a title and description to see how this product might appear in a search
-                  engine listing
-                </p>
-                <form action="">
-                  <div className="mt-5">
-                    <label htmlFor="title" className="text-[19px] font-medium text-[#302323]">
-                      Page Title
-                    </label>
-                    <input
-                      type="text"
-                      name="Title"
-                      id="title"
-                      className="border border-[#D6D6D6]/70 mt-3 rounded-xl w-full py-2.5 pl-3 pr-1.5"
-                      placeholder="Add a title "
-                    />
-                  </div>
-
-                  <div className="mt-6">
-                    <label htmlFor="title" className="text-[19px] font-medium text-[#302323]">
-                      Meta description
-                    </label>
-                    <textarea
-                      type="text"
-                      name="Title"
-                      id="title"
-                      rows={8}
-                      className="shadow[0px_4px_10px rgba(0, 0, 0, 0.15)] border border-[#D6D6D6]/70 mt-3 rounded-xl w-full py-2.5 pl-3 pr-1.5"
-                      placeholder="Add a description to see how this product might appear in a search engine listing "
-                    />
-                  </div>
-
-                  <div className="mt-3">
-                    <label htmlFor="title" className="text-[19px] font-medium text-[#302323]">
-                      URL
-                    </label>
-                    <input
-                      type="text"
-                      name="Title"
-                      id="title"
-                      className="border border-[#D6D6D6]/70 mt-3 rounded-xl w-full py-1.5 pl-3 pr-1.5"
-                    />
-                  </div>
-                </form>
-              </div>
+              <MetaSection />
             </section>
           </section>
 
