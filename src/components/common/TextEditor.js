@@ -1,8 +1,9 @@
 import React, { useState, useRef, useMemo } from 'react';
 import JoditEditor from 'jodit-react';
 
-const TextEditor = () => {
-  const [content, setContent] = useState('');
+const TextEditor = ({ description = '' }) => {
+  const [content, setContent] = useState(description);
+
   const editor = useRef(null);
   const config = useMemo(() => {
     return { readonly: false, placeholder: 'Start typings ...' };

@@ -15,10 +15,10 @@ import MetaSection from 'components/products/MetaSection';
 import CalenderIcon from 'components/SVGIcons/CalenderIcon';
 import ShippingIcon from 'assets/Images/products/ShippingIcon.png';
 import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
+import { CalendarDaysIcon, MapPinIcon } from '@heroicons/react/24/outline';
 // Css
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import { CalendarDaysIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 const NewProducts = () => {
   const variationList = [];
@@ -49,7 +49,7 @@ const NewProducts = () => {
             />
 
             <label className="block font-medium text-lg mb-2 mt-6">Product description</label>
-            <TextEditor />
+            <TextEditor description={''} />
 
             <label className="block font-medium text-lg mb-2 mt-6">Product long description</label>
             <TextEditor />
@@ -97,7 +97,6 @@ const NewProducts = () => {
                   id=""
                   disabled={!checkQuantity}
                   className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-full pr-1.5"
-                  placeholder="100"
                 />
               </div>
 
@@ -190,7 +189,13 @@ const NewProducts = () => {
                   )}
                 </div>
               </div>
-              <MetaSection />
+              <MetaSection
+                metaValue={{
+                  title: '',
+                  url: '',
+                  description: { description: '' }
+                }}
+              />
             </section>
           </section>
 

@@ -147,17 +147,17 @@ const NewVariation = ({ variation, setVariation, isVariable, setIsVariable }) =>
                 + Add another option
               </p>
               {!done ? (
-                <button
+                <p
                   onClick={handelDone}
                   className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">
                   Done
-                </button>
+                </p>
               ) : (
-                <button
+                <p
                   onClick={() => setDone(false)}
                   className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">
                   Edit
-                </button>
+                </p>
               )}
             </div>
           </>

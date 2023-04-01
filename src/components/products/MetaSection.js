@@ -2,8 +2,10 @@ import React, { useState, useRef, useMemo } from 'react';
 import SearchEngineIcon from 'assets/Images/products/SearchEngineIcon.png';
 import JoditEditor from 'jodit-react';
 
-const MetaSection = () => {
-  const [content, setContent] = useState('');
+const MetaSection = ({ metaValue }) => {
+  const { description = '', url, title } = metaValue;
+
+  const [content, setContent] = useState(description?.description);
   const editor = useRef(null);
   const config = useMemo(() => {
     return {
@@ -17,7 +19,7 @@ const MetaSection = () => {
     <div className="my-5">
       <div className="flex gap-2">
         <img src={SearchEngineIcon} alt="Option icon" className="h-6 w-5" />
-        <h5 className="font-medium text-xl">Search engine listing</h5>
+        <h4 className="font-medium text-xl">Search engine listing</h4>
       </div>
       <p className="text-xs pt-4 text-[#302323]">
         Add a title and description to see how this product might appear in a search engine listing
@@ -33,6 +35,7 @@ const MetaSection = () => {
             id="title"
             className="border border-[#D6D6D6]/70 mt-3 rounded-xl w-full py-2.5 pl-3 pr-1.5"
             placeholder="Add a title "
+            defaultValue={title}
           />
         </div>
 
@@ -61,7 +64,8 @@ const MetaSection = () => {
             type="text"
             name="Title"
             id="title"
-            className="border border-[#D6D6D6]/70 mt-3 rounded-xl w-full py-1.5 pl-3 pr-1.5"
+            className="border text-gray-600 text-sm border-[#D6D6D6]/70 mt-3 rounded-xl w-full py-2.5 pl-3 pr-1.5"
+            defaultValue={url}
           />
         </div>
       </form>

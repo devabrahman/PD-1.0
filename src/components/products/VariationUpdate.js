@@ -100,7 +100,6 @@ const VariationUpdate = ({ variation }) => {
                   <tr key={index} className="border-b dark:border-[#E6E6E6]">
                     <th scope="row" className="pl-3 py-3 font-medium whitespace-nowrap flex">
                       <RightMarkIcon />
-                      <RightMarkIcon />
                     </th>
                     <td className="py-3">
                       {item?.variant?.map((element, i) => (
