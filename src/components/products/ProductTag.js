@@ -21,7 +21,7 @@ const ProductTag = () => {
   };
   return (
     <div className="w-full rounded-xl input-accent-box-shadow mt-5 px-5 py-3">
-      <h5 className="text-[#424141] font-medium text-base">Tags</h5>
+      <label className="text-[#424141] font-medium text-base block">Tags</label>
       <p className="text-[10px] text-[#939090] flex justify-end m-0 p-0">Manage</p>
       <form onSubmit={addNewTag}>
         <input

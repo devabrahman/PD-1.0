@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { addDays } from 'date-fns';
+import { addDays, format } from 'date-fns';
 import Layout from 'components/common/Layout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import ImageDropDown from 'components/common/ImageDropDown';
@@ -18,6 +18,7 @@ import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
 // Css
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
+import { CalendarDaysIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 const NewProducts = () => {
   const variationList = [];
@@ -153,45 +154,37 @@ const NewProducts = () => {
                         <label className="block text-[#302323] text-xl py-4">
                           Customs information
                         </label>
-                        <form action="">
-                          <div>
-                            <label htmlFor="" className="text-[15px] pb-3 block">
-                              Country/Region of origin
-                            </label>
-                            <select
-                              name=""
-                              id=""
-                              placeholder="Select country or region"
-                              className="border border-[#B9B9B9] rounded-xl block w-5/12 outline-none py-2.5 px-4 text-[15px]">
-                              <option disabled value="" className="text-[#848484] text-[15px]">
-                                Select country or region
-                              </option>
-                              <option value="">Bangladesh</option>
-                              <option value="">India</option>
-                              <option value="">USA</option>
-                              <option value="">UEA</option>
-                            </select>
-                          </div>
 
-                          <div className="my-7">
-                            <label htmlFor="" className="text-[15px] pb-3 block">
-                              Country/Region of origin
-                            </label>
-                            <select
-                              name=""
-                              id=""
-                              placeholder="Select country or region"
-                              className="border border-[#B9B9B9] rounded-xl block w-5/12 outline-none py-2.5 px-4 text-[15px]">
-                              <option disabled value="" className="text-[#848484] text-[15px]">
-                                Select country or region
-                              </option>
-                              <option value="">Bangladesh</option>
-                              <option value="">India</option>
-                              <option value="">USA</option>
-                              <option value="">UEA</option>
-                            </select>
-                          </div>
-                        </form>
+                        <div>
+                          <label htmlFor="" className="text-[15px] pb-3 block">
+                            Country/Region of origin
+                          </label>
+                          <select
+                            name=""
+                            id=""
+                            placeholder="Select country or region"
+                            className="border border-[#B9B9B9] rounded-xl block w-5/12 outline-none py-2.5 px-4 text-[15px]">
+                            <option disabled value="" className="text-[#848484] text-[15px]">
+                              Select country or region
+                            </option>
+                            <option value="">Bangladesh</option>
+                            <option value="">India</option>
+                            <option value="">USA</option>
+                            <option value="">UEA</option>
+                          </select>
+                        </div>
+
+                        <div className="my-7">
+                          <label htmlFor="" className="text-[15px] pb-3 block">
+                            HS (Harmonized System) code
+                          </label>
+                          <input
+                            name=""
+                            id=""
+                            placeholder="Search or enter HS code"
+                            className="border border-[#B9B9B9] rounded-xl block w-5/12 outline-none py-2.5 px-4 text-[15px]"
+                          />
+                        </div>
                       </div>
                     </>
                   )}
@@ -202,7 +195,48 @@ const NewProducts = () => {
           </section>
 
           {/* Right Section */}
-          <section className="w-1/3">
+          <section className="w-1/3 space-y-10">
+            {/* Submit */}
+            <div className="w-full rounded-xl input-accent-box-shadow mt-5 px-5 py-3 space-y-5">
+              <label className="text-[#424141] font-medium text-base block">Publish</label>
+              <div className="flex justify-between">
+                <button className="border border-accent/30 px-2 py-1.5 rounded-lg text-sm input-back-box-shadow">
+                  Save Draft
+                </button>
+                <button className="border border-accent/30 px-2 py-1.5 rounded-lg text-sm input-back-box-shadow">
+                  Preview
+                </button>
+              </div>
+              <div className="flex gap-4 text-sm pt-2">
+                <MapPinIcon className="w-5" />
+                <p>
+                  Status:{' '}
+                  <select className=" bg-accent/10 p-0.5 rounded-sm outline-none selected:text-bold space-y-2">
+                    <option value="Draft">Draft</option>
+                    <option value="Publish">Publish</option>
+                  </select>
+                </p>
+              </div>
+              <div className="flex gap-4 mt-4">
+                <CalendarDaysIcon className="w-5" />
+                <p className="">
+                  Publish Date:{' '}
+                  <span className="pl-1 font-medium cursor-pointer">
+                    {format(Date.now(), 'dd , MMM , yyyy')}
+                  </span>
+                </p>
+              </div>
+              <hr />
+              <p className="text-xs mb-8 text-primary cursor pointer">Copy a new Draft</p>
+              <div className="text-right">
+                <button
+                  className="border border-accent px-2 py-1.5 rounded-lg inline-block text-right mb-2.5 input-back-box-shadow text-sm"
+                  type="submit">
+                  Publish
+                </button>
+              </div>
+            </div>
+
             <CategoryList />
 
             <div className="rounded-xl mt-5 input-accent-box-shadow w-full flex  gap-7 px-[15px] pt-3 pb-[18px]">

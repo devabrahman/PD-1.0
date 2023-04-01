@@ -59,6 +59,7 @@ const NewVariation = ({ variation, setVariation, isVariable, setIsVariable }) =>
         <img src={OptionIcon} alt="Option icon" className="h-6 w-5" />
         <h5 className="font-medium text-xl">Variations</h5>
       </div>
+
       <div className="border w-full border-[#D6D6D6]/60 py-2.5 rounded-xl my-2">
         <div className="ml-4 flex items-center gap-1.5">
           <div className="w-8 flex justify-center items-center">

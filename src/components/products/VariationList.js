@@ -7,7 +7,7 @@ const VariationList = ({ variation, setVariation }) => {
   return (
     <div className="my-5">
       <div className="flex">
-        <h5 className="font-medium text-xl ml-2">Variations</h5>
+        <label className="block font-medium text-xl ml-2">Variations</label>
       </div>
       <div className="border w-full border-[#D6D6D6]/60 rounded-xl my-2">
         {Array.isArray(variation) &&
