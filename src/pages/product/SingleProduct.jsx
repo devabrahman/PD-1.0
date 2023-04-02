@@ -5,16 +5,16 @@ import Breadcrumbs from 'components/common/Breadcrumbs';
 import Layout from 'components/common/Layout';
 import OtherProducts from 'components/products/OtherProducts';
 import { AiFillStar } from 'react-icons/ai';
-// images
+// images and icons
 import macbook1 from '../../assets/Images/products/macbook1.jpg';
 import macbook2 from '../../assets/Images/products/macbook2.jpg';
 import macbook3 from '../../assets/Images/products/macbook3.jpg';
 import macbook4 from '../../assets/Images/products/macbook4.jpg';
 import macbook5 from '../../assets/Images/products/macbook5.jpg';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 // Import css files
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 const SingleProduct = () => {
   const settings = {
@@ -80,7 +80,7 @@ const SingleProduct = () => {
             <i>Laptop</i>
           </h5>
 
-          <div className="flex gap-1.5 items-center">
+          <div className="flex gap-1.5 items-center mt-2.5 mb-1.5">
             <AiFillStar className="text-gold w-[21px] h-[21px]" />
             <span className="text-black/30 text-sm">4.9 Ratings </span>
             <span className="text-black/30 text-sm block">. 2.6k+ Reviews </span>
@@ -106,10 +106,10 @@ const SingleProduct = () => {
               </span>
             </div>
             <div className="flex gap-2.5 mt-8">
-              <span className="cursor-pointer text-[#002D9E] text-[15px] shadow-md bg-white border-[1px] border-[##D1D1D1] rounded-md px-1.5 py-0.5">
+              <span className="cursor-pointer text-[#002D9E] text-[15px] input-accent-box-shadow bg-white  rounded-md px-1.5 py-0.5">
                 128 GB
               </span>
-              <span className="cursor-pointer text-[#002D9E] text-[15px] shadow-md bg-white border-[1px] border-[##D1D1D1] rounded-md px-1.5 py-0.5">
+              <span className="cursor-pointer text-[#002D9E] text-[15px] input-accent-box-shadow bg-white  rounded-md px-1.5 py-0.5">
                 64 GB
               </span>
             </div>

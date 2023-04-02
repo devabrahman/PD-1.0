@@ -205,7 +205,7 @@ const NewProducts = () => {
             <div className="w-full rounded-xl input-accent-box-shadow mt-5 px-5 py-3 space-y-5">
               <label className="text-[#424141] font-medium text-base block">Publish</label>
               <div className="flex justify-between">
-                <button className="border border-accent/30 px-2 py-1.5 rounded-lg text-sm input-back-box-shadow">
+                <button className="border border-accent/30  px-2 py-1.5 rounded-lg text-sm input-back-box-shadow">
                   Save Draft
                 </button>
                 <button className="border border-accent/30 px-2 py-1.5 rounded-lg text-sm input-back-box-shadow">
@@ -235,7 +235,7 @@ const NewProducts = () => {
               <p className="text-xs mb-8 text-primary cursor pointer">Copy a new Draft</p>
               <div className="text-right">
                 <button
-                  className="border border-accent px-2 py-1.5 rounded-lg inline-block text-right mb-2.5 input-back-box-shadow text-sm"
+                  className="border border-accent text-primary px-2 py-1.5 rounded-lg inline-block text-right mb-2.5 input-back-box-shadow text-sm"
                   type="submit">
                   Publish
                 </button>
