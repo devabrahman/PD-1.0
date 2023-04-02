@@ -1,14 +1,30 @@
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import Slider from 'react-slick';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import Layout from 'components/common/Layout';
 import OtherProducts from 'components/products/OtherProducts';
 import { AiFillStar } from 'react-icons/ai';
+// images
 import macbook1 from '../../assets/Images/products/macbook1.jpg';
 import macbook2 from '../../assets/Images/products/macbook2.jpg';
 import macbook3 from '../../assets/Images/products/macbook3.jpg';
 import macbook4 from '../../assets/Images/products/macbook4.jpg';
 import macbook5 from '../../assets/Images/products/macbook5.jpg';
+// Import css files
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 const SingleProduct = () => {
+  const settings = {
+    speed: 500,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
+  };
   return (
     <Layout title="Products">
       <Breadcrumbs
@@ -22,12 +38,33 @@ const SingleProduct = () => {
             <img src={macbook1} alt="macBook" />
             <span></span>
           </div>
-          <div className="flex gap-3 justify-center mt-14">
-            <img className="object-cover h-14" src={macbook1} alt="macBook" />
-            <img className="object-cover h-14" src={macbook2} alt="macBook" />
-            <img className="object-cover h-14" src={macbook3} alt="macBook" />
-            <img className="object-cover h-14" src={macbook4} alt="macBook" />
-            <img className="object-cover h-14" src={macbook5} alt="macBook" />
+          <div className="max-w-2xl h-14 outline-none">
+            <Slider {...settings}>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook1} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook2} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook3} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook4} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook5} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook1} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook3} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook4} alt="macBook" />
+              </div>
+            </Slider>
           </div>
         </div>
 
@@ -106,3 +143,25 @@ const SingleProduct = () => {
 };
 
 export default SingleProduct;
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={'slick-next inline-block absolute'} onClick={onClick}>
+      <span className="absolute -left-1 top-0 w-full h-full">
+        <ChevronRightIcon strokeWidth={2} className="w-7 inline-block text-[#DADADA]" />
+      </span>
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={'slick-prev inline-block absolute'} onClick={onClick}>
+      <span className="absolute -left-1 top-0 w-full h-full">
+        <ChevronLeftIcon strokeWidth={2} className="w-7 inline-block text-[#DADADA]" />
+      </span>
+    </div>
+  );
+}
