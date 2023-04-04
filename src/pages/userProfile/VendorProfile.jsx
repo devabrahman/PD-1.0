@@ -1,16 +1,18 @@
 import Layout from 'components/common/Layout';
 import ProfileSetting from 'components/profile/ProfileSetting';
-import profile from '../../assets/Images/common/profile.png';
-import bg from '../../assets/Images/common/vendor-profile-bg.png';
-import check from '../../assets/Images/icons/check.png';
-import edit from '../../assets/Images/icons/edit.png';
-import notification from '../../assets/Images/icons/notification.png';
-import search from '../../assets/Images/icons/search.png';
-import user from '../../assets/Images/icons/user.png';
-import envelop from '../../assets/Images/social/envelop.png';
-import facebook from '../../assets/Images/social/facebook.png';
-import google from '../../assets/Images/social/google.png';
-import twitter from '../../assets/Images/social/twitter.png';
+import RecentProduct from 'components/profile/RecentProduct';
+// image
+import profile from 'assets/Images/common/profile.png';
+import bg from 'assets/Images/common/vendor-profile-bg.png';
+import check from 'assets/Images/icons/check.png';
+import edit from 'assets/Images/icons/edit.png';
+import notification from 'assets/Images/icons/notification.png';
+import search from 'assets/Images/icons/search.png';
+import user from 'assets/Images/icons/user.png';
+import envelop from 'assets/Images/social/envelop.png';
+import facebook from 'assets/Images/social/facebook.png';
+import google from 'assets/Images/social/google.png';
+import twitter from 'assets/Images/social/twitter.png';
 
 const VendorProfile = () => {
   return (
@@ -111,6 +113,7 @@ const VendorProfile = () => {
             </div>
           </div>
         </div>
+        <RecentProduct />
       </section>
     </Layout>
   );
