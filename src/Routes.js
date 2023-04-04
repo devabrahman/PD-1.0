@@ -17,6 +17,7 @@ import { themeCheck } from 'utils/darkmode';
 
 // importing pages
 import Home from './pages/Home';
+import Error404 from 'pages/Error404';
 
 const AppRoutes = () => {
   themeCheck();
@@ -49,6 +50,9 @@ const AppRoutes = () => {
         {/* Profile */}
         <Route path="/vendor-profile" element={<VendorProfile />} />
         <Route path="/vendor-profile-edit" element={<ProfileEdit />} />
+
+        {/*  404 */}
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   );

@@ -122,7 +122,7 @@ const MostOrderList = ({ className }) => {
                     </td>
                     <td className="flex flex-col">
                       <Link to="/order-details">
-                        Iphone 14 Pro<span className="text-[#B9B9B9] text-sm block">Laptop</span>
+                        Mac mini 1TB<span className="text-[#B9B9B9] text-sm block">Laptop</span>
                       </Link>
                     </td>
                     <td className="text-[#505050] text-sm">1 Nov, 9:32 AM</td>

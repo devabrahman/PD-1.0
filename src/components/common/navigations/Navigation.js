@@ -9,7 +9,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   const [openItem, setOpenItem] = useState(null);
-  const [activeNave, setActiveNave] = useState(null);
+  const [activeNavigation, setActiveNavigation] = useState(null);
 
   const toggleItem = (index) => {
     if (openItem === index) {
@@ -60,14 +60,14 @@ const Navigation = () => {
   ];
 
   useLayoutEffect(() => {
-    if (activeNave) {
-      setOpenItem(activeNave);
+    if (activeNavigation) {
+      setOpenItem(activeNavigation);
     }
-  }, [activeNave]);
+  }, [activeNavigation]);
 
   const setActiveNav = (index) => {
-    setActiveNave(index);
-    return 'text-black dark:text-primary';
+    setActiveNavigation(index);
+    return 'text-[#5798F7] dark:text-primary';
   };
   return (
     <>
@@ -90,7 +90,7 @@ const Navigation = () => {
                   ) : (
                     <span className="inline-block w-6"></span>
                   )}
-                  <p className="px-2 text-[#302323] dark:text-white font-medium text-[19px]">
+                  <p className="px-2 text-[#302323] dark:text-white font-medium text-[18px]">
                     {navItem.menu.url !== '' ? (
                       <NavLink
                         className={({ isActive, isPending }) =>
@@ -124,7 +124,7 @@ const Navigation = () => {
                     navItem?.submenu?.map((submenu, i) => (
                       <li
                         key={i}
-                        className={`text-[19px] dark:text-white ${
+                        className={`text-[17px] dark:text-white ${
                           navItem?.submenu?.length - 1 === i && 'pb-6'
                         }`}>
                         <NavLink

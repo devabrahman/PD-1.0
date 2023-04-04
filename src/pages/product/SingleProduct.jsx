@@ -31,7 +31,7 @@ const SingleProduct = () => {
         rootTitle={{ title: 'Products', url: '/products' }}
         subTitle=" Product Details"
       />
-      <section className="flex gap-16">
+      <section className="flex gap-16 mt-9">
         <div className="w-full">
           <div className="justify-center">
             <span></span>
@@ -144,6 +144,7 @@ const SingleProduct = () => {
 
 export default SingleProduct;
 
+// for slider navigation
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
