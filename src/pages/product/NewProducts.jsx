@@ -76,7 +76,7 @@ const NewProducts = () => {
                     <label
                       onClick={() => setCheckQuantity(checkQuantity ? false : true)}
                       htmlFor="input-2"
-                      className={`checkbox dark:fill-dark cursor-pointer ${
+                      className={`checkbox dark:fill-dark cursor-pointer border border-[#635e5e] ${
                         checkQuantity
                           ? 'rounded-[9px] bg-[#48f685] w-7 h-7'
                           : 'w-5 h-5 rounded-[4px]'
@@ -136,7 +136,7 @@ const NewProducts = () => {
                       <label
                         onClick={() => setPhysicalProduct(physicalProduct ? false : true)}
                         htmlFor="input-2"
-                        className={`checkbox dark:fill-dark cursor-pointer ${
+                        className={`checkbox dark:fill-dark cursor-pointer border border-[#635e5e] ${
                           physicalProduct
                             ? 'rounded-[9px] bg-[#48f685] w-6 h-6'
                             : 'w-4 h-4 rounded-[4px]'

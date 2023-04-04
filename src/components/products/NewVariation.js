@@ -72,7 +72,7 @@ const NewVariation = ({ variation, setVariation, isVariable, setIsVariable }) =>
             <label
               onClick={() => setIsVariable(isVariable ? false : true)}
               htmlFor="input-2"
-              className={`checkbox dark:fill-dark cursor-pointer ${
+              className={`checkbox dark:fill-dark cursor-pointer border border-[#635e5e] ${
                 isVariable ? 'rounded-[9px] bg-[#48f685] w-6 h-6' : 'w-4 h-4 rounded-[4px]'
               }`}>
               <CheckMarkIcon className="dark:stroke-dark stroke-white" />

@@ -97,7 +97,7 @@ const Products = () => {
                   <label
                     onClick={() => checkedAllProducts('all')}
                     htmlFor="input-2"
-                    className={`checkbox dark:fill-dark cursor-pointer w-6 h-6 rounded-[7px] ${
+                    className={`checkbox dark:fill-dark cursor-pointer w-6 h-6 rounded-[7px] border border-[#635e5e] ${
                       allChecked == 'all' && 'rounded-[9px] bg-[#48f685]'
                     }`}>
                     <CheckMarkIcon className="dark:stroke-dark stroke-white" />
@@ -160,7 +160,7 @@ const Products = () => {
                   <label
                     onClick={() => handelSingleCheckMark(product?.id)}
                     htmlFor="input-2"
-                    className={`checkbox dark:fill-dark cursor-pointer w-6 h-6 rounded-[7px] ${
+                    className={`checkbox dark:fill-dark cursor-pointer w-6 h-6 rounded-[7px] border border-[#635e5e] ${
                       product?.isChecked && 'rounded-[9px] bg-[#48f685]'
                     }`}>
                     <CheckMarkIcon className="dark:stroke-dark stroke-white" />
