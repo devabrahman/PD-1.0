@@ -13,6 +13,7 @@ import WalletIcon from 'components/SVGIcons/WalletIcon';
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
 import map from 'assets/Images/common/Map.png';
 import CalenderIcon from 'components/SVGIcons/CalenderIcon';
+import MostOrderList from 'components/dashboard/MostOrderList';
 
 const Home = () => {
   // Get Data from demo api
@@ -109,6 +110,8 @@ const Home = () => {
           <Payment className="col-span-5" />
           <Activity className="col-span-3" />
         </section>
+
+        <MostOrderList className="mt-11" />
       </main>
     </Layout>
   );

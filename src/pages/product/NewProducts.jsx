@@ -233,7 +233,7 @@ const NewProducts = () => {
               </div>
               <hr />
               <p className="text-xs mb-8 text-primary cursor pointer">Copy a new Draft</p>
-              <div className="text-right m-0">
+              <div className="text-right m-[0px]">
                 <button
                   className="border border-accent text-primary px-2 py-1.5 rounded-lg inline-block text-right mb-2.5 input-back-box-shadow text-sm"
                   type="submit">
