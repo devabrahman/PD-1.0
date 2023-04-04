@@ -37,9 +37,9 @@ const NewTag = ({ isOpen, setIsOpen }) => {
                     type="text"
                     rows="5"
                     className="rounded-xl flex justify-center items-center border border-[#B9B9B9]/50
-                     py-2  px-2 font-montserrat text-sm w-full outline-none"
+                     p-3 font-montserrat text-sm w-full outline-none"
                     required
-                    placeholder="Tags Name"
+                    placeholder="Please input description"
                   />
                 </div>
               </form>
