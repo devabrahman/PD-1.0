@@ -1,18 +1,23 @@
 import { memo, useLayoutEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // importing components
 import LayoutMainGrid from './LayoutMainGrid';
 import LeftNavigation from './navigations/Navigation';
-import { MagnifyingGlassIcon as SearchIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, MagnifyingGlassIcon as SearchIcon } from '@heroicons/react/24/outline';
 
 // TODO: a comment for @AJMIN to check later
 import ProfileDropdownMenu from 'components/profile/ProfileDropdownMenu';
 import CustomizationMenu from 'components/common/top-menu/CustomizationMenu';
 import TopNavigation from './navigations/TopNavigation';
 import Notification from './top-menu/Notification';
-import { useLocation } from 'react-router-dom';
+// import { mobileResponsive } from 'utils/responsive';
+import { useMediaQuery } from 'react-responsive';
 
 const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
+  const mobileResponsive = useMediaQuery({
+    query: '(min-width: 640px)'
+  });
   const { pathname } = useLocation();
 
   // state for sidebar position
@@ -42,7 +47,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
     return (
       <LayoutMainGrid position="left">
         <section className="bg-[#FBFDFF] dark:bg-[#0E1C2F] dark:text-white w-full h-full block">
-          <LeftNavigation />
+          {mobileResponsive ? <LeftNavigation /> : console.log('Profile')}
         </section>
         <section className={`dark:bg-dark ${padding}`}>
           {/* Disable for vendor profile */}
@@ -66,6 +71,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
                 />
 
                 <ProfileDropdownMenu />
+                {mobileResponsive ? <></> : <Bars3Icon className="w-5" />}
               </div>
             </div>
           )}
