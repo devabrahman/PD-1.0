@@ -1,15 +1,11 @@
-/* eslint-disable no-unused-vars */
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import { Tab } from '@headlessui/react';
-import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import { Link } from 'react-router-dom';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
-import EditIcon from 'components/SVGIcons/Editicon';
 
 const MostOrderList = ({ className }) => {
-  const [customCheck, setCustomCheck] = useState(false);
-
+  // TODO: there is only custom checkbox icon, need to replace with custom design
   return (
     <section className={className}>
       <div className="rounded-xl w-full">
@@ -143,6 +139,32 @@ const MostOrderList = ({ className }) => {
                       </div>
                     </td>
                   </tr>
+                  <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
+                    <td className="py-2">
+                      <div>
+                        <RightMarkIcon />
+                      </div>
+                    </td>
+                    <td>
+                      <p>#194551</p>
+                    </td>
+                    <td className="flex flex-col">
+                      <Link to="/order-details">
+                        Macbook Air<span className="text-[#B9B9B9] text-sm block">Laptop</span>
+                      </Link>
+                    </td>
+                    <td className="text-[#505050] text-sm">4 Nov, 9:32 AM</td>
+                    <td className="text-[#00DC72]">Paid</td>
+                    <td className="text-[#505050]">$ 1499</td>
+                    <td>
+                      <div className="flex gap-1.5 items-center">
+                        <span className="rounded-full w-5 h-5 inline-flex justify-center items-center text-white mr-1.5 bg-purple-700">
+                          L
+                        </span>
+                        John Laert
+                      </div>
+                    </td>
+                  </tr>
 
                   <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
                     <td className="py-2">
@@ -169,33 +191,6 @@ const MostOrderList = ({ className }) => {
                           alt="Laur"
                         />
                         Laur Gilbert
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
-                    <td className="py-2">
-                      <div>
-                        <RightMarkIcon />
-                      </div>
-                    </td>
-                    <td>
-                      <p>#194551</p>
-                    </td>
-                    <td className="flex flex-col">
-                      <Link to="/order-details">
-                        Macbook Air<span className="text-[#B9B9B9] text-sm block">Laptop</span>
-                      </Link>
-                    </td>
-                    <td className="text-[#505050] text-sm">4 Nov, 9:32 AM</td>
-                    <td className="text-[#00DC72]">Paid</td>
-                    <td className="text-[#505050]">$ 1499</td>
-                    <td>
-                      <div className="flex gap-1.5 items-center">
-                        <span className="rounded-full w-5 h-5 inline-flex justify-center items-center text-white mr-1.5 bg-purple-700">
-                          L
-                        </span>
-                        John Laert
                       </div>
                     </td>
                   </tr>
@@ -270,7 +265,7 @@ const MostOrderList = ({ className }) => {
                 <tbody>
                   <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
                     <td className="py-2">
-                      <div className="flex gap-2 items-center">
+                      <div>
                         <RightMarkIcon />
                       </div>
                     </td>
@@ -279,20 +274,18 @@ const MostOrderList = ({ className }) => {
                     </td>
                     <td className="flex flex-col">
                       <Link to="/order-details">
-                        Iphone 14 Pro<span className="text-[#B9B9B9] text-sm block">Laptop</span>
+                        Macbook Air<span className="text-[#B9B9B9] text-sm block">Laptop</span>
                       </Link>
                     </td>
-                    <td className="text-[#505050] text-sm">1 Nov, 9:32 AM</td>
+                    <td className="text-[#505050] text-sm">4 Nov, 9:32 AM</td>
                     <td className="text-[#00DC72]">Paid</td>
-                    <td className="text-[#505050]">$ 14,89</td>
+                    <td className="text-[#505050]">$ 1499</td>
                     <td>
                       <div className="flex gap-1.5 items-center">
-                        <img
-                          src="https://source.unsplash.com/random/50x50"
-                          className="w-5 h-5 rounded-full float-left mr-2.5 align-middle"
-                          alt="Laur"
-                        />
-                        John Laur
+                        <span className="rounded-full w-5 h-5 inline-flex justify-center items-center text-white mr-1.5 bg-purple-700">
+                          L
+                        </span>
+                        John Laert
                       </div>
                     </td>
                   </tr>
