@@ -1,5 +1,5 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import ProfileDialog from 'components/profile/ProfileDialog';
+import ProfileDropdownMenu from 'components/profile/ProfileDropdownMenu';
 import CustomizationMenu from 'components/common/top-menu/TopOptions';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
@@ -64,7 +64,7 @@ const Layout = ({ title, children }) => {
               setNavigationPosition={(value) => setNavigationPosition(value)}
             />
             {/* TODO: could you name it ProfileDropdownMenu */}
-            <ProfileDialog />
+            <ProfileDropdownMenu />
           </div>
         </div>
 

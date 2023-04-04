@@ -1,6 +1,7 @@
 import Layout from 'components/common/Layout';
 import ProfileSetting from 'components/profile/ProfileSetting';
 import RecentProduct from 'components/profile/RecentProduct';
+import HandelMailto from 'components/common/HandelMailto';
 // image
 import profile from 'assets/Images/common/profile.png';
 import bg from 'assets/Images/common/vendor-profile-bg.png';
@@ -16,7 +17,7 @@ import twitter from 'assets/Images/social/twitter.png';
 
 const VendorProfile = () => {
   return (
-    <Layout title="">
+    <Layout title="" padding="0">
       <section className="pb-10">
         <div>
           <div
@@ -62,9 +63,11 @@ const VendorProfile = () => {
                 <h2 className="text-xl font-medium text-[#302323]">Amantony Rojario</h2>
                 <p className="text-sm text-[#848484] font-medium">CEO / Co-Founder</p>
               </div>
-              <div className="w-7">
-                <img className="w-full" src={envelop} alt="envelop" />
-              </div>
+              <HandelMailto mailto="no-reply@example.com">
+                <div className="w-7 cursor-pointer">
+                  <img className="w-full" src={envelop} alt="envelop" />
+                </div>
+              </HandelMailto>
             </div>
           </div>
           <div className="flex items-center gap-2 mb-2">
@@ -80,7 +83,7 @@ const VendorProfile = () => {
               avoidance is creating an illusion of equality).
             </p>
           </div>
-          <div>
+          <div className="space-y-3 py-6">
             <div className="flex items-center gap-3 ">
               <span className="font-medium text-lg text-[#3F3D56]">Full Name:</span>
               <span className="text-[#302323]">Alec M. Thompson</span>
