@@ -9,7 +9,7 @@ const TextEditor = ({ description = '' }) => {
     return { readonly: false, placeholder: 'Start typings ...' };
   }, []);
   return (
-    <div className="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 ">
+    <div className="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-lightDark">
       <JoditEditor
         ref={editor}
         value={content}

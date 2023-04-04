@@ -42,7 +42,7 @@ const NewProducts = () => {
           <section className="w-3/4">
             <label className="block font-medium text-lg mb-2">Post Title</label>
             <input
-              className="w-full rounded-xl px-4 border border-pdGrey/70 h-12 input-back-box-shadow focus:outline-none focus:focused-input"
+              className="w-full rounded-xl px-4 border dark:bg-lightDark border-pdGrey/70 h-12 input-back-box-shadow focus:outline-none focus:focused-input"
               type="text"
               name="productTitle"
               id=""
@@ -85,7 +85,7 @@ const NewProducts = () => {
                     </label>
                   </div>
 
-                  <h5 className="font-medium text-xl">Quantity</h5>
+                  <label className="dark:bg-lightDark font-medium text-xl">Quantity</label>
                 </div>
                 <p className="text-[10px] text-[#302323] flex justify-end m-0 -mb-2 p-0">
                   Available
@@ -96,7 +96,7 @@ const NewProducts = () => {
                   name=""
                   id=""
                   disabled={!checkQuantity}
-                  className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-full pr-1.5"
+                  className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] dark:bg-lightDark h-9 mt-3 rounded-xl w-full pr-1.5"
                 />
               </div>
 
@@ -203,7 +203,9 @@ const NewProducts = () => {
           <section className="w-1/3 space-y-10">
             {/* Submit */}
             <div className="w-full rounded-xl input-accent-box-shadow mt-5 px-5 py-3 space-y-5">
-              <label className="text-[#424141] font-medium text-base block">Publish</label>
+              <label className="text-[#424141] dark:text-white font-medium text-base block">
+                Publish
+              </label>
               <div className="flex justify-between">
                 <button className="border border-accent/30  px-2 py-1.5 rounded-lg text-sm input-back-box-shadow">
                   Save Draft
