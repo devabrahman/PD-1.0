@@ -10,7 +10,7 @@ import linkedin from 'assets/Images/social/linkedin.png';
 import twitter from 'assets/Images/social/twitter.png';
 import MessageIcon from 'components/SVGIcons/MessageIcon';
 
-const ProfileDialog = () => {
+const ProfileDropdownMenu = () => {
   return (
     // TODO: could you add grid and place-content-center
     <Popover className="relative grid place-content-center">
@@ -96,4 +96,4 @@ const ProfileDialog = () => {
   );
 };
 
-export default ProfileDialog;
+export default ProfileDropdownMenu;
