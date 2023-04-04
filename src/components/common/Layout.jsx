@@ -44,7 +44,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
         <section className="bg-[#FBFDFF] dark:bg-[#0E1C2F] dark:text-white w-full h-full block">
           <LeftNavigation />
         </section>
-        <section className={padding}>
+        <section className={`dark:bg-dark ${padding}`}>
           {/* Disable for vendor profile */}
           {pathname === '/vendor-profile' ? (
             <></>

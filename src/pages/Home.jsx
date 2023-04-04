@@ -1,19 +1,20 @@
 import { CheckIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
+import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
 import { spent } from 'api/spent';
+import { Overview } from 'components/dashboard/Overview';
+import MostOrderList from 'components/dashboard/MostOrderList';
 import Layout from 'components/common/Layout';
 import Activity from 'components/dashboard/Activity';
-import { Overview } from 'components/dashboard/Overview';
 import Payment from 'components/dashboard/Payment';
 import TotalProduct from 'components/dashboard/TotalProduct';
 import TotalSales from 'components/dashboard/TotalSales';
+// icon
 import ChartIcon from 'components/SVGIcons/ChartIcon';
 import DollarIcon from 'components/SVGIcons/DollarIcon';
 import ReportIcon from 'components/SVGIcons/ReportIcon';
 import WalletIcon from 'components/SVGIcons/WalletIcon';
-import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
 import map from 'assets/Images/common/Map.png';
 import CalenderIcon from 'components/SVGIcons/CalenderIcon';
-import MostOrderList from 'components/dashboard/MostOrderList';
 
 const Home = () => {
   // Get Data from demo api
@@ -22,13 +23,13 @@ const Home = () => {
   return (
     // TODO
     <Layout title="Products" padding="px-8 py-8">
-      <main className="py-5">
+      <main className="py-5 dark:bg-dark">
         <section>
           <div className="flex gap-[18px]  ">
             <Overview icon={<ReportIcon />} title={'Earnings'} amount={350.4} />
             <Overview icon={<DollarIcon />} title={'Spend this month'} amount={642.39} />
             <Overview icon={<WalletIcon />} title={'Earnings'} amount={350.4} />
-            <div className="flex w-full gap-[18px] py-5 px-6 rounded-2xl bg-white input-accent-box-shadow">
+            <div className="flex w-full gap-[18px] py-5 px-6 rounded-2xl bg-white dark:bg-dark input-accent-box-shadow">
               <div className="w-6 h-14  rounded-full flex justify-center items-center"></div>
               <div>
                 <p className="font-medium text-[#97A6D5] text-sm">Sales</p>
@@ -100,7 +101,7 @@ const Home = () => {
             <TotalSales />
           </div>
           {/* <div className="flex justify-between w-full"></div> */}
-          <div className="col-span-4 bg-white input-accent-box-shadow px-5 py-[30px] rounded-x">
+          <div className="col-span-4 bg-white dark:bg-dark input-accent-box-shadow px-5 py-[30px] rounded-x">
             <p className="font-medium text-lg">Map</p>
 
             <div className="min-w-[331px]">

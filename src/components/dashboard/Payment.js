@@ -7,7 +7,7 @@ import React from 'react';
 const Payment = ({ className }) => {
   return (
     <div className={className}>
-      <div className="bg-white input-accent-box-shadow px-5 py-[15px] rounded-xl col-span-1 min-w-[344px] h-full">
+      <div className="bg-white dark:bg-dark input-accent-box-shadow px-5 py-[15px] rounded-xl col-span-1 min-w-[344px] h-full">
         <p className="font-medium text-lg">payment</p>
         <section className="space-y-8">
           <div className="flex gap-4 items-center mt-6">
