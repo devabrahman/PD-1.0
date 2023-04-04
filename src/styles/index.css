@@ -36,7 +36,8 @@
 }
 @layer base {
   input:focus,
-  textarea:focus {
+  textarea:focus,
+  button:focus {
     @apply focused-input dark:focused-input-dark;
   }
 }

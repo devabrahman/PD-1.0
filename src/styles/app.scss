@@ -35,7 +35,6 @@ input:checked + div {
   display: none;
   &:checked + .checkbox {
     box-shadow: 2px 4px 8px rgba(137, 176, 198, 0.1);
-
     position: relative;
     border: 4px solid rgba(255, 255, 255, 0.5);
     padding: 3px;
@@ -53,7 +52,8 @@ input:checked + div {
 }
 
 .checkbox {
-  border: 1px solid #635e5e;
+  // border: 1px solid;
+  // border-width: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
