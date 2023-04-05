@@ -72,7 +72,7 @@ const TopNavigation = ({ className }) => {
   };
   return (
     <nav className={` ${className}`}>
-      <div className="max-w-full mx-auto mt-10 flex items-center gap-5">
+      <div className="max-w-full mx-auto flex items-center gap-5">
         <Link to="/" className="block">
           <button className="bg-[#b7d9d6]/40 input-accent-box-shadow py-1.5 px-8 rounded-2xl text-xs font-bold ">
             <img src={logo} alt="Logo" className="w-10" />
