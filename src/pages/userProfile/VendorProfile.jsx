@@ -61,7 +61,9 @@ const VendorProfile = () => {
             <div className="flex items-center justify-between flex-grow">
               <div>
                 <h2 className="text-xl font-medium text-[#302323]">Amantony Rojario</h2>
-                <p className="text-sm text-[#848484] font-medium">CEO / Co-Founder</p>
+                <p className="text-sm text-[#848484]dark:text-white font-medium">
+                  CEO / Co-Founder
+                </p>
               </div>
               <HandelMailto mailto="no-reply@example.com">
                 <div className="w-7 cursor-pointer">
@@ -76,7 +78,7 @@ const VendorProfile = () => {
               <img className="w-full" src={edit} alt="edit" />
             </div>
           </div>
-          <div className="max-w-[790px] text-lg text-[#302323] mb-3">
+          <div className="max-w-[790px] text-lg text-[#302323] dark:text-white mb-3">
             <p>
               Hi, I&apos;m Alec Thompson, Decisions: If you can&apos;t decide, the answer is no. If
               two equally difficult paths, choose the one more painful in the short term (pain
@@ -85,23 +87,23 @@ const VendorProfile = () => {
           </div>
           <div className="space-y-3 py-6">
             <div className="flex items-center gap-3 ">
-              <span className="font-medium text-lg text-[#3F3D56]">Full Name:</span>
+              <span className="font-medium text-lg text-[#3F3D56] dark:text-white">Full Name:</span>
               <span className="text-[#302323]">Alec M. Thompson</span>
             </div>
             <div className="flex items-center gap-3 ">
-              <span className="font-medium text-lg text-[#3F3D56]">Mobile:</span>
+              <span className="font-medium text-lg text-[#3F3D56] dark:text-white">Mobile:</span>
               <span className="text-[#302323]">(44) 123 1234 123</span>
             </div>
             <div className="flex items-center gap-3 ">
-              <span className="font-medium text-lg text-[#3F3D56]">Email:</span>
+              <span className="font-medium text-lg text-[#3F3D56] dark:text-white">Email:</span>
               <span className="text-[#302323]">alecthompson@mail.com</span>
             </div>
             <div className="flex items-center gap-3 ">
-              <span className="font-medium text-lg text-[#3F3D56]">Location:</span>
+              <span className="font-medium text-lg text-[#3F3D56] dark:text-white">Location:</span>
               <span className="text-[#302323]">USA</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="font-medium text-lg text-[#3F3D56]">Social:</span>
+              <span className="font-medium text-lg text-[#3F3D56] dark:text-white">Social:</span>
               <div className="flex items-center gap-4">
                 <div className="w-6">
                   <img className="w-full" src={google} alt="google" />
