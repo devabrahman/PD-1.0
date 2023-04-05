@@ -62,7 +62,7 @@ const Products = () => {
 
   return (
     <>
-      <Layout title="Category" padding="p-0">
+      <Layout title="Category" padding="p-0 sm:px-8 sm:py-8">
         <div className="px-8 flex justify-between items-baseline">
           <Breadcrumbs rootTitle={{ title: 'Products' }} subTitle="" />
           <div className="flex gap-2.5 items-center">
