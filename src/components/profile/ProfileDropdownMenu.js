@@ -49,7 +49,7 @@ const ProfileDropdownMenu = () => {
                     <div className="flex gap-5">
                       <MessageIcon /> Give feedback
                     </div>
-                    <Link to="" className="flex items-center gap-4 mb-5">
+                    <Link to="" className="flex items-center gap-4 my-5">
                       <div className="w-6">
                         <img className="w-full" src={colorgear} alt="Setting" />
                       </div>
