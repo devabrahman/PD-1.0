@@ -1,6 +1,6 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import ProfileDialog from 'components/profile/ProfileDialog';
-import TopOptions from 'components/SVGIcons/TopOptions';
+import ProfileDropdownMenu from 'components/profile/ProfileDropdownMenu';
+import CustomizationMenu from 'components/common/top-menu/TopOptions';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 // import Navigation from './navigations/Navigation';
@@ -58,13 +58,13 @@ const Layout = ({ title, children }) => {
             <Notification />
 
             {/* TODO: I TOLD YOU TO the name is CUSTOMIZATION MENU. so could you name the component same? */}
-            <TopOptions
+            <CustomizationMenu
               // TODO: could prop name be much senseable?
               navigationPosition={navigationPosition}
               setNavigationPosition={(value) => setNavigationPosition(value)}
             />
             {/* TODO: could you name it ProfileDropdownMenu */}
-            <ProfileDialog />
+            <ProfileDropdownMenu />
           </div>
         </div>
 

@@ -5,7 +5,7 @@ import { Line, LineChart, ResponsiveContainer, Tooltip } from 'recharts';
 const TotalSales = () => {
   const data = products;
   return (
-    <div className="bg-white input-accent-box-shadow px-5 py-[30px] rounded-xl">
+    <div className="bg-white dark:bg-dark w-full input-accent-box-shadow px-5 py-[30px] rounded-xl">
       <div className="grid grid-cols-2">
         <div className="space-y-2 col-span-1">
           <p className="font-bold text-xs text-[#6B7A99]"> Total Sales</p>

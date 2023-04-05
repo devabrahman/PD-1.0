@@ -6,6 +6,7 @@ import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import SettingIcon from 'components/SVGIcons/SettingIcon';
 
 import OptionIcon from 'assets/Images/products/OptionIcon.png';
+import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
 
 const NewVariation = ({ variation, setVariation, isVariable, setIsVariable }) => {
   const [variationList, setVariationList] = useState(variation);
@@ -54,22 +55,32 @@ const NewVariation = ({ variation, setVariation, isVariable, setIsVariable }) =>
   };
   return (
     <div className="my-5">
-      <div className="flex">
+      <div className="flex gap-4">
         <img src={OptionIcon} alt="Option icon" className="h-6 w-5" />
-        <h5 className="font-medium text-xl ml-2">Variations</h5>
+        <h5 className="font-medium text-xl">Variations</h5>
       </div>
+
       <div className="border w-full border-[#D6D6D6]/60 py-2.5 rounded-xl my-2">
-        <div className="ml-4 flex items-center gap-3">
-          {/* <RightMarkIcon className="h-2 w-2" /> */}
-          <input
-            type="checkbox"
-            checked={isVariable}
-            onChange={(e) => setIsVariable(e.target.checked)}
-            name="variable"
-            id="variable"
-          />
+        <div className="ml-4 flex items-center gap-1.5">
+          <div className="w-8 flex justify-center items-center">
+            <input
+              type="checkbox"
+              checked={isVariable || false}
+              className="check-input cursor-pointer"
+              onChange={() => {}}
+            />
+            <label
+              onClick={() => setIsVariable(isVariable ? false : true)}
+              htmlFor="input-2"
+              className={`checkbox dark:fill-dark cursor-pointer border border-[#635e5e] ${
+                isVariable ? 'rounded-[9px] bg-[#48f685] w-6 h-6' : 'w-4 h-4 rounded-[4px]'
+              }`}>
+              <CheckMarkIcon className="dark:stroke-dark stroke-white" />
+            </label>
+          </div>
           <p>Add variation like Color, Size, etc</p>
         </div>
+
         {isVariable && (
           <>
             <hr className="h-0.5 my-2.5 w-full bg-[#CDCDCD]/20" />
@@ -136,17 +147,17 @@ const NewVariation = ({ variation, setVariation, isVariable, setIsVariable }) =>
                 + Add another option
               </p>
               {!done ? (
-                <button
+                <p
                   onClick={handelDone}
                   className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">
                   Done
-                </button>
+                </p>
               ) : (
-                <button
+                <p
                   onClick={() => setDone(false)}
                   className="bg-primary text-xl px-8 py-2 rounded-xl text-white mr-5 my-2">
                   Edit
-                </button>
+                </p>
               )}
             </div>
           </>

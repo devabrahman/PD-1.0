@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import Layout from 'components/common/Layout';
-import check from '../../assets/Images/common/check.png';
-import eye from '../../assets/Images/common/eye.png';
-import profile from '../../assets/Images/common/profile.png';
+import check from 'assets/Images/common/check.png';
+import profile from 'assets/Images/common/profile.png';
+import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
 
 const ProfileEdit = () => {
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <Layout title="">
       <section>
@@ -128,22 +131,30 @@ const ProfileEdit = () => {
               </label>
               <input
                 className="w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 name="password"
                 id="password"
                 placeholder="Min. 8 characters"
               />
-              <button className="absolute right-5 top-1/2 translate-y-1/2">
-                <img className="w-6" src={eye} alt="" />
-              </button>
+              <div
+                onClick={() => setShowPassword(showPassword ? false : true)}
+                className="absolute right-5 top-[43%] translate-y-1/2">
+                {showPassword ? (
+                  <EyeIcon className="w-6 text-[#A3AED0]" />
+                ) : (
+                  <EyeSlashIcon className="w-6 text-[#A3AED0]" />
+                )}
+              </div>
             </div>
             <div className="flex items-center gap-5">
               <button className="text-[#5798F7] text-sm font-bold rounded-xl border border-[#5798F7] px-5 py-3">
-                Back To Home{' '}
+                Reset
               </button>
-              <button className="bg-[#5798F7] text-white text-sm font-bold rounded-xl px-5 py-3">
-                Back To Home{' '}
-              </button>
+              <Link to="/vendor-profile">
+                <button className="bg-[#5798F7] text-white text-sm font-bold rounded-xl px-5 py-3">
+                  Submit
+                </button>
+              </Link>
             </div>
           </form>
         </div>

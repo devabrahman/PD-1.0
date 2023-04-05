@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Menu } from '@headlessui/react';
-
 import ChangeThemes from './ChangeThemes';
+import TransitionComponent from 'components/common/Transition';
+// icon
 import GearIcon from 'components/SVGIcons/GearIcon';
-import UserIcon from '../SVGIcons/UserIcon';
+import UserIcon from 'components/SVGIcons/UserIcon';
 import SupportIcon from 'components/SVGIcons/SupportIcon';
-import MessageIcon from 'components/SVGIcons/MessageIcon';
 import WarningIcon from 'components/SVGIcons/WarningIcon';
 import ArrowDownIcon from 'components/SVGIcons/ArrowDownIcon';
-import TransitionComponent from 'components/common/Transition';
+import coloredit from 'assets/Images/icons/color-edit.png';
 
 const ProfileSetting = () => {
   return (
@@ -33,8 +34,11 @@ const ProfileSetting = () => {
                 <li className="flex gap-5">
                   <UserIcon /> Account settings
                 </li>
-                <li className="flex gap-5">
-                  <MessageIcon /> Give feedback
+                <li className="flex gap-6">
+                  <img className="w-6" src={coloredit} alt="Edit" />
+                  <Link to="/vendor-profile-edit">
+                    <p className="text-[#302323]">Edit profile</p>
+                  </Link>
                 </li>
                 <li className="flex gap-5">
                   <WarningIcon /> Info

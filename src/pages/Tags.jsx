@@ -9,6 +9,7 @@ import DeletePopup from 'components/common/DeletePopup';
 import { MagnifyingGlassIcon as SearchIcon, PlusIcon } from '@heroicons/react/24/outline';
 import NewTag from 'components/tags/NewTag';
 import EditTag from 'components/tags/EditTag';
+import Pagination from 'components/common/Pagination';
 
 const Tags = () => {
   const [addTag, setAddATag] = useState(false);
@@ -83,8 +84,111 @@ const Tags = () => {
                 <DeleteIcon />
               </td>
             </tr>
+            <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow table-shadow">
+              <td className="my-2">
+                <RectangleIcon />
+              </td>
+              <td className="py-3">
+                <p>Angular</p>
+              </td>
+              <td className="text-left">
+                <p>#194556</p>
+              </td>
+              <td onClick={() => setEditTag(true)} className="cursor-pointer">
+                <EditIcon />
+              </td>
+              <td className="cursor-pointer" onClick={() => setIsDeleteOpen(true)}>
+                <DeleteIcon />
+              </td>
+            </tr>
+            <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow mt-5 table-shadow">
+              <td>
+                <RightMarkIcon />
+              </td>
+              <td className="py-3">
+                <p>Angular</p>
+              </td>
+              <td className="text-left">
+                <p>#194556</p>
+              </td>
+              <td onClick={() => setEditTag(true)} className="cursor-pointer">
+                <EditIcon />
+              </td>
+              <td className="cursor-pointer" onClick={() => setIsDeleteOpen(true)}>
+                <DeleteIcon />
+              </td>
+            </tr>
+            <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow table-shadow">
+              <td className="my-2">
+                <RectangleIcon />
+              </td>
+              <td className="py-3">
+                <p>Angular</p>
+              </td>
+              <td className="text-left">
+                <p>#194556</p>
+              </td>
+              <td onClick={() => setEditTag(true)} className="cursor-pointer">
+                <EditIcon />
+              </td>
+              <td className="cursor-pointer" onClick={() => setIsDeleteOpen(true)}>
+                <DeleteIcon />
+              </td>
+            </tr>
+            <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow mt-5 table-shadow">
+              <td>
+                <RightMarkIcon />
+              </td>
+              <td className="py-3">
+                <p>Angular</p>
+              </td>
+              <td className="text-left">
+                <p>#194556</p>
+              </td>
+              <td onClick={() => setEditTag(true)} className="cursor-pointer">
+                <EditIcon />
+              </td>
+              <td className="cursor-pointer" onClick={() => setIsDeleteOpen(true)}>
+                <DeleteIcon />
+              </td>
+            </tr>
+            <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow table-shadow">
+              <td className="my-2">
+                <RectangleIcon />
+              </td>
+              <td className="py-3">
+                <p>Angular</p>
+              </td>
+              <td className="text-left">
+                <p>#194556</p>
+              </td>
+              <td onClick={() => setEditTag(true)} className="cursor-pointer">
+                <EditIcon />
+              </td>
+              <td className="cursor-pointer" onClick={() => setIsDeleteOpen(true)}>
+                <DeleteIcon />
+              </td>
+            </tr>
+            <tr className="rounded-xl border-pdGrey/70 h-12 input-back-box-shadow mt-5 table-shadow">
+              <td>
+                <RightMarkIcon />
+              </td>
+              <td className="py-3">
+                <p>Angular</p>
+              </td>
+              <td className="text-left">
+                <p>#194556</p>
+              </td>
+              <td onClick={() => setEditTag(true)} className="cursor-pointer">
+                <EditIcon />
+              </td>
+              <td className="cursor-pointer" onClick={() => setIsDeleteOpen(true)}>
+                <DeleteIcon />
+              </td>
+            </tr>
           </tbody>
         </table>
+        <Pagination />
       </Layout>
       <DeletePopup isOpen={isDeleteOpen} setIsOpen={(event) => setIsDeleteOpen(event)} />
       <NewTag isOpen={addTag} setIsOpen={(event) => setAddATag(event)} />

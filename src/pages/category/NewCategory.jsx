@@ -26,6 +26,19 @@ const NewCategory = () => {
               required
               placeholder="Category Name"
             />
+
+            <select
+              type="text"
+              className="rounded-3xl px-6 flex justify-center dark:bg-dark items-center border border-[#B9B9B9]/50 dark:border-darkBorder my-5 bg-opacity-10 p-3 font-montserrat text-sm text-gray-800 outline-none"
+              required
+              placeholder="/angular">
+              <option value="" disabled selected>
+                select a parent category
+              </option>
+              <option value="">category</option>
+              <option value="">category</option>
+              <option value="">category</option>
+            </select>
             <input
               type="text"
               className="rounded-3xl px-6 flex justify-center dark:bg-dark items-center border border-[#B9B9B9]/50 dark:border-darkBorder my-5 bg-opacity-10 p-3 font-montserrat text-sm w-5/12"
@@ -33,21 +46,20 @@ const NewCategory = () => {
               placeholder="/angular"
             />
           </div>
-          <div className="mx-0">
-            <p
+          <div className="mx-0 space-y-3 pt-4">
+            <label
               htmlFor=""
               className="text-[#302323] dark:text-[#E6E6E6]  font-montserrat text-xl mb-1.5 block">
               Description
-            </p>
-            <p className="w-9/12 text-base text-[#161616]/70 dark:text-[#CDCDCD]/90 py-2">
-              Lorem Ipsum is simply dummy text of the popup lokhmmg jnjsannekdmbl,jifsss(optional).
-              .
-            </p>
+            </label>
+            <textarea
+              placeholder="Please enter description"
+              rows={6}
+              className="w-9/12  border border-[#B9B9B9]/50 rounded-xl p-3 text-base text-[#161616]/70 dark:text-[#CDCDCD]/90 py-2"
+            />
           </div>
-          <div className="py-5">
-            <label
-              htmlFor=""
-              className="text-[#302323] dark:text-[#E6E6E6] font-montserrat text-xl mb-1.5 block">
+          <div className="py-5 mt-3">
+            <label className="text-[#302323] dark:text-[#E6E6E6] font-montserrat text-xl mb-1.5 block">
               Categories Picture
             </label>
             <div className="p-2 max-w-sm">

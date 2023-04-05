@@ -1,33 +1,70 @@
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import Slider from 'react-slick';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import Layout from 'components/common/Layout';
 import OtherProducts from 'components/products/OtherProducts';
 import { AiFillStar } from 'react-icons/ai';
+// images and icons
 import macbook1 from '../../assets/Images/products/macbook1.jpg';
 import macbook2 from '../../assets/Images/products/macbook2.jpg';
 import macbook3 from '../../assets/Images/products/macbook3.jpg';
 import macbook4 from '../../assets/Images/products/macbook4.jpg';
 import macbook5 from '../../assets/Images/products/macbook5.jpg';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+// Import css files
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const SingleProduct = () => {
+  const settings = {
+    speed: 500,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
+  };
   return (
     <Layout title="Products">
       <Breadcrumbs
         rootTitle={{ title: 'Products', url: '/products' }}
         subTitle=" Product Details"
       />
-      <section className="flex gap-16">
+      <section className="flex gap-16 mt-9">
         <div className="w-full">
           <div className="justify-center">
             <span></span>
             <img src={macbook1} alt="macBook" />
             <span></span>
           </div>
-          <div className="flex gap-3 justify-center mt-14">
-            <img className="object-cover h-14" src={macbook1} alt="macBook" />
-            <img className="object-cover h-14" src={macbook2} alt="macBook" />
-            <img className="object-cover h-14" src={macbook3} alt="macBook" />
-            <img className="object-cover h-14" src={macbook4} alt="macBook" />
-            <img className="object-cover h-14" src={macbook5} alt="macBook" />
+          <div className="max-w-2xl h-14 outline-none">
+            <Slider {...settings}>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook1} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook2} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook3} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook4} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook5} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook1} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook3} alt="macBook" />
+              </div>
+              <div className="h-14 outline-none">
+                <img className="object-cover h-full " src={macbook4} alt="macBook" />
+              </div>
+            </Slider>
           </div>
         </div>
 
@@ -43,7 +80,7 @@ const SingleProduct = () => {
             <i>Laptop</i>
           </h5>
 
-          <div className="flex gap-1.5 items-center">
+          <div className="flex gap-1.5 items-center mt-2.5 mb-1.5">
             <AiFillStar className="text-gold w-[21px] h-[21px]" />
             <span className="text-black/30 text-sm">4.9 Ratings </span>
             <span className="text-black/30 text-sm block">. 2.6k+ Reviews </span>
@@ -69,10 +106,10 @@ const SingleProduct = () => {
               </span>
             </div>
             <div className="flex gap-2.5 mt-8">
-              <span className="cursor-pointer text-[#002D9E] text-[15px] shadow-md bg-white border-[1px] border-[##D1D1D1] rounded-md px-1.5 py-0.5">
+              <span className="cursor-pointer text-[#002D9E] text-[15px] input-accent-box-shadow bg-white  rounded-md px-1.5 py-0.5">
                 128 GB
               </span>
-              <span className="cursor-pointer text-[#002D9E] text-[15px] shadow-md bg-white border-[1px] border-[##D1D1D1] rounded-md px-1.5 py-0.5">
+              <span className="cursor-pointer text-[#002D9E] text-[15px] input-accent-box-shadow bg-white  rounded-md px-1.5 py-0.5">
                 64 GB
               </span>
             </div>
@@ -106,3 +143,26 @@ const SingleProduct = () => {
 };
 
 export default SingleProduct;
+
+// for slider navigation
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={'slick-next inline-block absolute'} onClick={onClick}>
+      <span className="absolute -left-1 top-0 w-full h-full">
+        <ChevronRightIcon strokeWidth={2} className="w-7 inline-block text-[#DADADA]" />
+      </span>
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={'slick-prev inline-block absolute'} onClick={onClick}>
+      <span className="absolute -left-1 top-0 w-full h-full">
+        <ChevronLeftIcon strokeWidth={2} className="w-7 inline-block text-[#DADADA]" />
+      </span>
+    </div>
+  );
+}

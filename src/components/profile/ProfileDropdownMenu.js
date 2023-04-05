@@ -1,16 +1,16 @@
 import { Popover } from '@headlessui/react';
 import { Link } from 'react-router-dom';
 import TransitionComponent from 'components/common/Transition';
+// icon
+import profile from 'assets/Images/common/profile.png';
+import atTheRate from 'assets/Images/icons/atTheRate.png';
+import colorgear from 'assets/Images/icons/color-gear.png';
+import saved from 'assets/Images/icons/saved.png';
+import linkedin from 'assets/Images/social/linkedin.png';
+import twitter from 'assets/Images/social/twitter.png';
+import MessageIcon from 'components/SVGIcons/MessageIcon';
 
-import profile from '../../assets/Images/common/profile.png';
-import atTheRate from '../../assets/Images/icons/atTheRate.png';
-import coloredit from '../../assets/Images/icons/color-edit.png';
-import colorgear from '../../assets/Images/icons/color-gear.png';
-import saved from '../../assets/Images/icons/saved.png';
-import linkedin from '../../assets/Images/social/linkedin.png';
-import twitter from '../../assets/Images/social/twitter.png';
-
-const ProfileDialog = () => {
+const ProfileDropdownMenu = () => {
   return (
     // TODO: could you add grid and place-content-center
     <Popover className="relative grid place-content-center">
@@ -38,14 +38,6 @@ const ProfileDialog = () => {
                         <p className="text-xs text-[#9F9FA2] font-medium">aman564@gmail.com</p>
                       </div>
                     </div>
-                    <a href="" className="flex items-center gap-4 mb-5">
-                      <div className="w-6">
-                        <img className="w-full" src={coloredit} alt="Edit" />
-                      </div>
-                      <Link to="/vendor-profile-edit">
-                        <p className="text-[#302323]">Edit profile</p>
-                      </Link>
-                    </a>
                     <Link to="" className="flex items-center gap-4 mb-5">
                       <div className="w-6">
                         <img className="w-full" src={saved} alt="Saved" />
@@ -54,6 +46,9 @@ const ProfileDialog = () => {
                         <p className="text-[#302323]">Saved</p>
                       </div>
                     </Link>
+                    <div className="flex gap-5">
+                      <MessageIcon /> Give feedback
+                    </div>
                     <Link to="" className="flex items-center gap-4 mb-5">
                       <div className="w-6">
                         <img className="w-full" src={colorgear} alt="Setting" />
@@ -101,4 +96,4 @@ const ProfileDialog = () => {
   );
 };
 
-export default ProfileDialog;
+export default ProfileDropdownMenu;

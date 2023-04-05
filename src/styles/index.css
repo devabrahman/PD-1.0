@@ -12,7 +12,12 @@
   .table-shadow {
     box-shadow: 0px 2px 15px rgba(135, 206, 235, 0.2);
   }
+
+  .position-center {
+    @apply inline-flex items-center justify-center;
+  }
 }
+
 @layer components {
   .focused-input {
     @apply border-blue-300 outline-none;
@@ -31,7 +36,8 @@
 }
 @layer base {
   input:focus,
-  textarea:focus {
+  textarea:focus,
+  button:focus {
     @apply focused-input dark:focused-input-dark;
   }
 }

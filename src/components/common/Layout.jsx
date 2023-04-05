@@ -1,18 +1,25 @@
 import { memo, useLayoutEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // importing components
 import LayoutMainGrid from './LayoutMainGrid';
 import LeftNavigation from './navigations/Navigation';
-import { MagnifyingGlassIcon as SearchIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, MagnifyingGlassIcon as SearchIcon } from '@heroicons/react/24/outline';
 
-// TODO: please change next three component name once you see the code
 // TODO: a comment for @AJMIN to check later
-import ProfileDropdownMenu from 'components/profile/ProfileDialog';
-import NotificationIcon from 'components/SVGIcons/NotificationIcon';
-import CustomizationMenu from 'components/SVGIcons/TopOptions';
+import ProfileDropdownMenu from 'components/profile/ProfileDropdownMenu';
+import CustomizationMenu from 'components/common/top-menu/CustomizationMenu';
 import TopNavigation from './navigations/TopNavigation';
+import Notification from './top-menu/Notification';
+// import { mobileResponsive } from 'utils/responsive';
+import { useMediaQuery } from 'react-responsive';
 
 const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
+  const mobileResponsive = useMediaQuery({
+    query: '(min-width: 640px)'
+  });
+  const { pathname } = useLocation();
+
   // state for sidebar position
   const [sidebarPosition, setSidebarPosition] = useState('left');
 
@@ -40,31 +47,34 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
     return (
       <LayoutMainGrid position="left">
         <section className="bg-[#FBFDFF] dark:bg-[#0E1C2F] dark:text-white w-full h-full block">
-          <LeftNavigation />
+          {mobileResponsive ? <LeftNavigation /> : console.log('Profile')}
         </section>
-        <section className={padding}>
-          <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-medium">{title}</h2>
+        <section className={`dark:bg-dark ${padding}`}>
+          {/* Disable for vendor profile */}
+          {pathname === '/vendor-profile' ? (
+            <></>
+          ) : (
+            <div className="flex justify-between items-center">
+              <h2 className="text-2xl font-medium">{title}</h2>
 
-            <div className="flex items-center gap-6 ">
-              <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
+              <div className="flex items-center gap-6 ">
+                <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400  h-10 w-12 rounded-xl px-2.5 cursor-pointer border2  table-shadow solid #5798F6" />
 
-              <div className="relative h-10 w-12 bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer">
-                <NotificationIcon />
-                <span className="h-2 w-2 rounded-full bg-red-500 absolute right-3 top-2"></span>
+                <Notification />
+
+                <CustomizationMenu
+                  sidebarPosition={sidebarPosition}
+                  setSidebarPosition={(value) => {
+                    setSidebarPosition(value);
+                    localStorage.setItem('sidebar_position', value);
+                  }}
+                />
+
+                <ProfileDropdownMenu />
+                {mobileResponsive ? <></> : <Bars3Icon className="w-5" />}
               </div>
-
-              <CustomizationMenu
-                sidebarPosition={sidebarPosition}
-                setSidebarPosition={(value) => {
-                  setSidebarPosition(value);
-                  localStorage.setItem('sidebar_position', value);
-                }}
-              />
-
-              <ProfileDropdownMenu />
             </div>
-          </div>
+          )}
           {children}
         </section>
       </LayoutMainGrid>
@@ -76,28 +86,30 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
     return (
       <LayoutMainGrid position="right">
         <section className={`dark:bg-dark dark:text-white ${padding}`}>
-          <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-medium">{title}</h2>
+          {/* Disable for vendor profile */}
+          {pathname === '/vendor-profile' ? (
+            <></>
+          ) : (
+            <div className="flex justify-between items-center">
+              <h2 className="text-2xl font-medium">{title}</h2>
 
-            <div className="flex items-center gap-6 ">
-              <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
+              <div className="flex items-center gap-6 ">
+                <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
 
-              <div className="relative h-10 w-12 bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer">
-                <NotificationIcon />
-                <span className="h-2 w-2 rounded-full bg-red-500 absolute right-3 top-2"></span>
+                <Notification />
+
+                <CustomizationMenu
+                  sidebarPosition={sidebarPosition}
+                  setSidebarPosition={(value) => {
+                    setSidebarPosition(value);
+                    localStorage.setItem('sidebar_position', value);
+                  }}
+                />
+
+                <ProfileDropdownMenu />
               </div>
-
-              <CustomizationMenu
-                sidebarPosition={sidebarPosition}
-                setSidebarPosition={(value) => {
-                  setSidebarPosition(value);
-                  localStorage.setItem('sidebar_position', value);
-                }}
-              />
-
-              <ProfileDropdownMenu />
             </div>
-          </div>
+          )}
           {children}
         </section>
         <section className="bg-[#FBFDFF] w-full h-full block">
@@ -114,24 +126,26 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
         <section className={`flex justify-between ${padding}`}>
           <TopNavigation />
 
-          <div className="flex items-center gap-6">
-            <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
+          {/* Disable for vendor profile */}
+          {pathname === '/vendor-profile' ? (
+            <></>
+          ) : (
+            <div className="flex items-center gap-6">
+              <SearchIcon className="bg-white transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 border border-gray-50 shadow-lg shadow-blue-100 h-10 w-12 rounded-xl px-2.5 cursor-pointer" />
 
-            <div className="relative h-10 w-12 bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 shadow-lg shadow-blue-100 rounded-xl grid place-content-center cursor-pointer">
-              <NotificationIcon />
-              <span className="h-2 w-2 rounded-full bg-red-500 absolute right-3 top-2"></span>
+              <Notification />
+
+              <CustomizationMenu
+                sidebarPosition={sidebarPosition}
+                setSidebarPosition={(value) => {
+                  setSidebarPosition(value);
+                  localStorage.setItem('sidebar_position', value);
+                }}
+              />
+
+              <ProfileDropdownMenu />
             </div>
-
-            <CustomizationMenu
-              sidebarPosition={sidebarPosition}
-              setSidebarPosition={(value) => {
-                setSidebarPosition(value);
-                localStorage.setItem('sidebar_position', value);
-              }}
-            />
-
-            <ProfileDropdownMenu />
-          </div>
+          )}
         </section>
         <section className="px-8">{children}</section>
       </LayoutMainGrid>

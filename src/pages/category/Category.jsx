@@ -56,7 +56,7 @@ const Category = () => {
               </th>
               <th>
                 <div className="flex items-center">
-                  <span className=" font-medium">SLUG</span>
+                  <span className="font-medium">SLUG</span>
                   <div className="bg-[#87CEEB]/10 mx-5">
                     <BiChevronUp />
                     <BiChevronDown />
@@ -65,7 +65,7 @@ const Category = () => {
               </th>
               <th>
                 <div className="flex items-center">
-                  <span className=" font-medium">Count</span>
+                  <span className="font-medium text-center">Count</span>
                   <div className="bg-[#87CEEB]/10 mx-5">
                     <BiChevronUp />
                     <BiChevronDown />
@@ -82,14 +82,87 @@ const Category = () => {
                 <RightMarkIcon />
               </td>
               <td className="py-2">
+                <div className="flex gap-2">
+                  <AstroIcon />
+                </div>
+              </td>
+              <td>
+                <p>#194556</p>
+              </td>
+              <td>FlowbiteJS</td>
+              <td className="italic">/angular</td>
+              <td className="pl-4">2</td>
+              <td></td>
+              <td>
+                <Link to="/edit-category" className="cursor-pointer">
+                  <EditIcon />
+                </Link>
+              </td>
+              <td className="cursor-pointer" onClick={() => setIsOpen(true)}>
+                <DeleteIcon />
+              </td>
+            </tr>
+            <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
+              <td>
+                <RightMarkIcon />
+              </td>
+              <td className="py-2">
                 <div className="flex gap-2 items-center">
                   <AstroIcon />
                 </div>
               </td>
               <td>#194556</td>
-              <td>Angular</td>
-              <td>/angular</td>
-              <td>1</td>
+              <td>- Angular</td>
+              <td className="italic">/angular</td>
+              <td className="pl-4">1</td>
+              <td></td>
+              <td>
+                <Link to="/edit-category" className="cursor-pointer">
+                  <EditIcon />
+                </Link>
+              </td>
+              <td className="cursor-pointer" onClick={() => setIsOpen(true)}>
+                <DeleteIcon />
+              </td>
+            </tr>
+            <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
+              <td>
+                <RightMarkIcon />
+              </td>
+              <td className="py-2">
+                <div className="flex gap-2">
+                  <AstroIcon />
+                </div>
+              </td>
+              <td>
+                <p>#194556</p>
+              </td>
+              <td>FlowbiteJS</td>
+              <td className="italic">/angular</td>
+              <td className="pl-4">2</td>
+              <td></td>
+              <td>
+                <Link to="/edit-category" className="cursor-pointer">
+                  <EditIcon />
+                </Link>
+              </td>
+              <td className="cursor-pointer" onClick={() => setIsOpen(true)}>
+                <DeleteIcon />
+              </td>
+            </tr>
+            <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
+              <td>
+                <RightMarkIcon />
+              </td>
+              <td className="py-2">
+                <div className="flex gap-2 items-center">
+                  <AstroIcon />
+                </div>
+              </td>
+              <td>#194556</td>
+              <td>- Angular</td>
+              <td className="italic">/angular</td>
+              <td className="pl-4">1</td>
               <td></td>
               <td>
                 <Link to="/edit-category" className="cursor-pointer">
@@ -114,8 +187,79 @@ const Category = () => {
                 <p>#194556</p>
               </td>
               <td>FlowbiteJS</td>
-              <td>/angular</td>
-              <td>2</td>
+              <td className="italic">/angular</td>
+              <td className="pl-4">2</td>
+              <td></td>
+              <td>
+                <Link to="/edit-category" className="cursor-pointer">
+                  <EditIcon />
+                </Link>
+              </td>
+              <td className="cursor-pointer" onClick={() => setIsOpen(true)}>
+                <DeleteIcon />
+              </td>
+            </tr>
+            <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
+              <td>
+                <RightMarkIcon />
+              </td>
+              <td className="py-2">
+                <div className="flex gap-2 items-center">
+                  <AstroIcon />
+                </div>
+              </td>
+              <td>#194556</td>
+              <td>- Angular</td>
+              <td className="italic">/angular</td>
+              <td className="pl-4">1</td>
+              <td></td>
+              <td>
+                <Link to="/edit-category" className="cursor-pointer">
+                  <EditIcon />
+                </Link>
+              </td>
+              <td className="cursor-pointer" onClick={() => setIsOpen(true)}>
+                <DeleteIcon />
+              </td>
+            </tr>
+            <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
+              <td>
+                <RightMarkIcon />
+              </td>
+              <td className="py-2">
+                <div className="flex gap-2">
+                  <AstroIcon />
+                </div>
+              </td>
+              <td>
+                <p>#194556</p>
+              </td>
+              <td>FlowbiteJS</td>
+              <td className="italic">/angular</td>
+              <td className="pl-4">2</td>
+              <td></td>
+              <td>
+                <Link to="/edit-category" className="cursor-pointer">
+                  <EditIcon />
+                </Link>
+              </td>
+              <td className="cursor-pointer" onClick={() => setIsOpen(true)}>
+                <DeleteIcon />
+              </td>
+            </tr>
+            <tr className="rounded-xl shadow-md shadow-[#87CEEB] table-shadow">
+              <td>
+                <RightMarkIcon />
+              </td>
+              <td className="py-2">
+                <div className="flex gap-2 items-center">
+                  <AstroIcon />
+                </div>
+              </td>
+              <td>#194556</td>
+              <td>- Angular</td>
+              <td className="italic">/angular</td>
+              <td className="pl-4">1</td>
               <td></td>
               <td>
                 <Link to="/edit-category" className="cursor-pointer">
