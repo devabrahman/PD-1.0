@@ -33,12 +33,12 @@ const ProfileDropdownMenu = () => {
                       <div className="w-9 h-9 rounded-full">
                         <img className="w-full" src={profile} alt="Profile" />
                       </div>
-                      <div>
+                      <Link to="/vendor-profile">
                         <h2 className="text-[#302323] dark:text-white/90 font-medium">
                           Amantony Rojario
                         </h2>
                         <p className="text-xs text-[#9F9FA2] font-medium">aman564@gmail.com</p>
-                      </div>
+                      </Link>
                     </div>
                     <Link to="" className="flex items-center gap-4 mb-5">
                       <div className="w-6">

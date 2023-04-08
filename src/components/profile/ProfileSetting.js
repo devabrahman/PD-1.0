@@ -31,23 +31,23 @@ const ProfileSetting = () => {
               { active } //eslint-disable-line
             ) => (
               <ul className="space-y-5">
-                <li className="flex gap-5">
-                  <UserIcon /> Account settings
+                <li className="flex gap-4 ml-1">
+                  <UserIcon className="w-6" /> Account settings
                 </li>
-                <li className="flex gap-6">
+                <li className="flex gap-3 ml-1.5">
                   <img className="w-6" src={coloredit} alt="Edit" />
                   <Link to="/vendor-profile-edit">
-                    <p className="text-[#302323]">Edit profile</p>
+                    <p className="">Edit profile</p>
                   </Link>
                 </li>
-                <li className="flex gap-5">
-                  <WarningIcon /> Info
+                <li className="flex gap-4">
+                  <WarningIcon className="w-6" /> Info
                 </li>
-                <li className="flex gap-5">
-                  <SupportIcon /> Support
+                <li className="flex gap-4">
+                  <SupportIcon className="w-6" /> Support
                 </li>
-                <li className="flex gap-5">
-                  <ArrowDownIcon /> Legal
+                <li className="flex gap-4">
+                  <ArrowDownIcon className="w-6" /> Legal
                 </li>
               </ul>
             )}

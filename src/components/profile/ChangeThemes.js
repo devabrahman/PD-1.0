@@ -47,7 +47,7 @@ function ChangeThemes({ className }) {
 
         <Tab
           className={`flex gap-2 bg text-base items-center ${
-            selectedIndex === 2 && 'bg-white'
+            selectedIndex === 2 && 'bg-white text-black'
           }  rounded-lg py-1.5 px-2.5`}
           onClick={() => applyTheme('black')}>
           <StarIcon className={`w-[20px] ${selectedIndex === 2 && 'text-gold'}`} /> Black
