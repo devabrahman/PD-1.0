@@ -14,7 +14,7 @@ import MetaSection from 'components/products/MetaSection';
 import { description } from 'api/products';
 // Icons
 import CalenderIcon from 'components/SVGIcons/CalenderIcon';
-import ShippingIcon from 'assets/Images/products/ShippingIcon.png';
+import ShippingIcon from 'assets/Images/icons/ShippingIcon.png';
 import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
 import { CalendarDaysIcon, MapPinIcon } from '@heroicons/react/24/outline';
 // Css

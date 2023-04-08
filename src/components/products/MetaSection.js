@@ -1,5 +1,5 @@
 import React, { useState, useRef, useMemo } from 'react';
-import SearchEngineIcon from 'assets/Images/products/SearchEngineIcon.png';
+import SearchEngineIcon from 'assets/Images/icons/SearchEngineIcon.png';
 import JoditEditor from 'jodit-react';
 
 const MetaSection = ({ metaValue }) => {

@@ -5,7 +5,7 @@ import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import SettingIcon from 'components/SVGIcons/SettingIcon';
 
-import OptionIcon from 'assets/Images/products/OptionIcon.png';
+import OptionIcon from 'assets/Images/icons/OptionIcon.png';
 import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
 
 const NewVariation = ({ variation, setVariation, isVariable, setIsVariable }) => {

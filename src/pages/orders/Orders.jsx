@@ -96,9 +96,9 @@ const Orders = () => {
                 Iphone 14 Pro<span className="text-[#B9B9B9] text-sm block">Laptop</span>
               </Link>
             </td>
-            <td className="text-[#505050] text-sm">1 Nov, 9:32 AM</td>
+            <td className="text-[#505050] dark:text-white/80 text-sm">1 Nov, 9:32 AM</td>
             <td className="text-[#00DC72]">Paid</td>
-            <td className="text-[#505050]">$ 14,89</td>
+            <td className="text-[#505050] dark:text-white/80">$ 14,89</td>
             <td>
               <div className="flex gap-1.5 items-center">
                 <img
@@ -125,9 +125,9 @@ const Orders = () => {
                 I Mac 2TB<span className="text-[#B9B9B9] text-sm block">Laptop</span>
               </Link>
             </td>
-            <td className="text-[#505050] text-sm">2 Nov, 9:32 AM</td>
+            <td className="text-[#505050] dark:text-white/80 text-sm">2 Nov, 9:32 AM</td>
             <td className="text-[#F4316B]">Canceled</td>
-            <td className="text-[#505050]">$ 1,885</td>
+            <td className="text-[#505050] dark:text-white/80">$ 1,885</td>
             <td>
               <div className="flex gap-1.5 items-center">
                 <img
@@ -154,9 +154,9 @@ const Orders = () => {
                 Macbook Air<span className="text-[#B9B9B9] text-sm block">Laptop</span>
               </Link>
             </td>
-            <td className="text-[#505050] text-sm">4 Nov, 9:32 AM</td>
+            <td className="text-[#505050] dark:text-white/80 text-sm">4 Nov, 9:32 AM</td>
             <td className="text-[#00DC72]">Paid</td>
-            <td className="text-[#505050]">$ 1499</td>
+            <td className="text-[#505050] dark:text-white/80">$ 1499</td>
             <td>
               <div className="flex gap-1.5 items-center">
                 <span className="rounded-full w-5 h-5 inline-flex justify-center items-center text-white mr-1.5 bg-purple-700">
@@ -181,9 +181,9 @@ const Orders = () => {
                 Mac Mini <span className="text-[#B9B9B9] text-sm block">Laptop</span>
               </Link>
             </td>
-            <td className="text-[#505050] text-sm">2 Nov, 9:32 AM</td>
+            <td className="text-[#505050] dark:text-white/80 text-sm">2 Nov, 9:32 AM</td>
             <td className="text-[#00DC72]">Paid</td>
-            <td className="text-[#505050]">$ 14,89</td>
+            <td className="text-[#505050] dark:text-white/80">$ 14,89</td>
             <td>
               <div className="flex gap-1.5 items-center">
                 <img
@@ -210,9 +210,9 @@ const Orders = () => {
                 Mac studio<span className="text-[#B9B9B9] text-sm block">Laptop</span>
               </Link>
             </td>
-            <td className="text-[#505050] text-sm">1 Nov, 9:32 AM</td>
+            <td className="text-[#505050] dark:text-white/80 text-sm">1 Nov, 9:32 AM</td>
             <td className="text-[#FF7144]">Refunded</td>
-            <td className="text-[#505050]">$ 18,89</td>
+            <td className="text-[#505050] dark:text-white/80">$ 18,89</td>
             <td>
               <div className="flex gap-1.5 items-center">
                 <span className="rounded-full w-5 h-5 inline-flex justify-center items-center text-white mr-1.5 bg-purple-700">
@@ -237,9 +237,9 @@ const Orders = () => {
                 Vivo Pad<span className="text-[#B9B9B9] text-sm block">Laptop</span>
               </Link>
             </td>
-            <td className="text-[#505050] text-sm">2 Nov, 9:32 AM</td>
+            <td className="text-[#505050] dark:text-white/80 text-sm">2 Nov, 9:32 AM</td>
             <td className="text-[#00DC72]">Paid</td>
-            <td className="text-[#505050]">$ 489</td>
+            <td className="text-[#505050] dark:text-white/80">$ 489</td>
             <td>
               <div className="flex gap-1.5 items-center">
                 <img
@@ -266,9 +266,9 @@ const Orders = () => {
                 Macbook Pro<span className="text-[#B9B9B9] text-sm block">Laptop</span>
               </Link>
             </td>
-            <td className="text-[#505050] text-sm">2 Nov, 9:32 AM</td>
+            <td className="text-[#505050] dark:text-white/80 text-sm">2 Nov, 9:32 AM</td>
             <td className="text-[#F4316B]">Canceled</td>
-            <td className="text-[#505050]">$ 11,89</td>
+            <td className="text-[#505050] dark:text-white/80">$ 11,89</td>
             <td>
               <div className="flex gap-1.5 items-center">
                 <span className="rounded-full w-5 h-5 inline-flex justify-center items-center text-white mr-1.5 bg-purple-700">

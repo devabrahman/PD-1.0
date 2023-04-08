@@ -13,7 +13,7 @@ import Pagination from 'components/common/Pagination';
 
 const Tags = () => {
   const [addTag, setAddATag] = useState(false);
-  const [editTag, setEditTag] = useState(true);
+  const [editTag, setEditTag] = useState(false);
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
   return (
     <>
