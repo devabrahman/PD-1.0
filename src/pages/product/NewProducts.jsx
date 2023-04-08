@@ -4,7 +4,7 @@ import Layout from 'components/common/Layout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import ImageDropDown from 'components/common/ImageDropDown';
 import CategoryList from 'components/products/CategoryList';
-import Calendar from 'components/products/Calendar';
+import Calendar from 'components/common/Calendar';
 import ProductTag from 'components/products/ProductTag';
 import NewVariation from 'components/products/NewVariation';
 import VariationList from 'components/products/VariationList';
@@ -38,7 +38,8 @@ const NewProducts = () => {
     <Layout title="Products">
       <Breadcrumbs rootTitle={{ title: 'Products', url: '/products' }} subTitle="New" />
       <main>
-        <form className="w-full flex gap-16 pt-14">
+        {/*TODO: used section for avoid reload */}
+        <section className="w-full flex gap-16 pt-14">
           <section className="w-3/4">
             <label className="block font-medium text-lg mb-2">Post Title</label>
             <input
@@ -61,7 +62,7 @@ const NewProducts = () => {
                   type="text"
                   name=""
                   id=""
-                  className="border pl-3 border-[#B9B9B9] h-9 mt-2 rounded-[8px] w-1/2 pr-1.5"
+                  className="border pl-3 border-[#B9B9B9] dark:border-darkBorder dark:bg-lightDark h-9 mt-2 rounded-[8px] w-1/2 pr-1.5"
                 />
               </div>
               <div className="my-5 w-1/3">
@@ -148,9 +149,9 @@ const NewProducts = () => {
                   </div>
                   {physicalProduct && (
                     <>
-                      <hr className="h-0.5 w-full bg-[#CDCDCD]/20" />
+                      <hr className="h-0.5 w-full bg-[#CDCDCD]/20 dark:bg-lightDark" />
                       <div className="px-3">
-                        <label className="block text-[#302323] text-xl py-4">
+                        <label className="block text-[#302323] dark:text-white text-xl py-4">
                           Customs information
                         </label>
 
@@ -162,8 +163,11 @@ const NewProducts = () => {
                             name=""
                             id=""
                             placeholder="Select country or region"
-                            className="border border-[#B9B9B9] rounded-xl block w-5/12 outline-none py-2.5 px-4 text-[15px]">
-                            <option disabled value="" className="text-[#848484] text-[15px]">
+                            className="border border-[#B9B9B9] dark:border-darkBorder dark:bg-lightDark rounded-xl block w-5/12 outline-none py-2.5 px-4 text-[15px]">
+                            <option
+                              disabled
+                              value=""
+                              className="text-[#848484] dark:text-white text-[15px] ">
                               Select country or region
                             </option>
                             <option value="">Bangladesh</option>
@@ -181,7 +185,7 @@ const NewProducts = () => {
                             name=""
                             id=""
                             placeholder="Search or enter HS code"
-                            className="border border-[#B9B9B9] rounded-xl block w-5/12 outline-none py-2.5 px-4 text-[15px]"
+                            className="border border-[#B9B9B9] dark:border-darkBorder dark:bg-lightDark rounded-xl block w-5/12 outline-none py-2.5 px-4 text-[15px]"
                           />
                         </div>
                       </div>
@@ -234,13 +238,15 @@ const NewProducts = () => {
                 </p>
               </div>
               <hr />
-              <p className="text-xs mb-8 text-primary cursor pointer">Copy a new Draft</p>
-              <div className="text-right m-[0px]">
-                <button
-                  className="border border-accent text-primary px-2 py-1.5 rounded-lg inline-block text-right mb-2.5 input-back-box-shadow text-sm"
-                  type="submit">
-                  Publish
-                </button>
+              <div>
+                <p className="text-xs mb-2 text-primary cursor pointer">Copy a new Draft</p>
+                <div className="text-right m-[0px]">
+                  <button
+                    type="submit"
+                    className="border border-accent text-primary px-2 py-1.5 rounded-lg inline-block text-right mb-2.5 input-back-box-shadow text-sm">
+                    Publish
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -254,7 +260,7 @@ const NewProducts = () => {
                   name=""
                   id=""
                   placeholder="$ 00.0"
-                  className="border pl-3 border-accent/30 h-9 mt-3 rounded-[7px] w-full pr-1.5"
+                  className="border pl-3 border-accent/30 dark:bg-lightDark  h-9 mt-3 rounded-[7px] w-full pr-1.5"
                 />
               </div>
 
@@ -265,7 +271,7 @@ const NewProducts = () => {
                   name=""
                   id=""
                   placeholder="$ 00.0"
-                  className="border pl-3 border-accent/30 h-9 mt-3 rounded-[7px] w-full pr-1.5 focus:focused-input"
+                  className="border pl-3 border-accent/30  dark:bg-lightDark h-9 mt-3 rounded-[7px] w-full pr-1.5 focus:focused-input"
                 />
                 <div className="flex items-center justify-between gap-2 absolute bottom-[11%] right-[15px] z-10">
                   <span className="h-4 rounded-sm w-0.5 bg-pdGrey block"></span>
@@ -289,7 +295,7 @@ const NewProducts = () => {
               </div>
             </div>
           </section>
-        </form>
+        </section>
       </main>
     </Layout>
   );

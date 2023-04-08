@@ -11,6 +11,7 @@ import macbook2 from '../../assets/Images/products/macbook2.jpg';
 import macbook3 from '../../assets/Images/products/macbook3.jpg';
 import macbook4 from '../../assets/Images/products/macbook4.jpg';
 import macbook5 from '../../assets/Images/products/macbook5.jpg';
+import productPic from 'assets/Images/products/moc-m2.jpg';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 // Import css files
 import 'slick-carousel/slick/slick.css';
@@ -33,36 +34,74 @@ const SingleProduct = () => {
       />
       <section className="flex gap-16 mt-9">
         <div className="w-full">
-          <div className="justify-center">
+          <div className="justify-center mb-5">
             <span></span>
-            <img src={macbook1} alt="macBook" />
+            <div className="rounded-lg  w-8/12 ml-5 mr-0">
+              <img
+                src={productPic}
+                alt="Category Icon"
+                className="mt-20  w-full object-contain dark:bg-lightDark rounded-[40px] px-6 dark:shadow-[0_10px_5px_rgba(4, 0, 34, 0.3))] "
+              />
+            </div>
             <span></span>
           </div>
           <div className="max-w-2xl h-14 outline-none">
             <Slider {...settings}>
-              <div className="h-14 outline-none">
-                <img className="object-cover h-full " src={macbook1} alt="macBook" />
+              <div className="h-14 outline-none mx-4 rounded-md inline-flex conte overflow-hidden ">
+                <img
+                  className="object-cover h-full rounded-md w-full ml-8 cursor-pointer"
+                  src={macbook1}
+                  alt="macBook"
+                />
               </div>
-              <div className="h-14 outline-none">
-                <img className="object-cover h-full " src={macbook2} alt="macBook" />
+              <div className="h-14 outline-none mx-4 rounded-md inline-flex conte overflow-hidden ">
+                <img
+                  className="object-cover h-full rounded-md w-full ml-8 cursor-pointer"
+                  src={macbook2}
+                  alt="macBook"
+                />
               </div>
-              <div className="h-14 outline-none">
-                <img className="object-cover h-full " src={macbook3} alt="macBook" />
+              <div className="h-14 outline-none mx-4 rounded-md inline-flex conte overflow-hidden ">
+                <img
+                  className="object-cover h-full rounded-md w-full ml-8 cursor-pointer"
+                  src={macbook3}
+                  alt="macBook"
+                />
               </div>
-              <div className="h-14 outline-none">
-                <img className="object-cover h-full " src={macbook4} alt="macBook" />
+              <div className="h-14 outline-none mx-4 rounded-md inline-flex conte overflow-hidden ">
+                <img
+                  className="object-cover h-full rounded-md w-full ml-8 cursor-pointer"
+                  src={macbook4}
+                  alt="macBook"
+                />
               </div>
-              <div className="h-14 outline-none">
-                <img className="object-cover h-full " src={macbook5} alt="macBook" />
+              <div className="h-14 outline-none mx-4 rounded-md inline-flex conte overflow-hidden ">
+                <img
+                  className="object-cover h-full rounded-md w-full ml-8 cursor-pointer"
+                  src={macbook5}
+                  alt="macBook"
+                />
               </div>
-              <div className="h-14 outline-none">
-                <img className="object-cover h-full " src={macbook1} alt="macBook" />
+              <div className="h-14 outline-none mx-4 rounded-md inline-flex conte overflow-hidden ">
+                <img
+                  className="object-cover h-full rounded-md w-full ml-8 cursor-pointer"
+                  src={macbook1}
+                  alt="macBook"
+                />
               </div>
-              <div className="h-14 outline-none">
-                <img className="object-cover h-full " src={macbook3} alt="macBook" />
+              <div className="h-14 outline-none mx-4 rounded-md inline-flex conte overflow-hidden ">
+                <img
+                  className="object-cover h-full rounded-md w-full ml-8 cursor-pointer"
+                  src={macbook3}
+                  alt="macBook"
+                />
               </div>
-              <div className="h-14 outline-none">
-                <img className="object-cover h-full " src={macbook4} alt="macBook" />
+              <div className="h-14 outline-none mx-4 rounded-md inline-flex conte overflow-hidden ">
+                <img
+                  className="object-cover h-full rounded-md w-full ml-8 cursor-pointer"
+                  src={macbook4}
+                  alt="macBook"
+                />
               </div>
             </Slider>
           </div>
@@ -70,21 +109,23 @@ const SingleProduct = () => {
 
         <div className="w-full">
           <div className="flex gap-3 items-center">
-            <h1 className="text-[32px] font-medium text-gray-900">Macbook Pro</h1>
+            <h1 className="text-[32px] font-medium text-gray-900 dark:text-white/90">
+              Macbook Pro
+            </h1>
             <span className="text-green bg-green/20 rounded-md text-sm py-1.5 px-3 font-medium h-min">
               In Stock
             </span>
           </div>
 
-          <h5 className="text-black/30 text-sm ">
+          <h5 className="text-black/30 dark:text-white/70 text-sm ">
             <i>Laptop</i>
           </h5>
 
-          <div className="flex gap-1.5 items-center mt-2.5 mb-1.5">
-            <AiFillStar className="text-gold w-[21px] h-[21px]" />
-            <span className="text-black/30 text-sm">4.9 Ratings </span>
-            <span className="text-black/30 text-sm block">. 2.6k+ Reviews </span>
-            <span className="text-black/30 text-sm">. 2.5k+ Sold </span>
+          <div className="flex gap-1.5 items-center mt-2.5 mb-1.5 text-black/30 dark:text-white/70">
+            <AiFillStar className="text-gold w-[21px] h-[21px] " />
+            <span className=" text-sm">4.9 Ratings </span>
+            <span className=" text-sm block">. 2.6k+ Reviews </span>
+            <span className=" text-sm">. 2.5k+ Sold </span>
           </div>
 
           <h3 className="font-medium text-[24px]">$399.00</h3>
@@ -106,17 +147,17 @@ const SingleProduct = () => {
               </span>
             </div>
             <div className="flex gap-2.5 mt-8">
-              <span className="cursor-pointer text-[#002D9E] text-[15px] input-accent-box-shadow bg-white  rounded-md px-1.5 py-0.5">
+              <span className="cursor-pointer text-[#002D9E] dark:text-blue-100 text-[15px] input-accent-box-shadow dark:bg-lightDark bg-white  rounded-md px-1.5 py-0.5">
                 128 GB
               </span>
-              <span className="cursor-pointer text-[#002D9E] text-[15px] input-accent-box-shadow bg-white  rounded-md px-1.5 py-0.5">
+              <span className="cursor-pointer text-[#002D9E] dark:text-blue-100 text-[15px] input-accent-box-shadow dark:bg-lightDark bg-white  rounded-md px-1.5 py-0.5">
                 64 GB
               </span>
             </div>
           </section>
-          <div className="mt-4">
+          <div className="mt-12">
             <h3 className="text-[20px] font-medium">Description</h3>
-            <ul className="list-disc ml-5 font-[15px] text-[#302323]">
+            <ul className="list-disc ml-5 font-[15px] text-[#302323] dark:text-white/80">
               <li>16-core Neural Engine</li>
               <li>13.6-inch Liquid Retina display with True Tone</li>
               <li>1080p FaceTime HD camera</li>

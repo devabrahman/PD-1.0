@@ -88,3 +88,9 @@ input:checked + div {
     transform: scale(1);
   }
 }
+
+// Slick slider
+.slick-prev:before,
+.slick-next:before {
+  font-size: 0px !important; //TODO: use important for hide slider
+}

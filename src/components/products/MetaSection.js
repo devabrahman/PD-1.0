@@ -64,7 +64,7 @@ const MetaSection = ({ metaValue }) => {
             type="text"
             name="Title"
             id="title"
-            className="border text-gray-600 text-sm dark:placeholder:text-white/50 dark:bg-lightDark  border-[#D6D6D6]/70 mt-3 rounded-xl w-full py-2.5 pl-3 pr-1.5"
+            className="border text-gray-600 text-sm dark:placeholder:text-white/50 dark:bg-lightDark  border-[#D6D6D6]/70 dark:text-white italic mt-3 rounded-xl w-full py-2.5 pl-3 pr-1.5"
             defaultValue={url}
           />
         </div>

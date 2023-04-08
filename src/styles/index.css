@@ -41,3 +41,58 @@
     @apply focused-input dark:focused-input-dark;
   }
 }
+
+/* for jodit editor */
+.jodit-react-container {
+  @apply input-accent-box-shadow;
+}
+.jodit-container:not(.jodit_inline) .jodit-workplace {
+  @apply dark:bg-dark;
+}
+.jodit-status-bar {
+  @apply dark:bg-dark text-white;
+}
+.jodit-workplace + .jodit-status-bar:not(:empty) {
+  @apply border dark:border-darkBorder;
+}
+.jodit-toolbar__box:not(:empty):not(:empty) {
+  @apply dark:bg-lightDark;
+}
+.jodit-icon {
+  @apply dark:stroke-white dark:fill-slate-50;
+}
+
+.jodit-xpath__item > a,
+.jodit-status-bar a.jodit-status-bar-link,
+.jodit-status-bar__item-right > span {
+  @apply dark:text-white;
+}
+
+.jodit-status-bar a.jodit-status-bar-link:visited {
+  @apply dark:text-darkBorder;
+}
+
+/* for calender */
+.rdrDefinedRangesWrapper,
+.rdrStaticRanges > button,
+.rdrDateDisplayWrapper,
+.rdrMonthAndYearWrapper,
+.rdrMonth {
+  @apply dark:bg-lightDark;
+}
+.rdrDay > span > span,
+.rdrWeekDay,
+.rdrMonthName,
+.rdrMonthPicker > select,
+.rdrYearPicker > select {
+  @apply dark:text-white;
+}
+
+.rdrDayPassive > span > span {
+  @apply dark:text-gray-400;
+}
+.rdrMonthPicker > select option,
+.rdrYearPicker > select option,
+.rdrDateInput > input {
+  @apply dark:text-white dark:bg-lightDark;
+}

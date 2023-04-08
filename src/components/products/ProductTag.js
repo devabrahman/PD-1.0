@@ -21,16 +21,22 @@ const ProductTag = () => {
   };
   return (
     <div className="w-full rounded-xl input-accent-box-shadow mt-5 px-5 py-3">
-      <label className="text-[#424141] font-medium text-base block">Tags</label>
-      <p className="text-[10px] text-[#939090] flex justify-end m-0 p-0">Manage</p>
-      <form onSubmit={addNewTag}>
+      <label className="text-[#424141] dark:text-white font-medium text-base block">Tags</label>
+      <p className="text-[10px] text-[#939090] dark:text-gray-300 flex justify-end m-0 p-0">
+        Manage
+      </p>
+      <form
+        onSubmit={(e) => {
+          addNewTag();
+        }}>
         <input
           type="text"
           name="tag"
           id=""
+          autoComplete="off"
           value={tagName}
-          className="border border-accent/30 h-9 mt-3 rounded-xl w-full px-2.5 py-0.5"
-          placeholder="Find or creat tags"
+          className="border border-accent/30 h-9 mt-3 rounded-xl w-full px-2.5 py-1 dark:bg-lightDark"
+          placeholder="Find or create tags"
           onChange={() => setTagName(event.target.value)}
         />
       </form>

@@ -89,12 +89,12 @@ const NewVariation = ({ variation, setVariation, isVariable, setIsVariable }) =>
                 <div className="w-3/5 mx-10 my-3">
                   <p>Variation name</p>
                   <div className="flex items-center">
-                    <SettingIcon className="w-5 h-6 -ml-6 mr-6" />
+                    <SettingIcon className="w-5 h-6 -ml-6 mr-6 dark:opacity-60 dark:fill-white" />
                     <input
                       type="text"
                       name=""
                       id=""
-                      className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-full pr-1.5 mr-6"
+                      className="border pl-3 border-[#B9B9B9] dark:border-darkBorder bg-[#F8F8F8] dark:bg-lightDark h-9 mt-3 rounded-xl w-full pr-1.5 mr-6"
                       value={item?.name}
                       onChange={(event) => updateVariationName(itemIndex, event.target.value)}
                     />
@@ -111,12 +111,12 @@ const NewVariation = ({ variation, setVariation, isVariable, setIsVariable }) =>
 
                   {item?.value?.map((value, valueIndex) => (
                     <div key={valueIndex} className="flex items-center">
-                      <SettingIcon className="w-5 h-6 -ml-4 mr-6 opacity-25" />
+                      <SettingIcon className="w-5 h-6 -ml-4 mr-6 dark:opacity-60 dark:fill-white" />
                       <input
                         type="text"
                         name=""
                         id=""
-                        className="border pl-3 border-[#B9B9B9] bg-[#F8F8F8] h-9 mt-3 rounded-xl w-4/5 pr-1.5 mr-6"
+                        className="border pl-3 border-[#B9B9B9] dark:border-darkBorder bg-[#F8F8F8] dark:bg-lightDark h-9 mt-3 rounded-xl w-4/5 pr-1.5 mr-6"
                         placeholder="Add another value"
                         value={value}
                         onChange={(event) =>

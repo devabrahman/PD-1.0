@@ -4,7 +4,7 @@ import Layout from 'components/common/Layout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import ImageDropDown from 'components/common/ImageDropDown';
 import CategoryList from 'components/products/CategoryList';
-import Calendar from 'components/products/Calendar';
+import Calendar from 'components/common/Calendar';
 import ProductTag from 'components/products/ProductTag';
 import NewVariation from 'components/products/NewVariation';
 import VariationList from 'components/products/VariationList';

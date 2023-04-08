@@ -29,7 +29,7 @@ const NewCategory = () => {
 
             <select
               type="text"
-              className="rounded-3xl px-6 flex justify-center dark:bg-dark items-center border border-[#B9B9B9]/50 dark:border-darkBorder my-5 bg-opacity-10 p-3 font-montserrat text-sm text-gray-800 outline-none"
+              className="rounded-3xl px-6 flex justify-center dark:bg-dark items-center border border-[#B9B9B9]/50 dark:border-darkBorder my-5 bg-opacity-10 p-3 font-montserrat text-sm text-gray-800 dark:text-white/80 outline-none"
               required
               placeholder="/angular">
               <option value="" disabled selected>
@@ -41,7 +41,7 @@ const NewCategory = () => {
             </select>
             <input
               type="text"
-              className="rounded-3xl px-6 flex justify-center dark:bg-dark items-center border border-[#B9B9B9]/50 dark:border-darkBorder my-5 bg-opacity-10 p-3 font-montserrat text-sm w-5/12"
+              className="rounded-3xl px-6 flex justify-center dark:bg-dark items-center border border-[#B9B9B9]/50 dark:border-darkBorder my-5 bg-opacity-10 p-3 font-montserrat text-sm w-5/12 italic"
               required
               placeholder="/angular"
             />
@@ -55,7 +55,7 @@ const NewCategory = () => {
             <textarea
               placeholder="Please enter description"
               rows={6}
-              className="w-9/12  border border-[#B9B9B9]/50 rounded-xl p-3 text-base text-[#161616]/70 dark:text-[#CDCDCD]/90 py-2"
+              className="w-9/12  border border-[#B9B9B9]/50 rounded-xl p-3 text-base text-[#161616]/70 dark:text-[#CDCDCD] dark:bg-lightDark input-accent-box-shadow py-2"
             />
           </div>
           <div className="py-5 mt-3">
@@ -67,8 +67,12 @@ const NewCategory = () => {
             </div>
           </div>
           <div className="flex justify-end gap-5 items-center mb-2 text-lg px-24">
-            <button className="px-6 py-1 text-[#DB2955] cursor-pointer">Cancel</button>
-            <button className="px-6 py-1 mr-5 bg-[#1C92FF] text-white rounded-3xl cursor-pointer">
+            <button type="reset" className="px-6 py-1 text-[#DB2955] cursor-pointer">
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="px-6 py-1 mr-5 bg-[#1C92FF] text-white rounded-3xl cursor-pointer">
               Submit
             </button>
           </div>

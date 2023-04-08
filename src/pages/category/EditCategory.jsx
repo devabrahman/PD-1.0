@@ -28,7 +28,7 @@ const EidtCategory = () => {
             />
             <input
               type="text"
-              className="rounded-3xl px-6 dark:bg-dark items-center border border-[#B9B9B9]/50 dark:border-darkBorder my-5 bg-opacity-10 p-3 text-sm w-5/12"
+              className="rounded-3xl px-6 dark:bg-dark items-center border border-[#B9B9B9]/50 dark:border-darkBorder my-5 bg-opacity-10 p-3 text-sm w-5/12 italic"
               required
               defaultValue="/angular"
             />
