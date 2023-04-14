@@ -18,14 +18,14 @@ const ProfileDropdownMenu = () => {
         <>
           <Popover.Button className="outline-none">
             <div
-              className={`h-12 w-12 border-4 rounded-full                       
-                ${open ? 'border-blue-700' : 'border-transparent'}`}>
+              className={`h-12 w-12 border-2 rounded-full                       
+                ${open ? 'border-blue-400' : 'border-transparent'}`}>
               <img src={profile} className={`rounded-full w-full h-full`} />
             </div>
           </Popover.Button>
           <TransitionComponent>
-            <Popover.Panel className="absolute z-10 right-0">
-              <div className="w-[320px] mx-auto rounded-3xl shadow-md shadow-[#87ceeb33] bg-white dark:bg-lightDark">
+            <Popover.Panel className="absolute z-10 right-0 top-2">
+              <div className="w-[320px] mx-auto rounded-lg shadow-md shadow-[#87ceeb33] bg-white dark:bg-lightDark">
                 <div className="p-6">
                   <h2 className="text-[#302323] dark:text-white/90 font-medium">Profile</h2>
                   <div className="p-2">
