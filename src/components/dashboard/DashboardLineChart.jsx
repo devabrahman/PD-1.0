@@ -39,7 +39,7 @@ const DashboardLineChart = () => {
   return (
     <section className="col-span-12 sm:col-span-9 bg-white px-4 py-4 rounded-xl">
       <section className="flex justify-between items-center mb-7">
-        <div className="flex items-center border border-gray-200 rounded-md px-2 py-1.5 cursor-pointer">
+        <div className="flex items-center border border-gray-200 rounded-md px-2 py-1.5 cursor-pointer -mt-3">
           <div className="rounded-md flex items-center gap-1.5 ">
             <CalendarDaysIcon className="h-5 w-5 stroke-blue-400" />
             <p className="text-[#A3AED0] text-[14px] font-medium">This month</p>
