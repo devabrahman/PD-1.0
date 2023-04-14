@@ -1,4 +1,4 @@
-import { CalendarDaysIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
+import { CalendarDaysIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
 
 const DashboardLineChart = () => {
@@ -39,11 +39,12 @@ const DashboardLineChart = () => {
   return (
     <section className="col-span-12 sm:col-span-9 bg-white px-4 py-4 rounded-xl">
       <section className="flex justify-between items-center mb-7">
-        <div>
-          <div className="rounded-md flex gap-1.5 items-center ">
+        <div className="flex items-center border border-gray-200 rounded-md px-2 py-1.5 cursor-pointer">
+          <div className="rounded-md flex items-center gap-1.5 ">
             <CalendarDaysIcon className="h-5 w-5 stroke-blue-400" />
             <p className="text-[#A3AED0] text-[14px] font-medium">This month</p>
           </div>
+          <ChevronDownIcon className="h-4 w-4 ml-3 text-blue-500" />
         </div>
         <div className="">
           <div className="col-span-">
