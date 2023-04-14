@@ -14,7 +14,7 @@ import Notification from './top-menu/Notification';
 // import { mobileResponsive } from 'utils/responsive';
 import { useMediaQuery } from 'react-responsive';
 
-const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
+const Layout = ({ title, children, padding = 'px-8 py-8', childrenSpace = 'mt-4' }) => {
   const mobileResponsive = useMediaQuery({
     query: '(min-width: 640px)'
   });
@@ -49,7 +49,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
         <section className="dark:bg-[#0E1C2F] dark:text-white w-full h-full block">
           {mobileResponsive ? <LeftNavigation /> : console.log('Profile')}
         </section>
-        <section className={`bg-[#F9F9F9] dark:bg-dark ${padding}`}>
+        <section className={`bg-[#f3f3f3] dark:bg-dark ${padding}`}>
           {/* Disable for vendor profile */}
           {pathname === '/vendor-profile' ? (
             <></>
@@ -75,7 +75,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
               </div>
             </div>
           )}
-          {children}
+          <section className={childrenSpace}>{children}</section>
         </section>
       </LayoutMainGrid>
     );
@@ -110,7 +110,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
               </div>
             </div>
           )}
-          {children}
+          <section className={childrenSpace}>{children}</section>
         </section>
         <section className="w-full h-full block">
           <LeftNavigation />
