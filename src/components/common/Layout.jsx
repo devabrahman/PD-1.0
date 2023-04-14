@@ -46,10 +46,10 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
   if (sidebarPosition === 'left') {
     return (
       <LayoutMainGrid position="left">
-        <section className="bg-[#FBFDFF] dark:bg-[#0E1C2F] dark:text-white w-full h-full block">
+        <section className="dark:bg-[#0E1C2F] dark:text-white w-full h-full block">
           {mobileResponsive ? <LeftNavigation /> : console.log('Profile')}
         </section>
-        <section className={`dark:bg-dark ${padding}`}>
+        <section className={`bg-[#F9F9F9] dark:bg-dark ${padding}`}>
           {/* Disable for vendor profile */}
           {pathname === '/vendor-profile' ? (
             <></>
@@ -85,7 +85,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
   if (sidebarPosition === 'right') {
     return (
       <LayoutMainGrid position="right">
-        <section className={`dark:bg-dark dark:text-white ${padding}`}>
+        <section className={`bg-[#F9F9F9] dark:bg-dark dark:text-white ${padding}`}>
           {/* Disable for vendor profile */}
           {pathname === '/vendor-profile' ? (
             <></>
@@ -112,7 +112,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8' }) => {
           )}
           {children}
         </section>
-        <section className="bg-[#FBFDFF] w-full h-full block">
+        <section className="w-full h-full block">
           <LeftNavigation />
         </section>
       </LayoutMainGrid>
