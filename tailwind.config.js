@@ -15,8 +15,8 @@ module.exports = {
         darkBorder: 'rgba(185, 185, 185, 0.5)'
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-        secondary: ['Montserrat', 'sans-serif'],
+        sans: ['Montserrat', 'sans-serif'],
+        secondary: ['Poppins', 'sans-serif'],
         DMSons: ['DM Sans', 'sans-serif']
       }
     }
