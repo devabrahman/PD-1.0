@@ -14,6 +14,7 @@ import envelop from 'assets/Images/social/envelop.png';
 import facebook from 'assets/Images/social/facebook.png';
 import google from 'assets/Images/social/google.png';
 import twitter from 'assets/Images/social/twitter.png';
+import { Link } from 'react-router-dom';
 
 const VendorProfile = () => {
   return (
@@ -60,7 +61,9 @@ const VendorProfile = () => {
             </div>
             <div className="flex items-center justify-between flex-grow">
               <div>
-                <h2 className="text-xl font-medium text-[#302323]">Amantony Rojario</h2>
+                <h2 className="text-xl font-medium text-[#302323] dark:text-white/80">
+                  Amantony Rojario
+                </h2>
                 <p className="text-sm text-[#848484]dark:text-white font-medium">
                   CEO / Co-Founder
                 </p>
@@ -73,34 +76,36 @@ const VendorProfile = () => {
             </div>
           </div>
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-xl text-[#5798F7] font-medium">Profile Information</span>
+            <span className="ml-7 text-xl text-[#5798F7] font-medium">Profile Information</span>
             <div className="w-[18px]">
-              <img className="w-full" src={edit} alt="edit" />
+              <Link to="">
+                <img className="w-full" src={edit} alt="edit" />
+              </Link>
             </div>
           </div>
-          <div className="max-w-[790px] text-lg text-[#302323] dark:text-white mb-3">
+          <div className="ml-7 max-w-[790px] text-lg text-[#302323]  dark:text-white mb-3">
             <p>
               Hi, I&apos;m Alec Thompson, Decisions: If you can&apos;t decide, the answer is no. If
               two equally difficult paths, choose the one more painful in the short term (pain
               avoidance is creating an illusion of equality).
             </p>
           </div>
-          <div className="space-y-3 py-6">
+          <div className="ml-7 space-y-3 py-6">
             <div className="flex items-center gap-3 ">
               <span className="font-medium text-lg text-[#3F3D56] dark:text-white">Full Name:</span>
-              <span className="text-[#302323]">Alec M. Thompson</span>
+              <span className="text-[#302323] dark:text-white/80">Alec M. Thompson</span>
             </div>
             <div className="flex items-center gap-3 ">
               <span className="font-medium text-lg text-[#3F3D56] dark:text-white">Mobile:</span>
-              <span className="text-[#302323]">(44) 123 1234 123</span>
+              <span className="text-[#302323] dark:text-white/80">(44) 123 1234 123</span>
             </div>
             <div className="flex items-center gap-3 ">
               <span className="font-medium text-lg text-[#3F3D56] dark:text-white">Email:</span>
-              <span className="text-[#302323]">alecthompson@mail.com</span>
+              <span className="text-[#302323] dark:text-white/80">alecthompson@mail.com</span>
             </div>
             <div className="flex items-center gap-3 ">
               <span className="font-medium text-lg text-[#3F3D56] dark:text-white">Location:</span>
-              <span className="text-[#302323]">USA</span>
+              <span className="text-[#302323] dark:text-white/80">USA</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="font-medium text-lg text-[#3F3D56] dark:text-white">Social:</span>

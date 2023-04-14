@@ -9,20 +9,20 @@ const CustomizationMenu = ({ sidebarPosition, setSidebarPosition }) => {
       {() => (
         <>
           <Popover.Button className="outline-none">
-            <div className="relative bg-white transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 table-shadow rounded-xl grid place-content-center cursor-pointer h-10 w-12 px-2">
+            <div className="relative bg-white dark:bg-dark transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 dark:bg-darkBorder table-shadow rounded-xl grid place-content-center cursor-pointer h-10 w-12 px-2">
               <CustomizationIcon />
             </div>
           </Popover.Button>
           <TransitionComponent>
             <Popover.Panel className="absolute z-10 right-0.5">
               <>
-                <div className="w-[320px] pt-[30px] pb-12 mt-4 px-6  mx-auto rounded-3xl drop-shadow-2xl bg-white  border-transparent border">
+                <div className="w-[320px] pt-[30px] pb-12 mt-4 px-6  mx-auto rounded-3xl drop-shadow-2xl bg-white dark:bg-lightDark  border-transparent border">
                   <ul className=" flex gap-[14px] justify-start ">
                     <li
                       onClick={() => {
                         setSidebarPosition('left');
                       }}
-                      className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(01,27,68,0.06)] ">
+                      className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(01,27,68,0.06)]  dark:shadow-[0_5px_10px_5px_rgba(0,99,255,0.07)]">
                       <span
                         className={`w-[25px] h-1 rounded-md ${
                           sidebarPosition === 'left' ? 'bg-primary' : 'bg-gray-300'
@@ -36,7 +36,7 @@ const CustomizationMenu = ({ sidebarPosition, setSidebarPosition }) => {
                       onClick={() => {
                         setSidebarPosition('top');
                       }}
-                      className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(01,27,68,0.06)]">
+                      className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(01,27,68,0.06)] dark:shadow-[0_5px_10px_5px_rgba(0,99,255,0.07)]">
                       <span
                         className={`w-[25px] h-1 rounded-md ${
                           sidebarPosition === 'top' ? 'bg-primary' : 'bg-gray-300'
@@ -46,7 +46,7 @@ const CustomizationMenu = ({ sidebarPosition, setSidebarPosition }) => {
                       onClick={() => {
                         setSidebarPosition('right');
                       }}
-                      className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(01,27,68,0.06)]">
+                      className="w-[34px] h-[34px] relative rounded-lg cursor-pointer shadow-[0_5px_10px_5px_rgba(01,27,68,0.06)] dark:shadow-[0_5px_10px_5px_rgba(0,99,255,0.07)]">
                       <span
                         className={`w-[25px] h-1 rounded-md ${
                           sidebarPosition === 'right' ? 'bg-primary' : 'bg-gray-300'
@@ -83,7 +83,7 @@ const CustomizationMenu = ({ sidebarPosition, setSidebarPosition }) => {
                         <MagnifyingGlassIcon className="w-4 text-primary absolute top-2.5 left-2" />
 
                         <input
-                          className="input-accent-box-shadow placeholder:font-[#B9B9B9] placeholder:text-sm py-1.5 px-1 rounded-md pl-7 w-full outline-none"
+                          className="input-accent-box-shadow placeholder:font-[#B9B9B9] dark:bg-lightDark placeholder:text-sm py-1.5 px-1 rounded-md pl-7 w-full outline-none"
                           type="text"
                           placeholder="Type your favorite fonts"
                         />
