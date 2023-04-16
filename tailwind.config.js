@@ -5,7 +5,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        green: '#2CF672',
+        // TODO: why you have named `green`?
+        // TODO: don't you know default colors will be replaced? :angry:
+        greenn: '#2CF672',
         gold: '#FFCF0D',
         primary: '#5798F6',
         pdGrey: '#D6D6D6',
