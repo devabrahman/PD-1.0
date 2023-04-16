@@ -7,9 +7,9 @@ const Notification = () => {
   return (
     <Popover className="relative">
       <Popover.Button>
-        <div className="relative bg-white dark:bg-lightDark transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 dark:border-darkBorder table-shadow rounded-xl px-2.5 py-2 grid place-content-center cursor-pointer grid-cols-2 gap-x-1.5">
+        <div className="flex items-center relative bg-white dark:bg-lightDark transform-gpu hover:scale-95 transition-all duration-150 border border-gray-50 dark:border-gray-700 table-shadow rounded-xl px-2.5 py-2 cursor-pointer grid-cols-2 gap-x-1.5">
           <NotificationIcon />
-          <span className="rounded-full bg-blue-500 font-secondary text-white text-xs w-[18px] h-[18px] flex justify-center items-center mt-[2px">
+          <span className="rounded-full bg-blue-500 dark:bg-blue-400 font-secondary text-white text-xs w-5 h-5 flex justify-center items-center -mt-[3px]">
             5
           </span>
         </div>
