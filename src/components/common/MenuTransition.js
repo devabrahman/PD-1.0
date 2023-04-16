@@ -1,6 +1,6 @@
 import { Transition } from '@headlessui/react';
 
-function TransitionComponent({ children }) {
+function MenuTransition({ children }) {
   return (
     <Transition
       enter="transition duration-200 ease-out"
@@ -14,4 +14,4 @@ function TransitionComponent({ children }) {
   );
 }
 
-export default TransitionComponent;
+export default MenuTransition;

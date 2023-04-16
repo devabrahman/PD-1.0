@@ -58,7 +58,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8', childrenSpace = 'mt-4'
               <h2 className="text-2xl font-medium">{title}</h2>
 
               <div className="flex items-center gap-6 ">
-                <SearchIcon className="bg-white dark:bg-lightDark transform-gpu hover:scale-95 transition-all duration-150 text-blue-400  h-10 w-12 rounded-xl px-2.5 cursor-pointer border2 input-accent-box-shadow" />
+                <SearchIcon className="bg-white dark:bg-lightDark transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 h-10 w-12 rounded-xl px-2.5 cursor-pointer table-shadow dark:border dark:border-gray-700" />
 
                 <Notification />
 
