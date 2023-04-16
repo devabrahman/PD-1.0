@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu } from '@headlessui/react';
 import ChangeThemes from './ChangeThemes';
-import TransitionComponent from 'components/common/Transition';
+import TransitionComponent from 'components/common/MenuTransition';
 // icon
 import GearIcon from 'components/SVGIcons/GearIcon';
 import UserIcon from 'components/SVGIcons/UserIcon';
