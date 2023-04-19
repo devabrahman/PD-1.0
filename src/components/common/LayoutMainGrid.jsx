@@ -11,7 +11,7 @@ const LayoutMainGrid = ({ children, position = 'app-grid' }) => {
           : position === 'top'
           ? 'app-grid-top'
           : 'app-grid-left'
-      } h-screen dark:bg-dark dark:text-white`}>
+      } h-screen overflow-hidden dark:bg-dark dark:text-white`}>
       {children}
     </section>
   );
