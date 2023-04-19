@@ -3,7 +3,7 @@ import Layout from 'components/common/Layout';
 import Activity from 'components/dashboard/Activity';
 import Payment from 'components/dashboard/Payment';
 import TotalProduct from 'components/dashboard/TotalProduct';
-import TotalSales from 'components/dashboard/TotalSales';
+// import TotalSales from 'components/dashboard/TotalSales';
 
 // icon
 import map from 'assets/Images/common/Map.png';
@@ -20,7 +20,8 @@ const Home = () => {
           <DashboardLineChart />
           <div className="col-span-12 md:block md:col-span-3 flex gap-4 space-y-5">
             <TotalProduct />
-            <TotalSales />
+            <TotalProduct />
+            {/* <TotalSales /> */}
           </div>
           {/* <div className="flex justify-between w-full"></div> */}
           <div className="col-span-12 md:col-span-4 bg-white dark:bg-dark input-accent-box-shadow px-5 py-[30px] rounded-x">

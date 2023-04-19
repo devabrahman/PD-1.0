@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+/* @layer utilities {
   .input-back-box-shadow {
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.05));
   }
@@ -40,10 +40,10 @@
   button:focus {
     @apply focused-input dark:focused-input-dark;
   }
-}
+} */
 
 /* for jodit editor */
-.jodit-react-container {
+/* .jodit-react-container {
   @apply input-accent-box-shadow;
 }
 .jodit-container:not(.jodit_inline) .jodit-workplace {
@@ -70,10 +70,10 @@
 
 .jodit-status-bar a.jodit-status-bar-link:visited {
   @apply dark:text-darkBorder;
-}
+} */
 
 /* for calender */
-.rdrDefinedRangesWrapper,
+/* .rdrDefinedRangesWrapper,
 .rdrStaticRanges > button,
 .rdrDateDisplayWrapper,
 .rdrMonthAndYearWrapper,
@@ -95,4 +95,4 @@
 .rdrYearPicker > select option,
 .rdrDateInput > input {
   @apply dark:text-white dark:bg-lightDark;
-}
+} */
