@@ -85,7 +85,7 @@ const Navigation = () => {
                 className="flex items-center justify-between px-4 py-3 cursor-pointer"
                 onClick={() => toggleItem(index)}>
                 <div className="flex">
-                  {navItem?.icon !== '' ? (
+                  {!!navItem?.icon ? (
                     <img src={navItem?.icon} alt="nav icon" className="w-6" />
                   ) : (
                     <span className="inline-block w-6"></span>

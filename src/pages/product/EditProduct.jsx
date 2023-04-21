@@ -16,7 +16,7 @@ import Shipping from './Shipping';
 import MetaSection from 'components/products/MetaSection';
 import RightSide from 'components/products/RightSide';
 
-const NewProducts = () => {
+const EditProduct = () => {
   const [value, setValue] = useState('');
 
   return (
@@ -106,4 +106,4 @@ const NewProducts = () => {
   );
 };
 
-export default NewProducts;
+export default EditProduct;

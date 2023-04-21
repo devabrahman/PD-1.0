@@ -70,7 +70,7 @@ const Products = () => {
               <MagnifyingGlassIcon className="h-6 w-6 text-gray-400" />
               <input
                 type="text"
-                className="pl-2 py-2 w-full ring-0 outline-none bg-transparent"
+                className="pl-2 py-2 w-full ring-0 border-none outline-none focus:outline-none focus:ring-0 bg-transparent"
                 placeholder="Search..."
               />
             </div>
