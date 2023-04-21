@@ -35,7 +35,7 @@ const CategoryList = () => {
   // };
 
   return (
-    <div className="rounded-xl input-accent-box-shadow w-full">
+    <div className="rounded-xl input-accent-box-shadow w-full bg-white">
       <Tab.Group>
         <Tab.List className="flex justify-around input-accent-box-shadow rounded-xl px-2.5 py-3">
           <Tab as={Fragment}>

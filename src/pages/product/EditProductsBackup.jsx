@@ -6,7 +6,7 @@ import ImageDropDown from 'components/common/ImageDropDown';
 import CategoryList from 'components/products/CategoryList';
 import Calendar from 'components/common/Calendar';
 import ProductTag from 'components/products/ProductTag';
-import NewVariation from 'components/products/NewVariation';
+import NewVariation from 'components/products/Variations';
 import VariationList from 'components/products/VariationList';
 import VariationUpdate from 'components/products/VariationUpdate';
 import TextEditor from 'components/common/TextEditor';

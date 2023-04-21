@@ -22,6 +22,68 @@
   grid-template-columns: 1fr;
 }
 
+// custom checkbox
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #e6e6e6;
+  border-radius: 5px;
+  position: relative;
+}
+
+.custom-checkbox:after {
+  content: url('../assets/Images/common/check.svg');
+  height: 20px;
+  width: 20px;
+  display: block;
+  position: relative;
+  left: 3px;
+}
+
+.custom-checkbox:checked {
+  background: #45e882;
+  border: 2px solid #45e882;
+}
+
+.custom-checkbox:checked::after {
+  height: 5px;
+  width: 5px;
+}
+
+// custom height for editor
+
+.quill {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ql-editor {
+  min-height: 125px !important;
+  max-height: 100px !important;
+  background: white !important;
+}
+
+.long_description .ql-container {
+  min-height: 250px !important;
+  max-height: 100px !important;
+  background: white !important;
+}
+
+.ql-toolbar.ql-snow {
+  border: 1px solid rgba(223, 222, 222, 0.6) !important;
+  border-radius: 12px 12px 0 0;
+  background: white;
+}
+
+.ql-container {
+  border-radius: 0 0 12px 12px !important;
+  border: 1px solid rgba(223, 222, 222, 0.6) !important;
+  border-top: none !important;
+  overflow: hidden;
+}
+
 // input box css
 input:checked + div {
   border-color: #99c3ff;

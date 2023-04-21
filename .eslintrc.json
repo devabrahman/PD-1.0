@@ -24,7 +24,8 @@
       {
         "endOfLine": "auto"
       }
-    ]
+    ],
+    "no-extra-boolean-cast": "off"
   }
 }
 

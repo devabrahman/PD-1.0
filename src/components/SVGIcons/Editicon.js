@@ -2,7 +2,13 @@ import React from 'react';
 
 const EditIcon = () => {
   return (
-    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="23"
+      height="23"
+      viewBox="0 0 23 23"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="cursor-pointer">
       <path
         d="M10.393 3.21387H3.08734C2.53374 3.21387 2.00282 3.43378 1.61137 3.82523C1.21992 4.21669 1 4.74761 1 5.30121V19.9126C1 20.4662 1.21992 20.9971 1.61137 21.3885C2.00282 21.78 2.53374 21.9999 3.08734 21.9999H17.6987C18.2523 21.9999 18.7832 21.78 19.1747 21.3885C19.5661 20.9971 19.786 20.4662 19.786 19.9126V12.6069"
         stroke="#5798F7"
