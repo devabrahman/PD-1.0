@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Layout from 'components/common/Layout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 // import DeletePopup from 'components/common/DeletePopup';
@@ -7,10 +7,12 @@ import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 
 // icons
-import { MagnifyingGlassIcon, PlusIcon } from '@heroicons/react/24/outline';
+import { ChevronUpDownIcon, MagnifyingGlassIcon, PlusIcon } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 
 const Products = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Layout title="Category" padding="p-0 sm:px-10 sm:py-8">
@@ -37,9 +39,9 @@ const Products = () => {
               leave="transition ease-in duration-75"
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95">
-              <Menu.Items className="absolute left-0 mt-2 z-10 w-56 origin-top-left rounded-md bg-white shadow-lg ring-0 focus:outline-none">
+              <Menu.Items className="absolute left-0 mt-2 z-10 w-56 origin-top-left rounded-md overflow-hidden bg-white shadow-lg ring-0 focus:outline-none">
                 <Menu.Item>
-                  <button className="group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-400 hover:text-white">
+                  <button className="group flex w-full items-center px-2 py-2 text-sm hover:bg-blue-400 hover:text-white">
                     Archive
                   </button>
                 </Menu.Item>
@@ -47,7 +49,7 @@ const Products = () => {
                 <span className="border-b h-[1px] bg-gray-400 block"></span>
 
                 <Menu.Item>
-                  <button className="group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-400 hover:text-white">
+                  <button className="group flex w-full items-center px-2 py-2 text-sm hover:bg-blue-400 hover:text-white">
                     Edit
                   </button>
                 </Menu.Item>
@@ -55,7 +57,7 @@ const Products = () => {
                 <span className="border-b h-[1px] bg-gray-400 block"></span>
 
                 <Menu.Item>
-                  <button className="group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-400 hover:text-white">
+                  <button className="group flex w-full items-center px-2 py-2 text-sm hover:bg-blue-400 hover:text-white">
                     Delete
                   </button>
                 </Menu.Item>
@@ -76,7 +78,7 @@ const Products = () => {
             <Link to="/new-product">
               <div className="bg-blue-500 text-white pl-2 pr-3 py-2 rounded-lg flex justify-center items-center cursor-pointer">
                 <PlusIcon className="text-white w-6 h-6" />
-                <p className="ml-1 font-">Product</p>
+                <p className="ml-1">Product</p>
               </div>
             </Link>
           </div>
@@ -89,68 +91,45 @@ const Products = () => {
                 <th scope="col" className="p-4">
                   <div className="flex items-center">
                     <input
-                      id="checkbox-all-search"
+                      id="custom-checkbox"
                       type="checkbox"
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      className="custom-checkbox cursor-pointer"
                     />
-                    <label className="sr-only">checkbox</label>
+                    <label className="sr-only" htmlFor="custom-checkbox">
+                      Check
+                    </label>
                   </div>
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-4 text-gray-700">
                   Product name
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-4">
                   <div className="flex items-center">
-                    Color
-                    <a href="#">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-3 h-3 ml-1"
-                        aria-hidden="true"
-                        fill="currentColor"
-                        viewBox="0 0 320 512">
-                        <path d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z" />
-                      </svg>
-                    </a>
+                    <p className="text-gray-700">Color</p>
+                    <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
                   </div>
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-4">
                   <div className="flex items-center">
-                    Category
-                    <a href="#">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-3 h-3 ml-1"
-                        aria-hidden="true"
-                        fill="currentColor"
-                        viewBox="0 0 320 512">
-                        <path d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z" />
-                      </svg>
-                    </a>
+                    <p className="text-gray-700">Category</p>
+                    <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
                   </div>
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-4">
                   <div className="flex items-center">
-                    Price
-                    <a href="#">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-3 h-3 ml-1"
-                        aria-hidden="true"
-                        fill="currentColor"
-                        viewBox="0 0 320 512">
-                        <path d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z" />
-                      </svg>
-                    </a>
+                    <p className="text-gray-700">Price</p>
+                    <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
                   </div>
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-4">
                   <span className="sr-only">Edit</span>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer">
+              <tr
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
+                onClick={() => navigate('/edit-product')}>
                 <td className="w-4 p-4">
                   <div className="flex items-center">
                     <input
@@ -169,15 +148,22 @@ const Products = () => {
                 <td className="px-6 py-4">Silver</td>
                 <td className="px-6 py-4">Laptop</td>
                 <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4 text-right">
-                  <a
-                    href="#"
+                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
+                  <Link
+                    to="/single-product"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    View
+                  </Link>
+                  <Link
+                    to="/edit-product"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                     Edit
-                  </a>
+                  </Link>
                 </td>
               </tr>
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer">
+              <tr
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
+                onClick={() => navigate('/edit-product')}>
                 <td className="w-4 p-4">
                   <div className="flex items-center">
                     <input
@@ -196,15 +182,22 @@ const Products = () => {
                 <td className="px-6 py-4">White</td>
                 <td className="px-6 py-4">Laptop PC</td>
                 <td className="px-6 py-4">$1999</td>
-                <td className="px-6 py-4 text-right">
-                  <a
-                    href="#"
+                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
+                  <Link
+                    to="/single-product"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    View
+                  </Link>
+                  <Link
+                    to="/edit-product"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                     Edit
-                  </a>
+                  </Link>
                 </td>
               </tr>
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer">
+              <tr
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
+                onClick={() => navigate('/edit-product')}>
                 <td className="w-4 p-4">
                   <div className="flex items-center">
                     <input
@@ -223,15 +216,22 @@ const Products = () => {
                 <td className="px-6 py-4">Silver</td>
                 <td className="px-6 py-4">Laptop</td>
                 <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4 text-right">
-                  <a
-                    href="#"
+                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
+                  <Link
+                    to="/single-product"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    View
+                  </Link>
+                  <Link
+                    to="/edit-product"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                     Edit
-                  </a>
+                  </Link>
                 </td>
               </tr>
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer">
+              <tr
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
+                onClick={() => navigate('/edit-product')}>
                 <td className="w-4 p-4">
                   <div className="flex items-center">
                     <input
@@ -250,15 +250,22 @@ const Products = () => {
                 <td className="px-6 py-4">White</td>
                 <td className="px-6 py-4">Laptop PC</td>
                 <td className="px-6 py-4">$1999</td>
-                <td className="px-6 py-4 text-right">
-                  <a
-                    href="#"
+                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
+                  <Link
+                    to="/single-product"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    View
+                  </Link>
+                  <Link
+                    to="/edit-product"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                     Edit
-                  </a>
+                  </Link>
                 </td>
               </tr>
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer">
+              <tr
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
+                onClick={() => navigate('/edit-product')}>
                 <td className="w-4 p-4">
                   <div className="flex items-center">
                     <input
@@ -277,15 +284,22 @@ const Products = () => {
                 <td className="px-6 py-4">Silver</td>
                 <td className="px-6 py-4">Laptop</td>
                 <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4 text-right">
-                  <a
-                    href="#"
+                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
+                  <Link
+                    to="/single-product"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    View
+                  </Link>
+                  <Link
+                    to="/edit-product"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                     Edit
-                  </a>
+                  </Link>
                 </td>
               </tr>
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer">
+              <tr
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
+                onClick={() => navigate('/edit-product')}>
                 <td className="w-4 p-4">
                   <div className="flex items-center">
                     <input
@@ -304,15 +318,22 @@ const Products = () => {
                 <td className="px-6 py-4">White</td>
                 <td className="px-6 py-4">Laptop PC</td>
                 <td className="px-6 py-4">$1999</td>
-                <td className="px-6 py-4 text-right">
-                  <a
-                    href="#"
+                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
+                  <Link
+                    to="/single-product"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    View
+                  </Link>
+                  <Link
+                    to="/edit-product"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                     Edit
-                  </a>
+                  </Link>
                 </td>
               </tr>
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer">
+              <tr
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
+                onClick={() => navigate('/edit-product')}>
                 <td className="w-4 p-4">
                   <div className="flex items-center">
                     <input
@@ -331,12 +352,17 @@ const Products = () => {
                 <td className="px-6 py-4">Silver</td>
                 <td className="px-6 py-4">Laptop</td>
                 <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4 text-right">
-                  <a
-                    href="#"
+                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
+                  <Link
+                    to="/single-product"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    View
+                  </Link>
+                  <Link
+                    to="/edit-product"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                     Edit
-                  </a>
+                  </Link>
                 </td>
               </tr>
               <tr className="bg-white dark:bg-gray-800">
@@ -358,12 +384,17 @@ const Products = () => {
                 <td className="px-6 py-4">Black</td>
                 <td className="px-6 py-4">Accessories</td>
                 <td className="px-6 py-4">$99</td>
-                <td className="px-6 py-4 text-right">
-                  <a
-                    href="#"
+                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
+                  <Link
+                    to="/single-product"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    View
+                  </Link>
+                  <Link
+                    to="/edit-product"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                     Edit
-                  </a>
+                  </Link>
                 </td>
               </tr>
             </tbody>

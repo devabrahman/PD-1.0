@@ -6,7 +6,7 @@ import NewCategory from 'pages/category/NewCategory';
 import OrderDetails from 'pages/orders/OrderDetails';
 import Orders from 'pages/orders/Orders';
 import EditProducts from 'pages/product/EditProducts';
-import NewProducts from 'pages/product/NewProducts';
+import NewProducts from 'pages/product/NewProduct';
 import Products from 'pages/product/Products';
 import SingleProduct from 'pages/product/SingleProduct';
 import Tags from 'pages/Tags';

@@ -16,8 +16,8 @@ const Breadcrumbs = ({ title, link }) => {
 };
 
 Breadcrumbs.propTypes = {
-  rootTitle: PropTypes.string.isRequired,
-  subTitle: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
 };
 
 export default Breadcrumbs;
