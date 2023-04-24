@@ -78,40 +78,40 @@ const LeftNavigation = () => {
                   <li className="py-2 hover:bg-gray-100 pl-[60px]">
                     <Link
                       to="/products"
-                      className="py-2 hover:bg-gray-100 text-gray-700 font-medium">
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
                       Products
                     </Link>
                   </li>
                   <li className="py-2 hover:bg-gray-100 pl-[60px]">
                     <Link
                       to="/new-product"
-                      className="py-2 hover:bg-gray-100 text-gray-700 font-medium">
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
                       New Product
                     </Link>
                   </li>
                   <li className="py-2 hover:bg-gray-100 pl-[60px]">
                     <Link
                       to="/edit-product"
-                      className="py-2 hover:bg-gray-100 text-gray-700 font-medium">
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
                       Edit Product
                     </Link>
                   </li>
                   <li className="py-2 hover:bg-gray-100 pl-[60px]">
                     <Link
                       to="/single-product"
-                      className="py-2 hover:bg-gray-100 text-gray-700 font-medium">
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
                       Single Product
                     </Link>
                   </li>
                   <li className="py-2 hover:bg-gray-100 pl-[60px]">
                     <Link
                       to="/categories"
-                      className="py-2 hover:bg-gray-100 text-gray-700 font-medium">
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
                       Categories
                     </Link>
                   </li>
-                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
-                    <Link to="/tags" className="py-2 hover:bg-gray-100 text-gray-700 font-medium">
+                  <li className="py-2 hover:bg-gray-100 pl-[60px] text-sm">
+                    <Link to="/tags" className="py-2 hover:bg-gray-100 text-gray-600 font-medium">
                       Tags
                     </Link>
                   </li>

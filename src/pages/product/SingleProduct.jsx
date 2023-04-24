@@ -28,19 +28,16 @@ const SingleProduct = () => {
   };
   return (
     <Layout title="Products">
-      <Breadcrumbs
-        rootTitle={{ title: 'Products', url: '/products' }}
-        subTitle=" Product Details"
-      />
+      <Breadcrumbs title="Products" link="/products" />
+
       <section className="flex gap-16 mt-9">
         <div className="w-full">
-          <div className="justify-center mb-5">
-            <span></span>
-            <div className="rounded-lg  w-8/12 ml-5 mr-0">
+          <div className="justify-center mb-5 bg-white py-4 rounded-xl">
+            <div className="rounded-lg w-8/12 ml-5 mr-0">
               <img
                 src={productPic}
                 alt="Category Icon"
-                className="mt-20  w-full object-contain dark:bg-lightDark rounded-[40px] px-6 dark:shadow-[0_10px_5px_rgba(4, 0, 34, 0.3))] "
+                className="w-full object-contain dark:bg-lightDark rounded-[40px] px-6 dark:shadow-[0_10px_5px_rgba(4, 0, 34, 0.3))] "
               />
             </div>
             <span></span>
