@@ -1,8 +1,8 @@
 // import SignIn from 'pages/auth/SignInMain';
 // import SignUp from 'pages/auth/SignUpMain';
 import Category from 'pages/product/Categories';
-import EditCategory from 'pages/category/EditCategory';
-import NewCategory from 'pages/category/NewCategory';
+import EditCategory from 'pages/product/EditCategory';
+import NewCategory from 'pages/product/NewCategory';
 import OrderDetails from 'pages/orders/OrderDetails';
 import Orders from 'pages/orders/Orders';
 import EditProducts from 'pages/product/EditProduct';
@@ -49,8 +49,8 @@ const AppRoutes = () => {
         <Route path="/order-details" element={<OrderDetails />} />
 
         {/* Profile */}
-        <Route path="/vendor-profile" element={<VendorProfile />} />
-        <Route path="/vendor-profile-edit" element={<ProfileEdit />} />
+        <Route path="/customer-profile" element={<VendorProfile />} />
+        <Route path="/customer-profile-edit" element={<ProfileEdit />} />
 
         {/*  404 */}
         <Route path="*" element={<Error404 />} />

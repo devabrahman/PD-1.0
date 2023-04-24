@@ -2,6 +2,7 @@
 import { useState, Fragment } from 'react';
 import { Tab } from '@headlessui/react';
 import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
+import { useLocation } from 'react-router-dom';
 
 // TODO:demo category list
 // const categoryList = [
@@ -22,7 +23,9 @@ import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
 // ];
 
 const CategoryList = () => {
-  const [customCheck, setCustomCheck] = useState(true);
+  const { pathname } = useLocation();
+  const [customCheck, setCustomCheck] = useState(pathname === '/new-product' ? false : true);
+
   // TODO: function for select category list
   // const [allCategory, setAllCategory] = useState(categoryList);
 

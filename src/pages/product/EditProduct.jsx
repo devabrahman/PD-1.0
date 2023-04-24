@@ -14,7 +14,7 @@ import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import Shipping from './Shipping';
 import MetaSection from 'components/products/MetaSection';
-import RightSide from 'components/products/RightSideCreate';
+import RightSideEdit from 'components/products/RightSideEdit';
 
 const EditProduct = () => {
   const [value, setValue] = useState(
@@ -105,7 +105,7 @@ const EditProduct = () => {
           </section>
 
           {/* Right Section */}
-          <RightSide />
+          <RightSideEdit />
         </form>
       </section>
     </Layout>
