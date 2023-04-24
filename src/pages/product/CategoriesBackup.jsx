@@ -4,7 +4,6 @@ import Layout from 'components/common/Layout';
 import AstroIcon from 'components/SVGIcons/AstroIcon';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import EditIcon from 'components/SVGIcons/Editicon';
-// import RectangleIcon from 'components/SVGIcons/RectangleIcon';
 import RightMarkIcon from 'components/SVGIcons/RightMarkIcon';
 import { useState } from 'react';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
@@ -14,11 +13,13 @@ import Pagination from 'components/common/Pagination';
 
 const Category = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <Layout title="Category">
         <div className="flex justify-between items-baseline">
-          <Breadcrumbs rootTitle={{ title: 'Category', url: '/categories' }} />
+          <Breadcrumbs title="Products" link="/products" />
+
           <div className="flex gap-2.5 items-center">
             <form action="">
               <div className="border border-[#B9B9B9]/30 rounded-lg flex pl-1.5 ">

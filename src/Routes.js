@@ -1,6 +1,6 @@
 // import SignIn from 'pages/auth/SignInMain';
 // import SignUp from 'pages/auth/SignUpMain';
-import Category from 'pages/category/Category';
+import Category from 'pages/product/Categories';
 import EditCategory from 'pages/category/EditCategory';
 import NewCategory from 'pages/category/NewCategory';
 import OrderDetails from 'pages/orders/OrderDetails';
@@ -9,7 +9,7 @@ import EditProducts from 'pages/product/EditProduct';
 import NewProducts from 'pages/product/NewProduct';
 import Products from 'pages/product/Products';
 import SingleProduct from 'pages/product/SingleProduct';
-import Tags from 'pages/Tags';
+import Tags from 'pages/product/Tags';
 import ProfileEdit from 'pages/userProfile/ProfileEdit';
 import VendorProfile from 'pages/userProfile/VendorProfile';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -21,6 +21,7 @@ import Error404 from 'pages/Error404';
 
 const AppRoutes = () => {
   themeCheck();
+
   return (
     <BrowserRouter>
       <Routes>

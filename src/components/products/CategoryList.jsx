@@ -22,7 +22,7 @@ import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
 // ];
 
 const CategoryList = () => {
-  const [customCheck, setCustomCheck] = useState(false);
+  const [customCheck, setCustomCheck] = useState(true);
   // TODO: function for select category list
   // const [allCategory, setAllCategory] = useState(categoryList);
 
