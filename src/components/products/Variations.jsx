@@ -46,6 +46,7 @@ const NewVariation = () => {
                 type="text"
                 className="border pl-3 border-gray-300 dark:border-darkBorder bg-white dark:bg-lightDark h-9 mt-3 rounded-xl w-full pr-1.5 mr-6"
                 id="variation_name"
+                value="Variation title"
               />
               <span className="cursor-pointer">
                 <DeleteIcon className="w-7 h-10" />
@@ -61,6 +62,7 @@ const NewVariation = () => {
                 type="text"
                 className="border pl-3 border-gray-300 dark:border-darkBorder bg-white dark:bg-lightDark h-9 mt-3 rounded-xl w-4/5 pr-1.5 mr-6"
                 placeholder="Add another value"
+                value="Variation value"
               />
               <span className="cursor-pointer mr-2">
                 <DeleteIcon className="w-8 h-10 " />
@@ -72,6 +74,7 @@ const NewVariation = () => {
                 type="text"
                 className="border pl-3 border-gray-300 dark:border-darkBorder bg-white dark:bg-lightDark h-9 mt-3 rounded-xl w-4/5 pr-1.5 mr-6"
                 placeholder="Add another value"
+                value="Variation value"
               />
               <span className="cursor-pointer mr-2">
                 <DeleteIcon className="w-8 h-10 " />

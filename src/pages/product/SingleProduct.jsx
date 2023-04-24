@@ -28,10 +28,8 @@ const SingleProduct = () => {
   };
   return (
     <Layout title="Products">
-      <Breadcrumbs
-        rootTitle={{ title: 'Products', url: '/products' }}
-        subTitle=" Product Details"
-      />
+      <Breadcrumbs title="Products" link="/products" />
+
       <section className="flex gap-16 mt-9">
         <div className="w-full">
           <div className="justify-center mb-5">

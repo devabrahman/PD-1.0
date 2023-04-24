@@ -20,8 +20,8 @@ const NewProducts = () => {
   const [value, setValue] = useState('');
 
   return (
-    <Layout title="Products">
-      <Breadcrumbs title="Products" link="/products" />
+    <Layout title="Create product">
+      <Breadcrumbs title="Create product" link="/products" />
 
       <section>
         <form className="w-full flex gap-12 pt-14">

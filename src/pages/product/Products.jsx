@@ -15,10 +15,8 @@ const Products = () => {
 
   return (
     <>
-      <Layout title="Category" padding="p-0 sm:px-10 sm:py-8">
-        <div className="flex justify-between items-center mt-5">
-          <Breadcrumbs title="Products" link="/products" />
-        </div>
+      <Layout title="Products" padding="p-0 sm:px-10 sm:py-8">
+        <Breadcrumbs title="Products" link="/products" />
 
         <div className="flex justify-between items-center mt-8">
           <Menu as="div" className="relative inline-block text-left">
