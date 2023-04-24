@@ -18,6 +18,8 @@ import { themeCheck } from 'utils/darkmode';
 // importing pages
 import Home from './pages/Home';
 import Error404 from 'pages/Error404';
+import SignUp from 'pages/auth/SignUp';
+import SignIn from 'pages/auth/SignInMain';
 
 const AppRoutes = () => {
   themeCheck();
@@ -27,8 +29,8 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         {/* Auth */}
-        {/* <Route path="signup" element={<SignUp />} />
-        <Route path="signin" element={<SignIn />} /> */}
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<SignIn />} />
 
         {/* Products */}
         <Route path="/products" element={<Products />} />

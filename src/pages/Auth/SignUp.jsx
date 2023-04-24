@@ -1,8 +1,8 @@
-import eye from '../../../assets/images/common/eye.png';
-import google from '../../../assets/images/common/google.png';
-import horizon from '../../../assets/images/common/horizon.png';
-import leftAngle from '../../../assets/images/common/left-angle.png';
-import moon from '../../../assets/images/common/moon.png';
+import eye from '../../assets/Images/common/eye.png';
+// import google from '../../assets/Images/common/google.png';
+// import horizon from '../../assets/Images/common/horizon.png';
+// import leftAngle from '../../assets/Images/common/left-angle.png';
+import moon from '../../assets/Images/auth/moon.png';
 
 const SignUp = () => {
   return (
@@ -11,9 +11,7 @@ const SignUp = () => {
         <div className="w-full py-5">
           <div className="w-[460px] h-full mx-auto">
             <div className="flex items-center gap-4 mb-7">
-              <div className="w-3">
-                <img src={leftAngle} alt="leftAngle" />
-              </div>
+              <div className="w-3">{/* <img src={leftAngle} alt="leftAngle" /> */}</div>
               <span className="text-sm text-[#A3AED0] font-medium">Back to dashboard</span>
             </div>
             <div className="my-auto w-[410px]">
@@ -23,7 +21,7 @@ const SignUp = () => {
               </div>
               <div className="grid gap-6 mb-7">
                 <button className="w-full flex items-center justify-center gap-2 bg-[#F4F7FE] rounded-2xl py-4">
-                  <img className="w-5 h-5" src={google} alt="Google" />
+                  {/* <img className="w-5 h-5" src={google} alt="Google" /> */}
                   <span className="text-sm font-medium text-[#2B3674]">Sign in with Google</span>
                 </button>
                 <div className="flex items-center gap-4">
@@ -85,7 +83,7 @@ const SignUp = () => {
           </div>
         </div>
         <div className="w-full relative">
-          <img className="w-full" src={horizon} alt="Horizon" />
+          {/* <img className="w-full" src={horizon} alt="Horizon" /> */}
           <div className="w-[60px] h-[60px] absolute right-8 bottom-8">
             <img className="w-full" src={moon} alt="Moon" />
           </div>
