@@ -67,12 +67,12 @@ const Login = () => {
 
                 {showPassword === true ? (
                   <EyeSlashIcon
-                    className="h-10 w-10 cursor-pointer hover:bg-gray-300 p-1 px-2 rounded-md"
+                    className="h-10 w-10 cursor-pointer hover:bg-gray-100 p-1 px-2 rounded-md"
                     onClick={() => setShowPassword(!showPassword)}
                   />
                 ) : (
                   <EyeIcon
-                    className="h-10 w-10 cursor-pointer hover:bg-gray-300 p-1 px-2 rounded-md"
+                    className="h-10 w-10 cursor-pointer hover:bg-gray-100 p-1 px-2 rounded-md"
                     onClick={() => setShowPassword(!showPassword)}
                   />
                 )}

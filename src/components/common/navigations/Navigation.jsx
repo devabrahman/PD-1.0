@@ -64,16 +64,23 @@ const LeftNavigation = () => {
                   </li>
                   <li className="py-2 hover:bg-gray-100 pl-[60px]">
                     <Link
-                      to="/signup"
+                      to="/create-account"
                       className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
                       Sign Up
                     </Link>
                   </li>
                   <li className="py-2 hover:bg-gray-100 pl-[60px]">
                     <Link
-                      to="/signup"
+                      to="/forgot-password"
                       className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
                       Forgot Password
+                    </Link>
+                  </li>
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/reset-mail-sent"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Reset Mail Sent
                     </Link>
                   </li>
                   <li className="py-2 hover:bg-gray-100 pl-[60px]">
