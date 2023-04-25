@@ -12,14 +12,39 @@ import SingleProduct from 'pages/product/SingleProduct';
 import Tags from 'pages/product/Tags';
 import ProfileEdit from 'pages/userProfile/ProfileEdit';
 import VendorProfile from 'pages/userProfile/VendorProfile';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { themeCheck } from 'utils/darkmode';
 
-// importing pages
+// // importing pages
 import Home from './pages/Home';
 import Error404 from 'pages/Error404';
 import SignUp from 'pages/auth/SignUp';
-import SignIn from 'pages/auth/SignInMain';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from 'pages/auth/Login';
+
+// all routing
+// const router = createBrowserRouter([
+//   {
+//     path: '/',
+//     element: <Home />
+//   }
+//   // {
+//   //   path: '/create-account',
+//   //   element: <CreateAccount />
+//   // },
+//   // {
+//   //   path: '/login-account',
+//   //   element: <Login />
+//   // },
+//   // {
+//   //   path: '/dashboard',
+//   //   element: <Dashboard />
+//   // }
+// ]);
+
+// const Routes = () => {
+//   return <RouterProvider router={router} />;
+// };
 
 const AppRoutes = () => {
   themeCheck();
@@ -30,7 +55,7 @@ const AppRoutes = () => {
         <Route path="/" element={<Home />} />
         {/* Auth */}
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<SignIn />} />
+        <Route path="/login" element={<Login />} />
 
         {/* Products */}
         <Route path="/products" element={<Products />} />
