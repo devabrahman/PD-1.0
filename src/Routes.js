@@ -1,62 +1,142 @@
-// import SignIn from 'pages/auth/SignInMain';
-// import SignUp from 'pages/auth/SignUpMain';
-import Category from 'pages/product/Categories';
-import EditCategory from 'pages/category/EditCategory';
-import NewCategory from 'pages/category/NewCategory';
-import OrderDetails from 'pages/orders/OrderDetails';
-import Orders from 'pages/orders/Orders';
-import EditProducts from 'pages/product/EditProduct';
-import NewProducts from 'pages/product/NewProduct';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+// import { themeCheck } from 'utils/darkmode';
+
+// importing auth pages
+import Home from './pages/Home';
+import SignUp from 'pages/auth/SignUp';
+import Login from 'pages/auth/Login';
+import ForgotPassword from 'pages/auth/ForgotPassword';
+import ChangePassword from 'pages/auth/ChangePassword';
+import ResetMailSent from 'pages/auth/ResetMailSent';
+
+// importing products pages
 import Products from 'pages/product/Products';
 import SingleProduct from 'pages/product/SingleProduct';
+import NewProducts from 'pages/product/NewProduct';
+import EditProduct from 'pages/product/EditProduct';
+
+// importing category pages
+import Categories from 'pages/product/Categories';
+import NewCategory from 'pages/product/NewCategory';
+import EidtCategory from 'pages/product/EditCategory';
+
+// importing tag page
 import Tags from 'pages/product/Tags';
+
+// importing orders page
+import Orders from 'pages/orders/Orders';
+import OrderDetails from 'pages/orders/OrderDetails';
+
+// importing customer profile page
+import CustomerProfile from 'pages/userProfile/CustomerProfile';
 import ProfileEdit from 'pages/userProfile/ProfileEdit';
-import VendorProfile from 'pages/userProfile/VendorProfile';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { themeCheck } from 'utils/darkmode';
 
-// importing pages
-import Home from './pages/Home';
+// error page
 import Error404 from 'pages/Error404';
+import Test from 'pages/Test';
 
-const AppRoutes = () => {
-  themeCheck();
+// all routing
+const router = createBrowserRouter([
+  // auth pages
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/create-account',
+    element: <SignUp />
+  },
+  {
+    path: '/login',
+    element: <Login />
+  },
+  {
+    path: '/forgot-password',
+    element: <ForgotPassword />
+  },
+  {
+    path: '/reset-mail-sent',
+    element: <ResetMailSent />
+  },
+  {
+    path: '/change-password',
+    element: <ChangePassword />
+  },
 
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* Auth */}
-        {/* <Route path="signup" element={<SignUp />} />
-        <Route path="signin" element={<SignIn />} /> */}
+  // product CRUD pages
+  {
+    path: '/products',
+    element: <Products />
+  },
+  {
+    path: '/single-product',
+    element: <SingleProduct />
+  },
+  {
+    path: '/new-product',
+    element: <NewProducts />
+  },
+  {
+    path: '/edit-product',
+    element: <EditProduct />
+  },
 
-        {/* Products */}
-        <Route path="/products" element={<Products />} />
-        <Route path="/single-product" element={<SingleProduct />} />
-        <Route path="/new-product" element={<NewProducts />} />
-        <Route path="/edit-product" element={<EditProducts />} />
+  // category CRUD pages
+  {
+    path: '/categories',
+    element: <Categories />
+  },
+  {
+    path: '/new-category',
+    element: <NewCategory />
+  },
+  {
+    path: '/edit-product',
+    element: <EidtCategory />
+  },
 
-        {/* Category */}
-        <Route path="/categories" element={<Category />} />
-        <Route path="/new-category" element={<NewCategory />} />
-        <Route path="/edit-category" element={<EditCategory />} />
+  // tags page
+  {
+    path: '/tags',
+    element: <Tags />
+  },
 
-        {/* Tags */}
-        <Route path="/tags" element={<Tags />} />
+  // oders pages
+  {
+    path: '/orders',
+    element: <Orders />
+  },
+  {
+    path: '/order-details',
+    element: <OrderDetails />
+  },
 
-        {/* orders */}
-        <Route path="/orders" element={<Orders />} />
-        <Route path="/order-details" element={<OrderDetails />} />
+  // profile pages
+  {
+    path: '/customer-profile',
+    element: <CustomerProfile />
+  },
+  {
+    path: '/customer-profile-edit',
+    element: <ProfileEdit />
+  },
 
-        {/* Profile */}
-        <Route path="/vendor-profile" element={<VendorProfile />} />
-        <Route path="/vendor-profile-edit" element={<ProfileEdit />} />
+  // if no route march (fallback)
+  {
+    path: '/*',
+    element: <Error404 />
+  },
 
-        {/*  404 */}
-        <Route path="*" element={<Error404 />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  // test page
+  {
+    path: '/test',
+    element: <Test />
+  }
+]);
+
+const Routes = () => {
+  //   themeCheck();
+  return <RouterProvider router={router} />;
 };
 
-export default AppRoutes;
+export default Routes;

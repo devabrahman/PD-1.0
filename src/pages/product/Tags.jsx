@@ -17,8 +17,8 @@ const Tags = () => {
 
   return (
     <>
-      <Layout title="Categories" padding="p-0 sm:px-10 sm:py-8">
-        <Breadcrumbs title="Categories" link="/categories" />
+      <Layout title="Tags" padding="p-0 sm:px-10 sm:py-8">
+        <Breadcrumbs title="Tags" link="/tags" />
 
         <div className="flex justify-between items-center mt-8">
           <Menu as="div" className="relative inline-block text-left">
@@ -182,40 +182,6 @@ const Tags = () => {
                 <td className="px-6 py-4">White</td>
                 <td className="px-6 py-4">Laptop PC</td>
                 <td className="px-6 py-4">$1999</td>
-                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
-                  <Link
-                    to="/single-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <DeleteIcon />
-                  </Link>
-                  <Link
-                    to="/edit-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <EditIcon />
-                  </Link>
-                </td>
-              </tr>
-              <tr
-                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
-                onClick={() => navigate('/edit-product')}>
-                <td className="w-4 p-4">
-                  <div className="flex items-center">
-                    <input
-                      id="checkbox-table-search-1"
-                      type="checkbox"
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label className="sr-only">checkbox</label>
-                  </div>
-                </td>
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  Apple MacBook Pro 17&quot;
-                </th>
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
-                <td className="px-6 py-4">$2999</td>
                 <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
                   <Link
                     to="/single-product"

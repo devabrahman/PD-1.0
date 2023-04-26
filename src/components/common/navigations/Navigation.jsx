@@ -53,9 +53,44 @@ const LeftNavigation = () => {
                   className={`${open ? '' : 'rotate-180 transform'} h-5 w-5 text-gray-400`}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                If you're unhappy with your purchase for any reason, email us within 90 days and
-                we'll refund you in full, no questions asked.
+              <Disclosure.Panel className="pb-2 text-sm text-gray-500">
+                <ul className="">
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/login"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Login
+                    </Link>
+                  </li>
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/create-account"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Sign Up
+                    </Link>
+                  </li>
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/forgot-password"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Forgot Password
+                    </Link>
+                  </li>
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/reset-mail-sent"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Reset Mail Sent
+                    </Link>
+                  </li>
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/change-password"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Change Password
+                    </Link>
+                  </li>
+                </ul>
               </Disclosure.Panel>
             </>
           )}
@@ -133,9 +168,23 @@ const LeftNavigation = () => {
                   className={`${open ? '' : 'rotate-180 transform'} h-5 w-5 text-gray-400`}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                If you're unhappy with your purchase for any reason, email us within 90 days and
-                we'll refund you in full, no questions asked.
+              <Disclosure.Panel className="pb-2 text-sm text-gray-500">
+                <ul className="">
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/orders"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Orders
+                    </Link>
+                  </li>
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/order-details"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Order Details
+                    </Link>
+                  </li>
+                </ul>
               </Disclosure.Panel>
             </>
           )}
@@ -163,13 +212,28 @@ const LeftNavigation = () => {
                   className={`${open ? '' : 'rotate-180 transform'} h-5 w-5 text-gray-400`}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                If you're unhappy with your purchase for any reason, email us within 90 days and
-                we'll refund you in full, no questions asked.
+              <Disclosure.Panel className="pb-2 text-sm text-gray-500">
+                <ul className="">
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/customer-profile"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Customer Profile
+                    </Link>
+                  </li>
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/customer-profile-edit"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Profile Edit
+                    </Link>
+                  </li>
+                </ul>
               </Disclosure.Panel>
             </>
           )}
         </Disclosure>
+
         <Disclosure>
           {({ open }) => (
             <>
@@ -182,9 +246,23 @@ const LeftNavigation = () => {
                   className={`${open ? '' : 'rotate-180 transform'} h-5 w-5 text-gray-400`}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                If you're unhappy with your purchase for any reason, email us within 90 days and
-                we'll refund you in full, no questions asked.
+              <Disclosure.Panel className="pb-2 text-sm text-gray-500">
+                <ul className="">
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/orders"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Customer Profile
+                    </Link>
+                  </li>
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/order-details"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Profile Edit
+                    </Link>
+                  </li>
+                </ul>
               </Disclosure.Panel>
             </>
           )}

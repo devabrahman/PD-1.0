@@ -12,9 +12,9 @@ import { InformationCircleIcon } from '@heroicons/react/24/outline';
 const OrderDetails = () => {
   return (
     <Layout title="Orders">
-      <Breadcrumbs rootTitle={{ title: 'Orders', url: '/orders' }} subTitle="Orders Details " />
+      <Breadcrumbs title="Orders" link="/order-details" />
 
-      <section className="py-10">
+      <section className="py-10 bg-white mt-10 rounded-xl">
         <div className="shadow-md drop-shadow-[0_4px_10px_rgba(135, 206, 235, 0.25)] rounded-xl px-6 py-7 w-full mx-auto">
           <div className="flex justify-between">
             <div className="flex items-center gap-10">

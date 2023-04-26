@@ -1,129 +1,129 @@
-import eye from '../../../assets/images/common/eye.png';
-import google from '../../../assets/images/common/google.png';
-import horizon from '../../../assets/images/common/horizon.png';
-import leftAngle from '../../../assets/images/common/left-angle.png';
-import moon from '../../../assets/images/common/moon.png';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 
 const SignUp = () => {
-  return (
-    <section className="relative">
-      <div className="flex justify-between">
-        <div className="w-full py-5">
-          <div className="w-[460px] h-full mx-auto">
-            <div className="flex items-center gap-4 mb-7">
-              <div className="w-3">
-                <img src={leftAngle} alt="leftAngle" />
-              </div>
-              <span className="text-sm text-[#A3AED0] font-medium">Back to dashboard</span>
-            </div>
-            <div className="my-auto w-[410px]">
-              <div className="mb-7">
-                <h2 className="text-4xl text-[#2B3674] font-bold mb-2">Sign In</h2>
-                <p className="text-[#A3AED0]">Enter your email and password to sign in!</p>
-              </div>
-              <div className="grid gap-6 mb-7">
-                <button className="w-full flex items-center justify-center gap-2 bg-[#F4F7FE] rounded-2xl py-4">
-                  <img className="w-5 h-5" src={google} alt="Google" />
-                  <span className="text-sm font-medium text-[#2B3674]">Sign in with Google</span>
-                </button>
-                <div className="flex items-center gap-4">
-                  <span className="bg-[#E0E5F2] h-[1px] block w-full"></span>
-                  <span className="text-sm text-[#A3AED0] font-medium">or</span>
-                  <span className="bg-[#E0E5F2] h-[1px] block w-full"></span>
-                </div>
-              </div>
-              <from>
-                <div className="flex flex-col gap-3 mb-6">
-                  <label className="text-[#2B3674] font-medium" htmlFor="email">
-                    Email<sup className="text-[#4318FF]">*</sup>
-                  </label>
-                  <input
-                    className="w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="mail@simmmple.com"
-                  />
-                </div>
-                <div className="flex flex-col gap-3 mb-6">
-                  <label className="text-[#2B3674] font-medium" htmlFor="password">
-                    Password<sup className="text-[#4318FF]">*</sup>
-                  </label>
-                  <div className="flex items-center justify-between w-full border border-[#E0E5F2] rounded-2xl px-6 py-4">
-                    <input
-                      className="placeholder:text-[#A3AED0] placeholder:text-sm outline-none"
-                      type="password"
-                      name="password"
-                      id="password"
-                      placeholder="Min. 8 characters"
-                    />
-                    <button>
-                      <img className="w-5" src={eye} alt="Show" />
-                    </button>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex gap-3">
-                    <input type="checkbox" name="check" id="check" />
-                    <label htmlFor="check">Keep me logged in</label>
-                  </div>
-                  <a className="text-[#4318FF] text-sm font-medium" href="http://">
-                    Forget password?
-                  </a>
-                </div>
-                <div className="grid gap-6">
-                  <button className="w-full bg-[#4318FF] text-white py-4 rounded-2xl" type="submit">
-                    Sign In
-                  </button>
-                  <p className="text-sm text-[#2B3674]">
-                    Not registered yet?{' '}
-                    <span className="font-bold text-[#4318FF]">Create an Account</span>
-                  </p>
-                </div>
-              </from>
-            </div>
-          </div>
-        </div>
-        <div className="w-full relative">
-          <img className="w-full" src={horizon} alt="Horizon" />
-          <div className="w-[60px] h-[60px] absolute right-8 bottom-8">
-            <img className="w-full" src={moon} alt="Moon" />
-          </div>
-        </div>
-      </div>
+  const [showPassword, setShowPassword] = useState(false);
 
-      <div className="absolute bottom-4 right-5 w-full flex items-center justify-center gap-40">
-        <div>
-          <p className="text-[#A3AED0] text-sm font-medium min-w-min">
-            &copy; 2022 Horizon UI. All Rights Reserved. Made with love by Simple!
-          </p>
-        </div>
-        <div>
-          <ul className="flex items-center justify-center gap-10">
-            <li>
-              <a className="text-white text-sm font-medium" href="https://">
-                Marketplace
-              </a>
-            </li>
-            <li>
-              <a className="text-white text-sm font-medium" href="https://">
-                License
-              </a>
-            </li>
-            <li>
-              <a className="text-white text-sm font-medium" href="https://">
-                Terms of Use
-              </a>
-            </li>
-            <li>
-              <a className="text-white text-sm font-medium" href="https://">
-                Blog
-              </a>
-            </li>
-          </ul>
+  return (
+    <div className="grid grid-cols-12 h-screen">
+      <div className="col-span-7 flex justify-center items-center">
+        <div className="w-[800px] h-[800px]">
+          <img src="/assets/images/auth/amazing_ecom.gif" className="w-full h-full" alt="" />
         </div>
       </div>
-    </section>
+      <div className="col-span-5 mt-8 pr-12 flex justify-center items-center">
+        <div className="w-[95%]">
+          <div className="mb-7">
+            <h2 className="text-4xl text-[#2B3674] font-bold mb-2">Create account</h2>
+            <p className="text-[#A3AED0]">Let&apos;s enter login details to use application</p>
+          </div>
+
+          <div className="grid gap-6 mb-7">
+            <div className="grid grid-cols-3 justify-center w-3/5 mx-auto items-center gap-2 rounded-lg py-3">
+              <div className="bg-white w-16 p-4 rounded-lg border border-gray-50 shadow-md shadow-blue-100 hover:scale-95 transform transition-all duration-150 cursor-pointer">
+                <img src="/assets/images/auth/google.png" />
+              </div>
+              <div className="bg-white w-16 p-4 rounded-lg border border-gray-50 shadow-md shadow-blue-100 hover:scale-95 transform transition-all duration-150 cursor-pointer">
+                <img src="/assets/images/auth/twitter.png" />
+              </div>
+              <div className="bg-white w-16 p-4 rounded-lg border border-gray-50 shadow-md shadow-blue-100 hover:scale-95 transform transition-all duration-150 cursor-pointer">
+                <img src="/assets/images/auth/facebook.png" />
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <span className="bg-[#E0E5F2] h-[1px] block w-full"></span>
+              <span className="text-sm text-[#A3AED0] font-medium">or</span>
+              <span className="bg-[#E0E5F2] h-[1px] block w-full"></span>
+            </div>
+          </div>
+
+          <from>
+            <div className="flex flex-col gap-3 mb-6">
+              <label className="text-[#2B3674] font-medium" htmlFor="name">
+                Name
+              </label>
+              <input
+                className="w-full border border-[#E0E5F2] rounded-lg px-3 py-2.5 placeholder:text-[#A3AED0] placeholder:text-sm"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Ex - Muhammad"
+              />
+            </div>
+            <div className="flex flex-col gap-3 mb-6">
+              <label className="text-[#2B3674] font-medium" htmlFor="email">
+                Email
+              </label>
+              <input
+                className="w-full border border-[#E0E5F2] rounded-lg px-3 py-2.5 placeholder:text-[#A3AED0] placeholder:text-sm"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="mail@simmmple.com"
+              />
+            </div>
+
+            <div className="flex flex-col gap-3 mb-6">
+              <label className="text-[#2B3674] font-medium" htmlFor="password">
+                Password
+              </label>
+              <div className="flex items-center justify-between w-full border border-[#E0E5F2] rounded-lg py-[2px]">
+                <input
+                  className="placeholder:text-[#A3AED0] placeholder:text-sm outline-none w-full border-none focus:outline-none focus:ring-0"
+                  type={showPassword === true ? 'text' : 'password'}
+                  name="password"
+                  id="password"
+                  placeholder="Min. 8 characters"
+                />
+
+                {showPassword === true ? (
+                  <EyeSlashIcon
+                    className="h-10 w-10 cursor-pointer hover:bg-gray-300 p-1 px-2 rounded-md"
+                    onClick={() => setShowPassword(!showPassword)}
+                  />
+                ) : (
+                  <EyeIcon
+                    className="h-10 w-10 cursor-pointer hover:bg-gray-300 p-1 px-2 rounded-md"
+                    onClick={() => setShowPassword(!showPassword)}
+                  />
+                )}
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center space-x-3">
+                <input type="checkbox" name="check" id="check" />
+                <label htmlFor="check" className="cursor-pointer">
+                  Keep me logged in
+                </label>
+              </div>
+              <Link
+                to="/forgot-password"
+                className="text-blue-400 text-sm font-medium"
+                href="http://">
+                Forget password?
+              </Link>
+            </div>
+
+            <div className="grid gap-6">
+              <button
+                className="w-full mx-auto bg-blue-500 text-white py-2.5 rounded-lg transform transition-all duration-500 hover:scale-95"
+                type="submit">
+                Sign In
+              </button>
+              <Link
+                to="/login"
+                className="w-full mx-auto hover:bg-blue-50 transform transition-all duration-150 py-2.5 rounded-lg text-blue-400 text-center"
+                type="submit">
+                Already have an account?
+              </Link>
+            </div>
+          </from>
+        </div>
+      </div>
+    </div>
   );
 };
 
