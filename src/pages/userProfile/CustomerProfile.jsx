@@ -16,7 +16,7 @@ import google from 'assets/Images/social/google.png';
 import twitter from 'assets/Images/social/twitter.png';
 import { Link } from 'react-router-dom';
 
-const VendorProfile = () => {
+const CustomerProfile = () => {
   return (
     <Layout title="" padding="0">
       <section className="pb-10">
@@ -129,4 +129,4 @@ const VendorProfile = () => {
   );
 };
 
-export default VendorProfile;
+export default CustomerProfile;
