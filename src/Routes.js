@@ -33,6 +33,7 @@ import ProfileEdit from 'pages/userProfile/ProfileEdit';
 
 // error page
 import Error404 from 'pages/Error404';
+import Test from 'pages/Test';
 
 // all routing
 const router = createBrowserRouter([
@@ -76,7 +77,7 @@ const router = createBrowserRouter([
     element: <NewProducts />
   },
   {
-    path: '/new-product',
+    path: '/edit-product',
     element: <EditProduct />
   },
 
@@ -124,6 +125,12 @@ const router = createBrowserRouter([
   {
     path: '/*',
     element: <Error404 />
+  },
+
+  // test page
+  {
+    path: '/test',
+    element: <Test />
   }
 ]);
 

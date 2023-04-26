@@ -2,6 +2,8 @@ import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 // import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { FunnelIcon } from '@heroicons/react/24/outline';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 const Filters = () => {
   return (
@@ -19,9 +21,7 @@ const Filters = () => {
         leaveTo="transform opacity-0 scale-95">
         <Menu.Items className="absolute left-0 mt-2 z-10 w-56 origin-top-left rounded-md overflow-hidden bg-white shadow-lg ring-0 focus:outline-none">
           <Menu.Item>
-            <button className="group flex w-full items-center px-2 py-2 text-sm hover:bg-blue-400 hover:text-white">
-              Archive
-            </button>
+            <Slider />
           </Menu.Item>
 
           <span className="border-b h-[1px] bg-gray-400 block"></span>
