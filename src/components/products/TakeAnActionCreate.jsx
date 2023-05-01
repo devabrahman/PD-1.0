@@ -41,7 +41,7 @@ const TakeAnAction = () => {
       <div className="text-right m-[0px]">
         <button
           type="submit"
-          className="bg-blue-400 text-white border border-blue-400 px-3 py-1.5 rounded-lg text-right mb-2.5 text-sm ml-4 transform transition-all duration-300 hover:scale-90">
+          className="bg-blue-500 text-white px-3 hover:px-4 py-1.5 rounded-lg text-right mb-2.5 text-sm ml-4 transform transition-all duration-300">
           Publish
         </button>
       </div>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { addDays, format } from 'date-fns';
 import Layout from 'components/common/Layout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
-import ImageDropDown from 'components/common/ImageDropDown';
+import ImageDropDown from 'components/common/ImageDragDrop';
 import CategoryList from 'components/products/CategoryList';
 import Calendar from 'components/common/Calendar';
 import ProductTag from 'components/products/ProductTag';

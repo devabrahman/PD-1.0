@@ -4,7 +4,7 @@ import Price from './Price';
 import TakeAnActionCreate from './TakeAnActionCreate';
 import ProductGallery from './ProductGallery';
 
-const RightSide = () => {
+const RightSideCreate = () => {
   return (
     <section className="w-1/3 space-y-10">
       <TakeAnActionCreate />
@@ -20,4 +20,4 @@ const RightSide = () => {
   );
 };
 
-export default RightSide;
+export default RightSideCreate;
