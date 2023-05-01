@@ -13,7 +13,7 @@ import VariationUpdate from 'components/products/VariationUpdate';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import Shipping from './Shipping';
-import MetaSection from 'components/products/MetaSection';
+import MetaSection from 'components/products/MetaSectionUpdate';
 import RightSideEdit from 'components/products/RightSideEdit';
 
 const EditProduct = () => {

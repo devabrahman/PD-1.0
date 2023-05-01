@@ -134,7 +134,10 @@ const LeftNavigation = () => {
                     <Link
                       to="/single-product"
                       className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
-                      Single Product
+                      Single Product{' '}
+                      <span className="relative -top-4 bg-amber-400 text-white px-1 py[3px] rounded-md">
+                        Bonus
+                      </span>
                     </Link>
                   </li>
                   <li className="py-2 hover:bg-gray-100 pl-[60px]">

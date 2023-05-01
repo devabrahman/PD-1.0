@@ -10,7 +10,7 @@ import NewVariation from 'components/products/Variations';
 import VariationList from 'components/products/VariationList';
 import VariationUpdate from 'components/products/VariationUpdate';
 import TextEditor from 'components/common/TextEditor';
-import MetaSection from 'components/products/MetaSection';
+import MetaSection from 'components/products/MetaSectionUpdate';
 import { description } from 'api/products';
 // Icons
 import CalenderIcon from 'components/SVGIcons/CalenderIcon';

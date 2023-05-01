@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
@@ -13,12 +12,10 @@ import VariationUpdate from 'components/products/VariationUpdate';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import Shipping from './Shipping';
-import MetaSection from 'components/products/MetaSection';
+import MetaSectionCreate from 'components/products/MetaSectionCreate';
 import RightSideCreate from 'components/products/RightSideCreate';
 
 const NewProducts = () => {
-  const [value, setValue] = useState('');
-
   return (
     <Layout title="Create product">
       <Breadcrumbs title="Create product" link="/products" />
@@ -39,23 +36,13 @@ const NewProducts = () => {
             {/* short description */}
             <div>
               <label className="block font-medium mb-2 mt-6">Short description</label>
-              <ReactQuill
-                theme="snow"
-                value={value}
-                onChange={setValue}
-                className="short_description"
-              />
+              <ReactQuill theme="snow" className="short_description" />
             </div>
 
             {/* long description */}
             <div>
               <label className="block font-medium mb-2 mt-6">Product long description</label>
-              <ReactQuill
-                theme="snow"
-                value={value}
-                onChange={setValue}
-                className="long_description"
-              />
+              <ReactQuill theme="snow" className="long_description" />
             </div>
 
             <section className="mt-4 w-full">
@@ -83,18 +70,20 @@ const NewProducts = () => {
                 </div>
               </div>
 
+              {/* variations goes here */}
               <Variations />
+
+              {/* variation list goes here */}
               <VariationList />
+
+              {/* variation update goes here */}
               <VariationUpdate />
 
+              {/* shipping managed here */}
               <Shipping />
-              <MetaSection
-                metaValue={{
-                  title: '',
-                  url: '',
-                  description: { description: '' }
-                }}
-              />
+
+              {/* seo section managed here */}
+              <MetaSectionCreate />
             </section>
           </section>
 
