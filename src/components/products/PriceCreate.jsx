@@ -3,7 +3,7 @@ import { addDays } from 'date-fns';
 import Calendar from 'components/common/Calendar';
 import CalenderIcon from 'components/SVGIcons/CalenderIcon';
 
-const Price = () => {
+const PriceCreate = () => {
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -24,7 +24,6 @@ const Price = () => {
           id="normalPrice"
           placeholder="$ 00.0"
           className="border border-gray-200 focus:ring-1 focus:ring-blue-200 focus:ring-opacity-5 pl-3 dark:bg-lightDark  h-9 mt-3 rounded-[7px] w-full pr-1.5"
-          value={97}
         />
       </div>
 
@@ -38,7 +37,6 @@ const Price = () => {
           id="specialPrice"
           placeholder="$ 00.0"
           className="border border-gray-200 focus:ring-1 focus:ring-blue-200 focus:ring-opacity-5 pl-3  dark:bg-lightDark h-9 mt-3 rounded-[7px] w-full pr-1.5 focus:focused-input"
-          value={57}
         />
         <div className="flex items-center justify-between gap-2 absolute bottom-[11%] right-[15px] z-10">
           <span className="h-4 rounded-sm w-0.5 bg-pdGrey block"></span>
@@ -55,4 +53,4 @@ const Price = () => {
   );
 };
 
-export default Price;
+export default PriceCreate;

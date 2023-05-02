@@ -1,7 +1,7 @@
 import { Tab } from '@headlessui/react';
 import { Fragment } from 'react';
 
-const CategoryList = () => {
+const CategoryListCreate = () => {
   return (
     <div className="rounded-xl input-accent-box-shadow w-full bg-white py-3">
       <Tab.Group>
@@ -198,4 +198,4 @@ const CategoryList = () => {
   );
 };
 
-export default CategoryList;
+export default CategoryListCreate;

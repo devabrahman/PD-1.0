@@ -3,7 +3,7 @@ import { addDays, format } from 'date-fns';
 import Layout from 'components/common/Layout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import ImageDropDown from 'components/common/ImageDragDrop';
-import CategoryList from 'components/products/CategoryList';
+import CategoryList from 'components/products/CategoryListEdit';
 import Calendar from 'components/common/Calendar';
 import ProductTag from 'components/products/ProductTag';
 import NewVariation from 'components/products/Variations';
