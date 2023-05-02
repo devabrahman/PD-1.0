@@ -1,3 +1,13 @@
+// some global styles
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-Regular.ttf');
+}
+
+* {
+  font-family: Montserrat;
+}
+
 // custom grid for my app
 .app-grid {
   display: grid;

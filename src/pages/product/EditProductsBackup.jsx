@@ -2,15 +2,15 @@ import { useState } from 'react';
 import { addDays, format } from 'date-fns';
 import Layout from 'components/common/Layout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
-import ImageDropDown from 'components/common/ImageDropDown';
-import CategoryList from 'components/products/CategoryList';
+import ImageDropDown from 'components/common/ImageDragDrop';
+import CategoryList from 'components/products/CategoryListEdit';
 import Calendar from 'components/common/Calendar';
 import ProductTag from 'components/products/ProductTag';
 import NewVariation from 'components/products/Variations';
 import VariationList from 'components/products/VariationList';
 import VariationUpdate from 'components/products/VariationUpdate';
 import TextEditor from 'components/common/TextEditor';
-import MetaSection from 'components/products/MetaSection';
+import MetaSection from 'components/products/MetaSectionUpdate';
 import { description } from 'api/products';
 // Icons
 import CalenderIcon from 'components/SVGIcons/CalenderIcon';

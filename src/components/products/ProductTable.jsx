@@ -10,7 +10,7 @@ const ProductTable = () => {
   const myArray = Array(8).fill(0);
 
   return (
-    <div className="relative overflow-x-auto shadow-md shadow-blue-50 sm:rounded-lg mt-6">
+    <div className="relative overflow-x-auto shadow-md shadow-blue-50 sm:rounded-lg mt-4">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead className="text-xs text-gray-700 uppercase bg-white dark:bg-gray-700 dark:text-gray-400 border-b">
           <tr>

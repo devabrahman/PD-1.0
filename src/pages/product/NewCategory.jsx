@@ -1,5 +1,5 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
-import ImageDropDown from 'components/common/ImageDropDown';
+import ImageDropDown from 'components/common/ImageDragDrop';
 import Layout from 'components/common/Layout';
 import categoryPic from 'assets/Images/common/CategoryPic.png';
 

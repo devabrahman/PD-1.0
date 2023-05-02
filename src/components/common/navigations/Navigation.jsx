@@ -34,11 +34,10 @@ const LeftNavigation = () => {
         <Link
           to="/"
           className="flex items-center w-full justify-between bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
-          <div className="flex justify-between items-center space-x-3.5">
+          <div className="flex items-center space-x-3.5">
             <FcHome className="h-6 w-6" />
             <span>Dashboard</span>
           </div>
-          <p className="bg-amber-400 text-white px-1.5 rounded-xl text-xs">5</p>
         </Link>
 
         <Disclosure>
@@ -135,7 +134,10 @@ const LeftNavigation = () => {
                     <Link
                       to="/single-product"
                       className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
-                      Single Product
+                      Single Product{' '}
+                      <span className="relative -top-4 bg-amber-400 text-white px-1 py[3px] rounded-md">
+                        Bonus
+                      </span>
                     </Link>
                   </li>
                   <li className="py-2 hover:bg-gray-100 pl-[60px]">
