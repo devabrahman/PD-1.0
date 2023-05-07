@@ -4,7 +4,7 @@ import CheckMarkIcon from 'components/SVGIcons/CheckMarkIcon';
 import { useState } from 'react';
 
 const Shipping = () => {
-  const [physicalProduct, setPhysicalProduct] = useState(false);
+  const [physicalProduct, setPhysicalProduct] = useState(true);
 
   return (
     <div className="my-5 bg-white px-3 py-4 rounded-lg shadow-xl shadow-gray-100 mt-8">

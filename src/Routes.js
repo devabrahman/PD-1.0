@@ -87,7 +87,7 @@ const router = createBrowserRouter([
     element: <Categories />
   },
   {
-    path: '/new-category',
+    path: '/category/create',
     element: <NewCategory />
   },
   {

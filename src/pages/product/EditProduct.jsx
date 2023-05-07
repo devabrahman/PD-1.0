@@ -13,7 +13,7 @@ import VariationUpdate from 'components/products/VariationUpdate';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import Shipping from './Shipping';
-import MetaSection from 'components/products/MetaSectionUpdate';
+import MetaSectionUpdate from 'components/products/MetaSectionUpdate';
 import RightSideEdit from 'components/products/RightSideEdit';
 
 const EditProduct = () => {
@@ -89,18 +89,20 @@ const EditProduct = () => {
                 </div>
               </div>
 
+              {/* variations goes here */}
               <Variations />
+
+              {/* variation list goes here */}
               <VariationList />
+
+              {/* variation update goes here */}
               <VariationUpdate />
 
+              {/* shipping managed here */}
               <Shipping />
-              <MetaSection
-                metaValue={{
-                  title: '',
-                  url: '',
-                  description: { description: '' }
-                }}
-              />
+
+              {/* seo section managed here */}
+              <MetaSectionUpdate />
             </section>
           </section>
 
