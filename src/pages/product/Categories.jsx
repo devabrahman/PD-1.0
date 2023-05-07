@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Layout from 'components/common/Layout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 // import DeletePopup from 'components/common/DeletePopup';
@@ -7,14 +7,61 @@ import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 
 // icons
-import { ChevronUpDownIcon, MagnifyingGlassIcon, PlusIcon } from '@heroicons/react/24/outline';
+import {
+  ChevronUpDownIcon,
+  MagnifyingGlassIcon,
+  PlusIcon,
+  EyeIcon
+} from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import EditIcon from 'components/SVGIcons/Editicon';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 
-const Categories = () => {
-  const navigate = useNavigate();
+// dummy data
+const categories = [
+  {
+    title: 'Apple',
+    description: 'All genuine Apple products listed here',
+    slug: '/apple'
+  },
+  {
+    title: '- Laptop',
+    description: 'Powerful apple laptops listed here',
+    slug: '/apple-laptop'
+  },
+  {
+    title: '-- Macbook Air',
+    description: 'Powerful M1 Macbook Air available for sell',
+    slug: '/apple-laptop-macbook'
+  },
+  {
+    title: 'Apple',
+    description: 'All genuine Apple products listed here',
+    slug: '/apple'
+  },
+  {
+    title: '- Laptop',
+    description: 'Powerful apple laptops listed here',
+    slug: '/apple-laptop'
+  },
+  {
+    title: '-- Macbook Air',
+    description: 'Powerful M1 Macbook Air available for sell',
+    slug: '/apple-laptop-macbook'
+  },
+  {
+    title: 'Apple',
+    description: 'All genuine Apple products listed here',
+    slug: '/apple'
+  },
+  {
+    title: '- Laptop',
+    description: 'Powerful apple laptops listed here',
+    slug: '/apple-laptop'
+  }
+];
 
+const Categories = () => {
   return (
     <>
       <Layout title="Categories" padding="p-0 sm:px-10 sm:py-8">
@@ -75,7 +122,7 @@ const Categories = () => {
               />
             </div>
 
-            <Link to="/new-product">
+            <Link to="/category/create">
               <div className="bg-blue-500 text-white pl-2 pr-3 py-2 rounded-lg flex justify-center items-center cursor-pointer">
                 <PlusIcon className="text-white w-6 h-6" />
                 <p className="ml-1">Category</p>
@@ -91,33 +138,36 @@ const Categories = () => {
                 <th scope="col" className="p-4">
                   <div className="flex items-center">
                     <input
-                      id="custom-checkbox"
+                      id="default-checkbox"
                       type="checkbox"
-                      className="custom-checkbox cursor-pointer"
+                      value=""
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                     />
-                    <label className="sr-only" htmlFor="custom-checkbox">
-                      Check
+                    <label
+                      htmlFor="default-checkbox"
+                      className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 sr-only">
+                      checkbox
                     </label>
                   </div>
                 </th>
                 <th scope="col" className="px-6 py-4 text-gray-700">
-                  Product name
+                  Category
                 </th>
                 <th scope="col" className="px-6 py-4">
                   <div className="flex items-center">
-                    <p className="text-gray-700">Color</p>
+                    <p className="text-gray-700">Description</p>
                     <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
                   </div>
                 </th>
                 <th scope="col" className="px-6 py-4">
                   <div className="flex items-center">
-                    <p className="text-gray-700">Category</p>
+                    <p className="text-gray-700">Slug</p>
                     <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
                   </div>
                 </th>
                 <th scope="col" className="px-6 py-4">
                   <div className="flex items-center">
-                    <p className="text-gray-700">Price</p>
+                    <p className="text-gray-700">Products</p>
                     <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
                   </div>
                 </th>
@@ -127,276 +177,47 @@ const Categories = () => {
               </tr>
             </thead>
             <tbody>
-              <tr
-                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
-                onClick={() => navigate('/edit-product')}>
-                <td className="w-4 p-4">
-                  <div className="flex items-center">
-                    <input
-                      id="checkbox-table-search-1"
-                      type="checkbox"
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label className="sr-only">checkbox</label>
-                  </div>
-                </td>
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  Apple MacBook Pro 17&quot;
-                </th>
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
-                <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
-                  <Link
-                    to="/single-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <DeleteIcon />
-                  </Link>
-                  <Link
-                    to="/edit-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <EditIcon />
-                  </Link>
-                </td>
-              </tr>
-              <tr
-                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
-                onClick={() => navigate('/edit-product')}>
-                <td className="w-4 p-4">
-                  <div className="flex items-center">
-                    <input
-                      id="checkbox-table-search-1"
-                      type="checkbox"
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label className="sr-only">checkbox</label>
-                  </div>
-                </td>
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  Microsoft Surface Pro
-                </th>
-                <td className="px-6 py-4">White</td>
-                <td className="px-6 py-4">Laptop PC</td>
-                <td className="px-6 py-4">$1999</td>
-                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
-                  <Link
-                    to="/single-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <DeleteIcon />
-                  </Link>
-                  <Link
-                    to="/edit-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <EditIcon />
-                  </Link>
-                </td>
-              </tr>
-              <tr
-                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
-                onClick={() => navigate('/edit-product')}>
-                <td className="w-4 p-4">
-                  <div className="flex items-center">
-                    <input
-                      id="checkbox-table-search-1"
-                      type="checkbox"
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label className="sr-only">checkbox</label>
-                  </div>
-                </td>
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  Apple MacBook Pro 17&quot;
-                </th>
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
-                <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
-                  <Link
-                    to="/single-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <DeleteIcon />
-                  </Link>
-                  <Link
-                    to="/edit-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <EditIcon />
-                  </Link>
-                </td>
-              </tr>
-              <tr
-                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
-                onClick={() => navigate('/edit-product')}>
-                <td className="w-4 p-4">
-                  <div className="flex items-center">
-                    <input
-                      id="checkbox-table-search-1"
-                      type="checkbox"
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label className="sr-only">checkbox</label>
-                  </div>
-                </td>
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  Microsoft Surface Pro
-                </th>
-                <td className="px-6 py-4">White</td>
-                <td className="px-6 py-4">Laptop PC</td>
-                <td className="px-6 py-4">$1999</td>
-                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
-                  <Link
-                    to="/single-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <DeleteIcon />
-                  </Link>
-                  <Link
-                    to="/edit-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <EditIcon />
-                  </Link>
-                </td>
-              </tr>
-              <tr
-                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
-                onClick={() => navigate('/edit-product')}>
-                <td className="w-4 p-4">
-                  <div className="flex items-center">
-                    <input
-                      id="checkbox-table-search-1"
-                      type="checkbox"
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label className="sr-only">checkbox</label>
-                  </div>
-                </td>
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  Apple MacBook Pro 17&quot;
-                </th>
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
-                <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
-                  <Link
-                    to="/single-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <DeleteIcon />
-                  </Link>
-                  <Link
-                    to="/edit-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <EditIcon />
-                  </Link>
-                </td>
-              </tr>
-              <tr
-                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
-                onClick={() => navigate('/edit-product')}>
-                <td className="w-4 p-4">
-                  <div className="flex items-center">
-                    <input
-                      id="checkbox-table-search-1"
-                      type="checkbox"
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label className="sr-only">checkbox</label>
-                  </div>
-                </td>
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  Microsoft Surface Pro
-                </th>
-                <td className="px-6 py-4">White</td>
-                <td className="px-6 py-4">Laptop PC</td>
-                <td className="px-6 py-4">$1999</td>
-                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
-                  <Link
-                    to="/single-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <DeleteIcon />
-                  </Link>
-                  <Link
-                    to="/edit-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <EditIcon />
-                  </Link>
-                </td>
-              </tr>
-              <tr
-                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-blue-50 cursor-pointer"
-                onClick={() => navigate('/edit-product')}>
-                <td className="w-4 p-4">
-                  <div className="flex items-center">
-                    <input
-                      id="checkbox-table-search-1"
-                      type="checkbox"
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label className="sr-only">checkbox</label>
-                  </div>
-                </td>
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  Apple MacBook Pro 17&quot;
-                </th>
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
-                <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
-                  <Link
-                    to="/single-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <DeleteIcon />
-                  </Link>
-                  <Link
-                    to="/edit-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <EditIcon />
-                  </Link>
-                </td>
-              </tr>
-              <tr className="bg-white dark:bg-gray-800">
-                <td className="w-4 p-4">
-                  <div className="flex items-center">
-                    <input
-                      id="checkbox-table-search-1"
-                      type="checkbox"
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label className="sr-only">checkbox</label>
-                  </div>
-                </td>
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  Magic Mouse 2
-                </th>
-                <td className="px-6 py-4">Black</td>
-                <td className="px-6 py-4">Accessories</td>
-                <td className="px-6 py-4">$99</td>
-                <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
-                  <Link
-                    to="/single-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <DeleteIcon />
-                  </Link>
-                  <Link
-                    to="/edit-product"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                    <EditIcon />
-                  </Link>
-                </td>
-              </tr>
+              {categories?.map((category, index) => (
+                <tr
+                  className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 cursor-pointer"
+                  key={index}>
+                  <td className="w-4 p-4">
+                    <div className="flex items-center">
+                      <input
+                        id="checkbox-table-search-1"
+                        type="checkbox"
+                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label className="sr-only">checkbox</label>
+                    </div>
+                  </td>
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {category?.title}
+                  </th>
+                  <td className="px-6 py-4">{category?.description}</td>
+                  <td className="px-6 py-4 italic">{category?.slug}</td>
+                  <td className="px-6 py-4">8</td>
+                  <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
+                    <Link
+                      to="/single-product"
+                      className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                      <EyeIcon className="h-6 w-6 text-blue-400 " />
+                    </Link>
+                    <Link
+                      to="/single-product"
+                      className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                      <DeleteIcon />
+                    </Link>
+                    <Link
+                      to="/edit-product"
+                      className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                      <EditIcon />
+                    </Link>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

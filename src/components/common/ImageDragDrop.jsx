@@ -2,7 +2,6 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import ImageIcon from 'components/SVGIcons/ImageIcon';
 import React, { useEffect, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
-// import ImageIcon from '../SVGIcons/ImageIcon';
 
 const thumbsContainer = {
   display: 'flex',
@@ -37,6 +36,7 @@ const img = {
 
 const ImageDropDown = () => {
   const [files, setFiles] = useState([]);
+
   const { getRootProps, getInputProps } = useDropzone({
     accept: {
       'image/*': []
@@ -58,27 +58,6 @@ const ImageDropDown = () => {
     newArr.splice(index, 1);
     setFiles(newArr);
   };
-
-  const thumbs = files.map((file, index) => (
-    <div style={thumb} key={file.name}>
-      <div className="relative group" style={thumbInner}>
-        <img
-          src={file.preview}
-          style={img}
-          // Revoke data uri after image is loaded
-          className="object-contain"
-          onLoad={() => {
-            URL.revokeObjectURL(file.preview);
-          }}
-        />
-        <span
-          onClick={() => removeThumbnail(file, index)}
-          className="hidden absolute right-0 w-4 h-4 bg-red-600 rounded-full group-hover:inline-flex items-center justify-center cursor-pointer">
-          <XMarkIcon className="w-4 text-white" />
-        </span>
-      </div>
-    </div>
-  ));
 
   useEffect(() => {
     // Make sure to revoke the data uris to avoid memory leaks, will run on unmount
@@ -103,7 +82,28 @@ const ImageDropDown = () => {
             </span>
           </div>
         </div>
-        <aside style={thumbsContainer}>{thumbs}</aside>
+        <aside style={thumbsContainer}>
+          {files.map((file, index) => (
+            <div style={thumb} key={file.name}>
+              <div className="relative group" style={thumbInner}>
+                <img
+                  src={file.preview}
+                  style={img}
+                  // Revoke data uri after image is loaded
+                  className="object-contain"
+                  onLoad={() => {
+                    URL.revokeObjectURL(file.preview);
+                  }}
+                />
+                <span
+                  onClick={() => removeThumbnail(file, index)}
+                  className="hidden absolute right-0 w-4 h-4 bg-red-600 rounded-full group-hover:inline-flex items-center justify-center cursor-pointer">
+                  <XMarkIcon className="w-4 text-white" />
+                </span>
+              </div>
+            </div>
+          ))}
+        </aside>
       </div>
     </>
   );

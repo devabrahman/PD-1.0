@@ -3,6 +3,7 @@ import ProductTag from 'components/products/ProductTag';
 import PriceEdit from './PriceEdit';
 import TakeAnActionEdit from './TakeAnActionEdit';
 import ProductGallery from './ProductGallery';
+import ProductPrimaryImage from './ProductPrimaryImage';
 
 const RightSide = () => {
   return (
@@ -18,6 +19,9 @@ const RightSide = () => {
 
       {/* all tag related to product are done here */}
       <ProductTag />
+
+      {/* product primary image */}
+      <ProductPrimaryImage />
 
       {/* all product photos are done here */}
       <ProductGallery />

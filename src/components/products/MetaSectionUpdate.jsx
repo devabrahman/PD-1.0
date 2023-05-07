@@ -2,7 +2,7 @@ import React from 'react';
 import SearchEngineIcon from 'assets/Images/icons/SearchEngineIcon.png';
 import ReactQuill from 'react-quill';
 
-const MetaSection = () => {
+const MetaSectionUpdate = () => {
   return (
     <div className="mt-16 mb-5 bg-white rounded-lg p-5">
       <div className="flex gap-2">
@@ -24,13 +24,18 @@ const MetaSection = () => {
             id="title"
             className="border border-gray-200 dark:bg-lightDark mt-3 rounded-xl w-full py-2 pl-3 pr-1.5 dark:placeholder:text-white/40"
             placeholder="Add a title "
+            value="Macbook Air M1 8GB Ram, 256GB SSD - Base variant"
           />
         </div>
 
         <div className="mt-6">
           <div>
             <label className="block font-medium mb-2 mt-6">Meta description</label>
-            <ReactQuill theme="snow" className="long_description" />
+            <ReactQuill
+              theme="snow"
+              className="long_description"
+              value="Macbook Air M1 8GB Ram, 256GB SSD - Base variant"
+            />
           </div>
         </div>
 
@@ -43,6 +48,7 @@ const MetaSection = () => {
             name="Title"
             id="title"
             className="border text-gray-600 text-sm dark:placeholder:text-white/50 dark:bg-lightDark  border-gray-200 dark:text-white italic mt-3 rounded-xl w-full py-2 pl-3 pr-1.5"
+            value="https://mywebsite.com/laptop/apple/macbook-air-m1"
           />
         </div>
       </form>
@@ -50,4 +56,4 @@ const MetaSection = () => {
   );
 };
 
-export default MetaSection;
+export default MetaSectionUpdate;
