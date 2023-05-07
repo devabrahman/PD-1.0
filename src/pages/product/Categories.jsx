@@ -58,7 +58,7 @@ const categories = [
     title: '- Laptop',
     description: 'Powerful apple laptops listed here',
     slug: '/apple-laptop'
-  },
+  }
 ];
 
 const Categories = () => {
@@ -178,7 +178,9 @@ const Categories = () => {
             </thead>
             <tbody>
               {categories?.map((category, index) => (
-                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 cursor-pointer">
+                <tr
+                  className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 cursor-pointer"
+                  key={index}>
                   <td className="w-4 p-4">
                     <div className="flex items-center">
                       <input

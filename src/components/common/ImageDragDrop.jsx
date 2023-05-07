@@ -82,7 +82,6 @@ const ImageDropDown = () => {
             </span>
           </div>
         </div>
-        {console.log(files)}
         <aside style={thumbsContainer}>
           {files.map((file, index) => (
             <div style={thumb} key={file.name}>
