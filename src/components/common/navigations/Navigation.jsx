@@ -149,7 +149,7 @@ const LeftNavigation = () => {
                   </li>
                   <li className="py-2 hover:bg-gray-100 pl-[60px]">
                     <Link
-                      to="/new-category"
+                      to="/category/create"
                       className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
                       New Category
                     </Link>

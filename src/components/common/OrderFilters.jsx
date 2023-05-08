@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react';
 import { Menu } from '@headlessui/react';
-import { FunnelIcon, StarIcon } from '@heroicons/react/24/outline';
+import { FunnelIcon } from '@heroicons/react/24/outline';
 import MenuTransition from './MenuTransition';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
@@ -20,15 +20,6 @@ const Filters = () => {
             <p className="text-sm">Price</p>
             <Slider className="mt-2" />
 
-            <p className="text-sm mt-6">Review</p>
-            <div className="flex items-center mt-1">
-              <StarIcon className="h-6 w-6 fill-amber-400 text-amber-400 cursor-pointer" />
-              <StarIcon className="h-6 w-6 fill-amber-400 text-amber-400 cursor-pointer" />
-              <StarIcon className="h-6 w-6 fill-amber-400 text-amber-400 cursor-pointer" />
-              <StarIcon className="h-6 w-6 fill-amber-400 text-amber-400 cursor-pointer" />
-              <StarIcon className="h-6 w-6 text-gray-300 cursor-pointer" />
-            </div>
-
             <p className="text-sm mt-6">Status</p>
             <div className="grid grid-cols-2 gap-2 items-center mt-1">
               <button
@@ -36,14 +27,14 @@ const Filters = () => {
                   status === 'inStock' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-900'
                 } w-full text-xs px-1 py-1.5 rounded-md hover:bg-blue-500 hover:text-white`}
                 onClick={() => setStatus('inStock')}>
-                In Stock
+                Paid
               </button>
               <button
                 className={` ${
                   status === 'outOfStock' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-900'
                 } w-full text-xs px-1 py-1.5 rounded-md hover:bg-blue-500 hover:text-white`}
                 onClick={() => setStatus('outOfStock')}>
-                Out of Stock
+                Cancelled
               </button>
             </div>
 
