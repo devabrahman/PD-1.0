@@ -5,9 +5,9 @@ import { ChevronUpDownIcon, EyeIcon } from '@heroicons/react/24/outline';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import EditIcon from 'components/SVGIcons/Editicon';
 
-const ProductTable = () => {
+const OrdersTable = () => {
   // empty array
-  const myArray = Array(8).fill(0);
+  const myArray = Array(7).fill(0);
 
   return (
     <div className="relative overflow-x-auto shadow-md shadow-blue-50 sm:rounded-lg mt-4">
@@ -29,27 +29,36 @@ const ProductTable = () => {
                 </label>
               </div>
             </th>
-            <th scope="col" className="px-6 py-4 text-blue-400 font-semibold">
-              Thumbnail
-            </th>
-            <th scope="col" className="px-6 py-4 text-blue-400 font-semibold">
-              Product
+            <th scope="col" className="px-6 py-4 text-blue-400">
+              Id
             </th>
             <th scope="col" className="px-6 py-4">
               <div className="flex items-center">
-                <p className="text-blue-400 font-semibold">Price</p>
+                <p className="text-blue-400">Product</p>
                 <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
               </div>
             </th>
             <th scope="col" className="px-6 py-4">
               <div className="flex items-center">
-                <p className="text-blue-400 font-semibold">SKU</p>
+                <p className="text-blue-400">Date</p>
                 <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
               </div>
             </th>
             <th scope="col" className="px-6 py-4">
               <div className="flex items-center">
-                <p className="text-blue-400 font-semibold">Status</p>
+                <p className="text-blue-400">Status</p>
+                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+              </div>
+            </th>
+            <th scope="col" className="px-6 py-4">
+              <div className="flex items-center">
+                <p className="text-blue-400">Revenue</p>
+                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+              </div>
+            </th>
+            <th scope="col" className="px-6 py-4">
+              <div className="flex items-center">
+                <p className="text-blue-400">Customer</p>
                 <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
               </div>
             </th>
@@ -73,10 +82,10 @@ const ProductTable = () => {
                   <label className="sr-only">checkbox</label>
                 </div>
               </td>
-              <th scope="row" className="px-6 py-3 whitespace-nowrap">
-                <div className="h-10 w-10">
-                  <img src="assets/images/products/macbook4.jpg" className="h-full w-full" alt="" />
-                </div>
+              <th
+                scope="row"
+                className="px-6 py-3 font-light text-gray-500 whitespace-nowrap dark:text-white">
+                #8543467
               </th>
               <th
                 scope="row"
@@ -86,12 +95,18 @@ const ProductTable = () => {
                   Laptop
                 </small>
               </th>
-              <td className="px-6 py-3">$2999</td>
-              <td className="px-6 py-3">13515459</td>
+              <td className="px-6 py-3 w-full">5th May, 2023</td>
+              <td className="px-6 py-3 text-green-400">Paid</td>
+              <td className="px-6 py-3">$ 1200</td>
               <td className="px-6 py-3">
-                <span className="bg-blue-50 text-blue-600 px-3 py-1 rounded-md font-normal">
-                  In Stock
-                </span>
+                <div className="flex items-center">
+                  <img
+                    src="/assets/images/products/customer.png"
+                    alt="customer image"
+                    className="h-6 w-6 rounded-full"
+                  />
+                  <span className="ml-2">Muhammad</span>
+                </div>
               </td>
               <td className="px-6 py-3 text-right flex justify-end items-center space-x-4">
                 <Link
@@ -118,4 +133,4 @@ const ProductTable = () => {
   );
 };
 
-export default ProductTable;
+export default OrdersTable;
