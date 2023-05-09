@@ -12,12 +12,8 @@ import CustomizationMenu from 'components/common/top-menu/CustomizationMenu';
 import TopNavigation from './navigations/TopNavigation';
 import Notification from './top-menu/Notification';
 // import { mobileResponsive } from 'utils/responsive';
-import { useMediaQuery } from 'react-responsive';
 
 const Layout = ({ title, children, padding = 'px-8 py-8', childrenSpace = 'mt-4' }) => {
-  const mobileResponsive = useMediaQuery({
-    query: '(min-width: 640px)'
-  });
   const { pathname } = useLocation();
 
   // state for sidebar position
@@ -47,8 +43,9 @@ const Layout = ({ title, children, padding = 'px-8 py-8', childrenSpace = 'mt-4'
     return (
       <LayoutMainGrid position="left">
         <section className="dark:bg-[#0E1C2F] dark:text-white w-full h-full block">
-          {mobileResponsive ? <LeftNavigation /> : console.log('Profile')}
+          <LeftNavigation />
         </section>
+
         <section className={`bg-[#f5f5f5] dark:bg-dark ${padding} overflow-y-scroll`}>
           {/* Disable for vendor profile */}
           {pathname === '/vendor-profile' ? (
@@ -71,7 +68,7 @@ const Layout = ({ title, children, padding = 'px-8 py-8', childrenSpace = 'mt-4'
                 />
 
                 <ProfileDropdownMenu />
-                {mobileResponsive ? <></> : <Bars3Icon className="w-5" />}
+                <Bars3Icon className="w-5" />
               </div>
             </div>
           )}
