@@ -1,14 +1,21 @@
-/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
 import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
-import { ChatBubbleLeftEllipsisIcon } from '@heroicons/react/24/outline';
+import {
+  Bars3BottomLeftIcon,
+  ChatBubbleLeftEllipsisIcon,
+  ChevronLeftIcon
+} from '@heroicons/react/24/outline';
 import { FcHome, FcLock } from 'react-icons/fc';
 import { SlBasket } from 'react-icons/sl';
 import { Link, useLocation } from 'react-router-dom';
 import OderIcon from 'assets/Images/icons/order-nav-icon.png';
 import { IoIosPeople } from 'react-icons/io';
+import { useState } from 'react';
 
 const LeftNavigation = () => {
+  const [collapseSidebar, setCollapseSidebar] = useState(false);
+
   const { pathname } = useLocation();
 
   // ecommerce disclosure
@@ -23,11 +30,17 @@ const LeftNavigation = () => {
 
   return (
     <div className="w-full">
-      <div className="text-center pt-10">
-        <div className="w-4/5 mx-auto flex justify-end">
-          <small className="bg-amber-400 text-white text-xs px-2 py-[2px] rounded-md">1.0</small>
+      <div className="flex justify-around items-center pt-10 w-11/12 mx-auto">
+        <div className="text- pt-1">
+          <div className="w-4/5 mx-auto flex justify-end">
+            <small className="bg-amber-400 text-white text-xs px-2 py-[2px] rounded-md">1.0</small>
+          </div>
+          <p className="text-xl font-medium text-gray-400">Prothom Dashboard</p>
         </div>
-        <p className="text-xl font-medium text-gray-400">Prothom Dashboard</p>
+        <ChevronLeftIcon
+          className="h-5 w-5 relative top-3 cursor-pointer"
+          onClick={() => setCollapseSidebar(true)}
+        />
       </div>
 
       <div className="mx-auto w-full bg-white space-y-2 mt-10">

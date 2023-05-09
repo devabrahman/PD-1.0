@@ -118,7 +118,7 @@ const Navigation = () => {
               <div
                 className={`transition-all duration-300 ${
                   openItem === index ? 'h-auto' : 'h-0'
-                } overflow-hidden ml-12 `}>
+                } overflow-hidden ml-12`}>
                 <ul className="text-base text-[#878787] space-y-1.5">
                   {navItem?.submenu?.length > 0 &&
                     navItem?.submenu?.map((submenu, i) => (
