@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 // icons
 import { ChevronUpDownIcon, EyeIcon } from '@heroicons/react/24/outline';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
-import EditIcon from 'components/SVGIcons/Editicon';
 
 const OrdersTable = () => {
   // empty array
@@ -108,7 +107,7 @@ const OrdersTable = () => {
                   <span className="ml-2">Muhammad</span>
                 </div>
               </td>
-              <td className="px-6 py-3 text-right flex justify-end items-center space-x-4">
+              <td className="px-6 py-3 text-right flex justify-end items-center space-x-4 ml-5">
                 <Link
                   to="/single-product"
                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
@@ -118,11 +117,6 @@ const OrdersTable = () => {
                   to="/single-product"
                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                   <DeleteIcon />
-                </Link>
-                <Link
-                  to="/edit-product"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                  <EditIcon />
                 </Link>
               </td>
             </tr>
