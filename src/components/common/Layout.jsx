@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 // importing components
 import LayoutMainGrid from './LayoutMainGrid';
 import LeftNavigation from './navigations/Navigation';
-import { Bars3Icon, MagnifyingGlassIcon as SearchIcon } from '@heroicons/react/24/outline';
+import { MagnifyingGlassIcon as SearchIcon } from '@heroicons/react/24/outline';
 
 // TODO: a comment for @AJMIN to check later
 import ProfileDropdownMenu from 'components/profile/ProfileDropdownMenu';
@@ -68,7 +68,6 @@ const Layout = ({ title, children, padding = 'px-8 py-8', childrenSpace = 'mt-4'
                 />
 
                 <ProfileDropdownMenu />
-                <Bars3Icon className="w-5" />
               </div>
             </div>
           )}
