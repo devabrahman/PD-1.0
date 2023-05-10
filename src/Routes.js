@@ -18,7 +18,6 @@ import EditProduct from 'pages/product/EditProduct';
 // importing category pages
 import Categories from 'pages/product/Categories';
 import NewCategory from 'pages/product/NewCategory';
-import EidtCategory from 'pages/product/EditCategory';
 
 // importing tag page
 import Tags from 'pages/product/Tags';
@@ -27,16 +26,23 @@ import Tags from 'pages/product/Tags';
 import Orders from 'pages/orders/Orders';
 import OrderDetails from 'pages/orders/OrderDetails';
 
+// importing posts page
+import Posts from 'pages/blog/Posts';
+import CreatePost from 'pages/blog/CreatePost';
+import BlogCategories from 'pages/blog/BlogCategories';
+import BlogCategoryCreate from 'pages/blog/BlogCategoryCreate';
+import BlogTags from 'pages/blog/BlogTags';
+
 // chat pages
 import Chat from 'pages/Chat';
 
 // importing customer profile page
+import Customers from 'pages/Customers';
 import CustomerProfile from 'pages/userProfile/CustomerProfile';
 import ProfileEdit from 'pages/userProfile/ProfileEdit';
 
 // error page
 import Error404 from 'pages/Error404';
-import Customers from 'pages/Customers';
 
 // all routing
 const router = createBrowserRouter([
@@ -93,10 +99,6 @@ const router = createBrowserRouter([
     path: '/category/create',
     element: <NewCategory />
   },
-  {
-    path: '/edit-product',
-    element: <EidtCategory />
-  },
 
   // tags page
   {
@@ -112,6 +114,28 @@ const router = createBrowserRouter([
   {
     path: '/order-details',
     element: <OrderDetails />
+  },
+
+  // blog pages
+  {
+    path: '/posts',
+    element: <Posts />
+  },
+  {
+    path: '/create-post',
+    element: <CreatePost />
+  },
+  {
+    path: '/blog-categories',
+    element: <BlogCategories />
+  },
+  {
+    path: '/blog/category/create',
+    element: <BlogCategoryCreate />
+  },
+  {
+    path: '/blog/tags',
+    element: <BlogTags />
   },
   // chat page
   {

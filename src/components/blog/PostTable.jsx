@@ -5,7 +5,7 @@ import { ChevronUpDownIcon, EyeIcon } from '@heroicons/react/24/outline';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import EditIcon from 'components/SVGIcons/Editicon';
 
-const ProductTable = () => {
+const PostTable = () => {
   // empty array
   const myArray = Array(8).fill(0);
 
@@ -33,17 +33,11 @@ const ProductTable = () => {
               Thumbnail
             </th>
             <th scope="col" className="px-6 py-4 text-blue-400 font-semibold">
-              Product
+              Post
             </th>
             <th scope="col" className="px-6 py-4">
               <div className="flex items-center">
-                <p className="text-blue-400 font-semibold">Price</p>
-                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
-              </div>
-            </th>
-            <th scope="col" className="px-6 py-4">
-              <div className="flex items-center">
-                <p className="text-blue-400 font-semibold">SKU</p>
+                <p className="text-blue-400 font-semibold">Comments</p>
                 <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
               </div>
             </th>
@@ -81,26 +75,25 @@ const ProductTable = () => {
               <th
                 scope="row"
                 className="px-6 py-3 font-medium text-gray-600 whitespace-nowrap dark:text-white">
-                <p>Apple MacBook Pro 17&quot;</p>
+                <p>GitHub Pre commit hooks made coding...</p>
                 <small className="text-xs text-gray-400 mt-[3px] inline-block rounded-md">
-                  Laptop
+                  Programming
                 </small>
               </th>
-              <td className="px-6 py-3">$2999</td>
-              <td className="px-6 py-3">13515459</td>
+              <td className="px-6 py-3">55</td>
               <td className="px-6 py-3">
                 <span className="bg-blue-50 text-blue-600 px-3 py-1 rounded-md font-normal">
-                  In Stock
+                  Published
                 </span>
               </td>
               <td className="px-6 py-3 text-right flex justify-end items-center space-x-4">
                 <Link
-                  to="/single-product"
+                  to="/create-post"
                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                   <EyeIcon className="h-6 w-6 text-blue-400 " />
                 </Link>
                 <Link
-                  to="/edit-product"
+                  to="/create-post"
                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                   <EditIcon />
                 </Link>
@@ -116,4 +109,4 @@ const ProductTable = () => {
   );
 };
 
-export default ProductTable;
+export default PostTable;
