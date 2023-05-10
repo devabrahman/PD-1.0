@@ -129,7 +129,7 @@ const router = createBrowserRouter([
     element: <CustomerProfile />
   },
   {
-    path: '/customer-profile-edit',
+    path: '/profile-edit',
     element: <ProfileEdit />
   },
 

@@ -37,7 +37,7 @@ const ProfileDropdownMenu = () => {
                 </Link>
               </Menu.Item>
               <Menu.Item>
-                <Link to="/products">
+                <Link to="/profile-edit">
                   <div className="flex items-center gap-3 mb-3">
                     <img className="w-6" src={coloredit} alt="Edit" />
                     <span>Edit profile</span>

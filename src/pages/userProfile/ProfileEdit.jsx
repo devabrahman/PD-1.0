@@ -3,7 +3,6 @@ import Layout from 'components/common/Layout';
 import check from 'assets/Images/common/check.png';
 import profile from 'assets/Images/common/profile.png';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom';
 
 const ProfileEdit = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -146,16 +145,9 @@ const ProfileEdit = () => {
                 )}
               </div>
             </div>
-            <div className="flex items-center gap-5">
-              <button className="text-[#5798F7] text-sm font-bold rounded-xl border border-[#5798F7] px-5 py-3">
-                Reset
-              </button>
-              <Link to="/vendor-profile">
-                <button className="bg-[#5798F7] text-white text-sm font-bold rounded-xl px-5 py-3">
-                  Submit
-                </button>
-              </Link>
-            </div>
+            <button className="bg-[#5798F7] w-full text-white text-sm font-bold rounded-xl px-5 py-3">
+              Submit
+            </button>
           </form>
         </div>
       </section>
