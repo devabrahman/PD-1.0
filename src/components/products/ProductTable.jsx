@@ -104,11 +104,9 @@ const ProductTable = () => {
                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                   <EditIcon />
                 </Link>
-                <Link
-                  to="/single-product"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                <button className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                   <DeleteIcon />
-                </Link>
+                </button>
               </td>
             </tr>
           ))}

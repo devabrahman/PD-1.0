@@ -199,20 +199,18 @@ const Categories = () => {
                   <td className="px-6 py-4">8</td>
                   <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
                     <Link
-                      to="/single-product"
+                      to="/category/create"
                       className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                       <EyeIcon className="h-6 w-6 text-blue-400 " />
                     </Link>
                     <Link
-                      to="/edit-product"
+                      to="/category/create"
                       className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                       <EditIcon />
                     </Link>
-                    <Link
-                      to="/single-product"
-                      className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    <button className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                       <DeleteIcon />
-                    </Link>
+                    </button>
                   </td>
                 </tr>
               ))}

@@ -88,20 +88,18 @@ const PostTable = () => {
               </td>
               <td className="px-6 py-3 text-right flex justify-end items-center space-x-4">
                 <Link
-                  to="/single-product"
+                  to="/create-post"
                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                   <EyeIcon className="h-6 w-6 text-blue-400 " />
                 </Link>
                 <Link
-                  to="/edit-product"
+                  to="/create-post"
                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                   <EditIcon />
                 </Link>
-                <Link
-                  to="/single-product"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                <button className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                   <DeleteIcon />
-                </Link>
+                </button>
               </td>
             </tr>
           ))}

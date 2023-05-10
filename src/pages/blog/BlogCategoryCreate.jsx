@@ -6,7 +6,7 @@ import categoryPic from 'assets/Images/common/CategoryPic.png';
 import { PencilIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 
-const NewCategory = () => {
+const BlogCategoryCreate = () => {
   const [editSlug, setEditSlug] = useState(false);
   const [slugValue, setSlugValue] = useState('');
 
@@ -105,4 +105,4 @@ const NewCategory = () => {
   );
 };
 
-export default NewCategory;
+export default BlogCategoryCreate;

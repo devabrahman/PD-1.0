@@ -61,11 +61,11 @@ const categories = [
   }
 ];
 
-const Categories = () => {
+const BlogCategories = () => {
   return (
     <>
-      <Layout title="Categories" padding="p-0 sm:px-10 sm:py-8">
-        <Breadcrumbs title="Categories" link="/categories" />
+      <Layout title="Blog Categories" padding="p-0 sm:px-10 sm:py-8">
+        <Breadcrumbs title="Categories" link="/blog-categories" />
 
         <div className="flex justify-between items-center mt-8">
           <Menu as="div" className="relative inline-block text-left">
@@ -120,7 +120,7 @@ const Categories = () => {
               />
             </div>
 
-            <Link to="/category/create">
+            <Link to="/blog/category/create">
               <div className="bg-blue-500 text-white pl-2 pr-3 py-2 rounded-lg flex justify-center items-center cursor-pointer">
                 <PlusIcon className="text-white w-6 h-6" />
                 <p className="ml-1">Category</p>
@@ -199,12 +199,12 @@ const Categories = () => {
                   <td className="px-6 py-4">8</td>
                   <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
                     <Link
-                      to="/single-product"
+                      to="/blog/category/create"
                       className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                       <EyeIcon className="h-6 w-6 text-blue-400 " />
                     </Link>
                     <Link
-                      to="/edit-product"
+                      to="/blog/category/create"
                       className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                       <EditIcon />
                     </Link>
@@ -233,4 +233,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default BlogCategories;

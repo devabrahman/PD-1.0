@@ -54,12 +54,12 @@ const tags = [
   }
 ];
 
-const Tags = () => {
+const BlogTags = () => {
   let [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <Layout title="Tags" padding="p-0 sm:px-10 sm:py-8">
+      <Layout title="Blog Tags" padding="p-0 sm:px-10 sm:py-8">
         <Breadcrumbs title="Tags" link="/tags" />
 
         <div className="flex justify-between items-center mt-8">
@@ -225,4 +225,4 @@ const Tags = () => {
   );
 };
 
-export default Tags;
+export default BlogTags;
