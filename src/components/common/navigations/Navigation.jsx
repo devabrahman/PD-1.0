@@ -238,6 +238,13 @@ const LeftNavigation = () => {
                 <ul className="">
                   <li className="py-2 hover:bg-gray-100 pl-[60px]">
                     <Link
+                      to="/customers"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Customers
+                    </Link>
+                  </li>
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
                       to="/customer-profile"
                       className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
                       Customer Profile

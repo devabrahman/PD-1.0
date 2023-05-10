@@ -36,6 +36,7 @@ import ProfileEdit from 'pages/userProfile/ProfileEdit';
 
 // error page
 import Error404 from 'pages/Error404';
+import Customers from 'pages/Customers';
 
 // all routing
 const router = createBrowserRouter([
@@ -118,9 +119,13 @@ const router = createBrowserRouter([
     element: <Chat />
   },
 
-  // profile pages
+  // customers pages
   {
-    path: '/customer-profile',
+    path: '/customers',
+    element: <Customers />
+  },
+  {
+    path: '/customer',
     element: <CustomerProfile />
   },
   {
