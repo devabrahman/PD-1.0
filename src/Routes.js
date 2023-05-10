@@ -40,6 +40,7 @@ import ProfileEdit from 'pages/userProfile/ProfileEdit';
 
 // error page
 import Error404 from 'pages/Error404';
+import CreatePost from 'pages/blog/CreatePost';
 
 // all routing
 const router = createBrowserRouter([
@@ -123,8 +124,8 @@ const router = createBrowserRouter([
     element: <Posts />
   },
   {
-    path: '/order-details',
-    element: <OrderDetails />
+    path: '/create-post',
+    element: <CreatePost />
   },
   // chat page
   {
