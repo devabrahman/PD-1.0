@@ -1,0 +1,50 @@
+import Layout from 'components/common/Layout';
+import Breadcrumbs from 'components/common/Breadcrumbs';
+// import DeletePopup from 'components/common/DeletePopup';
+import Pagination from 'components/common/Pagination';
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import ExportIcon from 'components/SVGIcons/ExportIcon';
+import CustomersTable from 'components/products/CustomersTable';
+import CustomersActions from 'components/common/CustomersActions';
+
+const Customers = () => {
+  return (
+    <>
+      <Layout title="Customers" padding="p-0 sm:px-10 sm:py-8">
+        <Breadcrumbs title="Customers" link="/customers" />
+
+        <div className="flex justify-between items-center mt-8">
+          <CustomersActions />
+
+          <div className="flex items-center">
+            <div className="flex items-center bg-white px-4 rounded-lg shadow-md shadow-blue-50 w-54">
+              <MagnifyingGlassIcon className="h-6 w-6 text-gray-400" />
+              <input
+                type="text"
+                className="pl-2 py-2 w-full ring-0 border-none outline-none focus:outline-none focus:ring-0 bg-transparent"
+                placeholder="Search..."
+              />
+            </div>
+            <div className="flex items-center ml-5 bg-white py-2 px-3 rounded-lg cursor-pointer">
+              <ExportIcon />
+              <span className="ml-2">Export CSV</span>
+            </div>
+          </div>
+        </div>
+
+        <CustomersTable />
+
+        <Pagination />
+      </Layout>
+
+      {/* 
+      <DeletePopup
+        setIsOpen={(event) => setIsDeleteOpen(event)}
+        isOpen={isDeleteOpen}
+        setConfirmDelete={(value) => setConfirmDelete(value)}
+      /> */}
+    </>
+  );
+};
+
+export default Customers;
