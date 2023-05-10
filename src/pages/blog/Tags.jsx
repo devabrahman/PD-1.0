@@ -4,7 +4,7 @@ import Breadcrumbs from 'components/common/Breadcrumbs';
 // import DeletePopup from 'components/common/DeletePopup';
 import Pagination from 'components/common/Pagination';
 import { Menu, Transition } from '@headlessui/react';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
 // icons
 import {
@@ -16,56 +16,51 @@ import {
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import EditIcon from 'components/SVGIcons/Editicon';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
+import CreateTag from 'components/common/CreateTag';
 
 // dummy data
-const categories = [
+const tags = [
   {
     title: 'Apple',
-    description: 'All genuine Apple products listed here',
-    slug: '/apple'
+    description: 'All genuine Apple products listed here'
   },
   {
-    title: '- Laptop',
-    description: 'Powerful apple laptops listed here',
-    slug: '/apple-laptop'
+    title: 'Laptop',
+    description: 'Powerful apple laptops listed here'
   },
   {
-    title: '-- Macbook Air',
-    description: 'Powerful M1 Macbook Air available for sell',
-    slug: '/apple-laptop-macbook'
+    title: 'Macbook Air',
+    description: 'Powerful M1 Macbook Air available for sell'
   },
   {
     title: 'Apple',
-    description: 'All genuine Apple products listed here',
-    slug: '/apple'
+    description: 'All genuine Apple products listed here'
   },
   {
-    title: '- Laptop',
-    description: 'Powerful apple laptops listed here',
-    slug: '/apple-laptop'
+    title: 'Laptop',
+    description: 'Powerful apple laptops listed here'
   },
   {
-    title: '-- Macbook Air',
-    description: 'Powerful M1 Macbook Air available for sell',
-    slug: '/apple-laptop-macbook'
+    title: 'Macbook Air',
+    description: 'Powerful M1 Macbook Air available for sell'
   },
   {
     title: 'Apple',
-    description: 'All genuine Apple products listed here',
-    slug: '/apple'
+    description: 'All genuine Apple products listed here'
   },
   {
-    title: '- Laptop',
-    description: 'Powerful apple laptops listed here',
-    slug: '/apple-laptop'
+    title: 'Laptop',
+    description: 'Powerful apple laptops listed here'
   }
 ];
 
-const Categories = () => {
+const Tags = () => {
+  let [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <Layout title="Categories" padding="p-0 sm:px-10 sm:py-8">
-        <Breadcrumbs title="Categories" link="/categories" />
+      <Layout title="Tags" padding="p-0 sm:px-10 sm:py-8">
+        <Breadcrumbs title="Tags" link="/tags" />
 
         <div className="flex justify-between items-center mt-8">
           <Menu as="div" className="relative inline-block text-left">
@@ -76,6 +71,7 @@ const Categories = () => {
                 aria-hidden="true"
               />
             </Menu.Button>
+
             <Transition
               as={Fragment}
               enter="transition ease-out duration-100"
@@ -120,12 +116,12 @@ const Categories = () => {
               />
             </div>
 
-            <Link to="/category/create">
-              <div className="bg-blue-500 text-white pl-2 pr-3 py-2 rounded-lg flex justify-center items-center cursor-pointer">
-                <PlusIcon className="text-white w-6 h-6" />
-                <p className="ml-1">Category</p>
-              </div>
-            </Link>
+            <button
+              className="bg-blue-500 text-white pl-2 pr-3 py-2 rounded-lg flex justify-center items-center cursor-pointer"
+              onClick={() => setIsOpen(true)}>
+              <PlusIcon className="text-white w-6 h-6" />
+              <p className="ml-1">Tag</p>
+            </button>
           </div>
         </div>
 
@@ -149,17 +145,11 @@ const Categories = () => {
                   </div>
                 </th>
                 <th scope="col" className="px-6 py-4 text-gray-700">
-                  Category
+                  Tag
                 </th>
                 <th scope="col" className="px-6 py-4">
                   <div className="flex items-center">
                     <p className="text-gray-700">Description</p>
-                    <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
-                  </div>
-                </th>
-                <th scope="col" className="px-6 py-4">
-                  <div className="flex items-center">
-                    <p className="text-gray-700">Slug</p>
                     <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
                   </div>
                 </th>
@@ -175,7 +165,7 @@ const Categories = () => {
               </tr>
             </thead>
             <tbody>
-              {categories?.map((category, index) => (
+              {tags?.map((tag, index) => (
                 <tr
                   className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 cursor-pointer"
                   key={index}>
@@ -192,10 +182,9 @@ const Categories = () => {
                   <th
                     scope="row"
                     className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {category?.title}
+                    {tag?.title}
                   </th>
-                  <td className="px-6 py-4">{category?.description}</td>
-                  <td className="px-6 py-4 italic">{category?.slug}</td>
+                  <td className="px-6 py-4">{tag?.description}</td>
                   <td className="px-6 py-4">8</td>
                   <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
                     <Link
@@ -204,14 +193,14 @@ const Categories = () => {
                       <EyeIcon className="h-6 w-6 text-blue-400 " />
                     </Link>
                     <Link
-                      to="/edit-product"
-                      className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                      <EditIcon />
-                    </Link>
-                    <Link
                       to="/single-product"
                       className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                       <DeleteIcon />
+                    </Link>
+                    <Link
+                      to="/edit-product"
+                      className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                      <EditIcon />
                     </Link>
                   </td>
                 </tr>
@@ -223,6 +212,9 @@ const Categories = () => {
         <Pagination />
       </Layout>
 
+      {/* tag create pop up */}
+      <CreateTag isOpen={isOpen} setIsOpen={(value) => setIsOpen(value)} />
+
       {/* 
       <DeletePopup
         setIsOpen={(event) => setIsDeleteOpen(event)}
@@ -233,4 +225,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default Tags;

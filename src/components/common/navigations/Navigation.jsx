@@ -212,6 +212,47 @@ const LeftNavigation = () => {
           )}
         </Disclosure>
 
+        <Disclosure>
+          {({ open }) => (
+            <>
+              <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
+                <div className="flex items-center space-x-3.5">
+                  <img src="/assets/images/icons/write.png" className="h-6 w-6" />
+                  <span>Blog</span>
+                </div>
+                <ChevronUpIcon
+                  className={`${open ? '' : 'rotate-180 transform'} h-5 w-5 text-gray-400`}
+                />
+              </Disclosure.Button>
+              <Disclosure.Panel className="pb-2 text-sm text-gray-500">
+                <ul className="">
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/posts"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Posts
+                    </Link>
+                  </li>
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/create-post"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Create Post
+                    </Link>
+                  </li>
+                  <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <Link
+                      to="/edit-post"
+                      className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                      Edit Post
+                    </Link>
+                  </li>
+                </ul>
+              </Disclosure.Panel>
+            </>
+          )}
+        </Disclosure>
+
         <Link
           to="/chat"
           className="flex items-center w-full justify-between hover:bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
