@@ -1,11 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
-import {
-  Bars3BottomLeftIcon,
-  ChatBubbleLeftEllipsisIcon,
-  ChevronLeftIcon
-} from '@heroicons/react/24/outline';
+import { ChatBubbleLeftEllipsisIcon, ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { FcHome, FcLock } from 'react-icons/fc';
 import { SlBasket } from 'react-icons/sl';
 import { Link, useLocation } from 'react-router-dom';
@@ -29,7 +25,7 @@ const LeftNavigation = () => {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col justify-between pb-6">
+    <div className="w-full h-screen flex flex-col justify-between pb-6">
       <div>
         <div className="flex justify-around items-center pt-6 w-11/12 mx-auto">
           <div className="pt-1">
@@ -337,16 +333,9 @@ const LeftNavigation = () => {
                   <ul className="">
                     <li className="py-2 hover:bg-gray-100 pl-[60px]">
                       <Link
-                        to="/orders"
+                        to="/help"
                         className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
-                        Customer Profile
-                      </Link>
-                    </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
-                      <Link
-                        to="/profile-edit"
-                        className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
-                        Profile Edit
+                        Help and FAQ
                       </Link>
                     </li>
                   </ul>
@@ -391,7 +380,22 @@ const LeftNavigation = () => {
         </div>
       </div>
 
-      {/* <div className="bg-amber-50 h-52 w-[90%] mx-auto rounded-xl block overflow-hidden"></div> */}
+      <div className="bg-gradient-to-br from-[#FBF0DE] to-[#E3E2F6] h-52 w-[90%] mx-auto rounded-xl block overflow-hidden relative grid place-content-center">
+        <div className="relative z-20">
+          <h3 className="text-center text-xl font-medium">Help Center</h3>
+          <p className="text-center text-sm mt-1">
+            Having trouble in Planti. Please contact us for more questions.
+          </p>
+
+          <div className="flex justify-center mt-6">
+            <Link to="/help" className="px-4 py-2 rounded-xl bg-[#FF8465] text-white">
+              Go To Help Center
+            </Link>
+          </div>
+        </div>
+        <span className="bg-[#FEF8F2] h-20 w-20 rounded-full absolute -top-7 -left-7 "></span>
+        <span className="bg-[#ECEDFB] h-32 w-32 rounded-full absolute -bottom-4 -right-4"></span>
+      </div>
     </div>
   );
 };

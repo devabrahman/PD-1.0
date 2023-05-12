@@ -41,6 +41,9 @@ import Customers from 'pages/Customers';
 import CustomerProfile from 'pages/userProfile/CustomerProfile';
 import ProfileEdit from 'pages/userProfile/ProfileEdit';
 
+// help page
+import Help from 'pages/bonus/Help';
+
 // error page
 import Error404 from 'pages/Error404';
 
@@ -155,6 +158,12 @@ const router = createBrowserRouter([
   {
     path: '/profile-edit',
     element: <ProfileEdit />
+  },
+
+  // bonus pages
+  {
+    path: '/help',
+    element: <Help />
   },
 
   // if no route march (fallback)
