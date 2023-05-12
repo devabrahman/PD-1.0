@@ -416,7 +416,7 @@ const LeftNavigation = () => {
           </p>
 
           <div className="flex justify-center mt-6">
-            <Link to="/help" className="px-4 py-2 rounded-xl bg-[#FF8465] text-white">
+            <Link to="/help" className="px-4 py-2 rounded-xl bg-[#FF8465] text-white font-medium">
               Go To Help Center
             </Link>
           </div>
