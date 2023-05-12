@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 // icons
-import { ChevronUpDownIcon, EyeIcon } from '@heroicons/react/24/outline';
+import { ChatBubbleLeftIcon, ChevronUpDownIcon, EyeIcon } from '@heroicons/react/24/outline';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 
 const CustomersTable = () => {
@@ -87,6 +87,11 @@ const CustomersTable = () => {
               <td className="px-6 py-3">5th May, 2023</td>
               <td className="px-6 py-3">8 Products</td>
               <td className="px-6 py-3 text-right flex justify-end items-center space-x-6 ml-5">
+                <Link
+                  to="/chat"
+                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                  <ChatBubbleLeftIcon className="h-6 w-6 text-amber-400 " />
+                </Link>
                 <Link
                   to="/customer"
                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline">

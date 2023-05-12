@@ -41,8 +41,15 @@ import Customers from 'pages/Customers';
 import CustomerProfile from 'pages/userProfile/CustomerProfile';
 import ProfileEdit from 'pages/userProfile/ProfileEdit';
 
+// help page
+import Cards from 'pages/bonus/Cards';
+import ProductCards from 'pages/bonus/ProductCards';
+import Toast from 'pages/bonus/Toast';
+import Help from 'pages/bonus/Help';
+
 // error page
 import Error404 from 'pages/Error404';
+import CallToAction from 'pages/bonus/CallToAction';
 
 // all routing
 const router = createBrowserRouter([
@@ -155,6 +162,28 @@ const router = createBrowserRouter([
   {
     path: '/profile-edit',
     element: <ProfileEdit />
+  },
+
+  // bonus pages
+  {
+    path: '/cards',
+    element: <Cards />
+  },
+  {
+    path: '/product-cards',
+    element: <ProductCards />
+  },
+  {
+    path: '/call-to-action',
+    element: <CallToAction />
+  },
+  {
+    path: '/help',
+    element: <Help />
+  },
+  {
+    path: '/toast',
+    element: <Toast />
   },
 
   // if no route march (fallback)

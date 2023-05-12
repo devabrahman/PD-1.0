@@ -4,11 +4,13 @@ import 'styles/index.css';
 import 'styles/app.scss';
 import reportWebVitals from './reportWebVitals';
 import AppRoutes from './Routes';
+import { Toaster } from 'react-hot-toast';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AppRoutes />
+    <Toaster position="bottom-right" />
   </React.StrictMode>
 );
 
