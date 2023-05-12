@@ -46,6 +46,7 @@ import Help from 'pages/bonus/Help';
 
 // error page
 import Error404 from 'pages/Error404';
+import Toast from 'pages/bonus/Toast';
 
 // all routing
 const router = createBrowserRouter([
@@ -164,6 +165,10 @@ const router = createBrowserRouter([
   {
     path: '/help',
     element: <Help />
+  },
+  {
+    path: '/toast',
+    element: <Toast />
   },
 
   // if no route march (fallback)

@@ -338,6 +338,13 @@ const LeftNavigation = () => {
                         Help and FAQ
                       </Link>
                     </li>
+                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                      <Link
+                        to="/toast"
+                        className="py-2 hover:bg-gray-100 text-gray-600 font-medium text-sm">
+                        Toast
+                      </Link>
+                    </li>
                   </ul>
                 </Disclosure.Panel>
               </>
