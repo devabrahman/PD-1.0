@@ -18,7 +18,7 @@ const DashboardTop = () => {
           <Overview icon={<DollarIcon />} title={'Spend this month'} amount={642.39} />
         </div>
         <div className="col-span-6 sm:col-span-3 h-auto">
-          <Overview icon={<WalletIcon />} title={'Earnings'} amount={350.4} />
+          <Overview icon={<WalletIcon />} title={'Shipment cost'} amount={350.4} />
         </div>
         <div className="col-span-6 sm:col-span-3 h-auto">
           <Overview
