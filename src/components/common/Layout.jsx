@@ -42,11 +42,11 @@ const Layout = ({ title, children, padding = 'px-8 py-8', childrenSpace = 'mt-4'
   if (sidebarPosition === 'left') {
     return (
       <LayoutMainGrid position="left">
-        <section className="dark:bg-[#0E1C2F] dark:text-white w-full h-full block">
+        <section className="dark:bg-lightDark dark:text-white w-full h-full block">
           <LeftNavigation />
         </section>
 
-        <section className={`bg-[#f5f5f5] dark:bg-dark ${padding} overflow-y-scroll`}>
+        <section className={`bg-[#f5f5f5] dark:bg-lightDark ${padding} overflow-y-scroll`}>
           {/* Disable for vendor profile */}
           {pathname === '/vendor-profile' ? (
             <></>

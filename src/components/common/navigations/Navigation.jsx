@@ -42,10 +42,10 @@ const LeftNavigation = () => {
           />
         </div>
 
-        <div className="mx-auto w-full bg-white space-y-2 mt-6">
+        <div className="mx-auto w-full bg-white dark:bg-lightDark space-y-2 mt-6">
           <Link
             to="/"
-            className="flex items-center w-full justify-between bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
+            className="flex items-center w-full justify-between bg-gray-100 dark:bg-dark hover:text-gray-700 hover:dark:text-gray-50 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
             <div className="flex items-center space-x-3.5">
               <FcHome className="h-6 w-6" />
               <span>Dashboard</span>
@@ -408,7 +408,7 @@ const LeftNavigation = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-br from-[#FBF0DE] to-[#E3E2F6] h-52 w-[90%] mx-auto rounded-xl block overflow-hidden relative grid place-content-center">
+      <div className="bg-gradient-to-br dark:bg-dark from-[#FBF0DE] dark:from-lightDark to-[#E3E2F6]  h-52 w-[90%] mx-auto rounded-xl block overflow-hidden relative grid place-content-center">
         <div className="relative z-20">
           <h3 className="text-center text-xl font-medium">Help Center</h3>
           <p className="text-center text-sm mt-1">
