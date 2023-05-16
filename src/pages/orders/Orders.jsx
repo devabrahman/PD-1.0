@@ -36,7 +36,7 @@ const Products = () => {
           </div>
           <div className="flex items-center">
             <div className="flex items-center bg-white dark:bg-dark px-4 rounded-lg shadow-md shadow-blue-50 dark:shadow-gray-800 w-54">
-              <MagnifyingGlassIcon className="h-6 w-6 text-gray-400" />
+              <MagnifyingGlassIcon className="h-6 w-6 text-gray-400 dark:text-gray-100" />
               <input
                 type="text"
                 className="pl-2 py-2 w-full ring-0 border-none outline-none focus:outline-none focus:ring-0 bg-transparent"
