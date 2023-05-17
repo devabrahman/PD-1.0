@@ -6,7 +6,7 @@ const CallToAction = () => {
     <Layout title="Product Cards" padding="p-0 sm:px-10 sm:py-8">
       <Breadcrumbs title="Product Cards" link="/prodcut-cards" />
 
-      <div className="w-full p-4 text-center bg-white border border-gray-200 rounded-lg sm:p-8 dark:bg-gray-800 dark:border-gray-700 mt-20">
+      <div className="w-full p-4 text-center bg-white border border-gray-200 rounded-lg sm:p-8 dark:bg-dark dark:border-gray-700 mt-20">
         <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
           Work fast from anywhere
         </h5>

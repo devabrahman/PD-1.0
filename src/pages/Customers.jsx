@@ -17,7 +17,7 @@ const Customers = () => {
           <CustomersActions />
 
           <div className="flex items-center">
-            <div className="flex items-center bg-white px-4 rounded-lg shadow-md shadow-blue-50 w-54">
+            <div className="flex items-center bg-white dark:bg-dark px-4 rounded-lg shadow-md shadow-blue-50 dark:shadow-gray-700 w-54">
               <MagnifyingGlassIcon className="h-6 w-6 text-gray-400" />
               <input
                 type="text"
@@ -25,7 +25,7 @@ const Customers = () => {
                 placeholder="Search..."
               />
             </div>
-            <div className="flex items-center ml-5 bg-white py-2 px-3 rounded-lg cursor-pointer">
+            <div className="flex items-center ml-5 bg-white dark:bg-dark py-2 px-3 rounded-lg cursor-pointer">
               <ExportIcon />
               <span className="ml-2">Export CSV</span>
             </div>

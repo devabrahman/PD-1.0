@@ -12,8 +12,8 @@ module.exports = {
         primary: '#5798F6',
         pdGrey: '#D6D6D6',
         accent: ' #1C92FF',
-        dark: ' #222327',
-        lightDark: '#131314',
+        dark: '#131314',
+        lightDark: ' #222327',
         darkBorder: 'rgba(185, 185, 185, 0.5)'
       },
       fontFamily: {

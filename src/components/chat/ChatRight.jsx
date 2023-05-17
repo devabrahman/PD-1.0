@@ -10,7 +10,7 @@ import Chats from './Chats';
 const ChatRight = () => {
   return (
     <div className="col-span-9 ">
-      <div className="w-11/12 mx-auto bg-white rounded-xl p-5 relative flex flex-col justify-between">
+      <div className="w-11/12 mx-auto bg-white dark:bg-dark rounded-xl p-5 relative flex flex-col justify-between">
         <div>
           <div className="flex justify-between">
             <div className="flex items-center">
@@ -40,7 +40,7 @@ const ChatRight = () => {
           <textarea
             cols="30"
             rows="1"
-            className="w-11/12 border border-gray-200  rounded-xl mx-4"></textarea>
+            className="w-11/12 border border-gray-200  dark:bg-dark rounded-xl mx-4"></textarea>
           <button className="px-4 py-2 bg-blue-500 text-white rounded-xl">Send</button>
         </div>
       </div>

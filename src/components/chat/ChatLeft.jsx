@@ -1,7 +1,7 @@
 const ChatLeft = () => {
   return (
     <div className="col-span-3 space-y-4">
-      <div className="flex items-center bg-white rounded-2xl pl-3 py-2 border border-amber-400 hover:border-amber-400 cursor-pointer relative">
+      <div className="flex items-center bg-white dark:bg-dark rounded-2xl pl-3 py-2 border border-amber-400 hover:border-amber-400 cursor-pointer relative">
         <img
           src="/assets/images/chat-users/File-1.png"
           className="h-14 w-14 object-cover rounded-xl"
@@ -16,7 +16,7 @@ const ChatLeft = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center bg-white rounded-2xl pl-3 py-2 border border-transparent hover:border-amber-400 cursor-pointer relative">
+      <div className="flex items-center bg-white dark:bg-dark rounded-2xl pl-3 py-2 border border-transparent hover:border-amber-400 cursor-pointer relative">
         <img
           src="/assets/images/chat-users/File-2.jpg"
           className="h-14 w-14 object-cover rounded-xl"
@@ -28,7 +28,7 @@ const ChatLeft = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center bg-white rounded-2xl pl-3 py-2 border border-transparent hover:border-amber-400 cursor-pointer relative">
+      <div className="flex items-center bg-white dark:bg-dark rounded-2xl pl-3 py-2 border border-transparent hover:border-amber-400 cursor-pointer relative">
         <img
           src="/assets/images/chat-users/File-3.jpg"
           className="h-14 w-14 object-cover rounded-xl"
@@ -40,7 +40,7 @@ const ChatLeft = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center bg-white rounded-2xl pl-3 py-2 border border-transparent hover:border-amber-400 cursor-pointer relative">
+      <div className="flex items-center bg-white dark:bg-dark rounded-2xl pl-3 py-2 border border-transparent hover:border-amber-400 cursor-pointer relative">
         <img
           src="/assets/images/chat-users/File-4.jpg"
           className="h-14 w-14 object-cover rounded-xl"
@@ -55,7 +55,7 @@ const ChatLeft = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center bg-white rounded-2xl pl-3 py-2 border border-transparent hover:border-amber-400 cursor-pointer relative">
+      <div className="flex items-center bg-white dark:bg-dark rounded-2xl pl-3 py-2 border border-transparent hover:border-amber-400 cursor-pointer relative">
         <img
           src="/assets/images/chat-users/File-5.jpg"
           className="h-14 w-14 object-cover rounded-xl"
@@ -67,7 +67,7 @@ const ChatLeft = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center bg-white rounded-2xl pl-3 py-2 border border-transparent hover:border-amber-400 cursor-pointer relative">
+      <div className="flex items-center bg-white dark:bg-dark rounded-2xl pl-3 py-2 border border-transparent hover:border-amber-400 cursor-pointer relative">
         <img
           src="/assets/images/chat-users/File-6.jpg"
           className="h-14 w-14 object-cover rounded-xl"
@@ -79,7 +79,7 @@ const ChatLeft = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center bg-white rounded-2xl pl-3 py-2 border border-transparent hover:border-amber-400 cursor-pointer relative">
+      <div className="flex items-center bg-white dark:bg-dark rounded-2xl pl-3 py-2 border border-transparent hover:border-amber-400 cursor-pointer relative">
         <img
           src="/assets/images/chat-users/File-7.jpg"
           className="h-14 w-14 object-cover rounded-xl"

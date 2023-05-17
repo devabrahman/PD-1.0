@@ -7,7 +7,7 @@ const Cards = () => {
       <Breadcrumbs title="Cards" link="/cards" />
 
       <div className="grid grid-cols-3 gap-10 mt-10">
-        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-dark dark:border-gray-700">
           <a href="#">
             <img
               className="h-52 w-full object-cover"
@@ -43,7 +43,7 @@ const Cards = () => {
             </a>
           </div>
         </div>
-        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-dark dark:border-gray-700">
           <a href="#">
             <img
               className="h-52 w-full object-cover"
@@ -79,7 +79,7 @@ const Cards = () => {
             </a>
           </div>
         </div>
-        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-dark dark:border-gray-700">
           <a href="#">
             <img
               className="h-52 w-full object-cover"
@@ -115,7 +115,7 @@ const Cards = () => {
             </a>
           </div>
         </div>
-        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-dark dark:border-gray-700">
           <a href="#">
             <img
               className="h-52 w-full object-cover"
@@ -151,7 +151,7 @@ const Cards = () => {
             </a>
           </div>
         </div>
-        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-dark dark:border-gray-700">
           <a href="#">
             <img
               className="h-52 w-full object-cover"
@@ -187,7 +187,7 @@ const Cards = () => {
             </a>
           </div>
         </div>
-        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-dark dark:border-gray-700">
           <a href="#">
             <img
               className="h-52 w-full object-cover"
@@ -223,7 +223,7 @@ const Cards = () => {
             </a>
           </div>
         </div>
-        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-dark dark:border-gray-700">
           <a href="#">
             <img
               className="h-52 w-full object-cover"
@@ -259,7 +259,7 @@ const Cards = () => {
             </a>
           </div>
         </div>
-        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-dark dark:border-gray-700">
           <a href="#">
             <img
               className="h-52 w-full object-cover"
@@ -295,7 +295,7 @@ const Cards = () => {
             </a>
           </div>
         </div>
-        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+        <div className="max-w-sm bg-white border border-gray-200 rounded-2xl overflow-hidden dark:bg-dark dark:border-gray-700">
           <a href="#">
             <img
               className="h-52 w-full object-cover"
