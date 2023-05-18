@@ -3,11 +3,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // importing auth pages
 import Home from './pages/Home';
-import SignUp from 'pages/auth/SignUp';
-import Login from 'pages/auth/Login';
-import ForgotPassword from 'pages/auth/ForgotPassword';
-import ChangePassword from 'pages/auth/ChangePassword';
-import ResetMailSent from 'pages/auth/ResetMailSent';
+// import SignUp from 'pages/auth/SignUp';
+// import Login from 'pages/auth/Login';
+// import ForgotPassword from 'pages/auth/ForgotPassword';
+// import ChangePassword from 'pages/auth/ChangePassword';
+// import ResetMailSent from 'pages/auth/ResetMailSent';
 
 // importing products pages
 import Products from 'pages/product/Products';
@@ -58,26 +58,26 @@ const router = createBrowserRouter([
     path: '/',
     element: <Home />
   },
-  {
-    path: '/create-account',
-    element: <SignUp />
-  },
-  {
-    path: '/login',
-    element: <Login />
-  },
-  {
-    path: '/forgot-password',
-    element: <ForgotPassword />
-  },
-  {
-    path: '/reset-mail-sent',
-    element: <ResetMailSent />
-  },
-  {
-    path: '/change-password',
-    element: <ChangePassword />
-  },
+  // {
+  //   path: '/create-account',
+  //   element: <SignUp />
+  // },
+  // {
+  //   path: '/login',
+  //   element: <Login />
+  // },
+  // {
+  //   path: '/forgot-password',
+  //   element: <ForgotPassword />
+  // },
+  // {
+  //   path: '/reset-mail-sent',
+  //   element: <ResetMailSent />
+  // },
+  // {
+  //   path: '/change-password',
+  //   element: <ChangePassword />
+  // },
 
   // product CRUD pages
   {

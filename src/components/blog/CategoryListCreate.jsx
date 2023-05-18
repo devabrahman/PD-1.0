@@ -3,9 +3,9 @@ import { Fragment } from 'react';
 
 const CategoryListCreate = () => {
   return (
-    <div className="rounded-xl input-accent-box-shadow w-full bg-white py-3">
+    <div className="rounded-xl input-accent-box-shadow w-full bg-white dark:bg-dark py-3">
       <Tab.Group>
-        <Tab.List className="flex justify-between rounded-full px-2.5 py-1.5 bg-blue-50 mx-4 mb-4">
+        <Tab.List className="flex justify-between rounded-full px-2.5 py-1.5 bg-blue-50 dark:bg-lightDark mx-4 mb-4">
           <Tab as={Fragment}>
             {({ selected }) => (
               <button
