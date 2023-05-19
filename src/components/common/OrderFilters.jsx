@@ -10,8 +10,8 @@ const Filters = () => {
 
   return (
     <Menu as="div" className="relative z-20 inline-block text-left">
-      <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white hover px-2.5 py-1.5 text-sm focus:outline-none focus-visible:ring-0 transform transition-all duration-300 hover:scale-95 hover:border hover:border-gray-200">
-        <FunnelIcon className="h-6 w-6 text-gray-400" aria-hidden="true" />
+      <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white dark:bg-dark hover px-2.5 py-1.5 text-sm focus:outline-none focus-visible:ring-0 transform transition-all duration-300 hover:scale-95 hover:border hover:border-gray-200">
+        <FunnelIcon className="h-6 w-6 text-gray-400 dark:text-gray-100" aria-hidden="true" />
         {/* <FiltersIcon /> */}
       </Menu.Button>
       <MenuTransition as={Fragment}>

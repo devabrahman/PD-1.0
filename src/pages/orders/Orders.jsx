@@ -19,31 +19,31 @@ const Products = () => {
             <Actions />
             <OrderFilters />
 
-            <div className="flex items-center bg-white px-3 py-2 rounded-lg">
-              <p className="text-sm text-gray-500 font-medium">$ 1250</p>
+            <div className="flex items-center bg-white dark:bg-dark  px-3 py-2 rounded-lg">
+              <p className="text-sm text-gray-500 dark:text-gray-100 font-medium">$ 1250</p>
               <XMarkIcon className="h-4 w-4 ml-2 hover:text-red-400 cursor-pointer" />
             </div>
 
-            <div className="flex items-center bg-white px-3 py-2 rounded-lg ml-4">
-              <p className="text-sm text-gray-500 font-medium">Paid</p>
+            <div className="flex items-center bg-white dark:bg-dark px-3 py-2 rounded-lg ml-4">
+              <p className="text-sm text-gray-500 dark:text-gray-100 font-medium">Paid</p>
               <XMarkIcon className="h-4 w-4 ml-2 hover:text-red-400 cursor-pointer" />
             </div>
 
-            <div className="flex items-center bg-white px-3 py-2 rounded-lg ml-4">
-              <p className="text-sm text-gray-500 font-medium">4+ Star</p>
+            <div className="flex items-center bg-white dark:bg-dark px-3 py-2 rounded-lg ml-4">
+              <p className="text-sm text-gray-500 dark:text-gray-100 font-medium">4+ Star</p>
               <XMarkIcon className="h-4 w-4 ml-2 hover:text-red-400 cursor-pointer" />
             </div>
           </div>
           <div className="flex items-center">
-            <div className="flex items-center bg-white px-4 rounded-lg shadow-md shadow-blue-50 w-54">
-              <MagnifyingGlassIcon className="h-6 w-6 text-gray-400" />
+            <div className="flex items-center bg-white dark:bg-dark px-4 rounded-lg shadow-md shadow-blue-50 dark:shadow-gray-800 w-54">
+              <MagnifyingGlassIcon className="h-6 w-6 text-gray-400 dark:text-gray-100" />
               <input
                 type="text"
                 className="pl-2 py-2 w-full ring-0 border-none outline-none focus:outline-none focus:ring-0 bg-transparent"
                 placeholder="Search..."
               />
             </div>
-            <div className="flex items-center ml-5 bg-white py-2 px-3 rounded-lg cursor-pointer">
+            <div className="flex items-center ml-5 bg-white dark:bg-dark py-2 px-3 rounded-lg cursor-pointer">
               <ExportIcon />
               <span className="ml-2">Export CSV</span>
             </div>

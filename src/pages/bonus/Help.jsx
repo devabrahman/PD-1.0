@@ -16,13 +16,13 @@ const Help = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white px-4 py-4 text-left text-sm font-medium focus:outline-none focus-visible:ring0">
+                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white dark:bg-dark dark:bg-dark px-4 py-4 text-left text-sm font-medium focus:outline-none focus-visible:ring0">
                   <span>What is your refund policy?</span>
                   <ChevronUpIcon
                     className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-purple-500`}
                   />
                 </Disclosure.Button>
-                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm bg-white text-gray-600 mt-1">
+                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm bg-white dark:bg-dark text-gray-600 dark:text-gray-100 mt-1">
                   If you&apos;re unhappy with your purchase for any reason, email us within 90 days
                   and we&apos;ll refund you in full, no questions asked.
                 </Disclosure.Panel>
@@ -32,13 +32,13 @@ const Help = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white px-4 py-4 text-left text-sm font-medium focus:outline-none focus-visible:ring0">
+                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white dark:bg-dark px-4 py-4 text-left text-sm font-medium focus:outline-none focus-visible:ring0">
                   <span>Lorem ipsum dolor sit amet consectetur adipisicing elit excepturi?</span>
                   <ChevronUpIcon
                     className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-purple-500`}
                   />
                 </Disclosure.Button>
-                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm bg-white text-gray-600 mt-1">
+                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm bg-white dark:bg-dark text-gray-600 dark:text-gray-100 mt-1">
                   If you&apos;re unhappy with your purchase for any reason, email us within 90 days
                   and we&apos;ll refund you in full, no questions asked.
                 </Disclosure.Panel>
@@ -48,13 +48,13 @@ const Help = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white px-4 py-4 text-left text-sm font-medium focus:outline-none focus-visible:ring0">
+                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white dark:bg-dark px-4 py-4 text-left text-sm font-medium focus:outline-none focus-visible:ring0">
                   <span>Lorem ipsum dolor sit amet consectetur adipisicing?</span>
                   <ChevronUpIcon
                     className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-purple-500`}
                   />
                 </Disclosure.Button>
-                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm bg-white text-gray-600 mt-1">
+                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm bg-white dark:bg-dark text-gray-600 dark:text-gray-100 mt-1">
                   If you&apos;re unhappy with your purchase for any reason, email us within 90 days
                   and we&apos;ll refund you in full, no questions asked.
                 </Disclosure.Panel>
@@ -64,13 +64,13 @@ const Help = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white px-4 py-4 text-left text-sm font-medium focus:outline-none focus-visible:ring0">
+                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white dark:bg-dark px-4 py-4 text-left text-sm font-medium focus:outline-none focus-visible:ring0">
                   <span>What is your refund policy?</span>
                   <ChevronUpIcon
                     className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-purple-500`}
                   />
                 </Disclosure.Button>
-                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm bg-white text-gray-600 mt-1">
+                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm bg-white dark:bg-dark text-gray-600 dark:text-gray-100 mt-1">
                   If you&apos;re unhappy with your purchase for any reason, email us within 90 days
                   and we&apos;ll refund you in full, no questions asked.
                 </Disclosure.Panel>
@@ -80,7 +80,7 @@ const Help = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white px-4 py-4 text-left text-sm font-medium focus:outline-none focus-visible:ring0">
+                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white dark:bg-dark px-4 py-4 text-left text-sm font-medium focus:outline-none focus-visible:ring0">
                   <span>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit accusamus at iusto?
                   </span>
@@ -88,7 +88,7 @@ const Help = () => {
                     className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-purple-500`}
                   />
                 </Disclosure.Button>
-                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm bg-white text-gray-600 mt-1">
+                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm bg-white dark:bg-dark text-gray-600 dark:text-gray-100 mt-1">
                   If you&apos;re unhappy with your purchase for any reason, email us within 90 days
                   and we&apos;ll refund you in full, no questions asked.
                 </Disclosure.Panel>
@@ -98,7 +98,7 @@ const Help = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white px-4 py-4 text-left text-sm font-medium focus:outline-none focus-visible:ring0">
+                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-white dark:bg-dark px-4 py-4 text-left text-sm font-medium focus:outline-none focus-visible:ring0">
                   <span>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit praesentium at vero?
                   </span>
@@ -106,7 +106,7 @@ const Help = () => {
                     className={`${open ? 'rotate-180 transform' : ''} h-5 w-5 text-purple-500`}
                   />
                 </Disclosure.Button>
-                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm bg-white text-gray-600 mt-1">
+                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm bg-white dark:bg-dark text-gray-600 dark:text-gray-100 mt-1">
                   If you&apos;re unhappy with your purchase for any reason, email us within 90 days
                   and we&apos;ll refund you in full, no questions asked.
                 </Disclosure.Panel>

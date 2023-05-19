@@ -10,7 +10,7 @@ const ProfileEdit = () => {
     <Layout title="">
       <section>
         <div className="w-[492px] mx-auto mb-20">
-          <h3 className="text-xl font-medium text-[#302323]">Edit profile</h3>
+          <h3 className="text-xl font-medium text-[#302323] dark:text-white">Edit profile</h3>
           <div className="w-[130px] h-[130px] mx-auto rounded-full shadow-lg shadow-[#87ceeb40] p-1 relative mb-10">
             <img className="w-full" src={profile} alt="Profile" />
             <div className="w-5 h-5 absolute right-2 bottom-3">
@@ -21,12 +21,12 @@ const ProfileEdit = () => {
             <div className="flex items-center gap-7 mb-5">
               <div>
                 <label
-                  className="text-sm text-[#2B3674] font-medium mb-3 block"
+                  className="text-sm text-[#2B3674] dark:text-white font-medium mb-3 block"
                   htmlFor="firstName">
                   First Name
                 </label>
                 <input
-                  className="w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                  className="w-full border dark:bg-dark border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                   type="text"
                   name="firstName"
                   id="firstName"
@@ -34,11 +34,13 @@ const ProfileEdit = () => {
                 />
               </div>
               <div>
-                <label className="text-sm text-[#2B3674] font-medium mb-3 block" htmlFor="lastName">
+                <label
+                  className="text-sm text-[#2B3674] dark:text-white font-medium mb-3 block"
+                  htmlFor="lastName">
                   Lastst Name
                 </label>
                 <input
-                  className="w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                  className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                   type="text"
                   name="lastName"
                   id="lastName"
@@ -47,11 +49,13 @@ const ProfileEdit = () => {
               </div>
             </div>
             <div className="mb-5 w-full">
-              <label className="text-sm text-[#2B3674] font-medium mb-3 block" htmlFor="email">
+              <label
+                className="text-sm text-[#2B3674] dark:text-white font-medium mb-3 block"
+                htmlFor="email">
                 Email<sup className="text-[#5798F7]">*</sup>
               </label>
               <input
-                className="w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                 type="email"
                 name="email"
                 id="email"
@@ -60,12 +64,12 @@ const ProfileEdit = () => {
             </div>
             <div className="mb-5 w-full">
               <label
-                className="text-sm text-[#2B3674] font-medium mb-3 block"
+                className="text-sm text-[#2B3674] dark:text-white font-medium mb-3 block"
                 htmlFor="phoneNumber">
                 Contact Number
               </label>
               <input
-                className="w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                 type="text"
                 name="phoneNumber"
                 id="phoneNumber"
@@ -74,11 +78,13 @@ const ProfileEdit = () => {
             </div>
             <div className="flex items-center gap-7 mb-5">
               <div>
-                <label className="text-sm text-[#2B3674] font-medium mb-3 block" htmlFor="city">
+                <label
+                  className="text-sm text-[#2B3674] dark:text-white font-medium mb-3 block"
+                  htmlFor="city">
                   City
                 </label>
                 <input
-                  className="w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                  className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                   type="text"
                   name="city"
                   id="city"
@@ -86,11 +92,13 @@ const ProfileEdit = () => {
                 />
               </div>
               <div>
-                <label className="text-sm text-[#2B3674] font-medium mb-3 block" htmlFor="state">
+                <label
+                  className="text-sm text-[#2B3674] dark:text-white font-medium mb-3 block"
+                  htmlFor="state">
                   State
                 </label>
                 <input
-                  className="w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                  className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                   type="text"
                   name="state"
                   id="state"
@@ -100,11 +108,13 @@ const ProfileEdit = () => {
             </div>
             <div className="flex items-center gap-7 mb-5">
               <div>
-                <label className="text-sm text-[#2B3674] font-medium mb-3 block" htmlFor="zipCode">
+                <label
+                  className="text-sm text-[#2B3674] dark:text-white font-medium mb-3 block"
+                  htmlFor="zipCode">
                   Zip code
                 </label>
                 <input
-                  className="w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                  className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                   type="text"
                   name="zipCode"
                   id="zipCode"
@@ -112,11 +122,13 @@ const ProfileEdit = () => {
                 />
               </div>
               <div>
-                <label className="text-sm text-[#2B3674] font-medium mb-3 block" htmlFor="country">
+                <label
+                  className="text-sm text-[#2B3674] dark:text-white font-medium mb-3 block"
+                  htmlFor="country">
                   Country
                 </label>
                 <input
-                  className="w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                  className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                   type="text"
                   name="country"
                   id="country"
@@ -125,11 +137,13 @@ const ProfileEdit = () => {
               </div>
             </div>
             <div className="mb-8 w-full relative">
-              <label className="text-sm text-[#2B3674] font-medium mb-3 block" htmlFor="password">
+              <label
+                className="text-sm text-[#2B3674] dark:text-white font-medium mb-3 block"
+                htmlFor="password">
                 Password
               </label>
               <input
-                className="w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                 type={showPassword ? 'text' : 'password'}
                 name="password"
                 id="password"
@@ -139,9 +153,9 @@ const ProfileEdit = () => {
                 onClick={() => setShowPassword(showPassword ? false : true)}
                 className="absolute right-5 top-[43%] translate-y-1/2">
                 {showPassword ? (
-                  <EyeIcon className="w-6 text-[#A3AED0]" />
+                  <EyeIcon className="w-6 text-[#A3AED0] dark:text-white" />
                 ) : (
-                  <EyeSlashIcon className="w-6 text-[#A3AED0]" />
+                  <EyeSlashIcon className="w-6 text-[#A3AED0] dark:text-white" />
                 )}
               </div>
             </div>
