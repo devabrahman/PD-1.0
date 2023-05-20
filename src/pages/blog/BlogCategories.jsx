@@ -69,7 +69,7 @@ const BlogCategories = () => {
 
         <div className="flex justify-between items-center mt-8">
           <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white hover pl-4 pr-2 py-2 text-sm focus:outline-none focus-visible:ring-0">
+            <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white dark:bg-dark hover pl-4 pr-2 py-2 text-sm focus:outline-none focus-visible:ring-0">
               Actions
               <ChevronDownIcon
                 className="ml-3 h-5 w-5 text-violet-200 hover:text-violet-100"
@@ -84,14 +84,14 @@ const BlogCategories = () => {
               leave="transition ease-in duration-75"
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95">
-              <Menu.Items className="absolute left-0 mt-2 z-10 w-56 origin-top-left rounded-md overflow-hidden bg-white shadow-lg ring-0 focus:outline-none">
+              <Menu.Items className="absolute left-0 mt-2 z-10 w-56 origin-top-left rounded-md overflow-hidden bg-white dark:bg-dark shadow-lg ring-0 focus:outline-none">
                 <Menu.Item>
                   <button className="group flex w-full items-center px-2 py-2 text-sm hover:bg-blue-400 hover:text-white">
                     Archive
                   </button>
                 </Menu.Item>
 
-                <span className="border-b h-[1px] bg-gray-400 block"></span>
+                <span className="border-b h-[1px] bg-gray-400 dark:bg-lightDark block"></span>
 
                 <Menu.Item>
                   <button className="group flex w-full items-center px-2 py-2 text-sm hover:bg-blue-400 hover:text-white">
@@ -99,7 +99,7 @@ const BlogCategories = () => {
                   </button>
                 </Menu.Item>
 
-                <span className="border-b h-[1px] bg-gray-400 block"></span>
+                <span className="border-b h-[1px] bg-gray-400 block dark:bg-lightDark"></span>
 
                 <Menu.Item>
                   <button className="group flex w-full items-center px-2 py-2 text-sm hover:bg-blue-400 hover:text-white">
@@ -111,7 +111,7 @@ const BlogCategories = () => {
           </Menu>
 
           <div className="flex items-center">
-            <div className="flex items-center bg-white px-4 rounded-lg mr-4 shadow-md shadow-blue-50 w-54">
+            <div className="flex items-center bg-white dark:bg-dark px-4 rounded-lg mr-4 shadow-md shadow-blue-50 dark:shadow-gray-900 w-54">
               <MagnifyingGlassIcon className="h-6 w-6 text-gray-400" />
               <input
                 type="text"
@@ -129,9 +129,9 @@ const BlogCategories = () => {
           </div>
         </div>
 
-        <div className="relative overflow-x-auto shadow-md shadow-blue-50 sm:rounded-lg mt-6">
+        <div className="relative overflow-x-auto shadow-md shadow-blue-50 dark:shadow-gray-900 sm:rounded-lg mt-6">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-gray-700 uppercase bg-white dark:bg-gray-700 dark:text-gray-400 border-b">
+            <thead className="text-xs text-gray-700 uppercase bg-white dark:bg-dark dark:text-white border-b">
               <tr>
                 <th scope="col" className="p-4">
                   <div className="flex items-center">
@@ -148,25 +148,25 @@ const BlogCategories = () => {
                     </label>
                   </div>
                 </th>
-                <th scope="col" className="px-6 py-4 text-gray-700">
+                <th scope="col" className="px-6 py-4 text-gray-700 dark:text-blue-50">
                   Category
                 </th>
                 <th scope="col" className="px-6 py-4">
                   <div className="flex items-center">
-                    <p className="text-gray-700">Description</p>
-                    <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+                    <p className="text-gray-700 dark:text-blue-50">Description</p>
+                    <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white  dark:bg-lightDark  ml-1.5 rounded-sm cursor-pointer" />
                   </div>
                 </th>
                 <th scope="col" className="px-6 py-4">
                   <div className="flex items-center">
-                    <p className="text-gray-700">Slug</p>
-                    <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+                    <p className="text-gray-700 dark:text-blue-50">Slug</p>
+                    <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white  dark:bg-lightDark ml-1.5 rounded-sm cursor-pointer" />
                   </div>
                 </th>
                 <th scope="col" className="px-6 py-4">
                   <div className="flex items-center">
-                    <p className="text-gray-700">Products</p>
-                    <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+                    <p className="text-gray-700 dark:text-blue-50">Products</p>
+                    <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white  dark:bg-lightDark  ml-1.5 rounded-sm cursor-pointer" />
                   </div>
                 </th>
                 <th scope="col" className="px-6 py-4">
@@ -177,7 +177,7 @@ const BlogCategories = () => {
             <tbody>
               {categories?.map((category, index) => (
                 <tr
-                  className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 cursor-pointer"
+                  className="bg-white  border-b dark:bg-dark dark:border-gray-800 hover:bg-gray-50 cursor-pointer"
                   key={index}>
                   <td className="w-4 p-4">
                     <div className="flex items-center">
@@ -194,18 +194,18 @@ const BlogCategories = () => {
                     className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {category?.title}
                   </th>
-                  <td className="px-6 py-4">{category?.description}</td>
-                  <td className="px-6 py-4 italic">{category?.slug}</td>
-                  <td className="px-6 py-4">8</td>
+                  <td className="px-6 py-4 dark:text-blue-50">{category?.description}</td>
+                  <td className="px-6 py-4 italic dark:text-blue-50">{category?.slug}</td>
+                  <td className="px-6 py-4 dark:text-blue-50">8</td>
                   <td className="px-6 py-4 text-right flex justify-end items-center space-x-4">
                     <Link
                       to="/blog/category/create"
-                      className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                      className="font-medium text-blue-600  dark:text-blue-50 hover:underline">
                       <EyeIcon className="h-6 w-6 text-blue-400 " />
                     </Link>
                     <Link
                       to="/blog/category/create"
-                      className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                      className="font-medium text-blue-600 dark:text-blue-50 hover:underline">
                       <EditIcon />
                     </Link>
                     <Link
