@@ -12,7 +12,7 @@ const OrderDetails = () => {
     <Layout title="Orders">
       <Breadcrumbs title="Orders" link="/order-details" />
 
-      <section className="py-10 bg-white mt-10 rounded-xl px-10 w-full mx-auto">
+      <section className="py-10 bg-white dark:bg-dark mt-10 rounded-xl px-10 w-full mx-auto">
         <div className="flex justify-between">
           <div className="flex items-center gap-10">
             <div className="w-52">

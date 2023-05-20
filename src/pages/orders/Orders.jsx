@@ -19,7 +19,7 @@ const Products = () => {
             <Actions />
             <OrderFilters />
 
-            <div className="flex items-center bg-white dark:bg-dark  px-3 py-2 rounded-lg">
+            <div className="flex items-center bg-white dark:bg-dark px-3 py-2 rounded-lg">
               <p className="text-sm text-gray-500 dark:text-gray-100 font-medium">$ 1250</p>
               <XMarkIcon className="h-4 w-4 ml-2 hover:text-red-400 cursor-pointer" />
             </div>

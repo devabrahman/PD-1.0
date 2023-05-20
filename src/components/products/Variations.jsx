@@ -14,7 +14,7 @@ const NewVariation = () => {
   const [enabled, setEnabled] = useState(true);
 
   return (
-    <div className="my-5 bg-white rounded-xl">
+    <div className="my-5 bg-white dark:bg-dark rounded-xl">
       <div className="flex justify-between items-center px-4 py-2">
         <div className="flex items-center gap-4">
           <FcTodoList className="h-6 w-6" />

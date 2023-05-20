@@ -10,9 +10,9 @@ const ProductTable = () => {
   const myArray = Array(8).fill(0);
 
   return (
-    <div className="relative overflow-x-auto shadow-md shadow-blue-50 sm:rounded-lg mt-4">
-      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-white dark:bg-gray-700 dark:text-gray-400 border-b">
+    <div className="relative overflow-x-auto shadow-md shadow-blue-50 dark:shadow-gray-900 sm:rounded-lg mt-4">
+      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-50">
+        <thead className="text-xs text-gray-700 uppercase bg-white dark:bg-dark dark:text-gray-50 border-b">
           <tr>
             <th scope="col" className="p-4">
               <div className="flex items-center">
@@ -20,7 +20,7 @@ const ProductTable = () => {
                   id="default-checkbox"
                   type="checkbox"
                   value=""
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-dark dark:border-gray-600"
                 />
                 <label
                   htmlFor="default-checkbox"
@@ -38,19 +38,19 @@ const ProductTable = () => {
             <th scope="col" className="px-6 py-4">
               <div className="flex items-center">
                 <p className="text-blue-400 font-semibold">Price</p>
-                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-lightDark dark:hover:bg-dark hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
               </div>
             </th>
             <th scope="col" className="px-6 py-4">
               <div className="flex items-center">
                 <p className="text-blue-400 font-semibold">SKU</p>
-                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-lightDark dark:hover:bg-dark hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
               </div>
             </th>
             <th scope="col" className="px-6 py-4">
               <div className="flex items-center">
                 <p className="text-blue-400 font-semibold">Status</p>
-                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-lightDark dark:hover:bg-dark hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
               </div>
             </th>
             <th scope="col" className="px-6 py-4">
@@ -61,14 +61,14 @@ const ProductTable = () => {
         <tbody>
           {myArray?.map((_, index) => (
             <tr
-              className="bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50"
+              className="bg-white border-b border-gray-200 dark:bg-dark dark:border-gray-700 hover:bg-gray-50"
               key={index}>
               <td className="w-4 p-4">
                 <div className="flex items-center">
                   <input
                     id="checkbox-table-search-1"
                     type="checkbox"
-                    className="w-4 h-4 text-blue-500 bg-gray-100 border-gray-300 rounded focus:ring-blue-400 dark:focus:ring-blue-500 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    className="w-4 h-4 text-blue-500 bg-gray-100 border-gray-300 rounded focus:ring-blue-400 dark:focus:ring-blue-500 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-dark dark:border-gray-600"
                   />
                   <label className="sr-only">checkbox</label>
                 </div>

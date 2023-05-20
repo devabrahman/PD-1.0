@@ -7,7 +7,7 @@ const TakeAnAction = () => {
   const [publishDate, setPublishDate] = useState(new Date());
 
   return (
-    <div className="w-full rounded-xl shadow-lg shadow-gray-100 mt-5 px-5 py-3 space-y-5 bg-white dark:bg-lightDark">
+    <div className="w-full rounded-xl shadow-lg shadow-gray-100 dark:shadow-gray-900 mt-5 px-5 py-3 space-y-5 bg-white dark:bg-dark">
       <p className="text-[#424141] dark:text-white font-medium text-base block">Take an action</p>
 
       <div className="flex justify-between items-center w-full space-x-4 text-sm">
@@ -16,7 +16,7 @@ const TakeAnAction = () => {
           <p>Status - </p>
         </div>
 
-        <select className="bg-blue-50 outline-none selected:text-bold space-y-2 border border-gray-200 rounded-lg pl-2.5 py-1 ml-2 text-sm cursor-pointer">
+        <select className="bg-blue-50 dark:bg-lightDark outline-none selected:text-bold space-y-2 border border-gray-200  rounded-lg pl-2.5 py-1 ml-2 text-sm cursor-pointer">
           <option value="Draft">Draft</option>
           <option value="Publish">Publish</option>
         </select>
@@ -29,7 +29,7 @@ const TakeAnAction = () => {
           <DatePicker
             selected={publishDate}
             onChange={(date) => setPublishDate(date)}
-            className="w-full border border-gray-300 hover:border-blue-400 cursor-pointer rounded-xl py-1"
+            className="w-full border border-gray-300 dark:bg-lightDark hover:border-blue-400 cursor-pointer rounded-xl py-1"
             minDate={new Date()}
             placeholderText="No date..."
           />

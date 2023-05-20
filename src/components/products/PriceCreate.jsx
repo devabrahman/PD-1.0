@@ -13,7 +13,7 @@ const PriceCreate = () => {
   ]);
 
   return (
-    <div className="rounded-xl mt-5 input-accent-box-shadow w-full flex  gap-7 px-[15px] pt-3 pb-[18px] bg-white">
+    <div className="rounded-xl mt-5 input-accent-box-shadow w-full flex  gap-7 px-[15px] pt-3 pb-[18px] bg-white dark:bg-dark">
       <div className="w-full ">
         <label className="block font-medium text-gray-600" htmlFor="normalPrice">
           Regular - $

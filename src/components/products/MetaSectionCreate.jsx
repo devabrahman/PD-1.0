@@ -4,7 +4,7 @@ import ReactQuill from 'react-quill';
 
 const MetaSection = () => {
   return (
-    <div className="mt-16 mb-5 bg-white rounded-lg p-5">
+    <div className="mt-16 mb-5 bg-white dark:bg-dark rounded-lg p-5">
       <div className="flex gap-2">
         <img src={SearchEngineIcon} alt="Option icon" className="h-6 w-5" />
         <h4 className="font-medium">Search engine listing</h4>

@@ -53,7 +53,7 @@ const NewProducts = () => {
                     type="text"
                     name=""
                     id=""
-                    className="pl-3 border border-gray-200 dark:border-darkBorder dark:bg-lightDark py-1.5 rounded-lg pr-1.5 w-full mt-2"
+                    className="pl-3 border border-gray-200 dark:border-darkBorder dark:bg-dark py-1.5 rounded-lg pr-1.5 w-full mt-2"
                   />
                 </div>
 
@@ -63,9 +63,9 @@ const NewProducts = () => {
                   </label>
 
                   <input
-                    type="number"
+                    type="text"
                     id="quantity"
-                    className="border pl-3 border-gray-200 bg-white dark:bg-lightDark py-1.5 rounded-lg w-full pr-1.5 mt-2"
+                    className="border pl-3 border-gray-200 bg-white dark:bg-dark py-1.5 rounded-lg w-full pr-1.5 mt-2"
                   />
                 </div>
               </div>

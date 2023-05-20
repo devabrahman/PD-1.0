@@ -7,7 +7,7 @@ const Shipping = () => {
   const [physicalProduct, setPhysicalProduct] = useState(true);
 
   return (
-    <div className="my-5 bg-white px-3 py-4 rounded-lg shadow-xl shadow-gray-100 mt-8">
+    <div className="my-5 bg-white dark:bg-dark px-3 py-4 rounded-lg shadow-xl shadow-gray-100 dark:shadow-gray-900 mt-8">
       <div className="flex">
         <img src={ShippingIcon} alt="Option icon" className="h-6 w-5" />
         <label className="block font-medium ml-2">Shipping</label>
