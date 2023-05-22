@@ -113,7 +113,7 @@ const NewVariation = () => {
             </div>
           </div>
 
-          <hr className="h-0.5 w-11/12 bg-[#CDCDCD]/20 ml-6" />
+          <hr className="h-0.5 w-11/12 bg-[#CDCDCD]/20 dark:bg-darkBorder ml-6" />
           <div className="flex justify-between items-center ml-5">
             <p className="text-accent/80 cursor-pointer">+ Add another option</p>
             <p className="bg-green-400 px-4 py-1.5 rounded-lg text-white mr-5 my-2">Done</p>
