@@ -1,7 +1,7 @@
+import React, { useLayoutEffect } from 'react';
 import { Tab } from '@headlessui/react';
 import { MoonIcon, SunIcon, StarIcon } from '@heroicons/react/24/outline';
-import React from 'react';
-import { useEffect } from 'react';
+
 import { useState } from 'react';
 import { setDarkMode, themeCheck } from 'utils/darkmode';
 
@@ -12,10 +12,9 @@ function ChangeThemes({ className }) {
     setDarkMode(name);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const activeTheme = themeCheck();
-    console.log('🔐 -> file: ChangeThemes.js:17 -> useEffect -> activeTheme:', activeTheme);
-
+    console.log('🔐 -> file: ChangeThemes.js:17 -> useLayoutEffect -> activeTheme:', activeTheme);
     if (activeTheme === 'light') {
       setSelectedIndex(0);
     } else if (activeTheme === 'dark') {
