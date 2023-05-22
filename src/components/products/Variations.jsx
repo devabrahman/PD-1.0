@@ -38,7 +38,7 @@ const NewVariation = () => {
       </div>
 
       {!!enabled && (
-        <div className="border w-full border-[#D6D6D6]/60 py-2.5 rounded-xl my-2">
+        <div className="border w-full border-[#D6D6D6]/60 dark:border-darkBorder py-2.5 rounded-xl my-2">
           <div className="w-3/5 mx-10 my-3">
             <label htmlFor="variation_name">Variation name</label>
             <div className="flex items-center">

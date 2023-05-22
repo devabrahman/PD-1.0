@@ -27,7 +27,7 @@ const NewProducts = () => {
             <div>
               <label className="block font-medium mb-2">Post Title</label>
               <input
-                className="w-full rounded-xl px-4 dark:bg-lightDark py-2 border border-gray-200 dark:border-darkBorder outline-none focus:ring-0 focus:outline-none"
+                className="w-full rounded-xl px-4 dark:bg-dark py-2 border border-gray-200 dark:border-darkBorder outline-none focus:ring-0 focus:outline-none"
                 type="text"
                 name="productTitle"
               />

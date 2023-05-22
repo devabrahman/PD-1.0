@@ -31,7 +31,7 @@ const VariationUpdate = () => {
         <div className="relative overflow-x-auto">
           <table className="w-full text-sm text-left">
             <thead className="text-xs">
-              <tr className="border-b text-gray-600 dark:text-gray-50 dark:border-[#E6E6E6]">
+              <tr className="border-b text-gray-600 dark:text-gray-50 dark:border-darkBorder">
                 <th scope="col" className="pl-3 py-3"></th>
                 <th scope="col" className="py-3 font-semibold">
                   Variant
@@ -49,7 +49,7 @@ const VariationUpdate = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b  dark:border-[#E6E6E6]">
+              <tr className="border-b dark:border-darkBorder">
                 <th scope="row" className="pl-3 py-3 font-medium whitespace-nowrap flex">
                   <RightMarkIcon />
                 </th>

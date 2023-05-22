@@ -24,7 +24,7 @@ const Shipping = () => {
             <label
               onClick={() => setPhysicalProduct(physicalProduct ? false : true)}
               htmlFor="input-2"
-              className={`checkbox dark:fill-dark cursor-pointer border border-[#635e5e] ${
+              className={`checkbox dark:fill-dark cursor-pointer border border-[#635e5e] dark:border-darkBorder ${
                 physicalProduct ? 'rounded-[9px] bg-[#48f685] w-6 h-6' : 'w-4 h-4 rounded-[4px]'
               }`}>
               <CheckMarkIcon className="dark:stroke-black stroke-white" />
