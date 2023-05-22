@@ -12,7 +12,7 @@ const ProductTable = () => {
   return (
     <div className="relative overflow-x-auto shadow-md shadow-blue-50 dark:shadow-gray-900 sm:rounded-lg mt-4">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-50">
-        <thead className="text-xs text-gray-700 uppercase bg-white dark:bg-dark dark:text-gray-50 border-b">
+        <thead className="text-xs text-gray-700 uppercase bg-white dark:bg-dark dark:text-gray-50 border-b dark:border-darkBorder">
           <tr>
             <th scope="col" className="p-4">
               <div className="flex items-center">
@@ -61,7 +61,7 @@ const ProductTable = () => {
         <tbody>
           {myArray?.map((_, index) => (
             <tr
-              className="bg-white border-b border-gray-200 dark:bg-dark dark:border-gray-700 hover:bg-gray-50"
+              className="bg-white border-b border-gray-200 dark:bg-dark dark:border-darkBorder hover:bg-gray-50"
               key={index}>
               <td className="w-4 p-4">
                 <div className="flex items-center">
@@ -75,7 +75,11 @@ const ProductTable = () => {
               </td>
               <th scope="row" className="px-6 py-3 whitespace-nowrap">
                 <div className="h-10 w-10">
-                  <img src="assets/images/products/macbook4.jpg" className="h-full w-full" alt="" />
+                  <img
+                    src="assets/images/products/macbook4.jpg"
+                    className="h-full w-full rounded-sm"
+                    alt=""
+                  />
                 </div>
               </th>
               <th
@@ -89,7 +93,7 @@ const ProductTable = () => {
               <td className="px-6 py-3">$2999</td>
               <td className="px-6 py-3">13515459</td>
               <td className="px-6 py-3">
-                <span className="bg-blue-50 text-blue-600 px-3 py-1 rounded-md font-normal">
+                <span className="bg-blue-50 dark:bg-lightDark text-blue-600 dark:text-gray-50 px-3 py-1 rounded-md font-normal">
                   In Stock
                 </span>
               </td>

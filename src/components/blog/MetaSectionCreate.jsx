@@ -22,7 +22,7 @@ const MetaSection = () => {
             type="text"
             name="Title"
             id="title"
-            className="border border-gray-200 dark:bg-lightDark mt-3 rounded-xl w-full py-2 pl-3 pr-1.5 dark:placeholder:text-white/40"
+            className="border border-gray-200 dark:border-darkBorder dark:bg-lightDark mt-3 rounded-xl w-full py-2 pl-3 pr-1.5 dark:placeholder:text-white/40"
             placeholder="Add a title "
           />
         </div>
@@ -42,7 +42,7 @@ const MetaSection = () => {
             type="text"
             name="Title"
             id="title"
-            className="border text-gray-600 text-sm dark:placeholder:text-white/50 dark:bg-lightDark  border-gray-200 dark:text-white italic mt-3 rounded-xl w-full py-2 pl-3 pr-1.5"
+            className="border text-gray-600 text-sm dark:placeholder:text-white/50 dark:bg-lightDark  border-gray-200 dark:border-darkBorder dark:text-white italic mt-3 rounded-xl w-full py-2 pl-3 pr-1.5"
           />
         </div>
       </form>

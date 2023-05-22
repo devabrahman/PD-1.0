@@ -48,7 +48,7 @@ const BlogCategoryCreate = () => {
               <div className="flex items-center mt-2">
                 <p className="text-blue-400 italic">https://my-amazing-website.com/category-name</p>
                 <button
-                  className="mt-1 ml-2 bg-white px-2 py-1 rounded-md shadow"
+                  className="mt-1 ml-2 bg-white dark:bg-dark px-2 py-1 rounded-md shadow"
                   type="button"
                   onClick={() => setEditSlug(true)}>
                   <PencilIcon className="h-4 w-4 cursor-pointer" />

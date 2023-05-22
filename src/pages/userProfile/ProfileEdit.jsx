@@ -26,7 +26,7 @@ const ProfileEdit = () => {
                   First Name
                 </label>
                 <input
-                  className="w-full border dark:bg-dark border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                  className="w-full border dark:bg-dark border-[#E0E5F2] dark:border-darkBorder rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                   type="text"
                   name="firstName"
                   id="firstName"
@@ -40,7 +40,7 @@ const ProfileEdit = () => {
                   Lastst Name
                 </label>
                 <input
-                  className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                  className="dark:bg-dark w-full border border-[#E0E5F2] dark:border-darkBorder rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                   type="text"
                   name="lastName"
                   id="lastName"
@@ -55,7 +55,7 @@ const ProfileEdit = () => {
                 Email<sup className="text-[#5798F7]">*</sup>
               </label>
               <input
-                className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                className="dark:bg-dark w-full border border-[#E0E5F2] dark:border-darkBorder rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                 type="email"
                 name="email"
                 id="email"
@@ -69,7 +69,7 @@ const ProfileEdit = () => {
                 Contact Number
               </label>
               <input
-                className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                className="dark:bg-dark w-full border border-[#E0E5F2] dark:border-darkBorder rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                 type="text"
                 name="phoneNumber"
                 id="phoneNumber"
@@ -84,7 +84,7 @@ const ProfileEdit = () => {
                   City
                 </label>
                 <input
-                  className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                  className="dark:bg-dark w-full border border-[#E0E5F2] dark:border-darkBorder rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                   type="text"
                   name="city"
                   id="city"
@@ -98,7 +98,7 @@ const ProfileEdit = () => {
                   State
                 </label>
                 <input
-                  className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                  className="dark:bg-dark w-full border border-[#E0E5F2] dark:border-darkBorder rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                   type="text"
                   name="state"
                   id="state"
@@ -114,7 +114,7 @@ const ProfileEdit = () => {
                   Zip code
                 </label>
                 <input
-                  className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                  className="dark:bg-dark w-full border border-[#E0E5F2] dark:border-darkBorder rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                   type="text"
                   name="zipCode"
                   id="zipCode"
@@ -128,7 +128,7 @@ const ProfileEdit = () => {
                   Country
                 </label>
                 <input
-                  className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                  className="dark:bg-dark w-full border border-[#E0E5F2] dark:border-darkBorder rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                   type="text"
                   name="country"
                   id="country"
@@ -143,7 +143,7 @@ const ProfileEdit = () => {
                 Password
               </label>
               <input
-                className="dark:bg-dark w-full border border-[#E0E5F2] rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
+                className="dark:bg-dark w-full border border-[#E0E5F2] dark:border-darkBorder rounded-2xl px-6 py-4 placeholder:text-[#A3AED0] placeholder:text-sm"
                 type={showPassword ? 'text' : 'password'}
                 name="password"
                 id="password"

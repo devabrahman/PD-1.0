@@ -24,7 +24,7 @@ const Posts = () => {
           </div>
 
           <div className="flex items-center">
-            <div className="flex items-center bg-white dark:bg-dark px-4 rounded-lg mr-4 shadow-md shadow-blue-50 dark:shadow-gray-800 w-54">
+            <div className="flex items-center bg-white dark:bg-dark px-4 rounded-lg mr-4 shadow-md shadow-blue-50 dark:shadow-gray-900 w-54">
               <MagnifyingGlassIcon className="h-6 w-6 text-gray-400" />
               <input
                 type="text"
