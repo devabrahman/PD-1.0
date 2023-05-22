@@ -16,7 +16,7 @@ const TakeAnAction = () => {
           <p>Status - </p>
         </div>
 
-        <select className="bg-blue-50 dark:bg-lightDark outline-none selected:text-bold space-y-2 border border-gray-200  rounded-lg pl-2.5 py-1 ml-2 text-sm cursor-pointer">
+        <select className="bg-blue-50 dark:bg-lightDark outline-none selected:text-bold space-y-2 border dark:border-darkBorder border-gray-200  rounded-lg pl-2.5 py-1 ml-2 text-sm cursor-pointer">
           <option value="Draft">Draft</option>
           <option value="Publish">Publish</option>
         </select>
@@ -29,14 +29,14 @@ const TakeAnAction = () => {
           <DatePicker
             selected={publishDate}
             onChange={(date) => setPublishDate(date)}
-            className="w-full border border-gray-300 dark:bg-lightDark hover:border-blue-400 cursor-pointer rounded-xl py-1"
+            className="w-full border border-gray-300 dark:border-darkBorder dark:bg-lightDark hover:border-blue-400 cursor-pointer rounded-xl py-1"
             minDate={new Date()}
             placeholderText="No date..."
           />
         </div>
       </div>
 
-      <hr />
+      <hr className="dark:border-darkBorder" />
 
       <div className="text-right m-[0px]">
         <button

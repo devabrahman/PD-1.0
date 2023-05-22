@@ -23,7 +23,7 @@ const PriceCreate = () => {
           name="normalPrice"
           id="normalPrice"
           placeholder="$ 00.0"
-          className="border border-gray-200 focus:ring-1 focus:ring-blue-200 focus:ring-opacity-5 pl-3 dark:bg-lightDark  h-9 mt-3 rounded-[7px] w-full pr-1.5"
+          className="border border-gray-200 dark:border-darkBorder focus:ring-1 focus:ring-blue-200 focus:ring-opacity-5 pl-3 dark:bg-lightDark  h-9 mt-3 rounded-[7px] w-full pr-1.5"
         />
       </div>
 
@@ -36,7 +36,7 @@ const PriceCreate = () => {
           name="specialPrice"
           id="specialPrice"
           placeholder="$ 00.0"
-          className="border border-gray-200 focus:ring-1 focus:ring-blue-200 focus:ring-opacity-5 pl-3  dark:bg-lightDark h-9 mt-3 rounded-[7px] w-full pr-1.5 focus:focused-input"
+          className="border border-gray-200 dark:border-darkBorder focus:ring-1 focus:ring-blue-200 focus:ring-opacity-5 pl-3  dark:bg-lightDark h-9 mt-3 rounded-[7px] w-full pr-1.5 focus:focused-input"
         />
         <div className="flex items-center justify-between gap-2 absolute bottom-[11%] right-[15px] z-10">
           <span className="h-4 rounded-sm w-0.5 bg-pdGrey block"></span>

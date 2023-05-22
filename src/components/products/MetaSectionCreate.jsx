@@ -9,20 +9,20 @@ const MetaSection = () => {
         <img src={SearchEngineIcon} alt="Option icon" className="h-6 w-5" />
         <h4 className="font-medium">Search engine listing</h4>
       </div>
-      <p className="text-xs text-gray-600 pt-2 dark:text-white">
+      <p className="text-xs text-gray-600 pt-2 dark:text-gray-50">
         Add a title and description to see how this product might appear in a search engine listing
       </p>
 
       <form action="">
         <div className="mt-5">
-          <label htmlFor="title" className="font-medium dark:text-white text-[#302323]">
+          <label htmlFor="title" className="font-medium dark:text-gray-50 text-[#302323]">
             Page Title
           </label>
           <input
             type="text"
             name="Title"
             id="title"
-            className="border border-gray-200 dark:bg-lightDark mt-3 rounded-xl w-full py-2 pl-3 pr-1.5 dark:placeholder:text-white/40"
+            className="border border-gray-200 dark:border-darkBorder dark:bg-lightDark  mt-3 rounded-xl w-full py-2 pl-3 pr-1.5 dark:placeholder:text-white/40"
             placeholder="Add a title "
           />
         </div>
@@ -42,7 +42,8 @@ const MetaSection = () => {
             type="text"
             name="Title"
             id="title"
-            className="border text-gray-600 text-sm dark:placeholder:text-white/50 dark:bg-lightDark  border-gray-200 dark:text-white italic mt-3 rounded-xl w-full py-2 pl-3 pr-1.5"
+            placeholder="https://yourdomain.com/productname"
+            className="border text-gray-600 text-sm dark:placeholder:text-white/50 dark:bg-lightDark  border-gray-200 dark:border-darkBorder dark:text-white italic mt-3 rounded-xl w-full py-2 pl-3 pr-1.5"
           />
         </div>
       </form>

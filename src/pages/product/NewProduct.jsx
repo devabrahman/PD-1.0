@@ -27,7 +27,7 @@ const NewProducts = () => {
             <div>
               <label className="block font-medium mb-2">Post Title</label>
               <input
-                className="w-full rounded-xl px-4 dark:bg-lightDark py-2 border border-gray-200 outline-none focus:ring-0 focus:outline-none"
+                className="w-full rounded-xl px-4 dark:bg-lightDark py-2 border border-gray-200 dark:border-darkBorder outline-none focus:ring-0 focus:outline-none"
                 type="text"
                 name="productTitle"
               />
@@ -65,7 +65,7 @@ const NewProducts = () => {
                   <input
                     type="text"
                     id="quantity"
-                    className="border pl-3 border-gray-200 bg-white dark:bg-dark py-1.5 rounded-lg w-full pr-1.5 mt-2"
+                    className="border pl-3 border-gray-200 dark:border-darkBorder bg-white dark:bg-dark py-1.5 rounded-lg w-full pr-1.5 mt-2"
                   />
                 </div>
               </div>

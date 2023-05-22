@@ -19,7 +19,7 @@ const ProductTag = () => {
           type="text"
           name="tag"
           autoComplete="off"
-          className="border border-gray-200 focus:ring-1 focus:ring-blue-200 focus:ring-opacity-5  h-9 mt-3 rounded-xl w-full px-2.5 py-1 dark:bg-lightDark"
+          className="border border-gray-200 dark:border-darkBorder focus:ring-1 focus:ring-blue-200 focus:ring-opacity-5  h-9 mt-3 rounded-xl w-full px-2.5 py-1 dark:bg-lightDark"
           placeholder="Find or create tags"
         />
       </form>

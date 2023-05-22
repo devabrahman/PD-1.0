@@ -8,7 +8,7 @@ const ProductPrimaryImage = () => {
         type="file"
         name="primary-image"
         id="primary-image"
-        className="w-full border dark:bg-lightDark border-gray-200 rounded-lg mt-4 text-xs bg-transparent"
+        className="w-full border dark:bg-lightDark border-gray-200 dark:border-darkBorder rounded-lg mt-4 text-xs bg-transparent"
       />
     </div>
   );

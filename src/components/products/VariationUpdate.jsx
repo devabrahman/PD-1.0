@@ -11,7 +11,7 @@ const VariationUpdate = () => {
         <h5 className="font-medium ml-2">Variation details</h5>
         <p className="text-accent/80">+ Add another option</p>
       </div>
-      <div className="border w-full border-[#D6D6D6]/70 rounded-xl my-2">
+      <div className="border w-full border-[#D6D6D6]/70 dark:border-darkBorder rounded-xl my-2">
         <div className="ml-4 flex items-center py-2">
           <p className="px-5">Select</p>
           <p className="text-accent">All</p>
@@ -31,7 +31,7 @@ const VariationUpdate = () => {
         <div className="relative overflow-x-auto">
           <table className="w-full text-sm text-left">
             <thead className="text-xs">
-              <tr className="border-b text-gray-600 dark:border-[#E6E6E6]">
+              <tr className="border-b text-gray-600 dark:text-gray-50 dark:border-[#E6E6E6]">
                 <th scope="col" className="pl-3 py-3"></th>
                 <th scope="col" className="py-3 font-semibold">
                   Variant
@@ -49,7 +49,7 @@ const VariationUpdate = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b dark:border-[#E6E6E6]">
+              <tr className="border-b  dark:border-[#E6E6E6]">
                 <th scope="row" className="pl-3 py-3 font-medium whitespace-nowrap flex">
                   <RightMarkIcon />
                 </th>
@@ -61,7 +61,7 @@ const VariationUpdate = () => {
                     type="text"
                     name=""
                     id=""
-                    className="border border-gray-200 h-9 rounded-lg pr-1.5 mr-6 w-24 px-2 text-center"
+                    className="border border-gray-200 dark:border-darkBorder dark:bg-lightDark h-9 rounded-lg pr-1.5 mr-6 w-24 px-2 text-center"
                     placeholder="e.g - 1299"
                   />
                 </td>
@@ -70,7 +70,7 @@ const VariationUpdate = () => {
                     type="text"
                     name=""
                     id=""
-                    className="border border-gray-200 h-9 rounded-lg pr-1.5 mr-6 w-24 px-2 text-center"
+                    className="border border-gray-200 dark:border-darkBorder dark:bg-lightDark h-9 rounded-lg pr-1.5 mr-6 w-24 px-2 text-center"
                     placeholder="55"
                   />
                 </td>
@@ -79,7 +79,7 @@ const VariationUpdate = () => {
                     type="text"
                     name=""
                     id=""
-                    className="border border-gray-200 h-9 rounded-lg pr-1.5 mr-6 w-24 px-2 text-center"
+                    className="border border-gray-200 dark:border-darkBorder dark:bg-lightDark h-9 rounded-lg pr-1.5 mr-6 w-24 px-2 text-center"
                     placeholder="75"
                   />
                 </td>
