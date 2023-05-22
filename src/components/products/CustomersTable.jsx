@@ -11,7 +11,7 @@ const CustomersTable = () => {
   return (
     <div className="relative overflow-x-auto shadow-md shadow-blue-50 dark:shadow-gray-900 sm:rounded-lg mt-4">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-white dark:bg-dark dark:text-gray-400 border-b">
+        <thead className="text-xs text-gray-700 uppercase bg-white dark:bg-dark dark:text-gray-400 border-b dark:border-darkBorder">
           <tr>
             <th scope="col" className="p-4">
               <div className="flex items-center">
@@ -57,7 +57,7 @@ const CustomersTable = () => {
         <tbody>
           {myArray?.map((_, index) => (
             <tr
-              className="bg-white border-b border-gray-200 dark:bg-dark dark:border-gray-700 hover:bg-gray-50"
+              className="bg-white border-b border-gray-200 dark:bg-dark dark:border-darkBorder hover:bg-gray-50"
               key={index}>
               <td className="w-4 p-4">
                 <div className="flex items-center">

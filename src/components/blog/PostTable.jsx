@@ -55,7 +55,7 @@ const PostTable = () => {
         <tbody>
           {myArray?.map((_, index) => (
             <tr
-              className="bg-white dark:bg-dark border-b border-gray-200  dark:border-gray-700 hover:bg-gray-50"
+              className="bg-white dark:bg-dark border-b border-gray-200  dark:border-darkBorder hover:bg-gray-50"
               key={index}>
               <td className="w-4 p-4">
                 <div className="flex items-center">

@@ -34,31 +34,31 @@ const OrdersTable = () => {
             <th scope="col" className="px-6 py-4">
               <div className="flex items-center">
                 <p className="text-blue-400">Product</p>
-                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-dark  hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-lightDark  hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
               </div>
             </th>
             <th scope="col" className="px-6 py-4">
               <div className="flex items-center">
                 <p className="text-blue-400">Date</p>
-                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-dark  hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-lightDark  hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
               </div>
             </th>
             <th scope="col" className="px-6 py-4">
               <div className="flex items-center">
                 <p className="text-blue-400">Status</p>
-                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-dark hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-lightDark hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
               </div>
             </th>
             <th scope="col" className="px-6 py-4">
               <div className="flex items-center">
                 <p className="text-blue-400">Revenue</p>
-                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-dark hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-lightDark hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
               </div>
             </th>
             <th scope="col" className="px-6 py-4">
               <div className="flex items-center">
                 <p className="text-blue-400">Customer</p>
-                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-dark hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
+                <ChevronUpDownIcon className="h-[18px] w-4 bg-blue-50 dark:bg-lightDark hover:bg-blue-400 hover:text-white ml-1.5 rounded-sm cursor-pointer" />
               </div>
             </th>
             <th scope="col" className="px-6 py-4">

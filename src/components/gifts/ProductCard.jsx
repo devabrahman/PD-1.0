@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProductCard = ({ imageLink = '/assets/images/products/watch.jpg' }) => {
   return (
-    <div className="w-full max-w-sm bg-white dark:bg-dark border border-gray-200 rounded-lg dark:border-gray-700">
+    <div className="w-full max-w-sm bg-white dark:bg-dark border border-gray-200 rounded-lg dark:border-darkBorder">
       <a href="#">
         <img
           className="h-60 w-full object-cover rounded-t-lg"
