@@ -17,7 +17,7 @@ const CreateTag = ({ isOpen, setIsOpen }) => {
               <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white dark:bg-dark p-6 text-left align-middle shadow-xl transition-all">
                 <Dialog.Title
                   as="h3"
-                  className="text-lg font-medium leading-6 text-gray-900 flex justify-between items-center">
+                  className="text-lg font-medium leading-6 text-gray-900 dark:text-gray-50 flex justify-between items-center">
                   <span>Create tag</span>
                   <XMarkIcon
                     className="h-5 w-5 text-gray-400 hover:text-red-400 cursor-pointer"
@@ -26,16 +26,18 @@ const CreateTag = ({ isOpen, setIsOpen }) => {
                 </Dialog.Title>
 
                 <form className="mt-">
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-gray-500 dark:text-gray-50">
                     Create a tag to use while creating category
                   </p>
 
                   <div className="mt-6">
-                    <label htmlFor="title">Tag title</label>
+                    <label htmlFor="title" className="dark:text-gray-50">
+                      Tag title
+                    </label>
                     <input
                       type="text"
                       id="title"
-                      className="w-full block px-2 py-1 border border-gray-200 rounded-lg mt-1"
+                      className="w-full block dark:text-gray-50 px-2 py-1 border border-gray-200 dark:bg-dark dark:border-darkBorder rounded-lg mt-1"
                     />
                   </div>
 

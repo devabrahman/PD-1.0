@@ -14,7 +14,7 @@ const NewVariation = () => {
   const [enabled, setEnabled] = useState(true);
 
   return (
-    <div className="my-5 bg-white rounded-xl">
+    <div className="my-5 bg-white dark:bg-dark rounded-xl">
       <div className="flex justify-between items-center px-4 py-2">
         <div className="flex items-center gap-4">
           <FcTodoList className="h-6 w-6" />
@@ -26,7 +26,7 @@ const NewVariation = () => {
         <Switch
           checked={enabled}
           onChange={setEnabled}
-          className={`${enabled ? 'bg-green-400' : 'bg-gray-200'}
+          className={`${enabled ? 'bg-green-400' : 'bg-gray-200 dark:bg-gray-600'}
           relative inline-flex h-[25px] w-[53px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}>
           <span className="sr-only">Use setting</span>
           <span
@@ -38,7 +38,7 @@ const NewVariation = () => {
       </div>
 
       {!!enabled && (
-        <div className="border w-full border-[#D6D6D6]/60 py-2.5 rounded-xl my-2">
+        <div className="border w-full border-[#D6D6D6]/60 dark:border-darkBorder py-2.5 rounded-xl my-2">
           <div className="w-3/5 mx-10 my-3">
             <label htmlFor="variation_name">Variation name</label>
             <div className="flex items-center">
@@ -113,7 +113,7 @@ const NewVariation = () => {
             </div>
           </div>
 
-          <hr className="h-0.5 w-11/12 bg-[#CDCDCD]/20 ml-6" />
+          <hr className="h-0.5 w-11/12 bg-[#CDCDCD]/20 dark:bg-darkBorder ml-6" />
           <div className="flex justify-between items-center ml-5">
             <p className="text-accent/80 cursor-pointer">+ Add another option</p>
             <p className="bg-green-400 px-4 py-1.5 rounded-lg text-white mr-5 my-2">Done</p>

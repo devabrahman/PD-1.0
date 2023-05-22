@@ -7,12 +7,12 @@ const Shipping = () => {
   const [physicalProduct, setPhysicalProduct] = useState(true);
 
   return (
-    <div className="my-5 bg-white px-3 py-4 rounded-lg shadow-xl shadow-gray-100 mt-8">
+    <div className="my-5 bg-white dark:bg-dark px-3 py-4 rounded-lg shadow-xl shadow-gray-100 dark:shadow-gray-900 mt-8">
       <div className="flex">
         <img src={ShippingIcon} alt="Option icon" className="h-6 w-5" />
         <label className="block font-medium ml-2">Shipping</label>
       </div>
-      <div className="border w-full border-[#D6D6D6]/60 rounded-xl my-2">
+      <div className="border w-full border-[#D6D6D6]/60 dark:border-darkBorder rounded-xl my-2">
         <div className="flex items-center gap-1.5 my-2 mx-3">
           <div className="w-8 flex justify-center items-center">
             <input
@@ -24,10 +24,10 @@ const Shipping = () => {
             <label
               onClick={() => setPhysicalProduct(physicalProduct ? false : true)}
               htmlFor="input-2"
-              className={`checkbox dark:fill-dark cursor-pointer border border-[#635e5e] ${
+              className={`checkbox dark:fill-dark cursor-pointer border border-[#635e5e] dark:border-darkBorder ${
                 physicalProduct ? 'rounded-[9px] bg-[#48f685] w-6 h-6' : 'w-4 h-4 rounded-[4px]'
               }`}>
-              <CheckMarkIcon className="dark:stroke-dark stroke-white" />
+              <CheckMarkIcon className="dark:stroke-black stroke-white" />
             </label>
           </div>
           <p>This is a physical product</p>

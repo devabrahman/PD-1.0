@@ -34,7 +34,7 @@ const EditProduct = () => {
                 Post Title
               </label>
               <input
-                className="w-full rounded-xl px-4 dark:bg-lightDark py-2 border border-gray-200 outline-none focus:ring-0 focus:outline-none"
+                className="w-full dark:border-darkBorder rounded-xl px-4 dark:bg-dark py-2 border border-gray-200 outline-none focus:ring-0 focus:outline-none"
                 type="text"
                 name="title"
                 value="Apple Macbook Pro M2 13-inch 2020 8GB 512GB SSD"
@@ -69,7 +69,7 @@ const EditProduct = () => {
                     type="text"
                     name="sku"
                     id="sku"
-                    className="pl-3 border border-gray-200 dark:border-darkBorder dark:bg-lightDark py-1.5 rounded-lg pr-1.5 w-full mt-2"
+                    className="pl-3 border border-gray-200 dark:border-darkBorder dark:bg-dark py-1.5 rounded-lg pr-1.5 w-full mt-2"
                     value={20}
                   />
                 </div>
@@ -83,7 +83,7 @@ const EditProduct = () => {
                     type="quantity"
                     name="quantity"
                     id="quantity"
-                    className="border pl-3 border-gray-200 bg-white dark:bg-lightDark py-1.5 rounded-lg w-full pr-1.5 mt-2"
+                    className="border pl-3 border-gray-200 dark:border-darkBorder bg-white dark:bg-dark py-1.5 rounded-lg w-full pr-1.5 mt-2"
                     value={3}
                   />
                 </div>

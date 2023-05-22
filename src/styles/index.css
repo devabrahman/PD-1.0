@@ -96,3 +96,12 @@
 .rdrDateInput > input {
   @apply dark:text-white dark:bg-lightDark;
 } */
+
+/* .dark .ql-editor {
+  @apply dark:bg-lightDark;
+} */
+
+.dark .ql-editor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(19 19 20 / var(--tw-bg-opacity)) !important;
+}

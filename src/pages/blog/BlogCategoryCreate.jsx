@@ -19,7 +19,7 @@ const BlogCategoryCreate = () => {
           <img
             src={categoryPic}
             alt="Category Icon"
-            className="object-contain dark:bg-lightDark w-full"
+            className="object-contain dark:bg-dark w-full rounded-lg"
           />
         </div>
 
@@ -48,7 +48,7 @@ const BlogCategoryCreate = () => {
               <div className="flex items-center mt-2">
                 <p className="text-blue-400 italic">https://my-amazing-website.com/category-name</p>
                 <button
-                  className="mt-1 ml-2 bg-white px-2 py-1 rounded-md shadow"
+                  className="mt-1 ml-2 bg-white dark:bg-dark px-2 py-1 rounded-md shadow"
                   type="button"
                   onClick={() => setEditSlug(true)}>
                   <PencilIcon className="h-4 w-4 cursor-pointer" />
@@ -73,13 +73,13 @@ const BlogCategoryCreate = () => {
           <div className="mx-0 space-y-3 pt-4">
             <label
               htmlFor=""
-              className="text-[#302323] dark:text-[#E6E6E6]  font-montserrat text-xl mb-1.5 block">
+              className="text-[#302323] dark:text-[#E6E6E6]   font-montserrat text-xl mb-1.5 block">
               Description
             </label>
             <textarea
               placeholder="Please enter description"
               rows={3}
-              className="w-full  border border-[#B9B9B9]/50 rounded-xl p-3 text-base text-[#161616]/70 dark:text-[#CDCDCD] dark:bg-lightDark input-accent-box-shadow py-2"
+              className="w-full dark:bg-dark border border-[#B9B9B9]/50 rounded-xl p-3 text-base text-[#161616]/70 dark:text-[#CDCDCD] input-accent-box-shadow py-2"
             />
           </div>
 

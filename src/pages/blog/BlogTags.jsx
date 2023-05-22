@@ -167,7 +167,7 @@ const BlogTags = () => {
             <tbody>
               {tags?.map((tag, index) => (
                 <tr
-                  className="bg-white border-b dark:bg-dark dark:border-gray-700 hover:bg-gray-50 cursor-pointer"
+                  className="bg-white border-b dark:bg-dark dark:border-darkBorder hover:bg-gray-50 cursor-pointer"
                   key={index}>
                   <td className="w-4 p-4">
                     <div className="flex items-center">

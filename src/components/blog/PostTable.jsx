@@ -10,9 +10,9 @@ const PostTable = () => {
   const myArray = Array(8).fill(0);
 
   return (
-    <div className="relative overflow-x-auto shadow-md shadow-blue-50 dark:shadow-gray-800 sm:rounded-lg mt-4">
+    <div className="relative overflow-x-auto shadow-md shadow-blue-50 dark:shadow-gray-900 sm:rounded-lg mt-4">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-100">
-        <thead className="text-xs text-gray-700 uppercase bg-white dark:bg-dark dark:text-gray-600 border-b">
+        <thead className="text-xs text-gray-700 uppercase bg-white dark:bg-dark dark:text-gray-600 border-b dark:border-darkBorder">
           <tr>
             <th scope="col" className="p-4">
               <div className="flex items-center">
@@ -55,7 +55,7 @@ const PostTable = () => {
         <tbody>
           {myArray?.map((_, index) => (
             <tr
-              className="bg-white dark:bg-dark border-b border-gray-200  dark:border-gray-700 hover:bg-gray-50"
+              className="bg-white dark:bg-dark border-b border-gray-200  dark:border-darkBorder hover:bg-gray-50"
               key={index}>
               <td className="w-4 p-4">
                 <div className="flex items-center">
