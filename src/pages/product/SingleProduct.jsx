@@ -1,6 +1,6 @@
 import React from 'react';
 import Breadcrumbs from 'components/common/Breadcrumbs';
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LeftLayout';
 import OtherProducts from 'components/products/OtherProducts';
 
 // importing components

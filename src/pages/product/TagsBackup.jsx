@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Breadcrumbs from 'components/common/Breadcrumbs';
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LeftLayout';
 import DeleteIcon from 'components/SVGIcons/DeleteIcon';
 import EditIcon from 'components/SVGIcons/Editicon';
 import RectangleIcon from 'components/SVGIcons/RectangleIcon';

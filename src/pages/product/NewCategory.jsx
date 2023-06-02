@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import ImageDropDown from 'components/common/ImageDragDrop';
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LeftLayout';
 import categoryPic from 'assets/Images/common/CategoryPic.png';
 import { PencilIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';

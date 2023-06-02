@@ -1,4 +1,4 @@
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LeftLayout';
 import RecentProduct from 'components/profile/RecentProduct';
 // image
 import profile from 'assets/Images/common/profile.png';

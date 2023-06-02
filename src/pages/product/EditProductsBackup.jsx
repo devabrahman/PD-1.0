@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { addDays, format } from 'date-fns';
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LeftLayout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import ImageDropDown from 'components/common/ImageDragDrop';
 import CategoryList from 'components/products/CategoryListEdit';

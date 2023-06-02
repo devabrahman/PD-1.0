@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import DeletePopup from 'components/common/DeletePopup';
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LeftLayout';
 import { Link } from 'react-router-dom';
 import Pagination from 'components/common/Pagination';
 // icon

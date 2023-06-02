@@ -2,7 +2,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
 // importing components
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LeftLayout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import MetaSectionCreate from 'components/blog/MetaSectionCreate';
 import RightSideCreate from 'components/blog/RightSideCreate';

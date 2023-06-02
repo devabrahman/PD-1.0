@@ -43,14 +43,46 @@ const LeftNavigation = () => {
         </div>
 
         <div className="mx-auto w-full bg-white dark:bg-lightDark space-y-2 mt-6">
-          <Link
-            to="/"
-            className="flex items-center w-full justify-between bg-gray-100 dark:bg-dark hover:text-gray-700 hover:dark:text-gray-50 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
-            <div className="flex items-center space-x-3.5">
-              <FcHome className="h-6 w-6" />
-              <span>Dashboard</span>
-            </div>
-          </Link>
+          <Disclosure>
+            {({ open }) => (
+              <>
+                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
+                  <div className="flex items-center space-x-3.5">
+                    <FcHome className="h-6 w-6" />
+                    <span>Dashboard</span>
+                  </div>
+                  <ChevronUpIcon
+                    className={`${open ? '' : 'rotate-180 transform'} h-5 w-5 text-gray-400`}
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel className="pb-2 text-sm text-gray-500">
+                  <ul className="">
+                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                      <Link
+                        to="/"
+                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        Left Sidebar
+                      </Link>
+                    </li>
+                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                      <Link
+                        to="/dashboard-right-sidebar"
+                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        Right Sidebar
+                      </Link>
+                    </li>
+                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                      <Link
+                        to="/dashboard-topbar"
+                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        Topbar
+                      </Link>
+                    </li>
+                  </ul>
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
 
           <Disclosure>
             {({ open }) => (

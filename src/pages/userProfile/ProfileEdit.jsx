@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LeftLayout';
 import check from 'assets/Images/common/check.png';
 import profile from 'assets/Images/common/profile.png';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';

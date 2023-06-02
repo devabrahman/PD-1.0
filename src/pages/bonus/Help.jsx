@@ -1,4 +1,4 @@
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LeftLayout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/20/solid';

@@ -1,4 +1,4 @@
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LeftLayout';
 import Breadcrumbs from 'components/common/Breadcrumbs';
 import ChatLeft from 'components/chat/ChatLeft';
 import ChatRight from 'components/chat/ChatRight';

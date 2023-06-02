@@ -1,9 +1,8 @@
 import MostOrderList from 'components/dashboard/MostOrderList';
-import Layout from 'components/common/Layout';
+import LeftLayout from 'components/common/LeftLayout';
 import Activity from 'components/dashboard/Activity';
 import Payment from 'components/dashboard/Payment';
 import TotalProduct from 'components/dashboard/TotalProduct';
-// import TotalSales from 'components/dashboard/TotalSales';
 
 // icon
 import map from 'assets/Images/common/Map.png';
@@ -11,12 +10,12 @@ import DashboardTop from 'components/dashboard/DashboardTop';
 import DashboardLineChart from 'components/dashboard/DashboardLineChart';
 import TotalSales from 'components/dashboard/TotalSales';
 
-const Home = () => {
+const LeftHome = () => {
   return (
-    // TODO
-    <Layout title="Dashboard" padding="px-8 py-8">
-      <main className="py-5 dark:bg-dark px-3 sm:px-0">
+    <LeftLayout title="Dashboard" padding="px-8 py-8">
+      <main className="py-5 px-3 sm:px-0">
         <DashboardTop />
+
         <section className="grid grid-cols-12 gap-8 mt-8">
           <DashboardLineChart />
           <div className="col-span-12 md:block md:col-span-3 flex gap-4 space-y-5">
@@ -32,14 +31,15 @@ const Home = () => {
               <img className="w-full" src={map} alt="map images" />
             </div>
           </div>
+
           <Payment className="col-span-12 sm:col-span-5" />
           <Activity className="col-span-12 sm:col-span-3" />
         </section>
 
         <MostOrderList className="mt-11" />
       </main>
-    </Layout>
+    </LeftLayout>
   );
 };
 
-export default Home;
+export default LeftHome;

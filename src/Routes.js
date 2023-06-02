@@ -1,8 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// import { themeCheck } from 'utils/darkmode';
+
+import LeftHome from './pages/LeftHome';
+import RightHome from 'pages/RightHome';
+import TopHome from 'pages/TopHome';
 
 // importing auth pages
-import Home from './pages/Home';
 import SignUp from './pages/auth/SignUp';
 import Login from './pages/auth/Login';
 import ForgotPassword from './pages/auth/ForgotPassword';
@@ -53,11 +55,19 @@ import CallToAction from 'pages/bonus/CallToAction';
 
 // all routing
 const router = createBrowserRouter([
-  // auth pages
   {
     path: '/',
-    element: <Home />
+    element: <LeftHome />
   },
+  {
+    path: '/dashboard-right-sidebar',
+    element: <RightHome />
+  },
+  {
+    path: '/dashboard-topbar',
+    element: <TopHome />
+  },
+  // auth pages
   {
     path: '/create-account',
     element: <SignUp />

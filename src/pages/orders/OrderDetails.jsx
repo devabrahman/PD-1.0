@@ -1,5 +1,5 @@
 import Breadcrumbs from 'components/common/Breadcrumbs';
-import Layout from 'components/common/Layout';
+import Layout from 'components/common/LeftLayout';
 import Bell from 'components/SVGIcons/Bell';
 import Check from 'components/SVGIcons/Check';
 
