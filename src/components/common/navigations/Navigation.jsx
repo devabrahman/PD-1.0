@@ -25,7 +25,7 @@ const LeftNavigation = () => {
   ];
 
   return (
-    <div className="w-full h-screen flex flex-col justify-between pb-6">
+    <div className="w-full h-screen flex flex-col justify-between pb-6 dark:bg-black">
       <div>
         <div className="flex justify-around items-center pt-6 w-11/12 mx-auto">
           <div className="pt-1">
@@ -42,7 +42,7 @@ const LeftNavigation = () => {
           />
         </div>
 
-        <div className="mx-auto w-full bg-white dark:bg-lightDark space-y-2 mt-6">
+        <div className="mx-auto w-full bg-white dark:bg-black space-y-2 mt-6">
           <Disclosure>
             {({ open }) => (
               <>
