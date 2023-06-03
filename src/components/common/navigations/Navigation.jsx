@@ -46,7 +46,7 @@ const LeftNavigation = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
+                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 dark:hover:bg-blue-500 dark:hover:text-white hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
                   <div className="flex items-center space-x-3.5">
                     <FcHome className="h-6 w-6" />
                     <span>Dashboard</span>
@@ -87,7 +87,7 @@ const LeftNavigation = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
+                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 dark:hover:bg-blue-500 dark:hover:text-white hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
                   <div className="flex items-center space-x-3.5">
                     <FcLock className="h-6 w-6 text-gray-400" />
                     <span>Authentication</span>
@@ -142,7 +142,7 @@ const LeftNavigation = () => {
           <Disclosure defaultOpen={productRoutes.includes(pathname) === true && true}>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
+                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 dark:hover:bg-blue-500 dark:hover:text-white hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
                   <div className="flex items-center space-x-3.5">
                     <SlBasket className="h-6 w-6 text-amber-400" />
                     <span>E-commerce</span>
@@ -214,7 +214,7 @@ const LeftNavigation = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
+                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 dark:hover:bg-blue-500 dark:hover:text-white hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
                   <div className="flex items-center space-x-3.5">
                     <img src={OderIcon} />
                     <span>Orders</span>
@@ -248,7 +248,7 @@ const LeftNavigation = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
+                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 dark:hover:bg-blue-500 dark:hover:text-white hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
                   <div className="flex items-center space-x-3.5">
                     <img src="/assets/images/icons/write.png" className="h-6 w-6" />
                     <span>Blog</span>
@@ -302,7 +302,7 @@ const LeftNavigation = () => {
 
           <Link
             to="/chat"
-            className="flex items-center w-full justify-between hover:bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
+            className="flex items-center w-full justify-between hover:bg-gray-100 dark:hover:bg-blue-500 dark:hover:text-white hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
             <div className="flex justify-between items-center space-x-3.5">
               <ChatBubbleLeftEllipsisIcon className="h-6 w-6 text-blue-400" />
               <span>Chat</span>
@@ -313,7 +313,7 @@ const LeftNavigation = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
+                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 dark:hover:bg-blue-500 dark:hover:text-white hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
                   <div className="flex items-center space-x-3.5">
                     <IoIosPeople className="h-6 w-6 text-gray-300" />
                     <span>Customers</span>
@@ -354,7 +354,7 @@ const LeftNavigation = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
+                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 dark:hover:bg-blue-500 dark:hover:text-white hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
                   <div className="flex items-center space-x-3.5">
                     <img src="/assets/images/icons/gift.png" className="h-6 w-6" />
                     <span>Cool Bonus</span>
@@ -409,7 +409,7 @@ const LeftNavigation = () => {
           <Disclosure>
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
+                <Disclosure.Button className="flex items-center w-full justify-between hover:bg-gray-100 dark:hover:bg-blue-500 dark:hover:text-white hover:text-gray-700 pl-5 pr-4 py-2.5 text-left font-medium focus:outline-none focus-visible:ring-0">
                   <div className="flex items-center space-x-3.5">
                     <img src="/assets/images/icons/error.png" className="h-6 w-6" />
                     <span>Error Pages</span>
@@ -442,7 +442,7 @@ const LeftNavigation = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-br dark:bg-dark from-[#FBF0DE] dark:from-lightDark to-[#E3E2F6]  h-52 w-[90%] mx-auto rounded-xl block overflow-hidden relative grid place-content-center">
+      <div className="bg-gradient-to-br dark:bg-dark from-[#FBF0DE] dark:from-lightDark to-[#E3E2F6]  h-52 w-[90%] mx-auto rounded-xl overflow-hidden relative grid place-content-center">
         <div className="relative z-20">
           <h3 className="text-center text-xl font-medium">Help Center</h3>
           <p className="text-center text-sm mt-1">
@@ -450,13 +450,15 @@ const LeftNavigation = () => {
           </p>
 
           <div className="flex justify-center mt-6">
-            <Link to="/help" className="px-4 py-2 rounded-xl bg-[#FF8465] text-white font-medium">
+            <Link
+              to="/help"
+              className="px-4 py-2 rounded-xl bg-[#FF8465] hover:bg-opacity-90 text-white font-medium">
               Go To Help Center
             </Link>
           </div>
         </div>
-        <span className="bg-[#FEF8F2] h-20 w-20 rounded-full absolute -top-7 -left-7 "></span>
-        <span className="bg-[#ECEDFB] h-32 w-32 rounded-full absolute -bottom-4 -right-4"></span>
+        <span className="bg-[#FEF8F2] dark:bg-gray-600 h-20 w-20 rounded-full absolute -top-7 -left-7 "></span>
+        <span className="bg-[#ECEDFB] dark:bg-gray-600 h-32 w-32 rounded-full absolute -bottom-4 -right-4"></span>
       </div>
     </div>
   );
