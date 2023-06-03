@@ -25,7 +25,7 @@ function ChangeThemes({ className }) {
   return (
     <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
       <Tab.List
-        className={`flex justify-around gap-1 bg-[#F4F4F8] dark:bg-[#211F26] p-1 rounded-lg ${className}`}>
+        className={`flex justify-around gap-1 bg-[#F4F4F8] dark:bg-gray-800 p-1 rounded-lg ${className}`}>
         <Tab
           className={`dark:bg-transparent flex gap-2 bg text-base items-center ${
             selectedIndex === 0 && 'bg-white'
