@@ -21,8 +21,9 @@ const ProfileDropdownMenu = () => {
             <img src={profile} className={`rounded-full w-full h-full`} />
           </div>
         </Menu.Button>
+
         <MenuTransition>
-          <Menu.Items className="absolute right-0 mt-2 w-auto origin-top-right bg-white dark:bg-dark shadow-lg dark:shadow-none shadow-gray-200 dark:border-gray-500 ring-0 focus:outline-none px-6 py-6 rounded-lg">
+          <Menu.Items className="absolute right-0 mt-2 w-80 origin-top-right bg-white dark:bg-dark shadow-lg dark:shadow-none shadow-gray-200 dark:border-gray-500 ring-0 focus:outline-none px-6 py-6 rounded-lg">
             <div className="px-1 py-1 ">
               <h5 className="text-[#302323] dark:text-white font-medium">Theme</h5>
 
@@ -32,7 +33,7 @@ const ProfileDropdownMenu = () => {
                 <Link to="/products">
                   <div className="flex items-center gap-3 mb-3">
                     <UserIcon className="w-6" />
-                    <span>Account settings</span>
+                    <span className="dark:text-gray-300">Account settings</span>
                   </div>
                 </Link>
               </Menu.Item>
@@ -40,7 +41,7 @@ const ProfileDropdownMenu = () => {
                 <Link to="/profile-edit">
                   <div className="flex items-center gap-3 mb-3">
                     <img className="w-6" src={coloredit} alt="Edit" />
-                    <span>Edit profile</span>
+                    <span className="dark:text-gray-300">Edit profile</span>
                   </div>
                 </Link>
               </Menu.Item>
@@ -48,7 +49,7 @@ const ProfileDropdownMenu = () => {
                 <Link to="/products">
                   <div className="flex items-center gap-3 mb-3">
                     <WarningIcon className="w-6" />
-                    <span>Info</span>
+                    <span className="dark:text-gray-300">Info</span>
                   </div>
                 </Link>
               </Menu.Item>
@@ -56,7 +57,7 @@ const ProfileDropdownMenu = () => {
                 <Link to="/products">
                   <div className="flex items-center gap-3 mb-3">
                     <SupportIcon className="w-6" />
-                    <span>Support</span>
+                    <span className="dark:text-gray-300">Support</span>
                   </div>
                 </Link>
               </Menu.Item>
@@ -64,7 +65,7 @@ const ProfileDropdownMenu = () => {
                 <Link to="/products">
                   <div className="flex items-center gap-3">
                     <ArrowDownIcon className="w-6" />
-                    <span>Legal</span>
+                    <span className="dark:text-gray-300">Legal</span>
                   </div>
                 </Link>
               </Menu.Item>

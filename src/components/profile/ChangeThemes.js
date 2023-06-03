@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import { Tab } from '@headlessui/react';
-import { MoonIcon, SunIcon, StarIcon } from '@heroicons/react/24/outline';
+import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 
 import { useState } from 'react';
 import { setDarkMode, themeCheck } from 'utils/darkmode';
@@ -24,32 +24,26 @@ function ChangeThemes({ className }) {
 
   return (
     <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-      <Tab.List className={`flex gap-1 bg-[#F4F4F8] dark:bg-[#211F26] p-1 rounded-lg ${className}`}>
+      <Tab.List
+        className={`flex justify-around gap-1 bg-[#F4F4F8] dark:bg-[#211F26] p-1 rounded-lg ${className}`}>
         <Tab
           className={`dark:bg-transparent flex gap-2 bg text-base items-center ${
             selectedIndex === 0 && 'bg-white'
           }  rounded-lg py-1.5 px-2.5`}
           onClick={() => applyTheme('light')}>
-          <SunIcon className={`w-[20px] ${selectedIndex === 0 && 'text-gold'}`} /> Light
+          <SunIcon className={`w-[20px] dark:text-gold ${selectedIndex === 0 && 'text-gold'}`} />
+          <span className="dark:text-white">Light</span>
         </Tab>
 
         <Tab
           className={`flex gap-2 dark:text-white bg text-base items-center ${
-            selectedIndex === 1 && 'bg-[#474950]'
+            selectedIndex === 1 && 'dark:bg-[#474950]'
           }  rounded-lg py-1.5 px-2.5`}
           onClick={() => applyTheme('dark')}>
           <MoonIcon
             className={`w-[20px] ${selectedIndex === 1 && 'text-[#87D3EB] fill-[#87D3EB]'}`}
           />{' '}
           Dark
-        </Tab>
-
-        <Tab
-          className={`flex gap-2 bg text-base items-center ${
-            selectedIndex === 2 && 'bg-white text-black'
-          }  rounded-lg py-1.5 px-2.5`}
-          onClick={() => applyTheme('black')}>
-          <StarIcon className={`w-[20px] ${selectedIndex === 2 && 'text-gold'}`} /> Black
         </Tab>
       </Tab.List>
     </Tab.Group>
