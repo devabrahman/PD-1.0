@@ -42,7 +42,7 @@ const LeftNavigation = () => {
           />
         </div>
 
-        <div className="mx-auto w-full bg-white dark:bg-black space-y-2 mt-6">
+        <div className="mx-auto h-[470px] overflow-y-scroll scrollbar-thin w-full bg-white dark:bg-black space-y-2 mt-6">
           <Disclosure>
             {({ open }) => (
               <>
