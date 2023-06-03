@@ -14,8 +14,8 @@ const CustomizationMenu = () => {
           </Popover.Button>
           <TransitionComponent>
             <Popover.Panel className="absolute z-10 right-0.5">
-              <div className="w-[320px] pt-[30px] pb-12 mt-4 px-6  mx-auto rounded-3xl drop-shadow-2xl bg-white dark:bg-lightDark  border-transparent border">
-                <p>Put someting you like...</p>
+              <div className="w-[320px] pt-[30px] pb-12 mt-4 px-6  mx-auto rounded-3xl drop-shadow-2xl bg-white dark:bg-lightDark dark:border dark:border-gray-600">
+                <p className="dark:text-gray-300">Put someting you like...</p>
               </div>
             </Popover.Panel>
           </TransitionComponent>
