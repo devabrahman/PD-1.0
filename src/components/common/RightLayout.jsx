@@ -7,7 +7,7 @@ import CustomizationMenu from './top-menu/CustomizationMenu';
 
 const RightLayout = ({ title, children, padding = 'px-8 py-8', childrenSpace = 'mt-4' }) => {
   return (
-    <section className="app-grid-right">
+    <section className="app-grid-right h-screen overflow-hidden">
       <section className={`bg-[#f5f5f5] dark:bg-lightDark ${padding} overflow-y-scroll`}>
         <div className="flex justify-between items-center">
           <h2 className="text-2xl font-medium">{title}</h2>

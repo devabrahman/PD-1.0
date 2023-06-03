@@ -7,7 +7,7 @@ import CustomizationMenu from './top-menu/CustomizationMenu';
 
 const LeftLayout = ({ title, children, padding = 'px-8 py-8', childrenSpace = 'mt-4' }) => {
   return (
-    <section className="app-grid-left">
+    <section className="app-grid-left h-screen overflow-hidden">
       <section className="dark:bg-lightDark dark:text-white w-full h-full block">
         <Navigation />
       </section>
