@@ -24,10 +24,10 @@ const LeftHome = () => {
           </div>
 
           {/* <div className="flex justify-between w-full"></div> */}
-          <div className="col-span-12 md:col-span-4 bg-white dark:bg-dark input-accent-box-shadow px-5 py-[30px] rounded-x">
+          <div className="col-span-12 md:col-span-4 bg-white dark:bg-dark input-accent-box-shadow px-5 py-4 rounded-xl">
             <p className="font-medium text-lg">Map</p>
 
-            <div className="min-w-[331px]">
+            <div className="">
               <img className="w-full" src={map} alt="map images" />
             </div>
           </div>
