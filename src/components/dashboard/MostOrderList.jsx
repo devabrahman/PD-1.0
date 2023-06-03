@@ -7,25 +7,29 @@ const MostOrderList = ({ className }) => {
     <section className={className}>
       <div className="rounded-xl w-full">
         <Tab.Group>
-          <Tab.List className="bg-white w-5/12 flex justify-around input-accent-box-shadow rounded-xl px-2.5 py-3">
+          <Tab.List className="bg-white dark:bg-black w-72 flex justify-between input-accent-box-shadow rounded-xl px-2.5 py-3">
             <Tab as={Fragment}>
               {({ selected }) => (
                 <button
-                  className={`font-medium text-base mr-4 outline-none ${
-                    selected && 'text-[#1C92FF] bg-[#E4F7FF] rounded-md px-2 uppercase'
+                  className={`font-medium text-base outline-none px-4 rounded-md ${
+                    selected
+                      ? 'text-[#1C92FF] bg-[#E4F7FF] uppercase'
+                      : 'dark:bg-gray-600 dark:text-gray-200'
                   }`}>
                   Recent
                 </button>
               )}
             </Tab>
-            <div className="w-0.5 h-8 bg-transparent" />
+            <div className="w-0.5 h-8 bg-transpaent" />
             <Tab as={Fragment}>
               {({ selected }) => (
                 <button
-                  className={`font-medium text-base mr-4 outline-none ${
-                    selected && 'text-[#1C92FF] bg-[#E4F7FF] rounded-md px-2 uppercase'
+                  className={`font-medium text-base outline-none px-4 rounded-md ${
+                    selected
+                      ? 'text-[#1C92FF] bg-[#E4F7FF] uppercase'
+                      : 'dark:bg-gray-600 dark:text-gray-200'
                   }`}>
-                  POPULAR
+                  Popular
                 </button>
               )}
             </Tab>
