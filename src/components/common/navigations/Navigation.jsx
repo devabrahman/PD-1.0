@@ -57,24 +57,24 @@ const LeftNavigation = () => {
                 </Disclosure.Button>
                 <Disclosure.Panel className="pb-2 text-sm text-gray-500">
                   <ul className="">
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Left Sidebar
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/dashboard-right-sidebar"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Right Sidebar
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/dashboard-topbar"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Topbar
                       </Link>
                     </li>
@@ -98,38 +98,38 @@ const LeftNavigation = () => {
                 </Disclosure.Button>
                 <Disclosure.Panel className="pb-2 text-sm text-gray-500">
                   <ul className="">
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/login"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Login
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/create-account"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Sign Up
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/forgot-password"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Forgot Password
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/reset-mail-sent"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Reset Mail Sent
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/change-password"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Change Password
                       </Link>
                     </li>
@@ -153,48 +153,48 @@ const LeftNavigation = () => {
                 </Disclosure.Button>
                 <Disclosure.Panel className="pb-2 text-sm text-gray-500">
                   <ul className="">
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/products"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Products
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/new-product"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         New Product
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/edit-product"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Edit Product
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/single-product"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Single Product{' '}
                         <span className="relative -top-4 bg-amber-400 text-white px-1 py[3px] rounded-md">
                           Bonus
                         </span>
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/categories"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Categories
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/category/create"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         New Category
                       </Link>
                     </li>
@@ -225,17 +225,17 @@ const LeftNavigation = () => {
                 </Disclosure.Button>
                 <Disclosure.Panel className="pb-2 text-sm text-gray-500">
                   <ul className="">
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/orders"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Orders
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/order-details"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Order Details
                       </Link>
                     </li>
@@ -259,31 +259,31 @@ const LeftNavigation = () => {
                 </Disclosure.Button>
                 <Disclosure.Panel className="pb-2 text-sm text-gray-500">
                   <ul className="">
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/posts"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Posts
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/create-post"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Create Post
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/blog-categories"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Categories
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/blog/category/create"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         New Category
                       </Link>
                     </li>
@@ -324,24 +324,24 @@ const LeftNavigation = () => {
                 </Disclosure.Button>
                 <Disclosure.Panel className="pb-2 text-sm text-gray-500">
                   <ul className="">
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/customers"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Customers
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/customer"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Customer Profile
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/profile-edit"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Profile Edit
                       </Link>
                     </li>
@@ -365,38 +365,38 @@ const LeftNavigation = () => {
                 </Disclosure.Button>
                 <Disclosure.Panel className="pb-2 text-sm text-gray-500">
                   <ul className="">
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/cards"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Cards
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/product-cards"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Product Card
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/call-to-action"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Call to Action
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/help"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Help and FAQ
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-gray-100 dark:hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/toast"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white dark:hover:text-white font-medium text-sm">
                         Toast
                       </Link>
                     </li>
@@ -420,17 +420,17 @@ const LeftNavigation = () => {
                 </Disclosure.Button>
                 <Disclosure.Panel className="pb-2 text-sm text-gray-500">
                   <ul className="">
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/orders"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white font-medium text-sm">
                         Customer Profile
                       </Link>
                     </li>
-                    <li className="py-2 hover:bg-gray-100 pl-[60px]">
+                    <li className="py-2 hover:bg-blue-500 dark:text-white pl-[60px]">
                       <Link
                         to="/profile-edit"
-                        className="py-2 hover:bg-gray-100 text-gray-600 dark:text-gray-300 dark:hover:text-gray-600 font-medium text-sm">
+                        className="py-2 text-gray-600 dark:text-white font-medium text-sm">
                         Profile Edit
                       </Link>
                     </li>
