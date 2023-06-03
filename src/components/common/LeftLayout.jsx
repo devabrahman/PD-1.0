@@ -17,7 +17,7 @@ const LeftLayout = ({ title, children, padding = 'px-8 py-8', childrenSpace = 'm
           <h2 className="text-2xl font-medium dark:text-gray-200">{title}</h2>
 
           <div className="flex items-center gap-6 ">
-            <SearchIcon className="bg-white dark:bg-lightDark transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 h-10 w-12 rounded-xl px-2.5 cursor-pointer table-shadow dark:border dark:border-darkBorder" />
+            <SearchIcon className="bg-white dark:bg-black transform-gpu hover:scale-95 transition-all duration-150 text-blue-400 h-10 w-12 rounded-xl px-2.5 cursor-pointer table-shadow border border-gray-50 dark:border-gray-700" />
 
             <Notification />
 
