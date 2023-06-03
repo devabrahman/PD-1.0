@@ -7,7 +7,7 @@ const ChatLeft = () => {
           className="h-14 w-14 object-cover rounded-xl"
         />
         <div className="ml-4">
-          <p>Muhammad Ajmin</p>
+          <p className="dark:text-white">Muhammad Ajmin</p>
           <div className="flex justify-between items-center">
             <small className="text-gray-400">I want to ask you...</small>
             <span className="bg-amber-400 h-5 w-5 text-sm rounded-full  grid place-content-center">
@@ -22,7 +22,7 @@ const ChatLeft = () => {
           className="h-14 w-14 object-cover rounded-xl"
         />
         <div className="ml-4">
-          <p>Husnain</p>
+          <p className="dark:text-white">Husnain</p>
           <div className="flex justify-between items-center">
             <small className="text-green-400">Typing...</small>
           </div>
@@ -34,7 +34,7 @@ const ChatLeft = () => {
           className="h-14 w-14 object-cover rounded-xl"
         />
         <div className="ml-4">
-          <p>Shaan Masood</p>
+          <p className="dark:text-white">Shaan Masood</p>
           <div className="flex justify-between items-center">
             <small className="text-gray-400">Hey, How are you doing...</small>
           </div>
@@ -46,7 +46,7 @@ const ChatLeft = () => {
           className="h-14 w-14 object-cover rounded-xl"
         />
         <div className="ml-4">
-          <p>Naseem Shah</p>
+          <p className="dark:text-white">Naseem Shah</p>
           <div className="flex justify-between items-center">
             <small className="text-gray-400">I want to ask you...</small>
             <span className="bg-amber-400 h-5 w-5 text-sm rounded-full  grid place-content-center ml-2">
@@ -61,7 +61,7 @@ const ChatLeft = () => {
           className="h-14 w-14 object-cover rounded-xl"
         />
         <div className="ml-4">
-          <p>Shaheen Afridi</p>
+          <p className="dark:text-white">Shaheen Afridi</p>
           <div className="flex justify-between items-center">
             <small className="text-green-400">Typing...</small>
           </div>
@@ -73,7 +73,7 @@ const ChatLeft = () => {
           className="h-14 w-14 object-cover rounded-xl"
         />
         <div className="ml-4">
-          <p>Muhammad Rizwan</p>
+          <p className="dark:text-white">Muhammad Rizwan</p>
           <div className="flex justify-between items-center">
             <small className="text-gray-400">Hey, How are you doing...</small>
           </div>
@@ -85,7 +85,7 @@ const ChatLeft = () => {
           className="h-14 w-14 object-cover rounded-xl"
         />
         <div className="ml-4">
-          <p>Babar Azam</p>
+          <p className="dark:text-white">Babar Azam</p>
           <div className="flex justify-between items-center">
             <small className="text-gray-400">Hey, How are you doing...</small>
           </div>

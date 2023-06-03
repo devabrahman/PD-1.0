@@ -19,10 +19,10 @@ const ChatRight = () => {
                 className="h-10 w-10 object-cover rounded-lg"
               />
               <div className="ml-4">
-                <h3 className="font-medium ">Muhammad Ajmin</h3>
+                <h3 className="font-medium dark:text-white">Muhammad Ajmin</h3>
                 <div className="flex items-center">
                   <span className="h-2 w-2 bg-green-500 rounded-full block"></span>
-                  <span className="ml-2">Active</span>
+                  <span className="ml-2 dark:text-gray-300">Active</span>
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@ const ChatRight = () => {
           <textarea
             cols="30"
             rows="1"
-            className="w-11/12 border border-gray-200  dark:bg-dark rounded-xl mx-4"></textarea>
+            className="w-11/12 border border-gray-200 dark:border-gray-500  dark:bg-dark rounded-xl mx-4"></textarea>
           <button className="px-4 py-2 bg-blue-500 text-white rounded-xl">Send</button>
         </div>
       </div>
