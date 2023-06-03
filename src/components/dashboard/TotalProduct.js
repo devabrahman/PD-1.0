@@ -62,7 +62,7 @@ const TotalProduct = () => {
 
       <div className="flex justify-between items-center gap-5 ">
         <p className="font-semibold text-gray-500 text-xs">4 visitors</p>
-        <p className="font-semibold text-xs border border-amber-400 px-2 py-1 rounded-md cursor-pointer transform transition-all duration-300 hover:px-2.5 hover:bg-amber-400 hover:text-white hover:font-medium">
+        <p className="font-semibold text-xs border border-amber-400 px-2 py-1 rounded-md cursor-pointer transform transition-all duration-300 hover:px-2.5 hover:bg-amber-400 dark:bg-amber-400 hover:text-white hover:font-medium">
           Live View
         </p>
       </div>
