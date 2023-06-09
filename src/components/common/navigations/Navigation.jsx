@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Disclosure } from '@headlessui/react';
-import { ChevronUpIcon } from '@heroicons/react/20/solid';
+import { ChevronRightIcon, ChevronUpIcon } from '@heroicons/react/20/solid';
 import { ChatBubbleLeftEllipsisIcon, ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { FcHome, FcLock } from 'react-icons/fc';
 import { SlBasket } from 'react-icons/sl';
@@ -9,9 +9,7 @@ import OderIcon from 'assets/Images/icons/order-nav-icon.png';
 import { IoIosPeople } from 'react-icons/io';
 import { useState } from 'react';
 
-const LeftNavigation = () => {
-  const [collapseSidebar, setCollapseSidebar] = useState(false);
-
+const LeftNavigation = ({ collapseSidebar, setCollapseSidebar }) => {
   const { pathname } = useLocation();
 
   // ecommerce disclosure
@@ -36,10 +34,17 @@ const LeftNavigation = () => {
             </div>
             <p className="text-xl font-medium text-gray-400">Prothom Dashboard</p>
           </div>
-          <ChevronLeftIcon
-            className="h-5 w-5 relative top-3 cursor-pointer"
-            onClick={() => setCollapseSidebar(true)}
-          />
+          {!!collapseSidebar ? (
+            <ChevronRightIcon
+              className="h-5 w-5 relative top-3 cursor-pointer"
+              onClick={() => setCollapseSidebar(false)}
+            />
+          ) : (
+            <ChevronLeftIcon
+              className="h-5 w-5 relative top-3 cursor-pointer"
+              onClick={() => setCollapseSidebar(true)}
+            />
+          )}
         </div>
 
         <div className="mx-auto h-[470px] overflow-y-scroll scrollbar-thin w-full bg-white dark:bg-black space-y-2 mt-6">
