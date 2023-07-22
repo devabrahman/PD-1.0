@@ -5,11 +5,11 @@ import RightHome from 'pages/RightHome';
 import TopHome from 'pages/TopHome';
 
 // importing auth pages
-import SignUp from './pages/auth/SignUp';
-import Login from './pages/auth/Login';
-import ForgotPassword from './pages/auth/ForgotPassword';
-import ChangePassword from './pages/auth/ChangePassword';
-import ResetMailSent from './pages/auth/ResetMailSent';
+import SignUp from 'pages/Auth/SignUp';
+import Login from 'pages/Auth/Login';
+import ForgotPassword from 'pages/Auth/ForgotPassword';
+import ResetMailSent from 'pages/Auth/ResetMailSent';
+import ChangePassword from 'pages/Auth/ChangePassword';
 
 // importing products pages
 import Products from 'pages/product/Products';
